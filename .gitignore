@@ -1,0 +1,19 @@
+# dados — nunca versionar
+*.parquet
+*.duckdb
+*.xlsx
+*.csv
+data/
+
+# ambiente
+.env
+__pycache__/
+*.py[cod]
+.venv/
+
+# notebooks
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
