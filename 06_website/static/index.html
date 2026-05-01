@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POPIN v4 — Populismo na América Latina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" />
+  <link rel="stylesheet" href="/static/css/style.css?v=15" />
+</head>
+<body>
+
+<!-- ── Sidebar ──────────────────────────────────────────────────────── -->
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-logo">
+      <span class="brand-name">POPIN</span><span class="brand-ver">v4</span>
+    </div>
+    <p class="brand-sub" data-i18n="brand_sub">Índice de Populismo · América Latina</p>
+    <div class="sidebar-actions">
+      <button class="lang-toggle" id="lang-toggle">
+        <span class="lang-opt active" data-lang="pt">PT</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-opt" data-lang="en">EN</span>
+      </button>
+      <button class="theme-toggle" id="theme-toggle" title="Alternar tema">
+        <!-- Sol → clique para ir ao modo claro (visível no modo escuro) -->
+        <svg class="theme-icon-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <!-- Lua → clique para ir ao modo escuro (visível no modo claro) -->
+        <svg class="theme-icon-moon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <a class="nav-item active" data-section="overview">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+      <span data-i18n="nav_overview">Visão Geral</span>
+    </a>
+    <a class="nav-item" data-section="countries">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span data-i18n="nav_countries">Países</span>
+    </a>
+    <a class="nav-item" data-section="leaders">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <span data-i18n="nav_leaders">Líderes</span>
+    </a>
+    <a class="nav-item" data-section="timeseries">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <span data-i18n="nav_timeseries">Série Temporal</span>
+    </a>
+    <a class="nav-item" data-section="dimensions">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span data-i18n="nav_dimensions">Dimensões</span>
+    </a>
+  </nav>
+
+  <!-- Pop scale legend — gradient strip, sem rótulos de valor -->
+  <div class="pop-legend">
+    <div class="pop-legend-title" data-i18n="legend_title">Score de Populismo</div>
+    <div class="pop-scale-track"></div>
+    <div class="pop-scale-ends"><span>0</span><span>100</span></div>
+  </div>
+</aside>
+
+<!-- ── Main ─────────────────────────────────────────────────────────── -->
+<main class="main">
+
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="spinner"></div>
+      <p data-i18n="loading">Carregando dados…</p>
+    </div>
+  </div>
+
+  <!-- ── Global discourse-type filter ── -->
+  <div class="global-filter-bar" id="global-filter-bar">
+    <span class="filter-label" data-i18n="f_filter_by">Filtrar por tipo</span>
+    <div id="dtype-chips" class="chip-group"></div>
+  </div>
+
+  <!-- ═══════════ OVERVIEW ═══════════ -->
+  <section id="section-overview" class="section active">
+    <div class="section-head">
+      <div>
+        <h1 class="section-title" data-i18n="nav_overview">Visão Geral</h1>
+        <p class="section-sub" data-i18n="ov_sub">Populismo na América Latina · 2000–2025</p>
+      </div>
+    </div>
+
+    <div class="kpi-row" id="kpi-row"></div>
+    <div class="hero-row" id="hero-row"></div>
+
+    <!-- Map + Cards split -->
+    <div class="overview-split">
+      <div class="card overview-map-card">
+        <div class="card-head">
+          <h3 data-i18n="chart_map">Mapa do Populismo</h3>
+          <span class="badge" data-i18n="badge_final">Score Final</span>
+        </div>
+        <div id="chart-map" class="chart-map"></div>
+      </div>
+      <div class="card overview-cards-card">
+        <div class="card-head">
+          <h3 data-i18n="cc_title">Score por País</h3>
+          <span class="badge" data-i18n="badge_ranked">ordenado</span>
+        </div>
+        <div id="country-cards" class="country-list"></div>
+      </div>
+    </div>
+
+    <!-- Trend -->
+    <div class="card">
+      <div class="card-head">
+        <h3 data-i18n="chart_trend">Tendência Global do Populismo</h3>
+        <div class="toggle-group" id="trend-dim-toggle"></div>
+      </div>
+      <div id="chart-trend" class="chart-sm"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ COUNTRIES ═══════════ -->
+  <section id="section-countries" class="section">
+    <div class="section-head">
+      <div>
+        <h1 class="section-title" data-i18n="nav_countries">Países</h1>
+        <p class="section-sub" data-i18n="ct_sub">Análise comparativa de 19 países</p>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-head">
+          <h3 data-i18n="chart_ranked">Ranking de Score</h3>
+          <span class="badge" data-i18n="badge_final">Score Final</span>
+        </div>
+        <div id="chart-country-box" class="chart-lg"></div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <h3 data-i18n="chart_radar">Perfil de Populismo</h3>
+          <span class="badge" data-i18n="badge_radar">Radar</span>
+        </div>
+        <div class="filter-row">
+          <span class="filter-label" data-i18n="f_countries">Países</span>
+          <div id="country-radar-select" class="chip-group"></div>
+        </div>
+        <div id="chart-country-radar" class="chart-md"></div>
+      </div>
+    </div>
+
+    <!-- Dimension bars per country -->
+    <div class="card">
+      <div class="card-head">
+        <h3 data-i18n="chart_dim_bars">Dimensões por País</h3>
+        <select id="dim-bar-select" class="select"></select>
+      </div>
+      <div id="chart-dim-bars" class="chart-lg"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ LEADERS ═══════════ -->
+  <section id="section-leaders" class="section">
+    <div class="section-head">
+      <div>
+        <h1 class="section-title" data-i18n="nav_leaders">Líderes</h1>
+        <p class="section-sub" data-i18n="ld_sub">Clique em um líder para ver o perfil completo</p>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label" data-i18n="f_country">País</span>
+        <select id="leader-country-filter" class="select">
+          <option value="ALL" data-i18n="f_all">Todos os Países</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3 data-i18n="chart_leaders">Ranking de Líderes</h3>
+        <span class="badge" id="leader-count-badge">25</span>
+      </div>
+      <div id="leader-rank-list" class="leader-rank-list"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ TIME SERIES ═══════════ -->
+  <section id="section-timeseries" class="section">
+    <div class="section-head">
+      <div>
+        <h1 class="section-title" data-i18n="nav_timeseries">Série Temporal</h1>
+        <p class="section-sub" data-i18n="ts_sub">Evolução do populismo · 2000–2025</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3 data-i18n="chart_ts_line">Comparação por País</h3>
+        <select id="ts-dim" class="select"></select>
+      </div>
+      <div class="filter-row">
+        <span class="filter-label" data-i18n="f_countries">Países</span>
+        <div id="ts-country-chips" class="chip-group"></div>
+      </div>
+      <div id="chart-ts-line" class="chart-lg"></div>
+    </div>
+
+    <!-- Top movers chart instead of heatmap -->
+    <div class="card">
+      <div class="card-head">
+        <h3 data-i18n="chart_movers">Variação 2000–2025 por País</h3>
+        <span class="badge" data-i18n="badge_delta">Δ Score</span>
+      </div>
+      <div id="chart-movers" class="chart-md"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ DIMENSIONS ═══════════ -->
+  <section id="section-dimensions" class="section">
+    <div class="section-head">
+      <div>
+        <h1 class="section-title" data-i18n="nav_dimensions">Dimensões</h1>
+        <p class="section-sub" data-i18n="dm_sub">Scores médios por dimensão de populismo</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end">
+        <div>
+          <div class="filter-label" style="margin-bottom:4px" data-i18n="f_dimension">Dimensão</div>
+          <select id="dist-dim" class="select"></select>
+        </div>
+        <div>
+          <div class="filter-label" style="margin-bottom:4px" data-i18n="f_group_by">Agrupar por</div>
+          <select id="dist-group" class="select">
+            <option value="country" data-i18n="f_country">País</option>
+            <option value="dtype" data-i18n="f_discourse">Tipo de Discurso</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ranked bars (replaces box plot) -->
+    <div class="card">
+      <div class="card-head"><h3 data-i18n="chart_means">Score Médio por Grupo</h3></div>
+      <div id="chart-hist" class="chart-lg"></div>
+    </div>
+
+    <!-- Scatter of two dimensions -->
+    <div class="card">
+      <div class="card-head">
+        <h3 data-i18n="chart_scatter2d">Dispersão entre Dimensões</h3>
+        <div style="display:flex;gap:8px;align-items:center">
+          <select id="scatter-x" class="select"></select>
+          <span style="color:var(--text3);font-size:11px">vs</span>
+          <select id="scatter-y" class="select"></select>
+        </div>
+      </div>
+      <div id="chart-scatter2d" class="chart-md"></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── Leader Detail Drawer ──────────────────────────────────────────── -->
+<div id="drawer-overlay" class="drawer-overlay"></div>
+<aside id="leader-drawer" class="leader-drawer">
+  <div class="drawer-header">
+    <div>
+      <div class="drawer-name" id="drawer-name">—</div>
+      <div class="drawer-meta" id="drawer-meta">—</div>
+    </div>
+    <button class="drawer-close" id="drawer-close" aria-label="Fechar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body">
+    <div class="drawer-score-row" id="drawer-score-row"></div>
+    <div class="drawer-section-label" data-i18n="drawer_dims">Dimensões</div>
+    <div id="drawer-dims"></div>
+    <div class="drawer-section-label" data-i18n="drawer_trend">Evolução Histórica</div>
+    <div id="chart-drawer-trend" style="height:180px;margin-top:4px"></div>
+    <div class="drawer-section-label" data-i18n="drawer_radar">Perfil Radar</div>
+    <div id="chart-drawer-radar" style="height:240px;margin-top:4px"></div>
+  </div>
+</aside>
+
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+<script src="/static/js/app.js?v=18"></script>
+</body>
+</html>

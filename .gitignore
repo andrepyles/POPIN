@@ -1,6 +1,7 @@
 # dados — nunca versionar
 *.parquet
 *.duckdb
+!06_website/popin_web.duckdb
 *.xlsx
 *.csv
 data/
