@@ -249,6 +249,8 @@ async function setTheme(t) {
 
 // ── Helpers ───────────────────────────────────────────────────────────
 const api = async p => { const r = await fetch(p); if(!r.ok) throw new Error(`API ${r.status}: ${p}`); return r.json(); };
+// Responsive chart left margin (bar charts with country names)
+const mL = () => window.innerWidth <= 480 ? 72 : window.innerWidth <= 768 ? 90 : 130;
 // rgba: accepts both "#rrggbb" and "rgb(r,g,b)" strings
 const rgba = (color, a) => {
   if (color.startsWith("rgb(")) {
@@ -331,7 +333,10 @@ function initNav() {
   navigateTo(saved);
 
   document.querySelectorAll(".nav-item").forEach(item => {
-    item.addEventListener("click", () => navigateTo(item.dataset.section));
+    item.addEventListener("click", () => {
+      navigateTo(item.dataset.section);
+      if (window.innerWidth <= 768) closeMobileSidebar();
+    });
   });
 
   document.getElementById("theme-toggle").addEventListener("click", () => {
@@ -352,6 +357,29 @@ function initNav() {
     if(_cache.countries) { renderCountryCards(_cache.countries); renderHeroBanner(_cache.countries); }
     if(_cache.leaders)   renderLeaderRankList(_cache.leaders);
   });
+
+  // ── Mobile sidebar toggle ─────────────────────────────────────────
+  const sidebar    = document.querySelector(".sidebar");
+  const overlay    = document.getElementById("sidebar-mob-overlay");
+  const toggleBtn  = document.getElementById("sidebar-toggle");
+
+  function openMobileSidebar() {
+    sidebar.classList.add("open");
+    overlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeMobileSidebar() {
+    sidebar.classList.remove("open");
+    overlay.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  // expose to nav-item handler above
+  window.closeMobileSidebar = closeMobileSidebar;
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.contains("open") ? closeMobileSidebar() : openMobileSidebar();
+  });
+  overlay.addEventListener("click", closeMobileSidebar);
 }
 
 // ── Global cache ──────────────────────────────────────────────────────
@@ -571,7 +599,7 @@ function renderCountryRanked(countries) {
     marker:{color:sorted.map(c=>popColor(c.final_score)), opacity:0.88},
     hovertemplate:"<b>%{y}</b><br>Score: <b>%{x:.1f}</b><extra></extra>",
   }], lay({
-    margin:{t:10,r:55,b:36,l:130},
+    margin:{t:10,r:55,b:36,l:mL()},
     xaxis:AX({range:[0,95]}),
     yaxis:AX(),
     bargap:0.28, showlegend:false,
@@ -655,7 +683,7 @@ function renderDimBars(countries) {
     marker:{color: sorted.map(c => popColor(c[_dimBarKey]||0)), opacity:0.88},
     hovertemplate:"<b>%{y}</b><br>Score: <b>%{x:.1f}</b><extra></extra>",
   }], lay({
-    margin:{t:10,r:55,b:36,l:130},
+    margin:{t:10,r:55,b:36,l:mL()},
     xaxis:AX({range:[0,95]}),
     yaxis:AX(),
     bargap:0.28, showlegend:false,
@@ -825,7 +853,7 @@ async function renderMovers(countries) {
     marker:{color:colors, opacity:0.85},
     hovertemplate:"<b>%{y}</b><br>Variação: <b>%{x:+.1f}</b><extra></extra>",
   }], lay({
-    margin:{t:10,r:55,b:36,l:140},
+    margin:{t:10,r:55,b:36,l:mL()},
     xaxis:AX({title:{text:"Δ Score",font:{size:11}}}),
     yaxis:AX(),
     bargap:0.3, showlegend:false,
