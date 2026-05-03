@@ -127,24 +127,24 @@ const CENTROIDS = {
 
 // ── Smooth populism color scale (dual-theme) ──────────────────────────
 const _COLOR_STOPS_DARK = [
-  [  0, [  9,  17,  30]],   // near-background — very low
-  [ 25, [ 14, 165, 233]],   // #0EA5E9 sky blue
-  [ 50, [234, 179,   8]],   // #EAB308 amber
-  [ 72, [239,  68,  68]],   // #EF4444 red
-  [100, [127,  29,  29]],   // #7F1D1D dark red
+  [  0, [ 26,  20,  16]],   // #1a1410 warm ink — very low
+  [ 22, [ 93, 122,  90]],   // #5d7a5a sage
+  [ 50, [201, 140,  58]],   // #c98c3a ochre
+  [ 72, [184,  80,  66]],   // #b85042 terracotta
+  [100, [138,  51,  40]],   // #8a3328 deep terracotta
 ];
 const _COLOR_STOPS_LIGHT = [
-  [  0, [147, 197, 253]],   // #93C5FD light blue (visível sobre branco)
-  [ 25, [ 14, 165, 233]],   // #0EA5E9 sky blue
-  [ 50, [234, 179,   8]],   // #EAB308 amber
-  [ 72, [239,  68,  68]],   // #EF4444 red
-  [100, [127,  29,  29]],   // #7F1D1D dark red
+  [  0, [243, 234, 217]],   // #f3ead9 warm paper — very low
+  [ 22, [ 93, 122,  90]],   // #5d7a5a sage
+  [ 50, [201, 140,  58]],   // #c98c3a ochre
+  [ 72, [184,  80,  66]],   // #b85042 terracotta
+  [100, [138,  51,  40]],   // #8a3328 deep terracotta
 ];
 
 let _COLOR_STOPS = _COLOR_STOPS_DARK;
 let POP_SCALE = [
-  [0.00, "#09111E"], [0.25, "#0EA5E9"],
-  [0.50, "#EAB308"], [0.72, "#EF4444"], [1.00, "#7F1D1D"],
+  [0.00, "#1a1410"], [0.22, "#5d7a5a"],
+  [0.50, "#c98c3a"], [0.72, "#b85042"], [1.00, "#8a3328"],
 ];
 
 function popColor(score) {
@@ -165,10 +165,10 @@ function popColor(score) {
 function updateColorStops() {
   if (THEME === "dark") {
     _COLOR_STOPS = _COLOR_STOPS_DARK;
-    POP_SCALE = [[0.00,"#09111E"],[0.25,"#0EA5E9"],[0.50,"#EAB308"],[0.72,"#EF4444"],[1.00,"#7F1D1D"]];
+    POP_SCALE = [[0.00,"#1a1410"],[0.22,"#5d7a5a"],[0.50,"#c98c3a"],[0.72,"#b85042"],[1.00,"#8a3328"]];
   } else {
     _COLOR_STOPS = _COLOR_STOPS_LIGHT;
-    POP_SCALE = [[0.00,"#93C5FD"],[0.25,"#0EA5E9"],[0.50,"#EAB308"],[0.72,"#EF4444"],[1.00,"#7F1D1D"]];
+    POP_SCALE = [[0.00,"#f3ead9"],[0.22,"#5d7a5a"],[0.50,"#c98c3a"],[0.72,"#b85042"],[1.00,"#8a3328"]];
   }
 }
 
@@ -176,9 +176,9 @@ function updateColorStops() {
 let THEME = "dark";
 
 const BG0 = "rgba(0,0,0,0)";
-let GRID_C = "rgba(255,255,255,.04)";
-let ZERO_C = "rgba(255,255,255,.08)";
-let FONT_C = "#C4D4EE";
+let GRID_C = "rgba(250,246,240,.05)";
+let ZERO_C = "rgba(250,246,240,.10)";
+let FONT_C = "#c4b49a";
 
 const BASE_LAY = {
   paper_bgcolor: BG0, plot_bgcolor: BG0,
@@ -192,35 +192,35 @@ const AX = (e={}) => ({ gridcolor:GRID_C, linecolor:GRID_C, zerolinecolor:ZERO_C
 
 function updateThemeVars() {
   if (THEME === "dark") {
-    GRID_C = "rgba(255,255,255,.05)";
-    ZERO_C = "rgba(255,255,255,.10)";
-    FONT_C = "#C4D4EE";   // quase branco azulado — alto contraste no escuro
+    GRID_C = "rgba(250,246,240,.06)";
+    ZERO_C = "rgba(250,246,240,.11)";
+    FONT_C = "#c4b49a";   // warm paper label
     BASE_LAY.font.color = FONT_C;
-    BASE_LAY.hoverlabel.bgcolor = "#0F1828";
-    BASE_LAY.hoverlabel.bordercolor = "rgba(255,255,255,.12)";
-    BASE_LAY.hoverlabel.font.color = "#E6EEFF";
+    BASE_LAY.hoverlabel.bgcolor = "#2a1f16";
+    BASE_LAY.hoverlabel.bordercolor = "rgba(250,246,240,.12)";
+    BASE_LAY.hoverlabel.font.color = "#f0e6d3";
   } else {
-    GRID_C = "rgba(0,0,0,.07)";
-    ZERO_C = "rgba(0,0,0,.12)";
-    FONT_C = "#1E2E42";   // quase preto azulado — alto contraste no claro
+    GRID_C = "rgba(26,20,16,.07)";
+    ZERO_C = "rgba(26,20,16,.13)";
+    FONT_C = "#3d2f24";   // ink-soft — alto contraste no claro
     BASE_LAY.font.color = FONT_C;
-    BASE_LAY.hoverlabel.bgcolor = "#FFFFFF";
-    BASE_LAY.hoverlabel.bordercolor = "rgba(0,0,0,.08)";
-    BASE_LAY.hoverlabel.font.color = "#18243A";
+    BASE_LAY.hoverlabel.bgcolor = "#faf6f0";
+    BASE_LAY.hoverlabel.bordercolor = "rgba(214,196,163,.7)";
+    BASE_LAY.hoverlabel.font.color = "#1a1410";
   }
 }
 
 function mapGeoColors() {
   return THEME === "dark" ? {
-    bgcolor:      "#1A2236",   // igual ao --card: sem "caixa" visível
-    oceancolor:   "#0C1118",   // igual ao --bg: oceano bem escuro
-    landcolor:    "#131B2A",   // igual ao --bg2: países fora do dataset
-    countrycolor: "#2A3A58",   // borda sutil entre países
+    bgcolor:      "#2a1f16",   // --card warm dark
+    oceancolor:   "#1a1410",   // --bg ink
+    landcolor:    "#231b14",   // --bg2 slightly lighter
+    countrycolor: "#3d2c1e",   // warm border
   } : {
-    bgcolor:      "#FFFFFF",   // igual ao --card
-    oceancolor:   "#EEF3FA",   // igual ao --bg: azul muito claro
-    landcolor:    "#DCE8F5",   // países fora do dataset
-    countrycolor: "#AABFD8",   // borda sutil
+    bgcolor:      "#faf6f0",   // --card paper
+    oceancolor:   "#ede4d6",   // --bg paper-warmer
+    landcolor:    "#f3ead9",   // --card2 paper-warm
+    countrycolor: "#d4c4a3",   // --border2 rule-strong
   };
 }
 
