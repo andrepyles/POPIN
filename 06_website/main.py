@@ -63,8 +63,7 @@ def load_data():
     df = con.execute(query).fetchdf()
     con.close()
     df["country"] = df["iso3"].map(COUNTRY_NAMES).fillna(df["iso3"])
-    df["leader_short"] = df["leader_name"].apply(
-        lambda n: " ".join(n.split()[:2]) if len(n.split()) > 3 else n)
+    df["leader_short"] = df["leader_name"]
     return df
 
 df = load_data()
