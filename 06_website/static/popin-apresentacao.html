@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>POPIN — Populismo em Números | André Pyles Siqueira</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
+<style>
+:root{
+  --ink:#1a1410;
+  --ink-soft:#3d2f24;
+  --paper:#faf6f0;
+  --paper-warm:#f3ead9;
+  --paper-warmer:#ebdfc6;
+  --rule:#e6dcc7;
+  --rule-strong:#d4c4a3;
+  --terracotta:#b85042;
+  --terracotta-deep:#8a3328;
+  --ochre:#c98c3a;
+  --gold:#d9a441;
+  --sage:#5d7a5a;
+  --sage-deep:#3d5440;
+  --slate:#2d3a45;
+  --muted:#7a6c5d;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.serif{font-family:'Fraunces',Georgia,serif}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* === DECK === */
+.deck{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+.slide{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;
+  padding:56px 72px 48px 72px;
+  opacity:0;pointer-events:none;
+  transform:translateX(40px);
+  transition:opacity .55s cubic-bezier(.4,0,.2,1), transform .55s cubic-bezier(.4,0,.2,1);
+  overflow:hidden;
+}
+.slide.active{opacity:1;pointer-events:auto;transform:translateX(0)}
+.slide.prev{transform:translateX(-40px)}
+
+/* === HEADER STRIP === */
+.slide-tag{
+  position:absolute;top:24px;left:72px;
+  display:flex;align-items:center;gap:12px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);z-index:10;
+}
+.slide-tag::before{content:"";width:24px;height:1px;background:var(--terracotta)}
+.slide-num{
+  position:absolute;top:24px;right:72px;
+  font-family:'Fraunces',serif;
+  font-size:13px;letter-spacing:.05em;
+  color:var(--muted);font-variant-numeric:tabular-nums;z-index:10;
+}
+.slide-num .cur{color:var(--ink);font-weight:600}
+
+/* === TITLES === */
+h1.deck-title{
+  font-family:'Fraunces',serif;font-weight:400;
+  font-size:clamp(40px,4.8vw,76px);line-height:1.02;
+  letter-spacing:-.02em;color:var(--ink);
+}
+h2.section-title{
+  font-family:'Fraunces',serif;font-weight:500;
+  font-size:clamp(36px,3.8vw,58px);line-height:1.04;
+  letter-spacing:-.02em;color:var(--ink);
+  margin-bottom:8px;
+}
+h2 em, h1 em{font-style:italic;color:var(--terracotta);font-weight:500}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--terracotta);margin-bottom:16px;
+  display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"§";font-family:'Fraunces',serif;font-size:14px}
+
+/* === COVER === */
+.cover{
+  background:
+    radial-gradient(1200px 800px at 85% 10%, rgba(184,80,66,.08), transparent 60%),
+    radial-gradient(900px 700px at 10% 90%, rgba(217,164,65,.08), transparent 55%),
+    var(--paper);
+  padding:0;
+}
+.cover-inner{flex:1;display:grid;grid-template-columns:1.4fr 1fr;align-items:stretch}
+.cover-left{
+  padding:72px 56px 56px 72px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  border-right:1px solid var(--rule);
+}
+.cover-meta{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--muted);display:flex;flex-direction:column;gap:4px;
+}
+.cover-meta .institution{color:var(--ink)}
+.cover-title{margin:48px 0}
+.cover-title .pre{
+  font-family:'JetBrains Mono',monospace;
+  font-size:13px;letter-spacing:.32em;color:var(--terracotta);
+  text-transform:uppercase;margin-bottom:24px;display:inline-block;
+}
+.cover-title h1{
+  font-family:'Fraunces',serif;font-weight:300;
+  font-size:clamp(48px,5.2vw,86px);line-height:.98;letter-spacing:-.025em;
+}
+.cover-title h1 .accent{color:var(--terracotta);font-style:italic;font-weight:500}
+.cover-author{
+  display:flex;align-items:flex-end;justify-content:space-between;gap:24px;
+  padding-top:24px;border-top:1px solid var(--rule);
+}
+.cover-author .name{font-family:'Fraunces',serif;font-size:22px;font-weight:500;color:var(--ink)}
+.cover-author .role{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);margin-top:4px;
+}
+.cover-right{
+  background:var(--ink);color:var(--paper-warm);
+  padding:72px 56px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  position:relative;overflow:hidden;
+}
+.cover-right::before{
+  content:"";position:absolute;top:-40%;right:-30%;
+  width:140%;height:140%;
+  background:radial-gradient(circle,rgba(217,164,65,.18),transparent 60%);
+  pointer-events:none;
+}
+.cover-stat{position:relative;z-index:1}
+.cover-stat .num{
+  font-family:'Fraunces',serif;font-weight:300;
+  font-size:120px;line-height:.9;color:var(--gold);letter-spacing:-.03em;
+}
+.cover-stat .num .small{font-size:36px;color:var(--paper-warm);opacity:.6}
+.cover-stat .label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--paper-warm);opacity:.7;margin-top:8px;
+}
+.cover-stats{display:flex;flex-direction:column;gap:32px}
+.cover-stat-row{
+  display:flex;align-items:baseline;gap:20px;
+  border-bottom:1px solid rgba(250,246,240,.12);
+  padding-bottom:20px;
+}
+.cover-stat-row:last-child{border-bottom:0;padding-bottom:0}
+.cover-stat-row .num{
+  font-family:'Fraunces',serif;font-weight:300;font-size:76px;
+  color:var(--gold);line-height:.9;letter-spacing:-.02em;min-width:140px;
+}
+.cover-stat-row .desc{font-family:'Inter',sans-serif;font-size:15px;color:var(--paper-warm);opacity:.85;line-height:1.4}
+.cover-stat-row .desc strong{
+  display:block;font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;margin-bottom:4px;
+}
+
+/* === STANDARD LAYOUTS === */
+.slide-body{flex:1;display:flex;flex-direction:column;min-height:0;padding-bottom:36px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;flex:1;min-height:0}
+.two-col-asym{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;flex:1;min-height:0}
+.two-col-asym-r{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;flex:1;min-height:0}
+.kicker-block{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;flex-shrink:0}
+.lead{
+  font-family:'Fraunces',serif;font-style:italic;font-weight:300;
+  font-size:24px;color:var(--ink-soft);max-width:900px;line-height:1.4;
+}
+.body-text{font-size:16px;line-height:1.65;color:var(--ink-soft);max-width:580px}
+
+/* CARDS */
+.card{
+  background:var(--paper-warm);
+  border:1px solid var(--rule);
+  padding:28px 30px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.card.dark{background:var(--ink);color:var(--paper-warm);border-color:var(--ink)}
+.card.outline{background:transparent;border:1px solid var(--rule-strong)}
+.card .label{
+  font-family:'JetBrains Mono',monospace;
+  font-size:11px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--terracotta);
+}
+.card.dark .label{color:var(--gold)}
+.card h3{font-family:'Fraunces',serif;font-weight:500;font-size:24px;line-height:1.15;letter-spacing:-.01em;color:var(--ink)}
+.card.dark h3{color:var(--paper-warm)}
+.card p{font-size:15.5px;line-height:1.55;color:var(--ink-soft)}
+.card.dark p{color:rgba(250,246,240,.8)}
+
+/* === DIMENSIONS GRID === */
+.dim-grid{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:16px;flex:1;align-items:stretch;margin-top:8px;
+}
+.dim{
+  display:flex;flex-direction:column;
+  padding:32px 24px 26px;
+  background:var(--paper-warm);
+  border:1px solid var(--rule);
+  border-top:3px solid var(--terracotta);
+  position:relative;min-height:100%;
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.dim:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(26,20,16,.08)}
+.dim:nth-child(1){border-top-color:#b85042}
+.dim:nth-child(2){border-top-color:#c98c3a}
+.dim:nth-child(3){border-top-color:#d9a441}
+.dim:nth-child(4){border-top-color:#5d7a5a}
+.dim:nth-child(5){border-top-color:#2d3a45}
+.dim .dim-num{
+  font-family:'Fraunces',serif;font-weight:300;font-size:72px;
+  line-height:1;color:var(--terracotta);letter-spacing:-.025em;margin-bottom:14px;
+}
+.dim:nth-child(1) .dim-num{color:#b85042}
+.dim:nth-child(2) .dim-num{color:#c98c3a}
+.dim:nth-child(3) .dim-num{color:#d9a441}
+.dim:nth-child(4) .dim-num{color:#5d7a5a}
+.dim:nth-child(5) .dim-num{color:#2d3a45}
+.dim h4{font-family:'Fraunces',serif;font-weight:500;font-size:20px;line-height:1.18;margin-bottom:12px;color:var(--ink);letter-spacing:-.005em}
+.dim p{font-size:14.5px;line-height:1.55;color:var(--ink-soft);flex:1}
+.dim .cite{
+  font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;letter-spacing:.04em;color:var(--muted);
+  margin-top:16px;padding-top:12px;border-top:1px solid var(--rule);
+}
+
+/* === EVOLUTION CARDS === */
+.evo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;flex:1;margin-top:8px;align-items:stretch}
+.evo-card{
+  display:flex;flex-direction:column;
+  background:var(--paper);border:1px solid var(--rule);
+  padding:36px 32px;position:relative;min-height:100%;
+}
+.evo-card::before{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:var(--terracotta)}
+.evo-card:nth-child(2)::before{background:var(--ochre)}
+.evo-card:nth-child(3)::before{background:var(--sage)}
+.evo-card .ver{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+.evo-card .ver-num{font-family:'Fraunces',serif;font-weight:400;font-size:42px;color:var(--terracotta);letter-spacing:-.015em;margin:8px 0 16px}
+.evo-card:nth-child(2) .ver-num{color:var(--ochre)}
+.evo-card:nth-child(3) .ver-num{color:var(--sage)}
+.evo-card h4{font-family:'Fraunces',serif;font-size:22px;font-weight:500;line-height:1.2;margin-bottom:14px}
+.evo-card p{font-size:15px;line-height:1.55;color:var(--ink-soft)}
+.evo-card .metric{
+  margin-top:auto;padding-top:20px;border-top:1px solid var(--rule);
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);
+  letter-spacing:.05em;text-transform:uppercase;
+}
+.evo-card .metric strong{font-family:'Fraunces',serif;font-size:28px;color:var(--terracotta);font-weight:500}
+.evo-card:nth-child(2) .metric strong{color:var(--ochre)}
+.evo-card:nth-child(3) .metric strong{color:var(--sage)}
+
+/* === CHART CONTAINER === */
+.chart-wrap{
+  flex:1;background:var(--paper);
+  border:1px solid var(--rule);padding:22px;
+  display:flex;flex-direction:column;min-height:0;position:relative;
+}
+.chart-wrap canvas{flex:1;min-height:0;max-height:100%}
+.chart-title{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px;gap:24px}
+.chart-title h4{font-family:'Fraunces',serif;font-size:20px;font-weight:500}
+.chart-title .src{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+
+/* === INSIGHT === */
+.insights{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.insight{
+  display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;
+  padding:18px 22px;background:var(--paper-warm);border-left:3px solid var(--terracotta);
+}
+.insight .marker{font-family:'Fraunces',serif;font-size:30px;font-weight:400;color:var(--terracotta);line-height:1}
+.insight h5{font-family:'Fraunces',serif;font-size:18px;font-weight:600;margin-bottom:5px}
+.insight p{font-size:14.5px;line-height:1.55;color:var(--ink-soft)}
+
+/* === CODE === */
+.code-block{
+  background:var(--ink);color:var(--paper-warm);padding:28px 32px;
+  font-family:'JetBrains Mono',monospace;font-size:14px;line-height:1.7;
+  border-radius:2px;position:relative;overflow:hidden;
+}
+.code-block .tag{position:absolute;top:14px;right:18px;font-size:11px;letter-spacing:.2em;color:var(--gold);opacity:.7}
+.code-block .com{color:#7a8b6f;font-style:italic}
+.code-block .key{color:var(--gold)}
+.code-block .str{color:#e8b87a}
+.code-block .var{color:#d4c4a3}
+
+/* === RANK TABLE === */
+.rank-table{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--rule);flex:1}
+.rank-table > .rank-row{flex:1}
+.rank-row{
+  display:grid;grid-template-columns:42px 1fr auto auto;
+  gap:18px;align-items:center;
+  padding:11px 22px;border-bottom:1px solid var(--rule);
+  transition:background .2s;position:relative;min-height:0;
+}
+.rank-row:last-child{border-bottom:0}
+.rank-row:hover{background:var(--paper-warm)}
+.rank-row .pos{font-family:'Fraunces',serif;font-size:26px;font-weight:300;color:var(--terracotta);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.rank-row .pos.medal{color:var(--gold);font-weight:400}
+.rank-row .name{font-family:'Fraunces',serif;font-size:16px;font-weight:500}
+.rank-row .name .country{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);letter-spacing:.1em;display:block;margin-top:2px}
+.rank-row .vol{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.05em}
+.rank-row .score{
+  font-family:'Fraunces',serif;font-size:22px;font-weight:500;
+  color:var(--ink);font-variant-numeric:tabular-nums;
+  min-width:64px;text-align:right;
+}
+
+/* === SPLIT === */
+.split{display:grid;grid-template-columns:1fr 1px 1fr;gap:0;flex:1;min-height:0}
+.split .divider{background:var(--rule)}
+.split .col{padding:0 36px;display:flex;flex-direction:column;justify-content:center}
+.split .col:first-child{padding-left:0}
+.split .col:last-child{padding-right:0}
+.split h3{font-family:'Fraunces',serif;font-size:28px;font-weight:500;margin-bottom:8px;letter-spacing:-.01em}
+.split .approach{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--terracotta);margin-bottom:18px;
+}
+.split .col:last-child .approach{color:var(--sage-deep)}
+.split p{font-size:15.5px;line-height:1.6;color:var(--ink-soft);margin-bottom:14px}
+.split ul{list-style:none;padding:0}
+.split li{font-size:15px;line-height:1.55;color:var(--ink-soft);padding:9px 0 9px 20px;position:relative;border-bottom:1px solid var(--rule)}
+.split li:last-child{border-bottom:0}
+.split li::before{content:"";position:absolute;left:0;top:16px;width:10px;height:1px;background:var(--terracotta)}
+.split .col:last-child li::before{background:var(--sage-deep)}
+.split li strong{font-family:'Fraunces',serif;font-weight:600;color:var(--ink)}
+
+/* === CONCLUSION === */
+.conclusion-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;flex:1;align-items:stretch}
+.conc-card{
+  background:var(--paper-warm);border:1px solid var(--rule);
+  padding:38px 38px 32px;display:flex;flex-direction:column;justify-content:center;
+}
+.conc-card.dark{background:var(--ink);color:var(--paper-warm);border:0}
+.conc-card .num{font-family:'Fraunces',serif;font-weight:300;font-size:96px;color:var(--terracotta);line-height:.9;letter-spacing:-.03em;margin-bottom:10px}
+.conc-card.dark .num{color:var(--gold)}
+.conc-card h3{font-family:'Fraunces',serif;font-weight:500;font-size:26px;margin-bottom:16px}
+.conc-card p{font-size:15.5px;line-height:1.6;color:var(--ink-soft);margin-bottom:10px}
+.conc-card.dark p{color:rgba(250,246,240,.85)}
+
+/* === FOOTNOTE === */
+.footnote{
+  position:absolute;bottom:18px;left:72px;right:72px;
+  font-family:'JetBrains Mono',monospace;
+  font-size:10.5px;color:var(--muted);letter-spacing:.08em;
+  display:flex;justify-content:space-between;
+  border-top:1px solid var(--rule);padding-top:10px;
+}
+
+/* === BIG NUMBERS === */
+.big-num-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+}
+.big-num{padding:24px 22px;border-right:1px solid var(--rule)}
+.big-num:last-child{border-right:0}
+.big-num .n{font-family:'Fraunces',serif;font-weight:300;font-size:60px;color:var(--terracotta);line-height:.95;letter-spacing:-.025em}
+.big-num .l{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+/* === MAP === */
+.map-container{
+  flex:1;display:flex;flex-direction:column;
+  background:var(--paper);border:1px solid var(--rule);
+  padding:24px;min-height:0;
+}
+.map-svg-wrap{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;position:relative}
+.map-svg-wrap svg{max-height:100%;max-width:100%;width:auto;height:auto}
+.legend-bar{
+  display:flex;align-items:center;gap:14px;margin-top:18px;
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);
+  letter-spacing:.1em;text-transform:uppercase;
+}
+.legend-grad{flex:1;height:10px;background:linear-gradient(90deg,#f0e6d3,#e8d9c0,#d9b074,#c98c3a,#b85042,#8a3328)}
+
+/* === NAV === */
+.nav{
+  position:fixed;bottom:20px;left:50%;transform:translateX(-50%);
+  display:flex;align-items:center;gap:14px;
+  background:rgba(26,20,16,.92);backdrop-filter:blur(10px);
+  padding:8px 14px;border-radius:100px;z-index:100;
+  font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--paper-warm);
+  letter-spacing:.1em;box-shadow:0 8px 32px rgba(26,20,16,.2);
+  opacity:.85;transition:opacity .3s, transform .35s cubic-bezier(.4,0,.2,1);
+}
+.nav:hover{opacity:1}
+.nav.hidden{transform:translateX(-50%) translateY(72px);opacity:0;pointer-events:none}
+.nav-toggle{
+  position:fixed;bottom:20px;right:24px;width:38px;height:38px;border-radius:50%;
+  background:rgba(26,20,16,.85);backdrop-filter:blur(10px);
+  border:0;color:var(--paper-warm);cursor:pointer;z-index:101;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'JetBrains Mono',monospace;font-size:14px;
+  box-shadow:0 4px 16px rgba(26,20,16,.18);
+  opacity:.7;transition:opacity .2s, transform .2s;
+}
+.nav-toggle:hover{opacity:1;transform:scale(1.05)}
+.nav button{
+  background:transparent;border:0;color:var(--paper-warm);cursor:pointer;
+  font-family:inherit;font-size:14px;padding:4px 8px;border-radius:50%;
+  width:28px;height:28px;display:flex;align-items:center;justify-content:center;
+  transition:background .2s;
+}
+.nav button:hover{background:rgba(250,246,240,.1)}
+.nav .progress{display:flex;gap:3px}
+.nav .progress span{width:18px;height:2px;background:rgba(250,246,240,.3);cursor:pointer;transition:background .3s}
+.nav .progress span.active{background:var(--gold)}
+.nav .progress span.passed{background:rgba(217,164,65,.6)}
+.nav .counter{color:var(--paper-warm);font-variant-numeric:tabular-nums;padding:0 6px}
+.nav .counter .cur{color:var(--gold);font-weight:500}
+
+.kbd-hint{
+  position:fixed;bottom:34px;right:78px;
+  font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);
+  letter-spacing:.1em;z-index:50;
+}
+.kbd-hint kbd{
+  background:var(--paper-warm);border:1px solid var(--rule-strong);
+  padding:2px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;
+  font-size:10px;color:var(--ink);margin:0 2px;
+}
+.deck-progress{
+  position:fixed;top:0;left:0;height:2px;
+  background:var(--terracotta);z-index:200;
+  transition:width .55s cubic-bezier(.4,0,.2,1);
+}
+
+/* === LIST PRESIDÊNCIA STAGED === */
+.stage-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:0;flex-shrink:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.stage{padding:18px 16px;border-right:1px solid var(--rule);text-align:center}
+.stage:last-child{border-right:0}
+.stage .nm{font-family:'Fraunces',serif;font-weight:500;font-size:13px;color:var(--ink)}
+.stage .yr{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.1em;margin:4px 0}
+.stage .sc{font-family:'Fraunces',serif;font-weight:600;font-size:24px;letter-spacing:-.02em}
+
+/* === HERO LARGE NUMBER === */
+.hero-num{
+  font-family:'Fraunces',serif;font-weight:300;
+  font-size:clamp(140px,15vw,220px);line-height:.9;
+  letter-spacing:-.04em;color:var(--terracotta);
+}
+.hero-num .unit{font-size:.4em;color:var(--muted);font-style:italic;font-weight:400}
+
+/* === PIPELINE FLOW === */
+.pipeline-vert{display:flex;flex-direction:column;gap:0;flex:1}
+.pipe-stage{
+  display:grid;grid-template-columns:80px 1fr;gap:24px;align-items:center;
+  padding:22px 0;border-bottom:1px solid var(--rule);
+}
+.pipe-stage:last-child{border-bottom:0}
+.pipe-stage .ic{
+  width:64px;height:64px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',serif;font-size:24px;font-weight:500;
+  background:var(--paper-warm);color:var(--terracotta);
+  border:1px solid var(--rule-strong);
+}
+.pipe-stage:nth-child(2) .ic{background:var(--ink);color:var(--gold);border-color:var(--ink)}
+.pipe-stage:nth-child(3) .ic{background:var(--terracotta);color:var(--paper-warm);border-color:var(--terracotta)}
+.pipe-stage:nth-child(4) .ic{background:var(--sage);color:var(--paper-warm);border-color:var(--sage)}
+.pipe-stage h4{font-family:'Fraunces',serif;font-size:22px;font-weight:600;margin-bottom:4px}
+.pipe-stage p{font-size:15px;color:var(--ink-soft);line-height:1.5}
+
+/* === RESPONSIVE === */
+@media (max-width:1100px){
+  .slide{padding:48px 56px 48px 56px}
+  .slide-tag,.footnote{left:56px}
+  .slide-num,.footnote{right:56px}
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.slide.active .anim{animation:fadeUp .8s cubic-bezier(.2,.6,.2,1) both}
+.slide.active .anim-1{animation-delay:.1s}
+.slide.active .anim-2{animation-delay:.2s}
+.slide.active .anim-3{animation-delay:.3s}
+.slide.active .anim-4{animation-delay:.4s}
+.slide.active .anim-5{animation-delay:.5s}
+
+/* === MAP COUNTRY === */
+.country{stroke:#faf6f0;stroke-width:.7;cursor:pointer;transition:filter .3s,opacity .3s}
+.country:hover{filter:brightness(.92);opacity:.95}
+.cnum{font-family:'Fraunces',serif;font-weight:600;fill:#1a1410;pointer-events:none}
+.cnum-l{fill:#faf6f0}
+.clbl{font-family:'JetBrains Mono',monospace;font-weight:500;fill:#1a1410;pointer-events:none;letter-spacing:.05em}
+.clbl-l{fill:#faf6f0}
+.ocean-label{font-family:'Fraunces',serif;font-style:italic;fill:#a99a82;letter-spacing:.1em;pointer-events:none}
+
+/* === HERO COL === */
+.hero-col{display:flex;flex-direction:column;justify-content:center;gap:24px}
+.hero-col .super{
+  font-family:'JetBrains Mono',monospace;
+  font-size:12px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--terracotta);
+}
+.hero-col .display{
+  font-family:'Fraunces',serif;font-weight:300;
+  font-size:clamp(54px,5.6vw,96px);line-height:.96;
+  letter-spacing:-.02em;color:var(--ink);
+}
+.hero-col .display em{font-style:italic;color:var(--terracotta);font-weight:500}
+.hero-col .dec{font-family:'Fraunces',serif;font-style:italic;font-size:22px;color:var(--ink-soft);line-height:1.4}
+
+/* === MINI CHART CARDS === */
+.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;flex:1;align-items:stretch}
+.mini-card{
+  background:var(--paper);border:1px solid var(--rule);
+  padding:20px;display:flex;flex-direction:column;min-height:0;
+}
+.mini-card h5{font-family:'Fraunces',serif;font-size:18px;font-weight:600;margin-bottom:4px}
+.mini-card .meta{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.mini-card .canvas-wrap{flex:1;min-height:0;position:relative}
+.mini-card canvas{position:absolute;inset:0;width:100% !important;height:100% !important}
+
+/* === STAT CALLOUTS === */
+.stat-row{display:flex;justify-content:space-between;align-items:baseline;gap:18px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.stat-row:last-child{border-bottom:0}
+.stat-row .lbl{font-family:'Fraunces',serif;font-size:16px;font-weight:500}
+.stat-row .lbl small{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;font-weight:400}
+.stat-row .val{font-family:'Fraunces',serif;font-size:28px;font-weight:500;color:var(--terracotta);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+</style>
+</head>
+<body>
+
+<div class="deck-progress" id="progress"></div>
+
+<div class="deck" id="deck">
+
+<!-- ============== 1: COVER ============== -->
+<section class="slide cover active">
+  <div class="cover-inner">
+    <div class="cover-left">
+      <div class="cover-meta anim anim-1">
+        <span class="institution">Dissertação de Mestrado</span>
+        <span>Programa de Pós-Graduação · Economia</span>
+        <span>2025</span>
+      </div>
+      <div class="cover-title anim anim-2">
+        <span class="pre">Populismo em Números</span>
+        <h1>Construção de um <span class="accent">índice</span><br>para mensurar a retórica<br>populista na <span class="accent">América Latina</span></h1>
+      </div>
+      <div class="cover-author anim anim-3">
+        <div>
+          <div class="name">André Pyles Siqueira</div>
+          <div class="role">Autor · Mestrando</div>
+        </div>
+        <div style="text-align:right">
+          <div class="name serif" style="font-size:14px;font-style:italic;color:var(--muted)">POPIN v3.0</div>
+          <div class="role">Século XXI · 2000–2024</div>
+        </div>
+      </div>
+    </div>
+    <div class="cover-right">
+      <div class="cover-stat anim anim-2">
+        <div class="num">POP<span class="small">·</span>IN</div>
+        <div class="label">Populism Index</div>
+      </div>
+      <div class="cover-stats anim anim-3">
+        <div class="cover-stat-row"><div class="num">45k</div><div class="desc"><strong>Discursos</strong>Corpus presidencial latino-americano (DiscourseDB)</div></div>
+        <div class="cover-stat-row"><div class="num">18</div><div class="desc"><strong>Países</strong>Cobertura completa da região</div></div>
+        <div class="cover-stat-row"><div class="num">101</div><div class="desc"><strong>Líderes</strong>Presidentes e chefes de Estado</div></div>
+        <div class="cover-stat-row"><div class="num">25</div><div class="desc"><strong>Anos</strong>Série temporal 2000–2024</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 2: A QUESTÃO ============== -->
+<section class="slide">
+  <div class="slide-tag">01 · A Questão</div>
+  <span class="slide-num"><span class="cur">02</span> / 13</span>
+  <div class="slide-body">
+    <div class="two-col" style="align-items:center">
+      <div class="hero-col anim anim-1">
+        <div class="super">Pergunta de pesquisa</div>
+        <div class="display">Como medir aquilo que <em>resiste à medição</em>?</div>
+        <div class="dec">Como identificar o populismo a partir de discursos — e atribuir um <strong style="font-style:normal;color:var(--ink)">score contínuo</strong> a um fenômeno historicamente classificado em termos binários?</div>
+      </div>
+      <div class="anim anim-2" style="display:flex;flex-direction:column;gap:18px;justify-content:center">
+        <div class="card outline">
+          <span class="label">I · Justificativa econômica</span>
+          <h3>Um fenômeno persistente que molda a região</h3>
+          <p>O populismo é recorrente e intrínseco ao desenvolvimento latino-americano. Identificá-lo ajuda a entender trajetórias políticas e econômicas — e antecipar choques macroeconômicos.</p>
+        </div>
+        <div class="card outline">
+          <span class="label">II · Por que continuum?</span>
+          <h3>Comparabilidade, transparência, reprodutibilidade</h3>
+          <p>Uma medida contínua e auditável amplia a capacidade comparativa entre líderes e regimes, abrindo espaço para análises de impacto econômico futuras.</p>
+        </div>
+        <div class="card dark">
+          <span class="label">III · Subproduto</span>
+          <h3 style="font-size:22px">DiscourseDB &middot; corpus público</h3>
+          <p>O maior corpus aberto de discursos presidenciais latino-americanos do século XXI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footnote"><span>POPIN · Pergunta de Pesquisa</span><span>Justificativa &middot; Objetivos</span></div>
+</section>
+
+<!-- ============== 3: MARCO TEÓRICO ============== -->
+<section class="slide">
+  <div class="slide-tag">02 · Marco Teórico</div>
+  <span class="slide-num"><span class="cur">03</span> / 13</span>
+  <div class="slide-body">
+    <div class="kicker-block anim anim-1">
+      <span class="eyebrow">Definir o indefinível</span>
+      <h2 class="section-title">Duas tradições em <em>tensão produtiva</em></h2>
+      <p class="lead">A literatura oferece dois caminhos para conceituar o populismo. Ambos informam o desenho do POPIN.</p>
+    </div>
+    <div class="split anim anim-2">
+      <div class="col">
+        <div class="approach">Abordagem Ideacional</div>
+        <h3>Visão de mundo maniqueísta</h3>
+        <p style="font-family:'Fraunces',serif;font-style:italic;font-size:20px;color:var(--terracotta);margin:14px 0;line-height:1.3">"Uma sociedade dividida em dois grupos antagônicos e homogêneos."</p>
+        <p>Baseada em <strong>Cas Mudde</strong> e <strong>Kirk Hawkins</strong>, define populismo como ideologia <em>thin-centered</em> — uma estrutura mental que separa a sociedade em campos morais opostos.</p>
+        <ul>
+          <li><strong>O Povo Puro</strong> versus <strong>A Elite Corrupta</strong></li>
+          <li>Soberania popular como princípio absoluto</li>
+          <li>Política como expressão da <em>vontade geral</em></li>
+        </ul>
+      </div>
+      <div class="divider"></div>
+      <div class="col">
+        <div class="approach">Estratégia Discursiva</div>
+        <h3>Performance e construção política</h3>
+        <p style="font-family:'Fraunces',serif;font-style:italic;font-size:20px;color:var(--sage-deep);margin:14px 0;line-height:1.3">"Operação simbólica que articula demandas dispersas sob um líder."</p>
+        <p>Baseada em <strong>Ernesto Laclau</strong> e estendida por <strong>Moffitt</strong> e <strong>Pappas</strong>: o populismo opera como prática performática.</p>
+        <ul>
+          <li><strong>Equivalência:</strong> insatisfações dispersas unificadas sob um líder</li>
+          <li><strong>Significantes vazios:</strong> termos ambíguos preenchidos politicamente</li>
+          <li><strong>Estilo:</strong> confronto institucional como performance</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footnote"><span>Marco Teórico</span><span>Mudde &middot; Hawkins &middot; Laclau &middot; Moffitt &middot; Pappas</span></div>
+</section>
+
+<!-- ============== 4: ESTRATÉGIA + CORPUS ============== -->
+<section class="slide">
+  <div class="slide-tag">03 · Estratégia</div>
+  <span class="slide-num"><span class="cur">04</span> / 13</span>
+  <div class="slide-body">
+    <div class="kicker-block anim anim-1">
+      <span class="eyebrow">Da teoria à mensuração</span>
+      <h2 class="section-title">Um pipeline <em>computacional</em> para um problema hermenêutico</h2>
+    </div>
+    <div class="big-num-grid anim anim-2">
+      <div class="big-num"><div class="n">45k</div><div class="l">Discursos</div></div>
+      <div class="big-num"><div class="n">18</div><div class="l">Países</div></div>
+      <div class="big-num"><div class="n">101</div><div class="l">Líderes</div></div>
+      <div class="big-num"><div class="n">25</div><div class="l">Anos</div></div>
+    </div>
+    <div class="anim anim-3" style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:8px">
+      <div class="pipeline-vert">
+        <div class="pipe-stage">
+          <div class="ic">A</div>
+          <div>
+            <h4>Coleta automatizada</h4>
+            <p>Web scraping em sites oficiais de presidência, validação de metadata e desduplicação textual.</p>
+          </div>
+        </div>
+        <div class="pipe-stage">
+          <div class="ic">B</div>
+          <div>
+            <h4>DiscourseDB</h4>
+            <p>Corpus público estruturado: maior base aberta de discursos presidenciais latino-americanos.</p>
+          </div>
+        </div>
+        <div class="pipe-stage">
+          <div class="ic">C</div>
+          <div>
+            <h4>Análise via LLM</h4>
+            <p>Prompt engineering ancorado na literatura, exigindo evidências citáveis para cada nota.</p>
+          </div>
+        </div>
+        <div class="pipe-stage">
+          <div class="ic">D</div>
+          <div>
+            <h4>Score 0–100</h4>
+            <p>Saída JSON multidimensional sobre 5 eixos teóricos — auditável e reprodutível.</p>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;height:100%">
+        <p class="lead" style="margin-bottom:24px">Em vez de treinar um classificador supervisionado preso a léxicos rígidos, o POPIN explora a <strong style="font-style:normal;color:var(--ink)">capacidade interpretativa</strong> já internalizada por modelos de linguagem.</p>
+        <div class="card dark">
+          <span class="label">Output científico</span>
+          <h3 style="font-size:22px">Índice contínuo, multidimensional, reprodutível</h3>
+          <p style="font-size:15px">Score 0–100 sobre 5 eixos teóricos, com auditabilidade plena dos prompts, dos exemplos e da composição amostral.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footnote"><span>Estratégia metodológica</span><span>DiscourseDB &middot; LLM Pipeline</span></div>
+</section>
+
+<!-- ============== 5: EVOLUÇÃO POPIN ============== -->
+<section class="slide">
+  <div class="slide-tag">04 · Evolução do Modelo</div>
+  <span class="slide-num"><span class="cur">05</span> / 13</span>
+  <div class="slide-body">
+    <div class="kicker-block anim anim-1">
+      <span class="eyebrow">Três gerações</span>
+      <h2 class="section-title">De árvores de decisão a <em>raciocínio dimensional</em></h2>
+      <p class="lead">Cada versão respondeu às limitações da anterior — culminando em uma arquitetura que abandona a supervisão binária.</p>
+    </div>
+    <div class="evo-grid anim anim-2">
+      <div class="evo-card">
+        <span class="ver">v1.0 · 2024</span>
+        <span class="ver-num">Random Forest</span>
+        <h4>Prova de conceito supervisionada</h4>
+        <p>Vetorização TF-IDF e árvore de decisão sobre discursos rotulados. Boa baseline, mas presa a léxico simples e a uma classificação dicotômica.</p>
+        <div class="metric"><span>Acurácia</span><strong>87%</strong></div>
+      </div>
+      <div class="evo-card">
+        <span class="ver">v2.0 · 2024</span>
+        <span class="ver-num">BERT</span>
+        <h4>Compreensão contextual</h4>
+        <p>Fine-tuning de Transformers (BERT Multilingual) sobre o corpus expandido. Capturou contexto semântico — mas manteve o viés binário do treino.</p>
+        <div class="metric"><span>Corpus</span><strong>45k</strong></div>
+      </div>
+      <div class="evo-card">
+        <span class="ver">v3.0 · 2025</span>
+        <span class="ver-num">LLM</span>
+        <h4>Análise dimensional 5 eixos</h4>
+        <p>Renúncia à supervisão binária. Prompt engineering em LLMs (Qwen-30B) ancora a inferência nas definições teóricas, exigindo evidências explícitas.</p>
+        <div class="metric"><span>Granularidade</span><strong>0–100</strong></div>
+      </div>
+    </div>
+  </div>
+  <div class="footnote"><span>Iteração metodológica</span><span>Random Forest → BERT → LLM</span></div>
+</section>
+
+<!-- ============== 6: ARQUITETURA v3.0 ============== -->
+<section class="slide">
+  <div class="slide-tag">05 · Arquitetura v3.0</div>
+  <span class="slide-num"><span class="cur">06</span> / 13</span>
+  <div class="slide-body">
+    <div class="kicker-block anim anim-1">
+      <span class="eyebrow">Mecânica do POPIN v3.0</span>
+      <h2 class="section-title">Inferência ancorada em <em>prompt engineering</em></h2>
+    </div>
+    <div class="two-col anim anim-2" style="gap:48px;align-items:center">
+      <div>
+        <div class="code-block">
+          <span class="tag">SYSTEM PROMPT</span>
+<span class="com"># Analyze the political speech using</span>
+<span class="com"># the 5-dimensional framework:</span>
+
+<span class="key">people_centrism</span>: <span class="str">"unified &amp; virtuous people"</span>
+<span class="key">anti_elitism</span>:    <span class="str">"elites as morally corrupt"</span>
+<span class="key">moral_dichotomy</span>: <span class="str">"good vs. evil framing"</span>
+<span class="key">exclusion</span>:       <span class="str">"who counts as 'the people'"</span>
+<span class="key">pop_sovereignty</span>: <span class="str">"bypass institutions"</span>
+
+<span class="com"># For each dimension, return:</span>
+<span class="var">{ score: 0–100, evidence: [quote, …] }</span>
+        </div>
+        <p class="body-text" style="margin-top:18px">O prompt <strong>ancora</strong> a IA nas definições teóricas, exige <strong>evidências citáveis</strong> em cada quote — reduzindo alucinação e eliminando viés subjetivo do anotador humano.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="card">
+          <span class="label">Modelo</span>
+          <h3>Qwen-30B-Instruct</h3>
+          <p>Open-source rodando em <span class="mono" style="font-size:14px;color:var(--ink)">vLLM local</span> — reprodutibilidade total e custo controlado.</p>
+        </div>
+        <div class="card">
+          <span class="label">Segmentação</span>
+          <h3>Chunks com overlap</h3>
+          <p>Discursos longos são divididos em janelas com sobreposição para preservar contexto. Agregação ponderada ao final.</p>
+        </div>
+        <div class="card">
+          <span class="label">Saída</span>
+          <h3>JSON estruturado</h3>
+          <p>Score por eixo, score consolidado e excerts citáveis — permitindo <strong>auditoria reversa</strong> de cada nota atribuída.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footnote"><span>POPIN v3.0 · Arquitetura</span><span>Qwen-30B &middot; vLLM &middot; JSON Schema</span></div>
+</section>
+
+<!-- ============== 7: 5 DIMENSÕES ============== -->
+<section class="slide">
+  <div class="slide-tag">06 · Framework Conceitual</div>
+  <span class="slide-num"><span class="cur">07</span> / 13</span>
+  <div class="slide-body">
+    <div class="kicker-block anim anim-1">
+      <span class="eyebrow">Os 5 eixos</span>
+      <h2 class="section-title">As cinco dimensões do <em>POPIN v3.0</em></h2>
+      <p class="lead">Cada eixo opera como um vetor independente, ancorado em uma referência canônica da literatura.</p>
+    </div>
+    <div class="dim-grid anim anim-2">
+      <div class="dim">
+        <div class="dim-num">01</div>
+        <h4>Centralidade do Povo</h4>
+        <p>A idealização de um povo homogêneo e virtuoso cuja vontade é suprema e moralmente legítima.</p>
+        <div class="cite">Mudde &amp; Kaltwasser, 2017</div>
+      </div>
+      <div class="dim">
+        <div class="dim-num">02</div>
+        <h4>Antielitismo</h4>
+        <p>A denúncia moral da elite política, econômica ou cultural — apresentada como inimiga do projeto popular.</p>
+        <div class="cite">Mudde, 2004</div>
+      </div>
+      <div class="dim">
+        <div class="dim-num">03</div>
+        <h4>Dicotomia Moral</h4>
+        <p>Enquadramento da política como uma luta cosmológica entre o povo bom e a elite má — sem zona cinzenta.</p>
+        <div class="cite">Weyland, 2017</div>
+      </div>
+      <div class="dim">
+        <div class="dim-num">04</div>
+        <h4>Retórica de Exclusão</h4>
+        <p>Definição restritiva de quem pertence ao povo — opositores são deslegitimados como traidores.</p>
+        <div class="cite">Pappas, 2019</div>
+      </div>
+      <div class="dim">
+        <div class="dim-num">05</div>
+        <h4>Soberania Popular</h4>
+        <p>Liberdade discursiva para contornar instituições em nome da vontade direta do povo.</p>
+        <div class="cite">Moffitt, 2016</div>
+      </div>
+    </div>
+  </div>
+  <div class="footnote"><span>POPIN v3.0 &middot; 5 Dimensões</span><span>Score agregado 0–100</span></div>
+</section>
+
+<!-- ============== 8: RANKING UNIFICADO (PAÍSES + LÍDERES) ============== -->
+<section class="slide">
+  <div class="slide-tag">07 · Ranking Geral</div>
+  <span class="slide-num"><span class="cur">08</span> / 13</span>
+  <div class="slide-body">
+    <div class="kicker-block anim anim-1">
+      <span class="eyebrow">Quem fala como populista?</span>
+      <h2 class="section-title">O ranking POPIN — <em>países</em> e <em>líderes</em></h2>
+      <p class="lead">A Venezuela domina como nação e exporta seus dois principais líderes (Chávez e Maduro) ao topo do ranking individual.</p>
+    </div>
+
+    <div class="anim anim-2" style="flex:1;display:grid;grid-template-columns:1fr 1.15fr;gap:44px;min-height:0">
+
+      <!-- Coluna esquerda: top 10 países (gráfico de barras) -->
+      <div style="display:flex;flex-direction:column;min-height:0">
+        <div class="chart-title">
+          <h4>Top 10 países &middot; Score POPIN médio</h4>
+          <span class="src">2000–2024</span>
+        </div>
+        <div class="chart-wrap" style="padding:18px;flex:1">
+          <canvas id="chartCountries"></canvas>
+        </div>
+      </div>
+
+      <!-- Coluna direita: top 10 líderes -->
+      <div style="display:flex;flex-direction:column;min-height:0">
+        <div class="chart-title">
+          <h4>Top 10 líderes &middot; Maior score POPIN</h4>
+          <span class="src">≥ 100 discursos</span>
+        </div>
+        <div class="rank-table" style="flex:1;margin-top:0">
+          <div class="rank-row" style="background:linear-gradient(90deg,rgba(217,164,65,.12),transparent 60%)">
+            <div class="pos medal">1</div>
+            <div class="name">Hugo Chávez<span class="country">Venezuela &middot; 1.316 discursos</span></div>
+            <div class="vol"></div>
+            <div class="score">72,3</div>
+          </div>
+          <div class="rank-row" style="background:linear-gradient(90deg,rgba(217,164,65,.09),transparent 60%)">
+            <div class="pos medal">2</div>
+            <div class="name">Nicolás Maduro<span class="country">Venezuela &middot; 2.293 discursos</span></div>
+            <div class="vol"></div>
+            <div class="score">71,3</div>
+          </div>
+          <div class="rank-row" style="background:linear-gradient(90deg,rgba(217,164,65,.06),transparent 60%)">
+            <div class="pos medal">3</div>
+            <div class="name">Rafael Correa<span class="country">Equador &middot; 635 discursos</span></div>
+            <div class="vol"></div>
+            <div class="score">66,5</div>
+          </div>
+          <div class="rank-row">
+            <div class="pos">4</div>
+            <div class="name">Claudia Sheinbaum<span class="country">México &middot; 190 discursos</span></div>
+            <div class="vol"></div>
+            <div class="score">63,3</div>
+          </div>
+          <div class="rank-row">
+            <div class="pos">5</div>
+            <div class="name">Javier Milei<span class="country">Argentina &middot; 221 discursos</span></div>
+            <div class="vol"></div>
+            <div class="score">51,8</div>
+          </div>
+          <div class="rank-row">
+            <div class="pos">6</div>
+            <div class="name">Daniel Ortega<span class="country">Nicarágua &middot; 509 discursos</span></div>
+            <div class="vol"></div>
+            <div class="score">51,2</div>
+          </div>
+          <div class="rank-row">
+            <div class="pos">7</div>
+            <div class="name">Evo Morales<span class="country">Bolívia &middot; 144 discursos</span></div>
+            <div class="vol"></div>
+            <div class="score">50,8</div>
+          </div>
+          <div class="rank-row">
+            <div class="pos">8</div>
+            <div class="name">López Obrador<span class="country">México &middot; 1.496 discursos</span></div>
+            <div class="vol"></div>
+            <div class="score">50,6</div>
+          </div>
+          <div class="rank-row">
+            <div class="pos">9</div>
+            <div class="name">Néstor Kirchner<span class="country">Argentina &middot; 622 discursos</span></div>
+            <div class="vol"></div>
+            <div class="score">49,9</div>
+          </div>
+          <div class="rank-row">
+            <div class="pos">10</div>
+            <div class="name">Lula da Silva<span class="country">Brasil &middot; 2.834 discursos</span></div>
+            <div class="vol"></div>
+            <div class="score">42,1</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footnote"><span>POPIN v3.0 &middot; Ranking Países + Líderes</span><span>Fonte: elaboração própria &middot; filtro ≥ 100 discursos</span></div>
+</section>
+
+<!-- ============== 10: VENEZUELA ============== -->
+<section class="slide">
+  <div class="slide-tag">08 · Caso Venezuela</div>
+  <span class="slide-num"><span class="cur">09</span> / 13</span>
+  <div class="slide-body">
+    <div class="kicker-block anim anim-1">
+      <span class="eyebrow">Venezuela &middot; 2000–2024</span>
+      <h2 class="section-title">Retórica populista <em>persistente</em> e estrutural</h2>
+    </div>
+    <div class="two-col-asym anim anim-2" style="gap:44px">
+      <div style="display:flex;flex-direction:column;min-height:0">
+        <div class="chart-wrap">
+          <div class="chart-title">
+            <h4>Evolução POPIN — Venezuela</h4>
+            <span class="src">Chávez → Maduro</span>
+          </div>
+          <canvas id="chartVenezuela"></canvas>
+        </div>
+      </div>
+      <div class="insights">
+        <div class="insight">
+          <div class="marker">I</div>
+          <div>
+            <h5>Chavismo persistente</h5>
+            <p>Patamar de 69–73 entre 2000 e 2012: antielitismo e soberania popular como <strong>traços estruturais</strong>, não cíclicos.</p>
+          </div>
+        </div>
+        <div class="insight" style="border-left-color:var(--terracotta-deep)">
+          <div class="marker" style="color:var(--terracotta-deep)">II</div>
+          <div>
+            <h5>Pico de 2014 &middot; ~82</h5>
+            <p>Sucessão Chávez → Maduro intensifica o repertório retórico para disputar legitimidade política.</p>
+          </div>
+        </div>
+        <div class="insight" style="border-left-color:var(--ochre)">
+          <div class="marker" style="color:var(--ochre)">III</div>
+          <div>
+            <h5>Massificação institucional</h5>
+            <p>Alto volume de discursos sugere a populista como <em>ferramenta de governo</em> — comunicação plebiscitária permanente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footnote"><span>Caso Venezuela</span><span>Mudde, 2004 &middot; Hawkins, 2019 &middot; Corrales &amp; Penfold, 2015</span></div>
+</section>
+
+<!-- ============== 11: BRASIL ============== -->
+<section class="slide">
+  <div class="slide-tag">09 · Caso Brasil</div>
+  <span class="slide-num"><span class="cur">10</span> / 13</span>
+  <div class="slide-body">
+    <div class="kicker-block anim anim-1">
+      <span class="eyebrow">Brasil &middot; 2000–2024</span>
+      <h2 class="section-title">Ciclos retóricos sob <em>seis presidências</em></h2>
+    </div>
+    <div class="stage-grid anim anim-2">
+      <div class="stage"><div class="nm">FHC</div><div class="yr">2000–02</div><div class="sc" style="color:var(--sage-deep)">~10</div></div>
+      <div class="stage"><div class="nm">Lula</div><div class="yr">2003–10</div><div class="sc" style="color:var(--terracotta)">~37</div></div>
+      <div class="stage"><div class="nm">Dilma</div><div class="yr">2011–16</div><div class="sc" style="color:var(--ochre)">~22</div></div>
+      <div class="stage"><div class="nm">Temer</div><div class="yr">2017–18</div><div class="sc" style="color:var(--sage-deep)">~17</div></div>
+      <div class="stage"><div class="nm">Bolsonaro</div><div class="yr">2019–22</div><div class="sc" style="color:var(--terracotta-deep)">~42</div></div>
+      <div class="stage"><div class="nm">Lula</div><div class="yr">2023–24</div><div class="sc" style="color:var(--terracotta)">~45</div></div>
+    </div>
+    <div class="anim anim-3" style="flex:1;display:grid;grid-template-columns:1.1fr .9fr;gap:44px;margin-top:20px;min-height:0">
+      <div style="display:flex;flex-direction:column;min-height:0">
+        <div class="chart-wrap">
+          <div class="chart-title">
+            <h4>Evolução POPIN — Brasil</h4>
+            <span class="src">2000–2024</span>
+          </div>
+          <canvas id="chartBrasil"></canvas>
+        </div>
+      </div>
+      <div class="insights">
+        <div class="insight" style="border-left-color:var(--sage-deep)">
+          <div class="marker" style="color:var(--sage-deep)">I</div>
+          <div><h5>FHC &amp; Temer &middot; tecnocracia</h5><p>Patamares baixos (9–19), coerentes com perfil pragmático e foco em estabilização.</p></div>
+        </div>
+        <div class="insight">
+          <div class="marker">II</div>
+          <div><h5>Lulismo &middot; mobilização</h5><p>32–42: combinação de mobilização popular e crítica às elites — sem retórica excludente.</p></div>
+        </div>
+        <div class="insight" style="border-left-color:var(--ochre)">
+          <div class="marker" style="color:var(--ochre)">III</div>
+          <div><h5>Choque institucional 2016</h5><p>Salto isolado para 39 no ano do impeachment.</p></div>
+        </div>
+        <div class="insight" style="border-left-color:var(--terracotta-deep)">
+          <div class="marker" style="color:var(--terracotta-deep)">IV</div>
+          <div><h5>Bolsonarismo &middot; polarização</h5><p>37–47 em 2019–24: retórica antissistema e desintermediação digital.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footnote"><span>Caso Brasil</span><span>Hunter &amp; Power 2007/2019 &middot; Tucker et al. 2018</span></div>
+</section>
+
+<!-- ============== 12: ARGENTINA + COMPARATIVE MINI ============== -->
+<section class="slide">
+  <div class="slide-tag">10 · Argentina &amp; Comparativo</div>
+  <span class="slide-num"><span class="cur">11</span> / 13</span>
+  <div class="slide-body">
+    <div class="kicker-block anim anim-1">
+      <span class="eyebrow">Comparativo dos três casos</span>
+      <h2 class="section-title">Trajetórias <em>contrastantes</em> em três economias</h2>
+      <p class="lead">A Argentina revela um padrão não-linear: kirchnerismo moderado, choque pandêmico e ruptura abrupta com Milei (38 → 67) em 2024.</p>
+    </div>
+    <div class="mini-grid anim anim-2">
+      <div class="mini-card">
+        <h5>Argentina</h5>
+        <span class="meta">Néstor → Milei &middot; Score médio 21,8</span>
+        <div class="canvas-wrap"><canvas id="chartArg"></canvas></div>
+      </div>
+      <div class="mini-card">
+        <h5>Brasil</h5>
+        <span class="meta">FHC → Lula &middot; Score médio 31,8</span>
+        <div class="canvas-wrap"><canvas id="chartBr"></canvas></div>
+      </div>
+      <div class="mini-card">
+        <h5>Venezuela</h5>
+        <span class="meta">Chávez → Maduro &middot; Score médio 66,3</span>
+        <div class="canvas-wrap"><canvas id="chartVen"></canvas></div>
+      </div>
+    </div>
+    <div class="anim anim-3" style="margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <div>
+        <div class="serif" style="font-size:18px;font-weight:600;margin-bottom:6px">Argentina</div>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:1.55">Kirchnerismo (38–47) → Cristina recua (13–21) → Macri tecnocrático → A. Fernández (40) na pandemia → <strong style="color:var(--terracotta-deep)">salto Milei 38→67 em 2024</strong>.</p>
+      </div>
+      <div>
+        <div class="serif" style="font-size:18px;font-weight:600;margin-bottom:6px">Brasil</div>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:1.55">Hiato tecnocrático (FHC, Temer, Dilma) intercalado por <strong>dois ciclos populistas</strong> distintos (Lula e Bolsonaro). 2016 isola um pico: ano do impeachment.</p>
+      </div>
+      <div>
+        <div class="serif" style="font-size:18px;font-weight:600;margin-bottom:6px">Venezuela</div>
+        <p style="font-size:14px;color:var(--ink-soft);line-height:1.55">Plateau elevado e estável (60–82) ao longo de 24 anos. <strong>Sem ciclos</strong>: a retórica populista é o repertório de governo desde 1999.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footnote"><span>Comparativo Argentina &middot; Brasil &middot; Venezuela</span><span>2000–2024</span></div>
+</section>
+
+<!-- ============== 13: MAPA AMÉRICA LATINA ============== -->
+<section class="slide">
+  <div class="slide-tag">12 · Panorama Regional</div>
+  <span class="slide-num"><span class="cur">13</span> / 13</span>
+  <div class="slide-body">
+    <div class="kicker-block anim anim-1" style="margin-bottom:14px">
+      <span class="eyebrow">Mapa POPIN &middot; América Latina</span>
+      <h2 class="section-title">Geografia da <em>retórica populista</em></h2>
+      <p class="lead">Um cinturão andino-caribenho de alta intensidade contrasta com um cone sul mais moderado.</p>
+    </div>
+    <div class="two-col-asym anim anim-2" style="gap:44px;flex:1;min-height:0">
+      <div class="map-container">
+        <div class="map-svg-wrap" id="mapWrap">
+          <div id="mapLoading" style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:.15em;text-transform:uppercase">Carregando mapa…</div>
+          <svg id="mapSvg" viewBox="0 0 720 920" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" style="display:none">
+          </svg>
+        </div>
+        <div class="legend-bar">
+          <span>Baixo &middot; 0</span>
+          <div class="legend-grad"></div>
+          <span>Alto &middot; 100</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;justify-content:center">
+        <div class="card outline" style="border-left:3px solid #8a3328">
+          <span class="label">Polo Andino-Caribenho</span>
+          <h3 style="font-size:21px">Venezuela 66,3 &middot; Equador 49,5</h3>
+          <p>Tradição "ideacional pura": antielitismo persistente e apelo plebiscitário institucionalizado como ferramenta de governo.</p>
+        </div>
+        <div class="card outline" style="border-left:3px solid #c98c3a">
+          <span class="label">Centro &middot; Mesoamérica</span>
+          <h3 style="font-size:21px">Costa Rica, México, Nicarágua</h3>
+          <p>Patamar intermediário (32–37). Costa Rica reflete amostra reduzida; México captura a era AMLO/Sheinbaum.</p>
+        </div>
+        <div class="card outline" style="border-left:3px solid #5d7a5a">
+          <span class="label">Cone Sul &middot; moderado</span>
+          <h3 style="font-size:21px">Argentina 21,8 &middot; Uruguai 9,6</h3>
+          <p>Heterogeneidade interna alta: Milei (51,8) coexiste com a fase Cristina (13–21).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footnote"><span>POPIN v3.0 &middot; Mapa Regional</span><span>Médias 2000–2024</span></div>
+</section>
+
+<!-- ============== 14: CONCLUSÃO ============== -->
+<section class="slide">
+  <div class="slide-tag">13 · Conclusão</div>
+  <span class="slide-num"><span class="cur">14</span> / 13</span>
+  <div class="slide-body">
+    <div class="kicker-block anim anim-1">
+      <span class="eyebrow">Limitações &amp; Próximos Passos</span>
+      <h2 class="section-title">O que o POPIN <em>vê</em> — e o que ainda falta</h2>
+    </div>
+    <div class="conclusion-grid anim anim-2">
+      <div class="conc-card">
+        <div class="num">3</div>
+        <h3>Limitações reconhecidas</h3>
+        <p><strong style="font-family:'Fraunces',serif">Retórica ≠ ação:</strong> o índice mede o discurso, não a prática populista.</p>
+        <p><strong style="font-family:'Fraunces',serif">Assimetrias amostrais:</strong> volume desigual entre países, líderes e anos.</p>
+        <p><strong style="font-family:'Fraunces',serif">Variação contextual:</strong> português/espanhol e estilos nacionais afetam comparabilidade fina.</p>
+      </div>
+      <div class="conc-card dark">
+        <div class="num">3</div>
+        <h3>Próximos passos</h3>
+        <p><strong style="font-family:'Fraunces',serif;color:var(--gold)">Expandir corpus:</strong> aumentar cobertura temporal e reduzir assimetrias.</p>
+        <p><strong style="font-family:'Fraunces',serif;color:var(--gold)">Causalidade econômica:</strong> testar relações com inflação, incerteza, investimento.</p>
+        <p><strong style="font-family:'Fraunces',serif;color:var(--gold)">Escala global:</strong> replicar em outras regiões e idiomas.</p>
+      </div>
+    </div>
+    <div class="anim anim-3" style="margin-top:32px;padding-top:32px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;gap:32px">
+      <div class="serif" style="font-style:italic;font-size:26px;font-weight:300;color:var(--ink);max-width:760px;line-height:1.3">"Uma medida contínua, auditável e reprodutível abre espaço para que o populismo deixe de ser um <em style="color:var(--terracotta)">rótulo</em> e passe a ser uma <em style="color:var(--terracotta)">variável</em>."</div>
+      <div style="text-align:right">
+        <div class="serif" style="font-size:22px;font-weight:500">Obrigado.</div>
+        <div class="mono" style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:4px">Perguntas &amp; discussão</div>
+      </div>
+    </div>
+  </div>
+  <div class="footnote"><span>POPIN &middot; André Pyles Siqueira &middot; 2025</span><span>FIM &middot; 14/14</span></div>
+</section>
+
+</div><!-- /.deck -->
+
+<!-- NAV -->
+<div class="nav" id="nav">
+  <button id="prev" aria-label="Anterior">‹</button>
+  <div class="counter"><span class="cur" id="curN">01</span> / <span id="totN">14</span></div>
+  <div class="progress" id="dots"></div>
+  <button id="next" aria-label="Próximo">›</button>
+</div>
+
+<button class="nav-toggle" id="navToggle" aria-label="Mostrar/Ocultar menu" title="H · ocultar menu">
+  <span id="navToggleIc">⌄</span>
+</button>
+
+<div class="kbd-hint" id="kbdHint">
+  <kbd>←</kbd> <kbd>→</kbd> navegar &middot; <kbd>F</kbd> tela cheia &middot; <kbd>H</kbd> ocultar menu
+</div>
+
+<script>
+// ===== DECK ENGINE =====
+const slides = document.querySelectorAll('.slide');
+const total = slides.length;
+let idx = 0;
+
+const dotsEl = document.getElementById('dots');
+const curN = document.getElementById('curN');
+const totN = document.getElementById('totN');
+const progressBar = document.getElementById('progress');
+
+totN.textContent = String(total).padStart(2,'0');
+
+for(let i=0;i<total;i++){
+  const d = document.createElement('span');
+  d.dataset.i = i;
+  d.addEventListener('click',()=>go(i));
+  dotsEl.appendChild(d);
+}
+
+function go(i){
+  i = Math.max(0,Math.min(total-1,i));
+  if(i === idx) return;
+  slides[idx].classList.remove('active');
+  if(i < idx) slides[idx].classList.add('prev');
+  else slides[idx].classList.remove('prev');
+  setTimeout(()=>slides[idx].classList.remove('prev'),600);
+  idx = i;
+  slides[idx].classList.add('active');
+  slides[idx].classList.remove('prev');
+  updateUI();
+}
+
+function updateUI(){
+  curN.textContent = String(idx+1).padStart(2,'0');
+  document.querySelectorAll('#dots span').forEach((d,i)=>{
+    d.classList.toggle('active', i===idx);
+    d.classList.toggle('passed', i<idx);
+  });
+  progressBar.style.width = (((idx+1)/total)*100)+'%';
+  const sn = slides[idx].querySelector('.slide-num .cur');
+  if(sn) sn.textContent = String(idx+1).padStart(2,'0');
+}
+
+document.getElementById('next').addEventListener('click',()=>go(idx+1));
+document.getElementById('prev').addEventListener('click',()=>go(idx-1));
+
+// Nav toggle
+const navEl = document.getElementById('nav');
+const navTogBtn = document.getElementById('navToggle');
+const navTogIc = document.getElementById('navToggleIc');
+let navHidden = false;
+function toggleNav(force){
+  navHidden = (typeof force === 'boolean') ? force : !navHidden;
+  navEl.classList.toggle('hidden', navHidden);
+  navTogIc.textContent = navHidden ? '⌃' : '⌄';
+  navTogBtn.title = navHidden ? 'H · mostrar menu' : 'H · ocultar menu';
+}
+navTogBtn.addEventListener('click',()=>toggleNav());
+
+document.addEventListener('keydown',e=>{
+  if(e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown'){ e.preventDefault(); go(idx+1); }
+  if(e.key === 'ArrowLeft' || e.key === 'PageUp'){ e.preventDefault(); go(idx-1); }
+  if(e.key === 'Home'){ e.preventDefault(); go(0); }
+  if(e.key === 'End'){ e.preventDefault(); go(total-1); }
+  if(e.key === 'f' || e.key === 'F'){
+    if(!document.fullscreenElement) document.documentElement.requestFullscreen();
+    else document.exitFullscreen();
+  }
+  if(e.key === 'h' || e.key === 'H'){ e.preventDefault(); toggleNav(); }
+  if(e.key === 'Escape' && document.fullscreenElement) document.exitFullscreen();
+});
+
+let touchX = 0;
+document.addEventListener('touchstart',e=>touchX=e.touches[0].clientX);
+document.addEventListener('touchend',e=>{
+  const dx = e.changedTouches[0].clientX - touchX;
+  if(Math.abs(dx)>50){ if(dx<0) go(idx+1); else go(idx-1); }
+});
+
+updateUI();
+
+// ===== CHARTS =====
+Chart.defaults.font.family = "'Inter', sans-serif";
+Chart.defaults.color = '#7a6c5d';
+Chart.defaults.borderColor = '#e6dcc7';
+
+// Top Countries
+new Chart(document.getElementById('chartCountries'), {
+  type: 'bar',
+  data: {
+    labels: ['Venezuela','Equador','Costa Rica','México','Nicarágua','Brasil','Bolívia','Honduras','Peru','Colômbia'],
+    datasets: [{
+      data: [66.28, 49.53, 36.74, 32.87, 32.84, 31.82, 31.24, 28.38, 26.04, 24.65],
+      backgroundColor: ctx => {
+        const v = ctx.raw;
+        if(v>=60) return '#8a3328';
+        if(v>=45) return '#b85042';
+        if(v>=30) return '#c98c3a';
+        if(v>=20) return '#d9a441';
+        return '#e8d9c0';
+      },
+      borderRadius: 2,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    maintainAspectRatio: false,
+    layout:{padding:{left:8,right:32,top:6,bottom:6}},
+    plugins: {
+      legend:{display:false},
+      tooltip:{
+        backgroundColor:'#1a1410',
+        titleFont:{family:"'Fraunces',serif",size:14,weight:'500'},
+        bodyFont:{family:"'JetBrains Mono',monospace",size:12},
+        padding:12, displayColors:false,
+        callbacks:{ label: ctx => `POPIN: ${ctx.raw.toFixed(1)}` }
+      }
+    },
+    scales: {
+      x: { beginAtZero:true, max:75,
+        grid:{color:'#e6dcc7',drawTicks:false},
+        ticks:{font:{family:"'JetBrains Mono',monospace",size:11},color:'#7a6c5d'},
+        border:{display:false}
+      },
+      y: {
+        grid:{display:false},
+        ticks:{
+          font:{family:"'Fraunces',serif",size:14,weight:'500'},
+          color:'#1a1410', padding:6, crossAlign:'far'
+        },
+        afterFit:(scale)=>{ scale.width = 100; },
+        border:{display:false}
+      }
+    }
+  }
+});
+
+// Venezuela series
+const venYears = ['2000','2002','2004','2006','2008','2010','2012','2014','2016','2018','2020','2022','2024'];
+const venData  = [70,71,73,70,71,73,70,82,68,67,64,48,68];
+const venDataFull = [70,69,71,72,73,71,70,72,71,72,73,71,70,76,82,72,68,65,67,69,64,52,48,66,68];
+const venYearsFull = Array.from({length:25},(_,i)=>2000+i+'');
+
+new Chart(document.getElementById('chartVenezuela'), {
+  type:'line',
+  data:{
+    labels:venYearsFull,
+    datasets:[{
+      label:'Score POPIN',
+      data:venDataFull,
+      borderColor:'#8a3328',
+      backgroundColor:'rgba(184,80,66,.12)',
+      tension:.35, borderWidth:2.5,
+      pointBackgroundColor:'#8a3328',
+      pointBorderColor:'#faf6f0',
+      pointBorderWidth:1.5,
+      pointRadius:3, pointHoverRadius:6,
+      fill:true
+    }]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{
+      legend:{display:false},
+      tooltip:{
+        backgroundColor:'#1a1410',
+        titleFont:{family:"'Fraunces',serif",size:14,weight:'500'},
+        bodyFont:{family:"'JetBrains Mono',monospace",size:12},
+        padding:12, displayColors:false,
+        callbacks:{ title:items=>'Ano '+items[0].label, label:ctx=>`POPIN: ${ctx.raw}` }
+      }
+    },
+    scales:{
+      y:{ min:0,max:100,
+        grid:{color:'#e6dcc7'},
+        ticks:{font:{family:"'JetBrains Mono',monospace",size:11},stepSize:25,color:'#7a6c5d'},
+        border:{display:false}
+      },
+      x:{ grid:{display:false},
+        ticks:{font:{family:"'JetBrains Mono',monospace",size:10},color:'#7a6c5d',maxRotation:0,autoSkip:true,maxTicksLimit:8},
+        border:{color:'#d4c4a3'}
+      }
+    }
+  }
+});
+
+// Brasil series with presidency bands
+const brYears = Array.from({length:25},(_,i)=>2000+i+'');
+const brData  = [10,11,12,32,35,38,40,42,38,36,34,21,19,18,20,23,39,17,18,38,42,40,47,43,47];
+
+const presidencyBg = {
+  id:'presBg',
+  beforeDatasetsDraw(chart){
+    const {ctx, chartArea:{top,bottom}, scales:{x}} = chart;
+    const bands = [
+      {start:'2000',end:'2002',color:'rgba(125,140,135,.10)',label:'FHC'},
+      {start:'2003',end:'2010',color:'rgba(184,80,66,.10)',label:'LULA'},
+      {start:'2011',end:'2016',color:'rgba(201,140,58,.10)',label:'DILMA'},
+      {start:'2017',end:'2018',color:'rgba(125,140,135,.10)',label:'TEMER'},
+      {start:'2019',end:'2022',color:'rgba(138,51,40,.12)',label:'BOLSO.'},
+      {start:'2023',end:'2024',color:'rgba(184,80,66,.10)',label:'LULA 3'}
+    ];
+    bands.forEach(b=>{
+      const xs = x.getPixelForValue(b.start);
+      const xe = x.getPixelForValue(b.end);
+      ctx.fillStyle = b.color;
+      ctx.fillRect(xs - 8, top, (xe-xs)+16, bottom-top);
+      ctx.fillStyle='#7a6c5d';
+      ctx.font="600 9.5px 'JetBrains Mono', monospace";
+      ctx.textAlign='center';
+      ctx.fillText(b.label, (xs+xe)/2, top+13);
+    });
+  }
+};
+
+new Chart(document.getElementById('chartBrasil'), {
+  type:'line',
+  data:{
+    labels:brYears,
+    datasets:[{
+      label:'Score POPIN',
+      data:brData,
+      borderColor:'#b85042',
+      backgroundColor:'rgba(184,80,66,.12)',
+      tension:.3, borderWidth:2.5,
+      pointBackgroundColor:'#b85042',
+      pointBorderColor:'#faf6f0',
+      pointBorderWidth:1.5,
+      pointRadius:3, pointHoverRadius:6,
+      fill:true
+    }]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{
+      legend:{display:false},
+      tooltip:{
+        backgroundColor:'#1a1410',
+        titleFont:{family:"'Fraunces',serif",size:14,weight:'500'},
+        bodyFont:{family:"'JetBrains Mono',monospace",size:12},
+        padding:12, displayColors:false,
+        callbacks:{ title:items=>'Ano '+items[0].label, label:ctx=>`POPIN: ${ctx.raw}` }
+      }
+    },
+    scales:{
+      y:{ min:0, max:60,
+        grid:{color:'#e6dcc7'},
+        ticks:{font:{family:"'JetBrains Mono',monospace",size:11},stepSize:15,color:'#7a6c5d'},
+        border:{display:false}
+      },
+      x:{ grid:{display:false},
+        ticks:{font:{family:"'JetBrains Mono',monospace",size:10},color:'#7a6c5d',maxRotation:0,autoSkip:true,maxTicksLimit:8},
+        border:{color:'#d4c4a3'}
+      }
+    }
+  },
+  plugins:[presidencyBg]
+});
+
+// Mini comparative charts
+const yrs = Array.from({length:25},(_,i)=>2000+i+'');
+function miniChart(canvasId, data, color){
+  return new Chart(document.getElementById(canvasId), {
+    type:'line',
+    data:{
+      labels:yrs,
+      datasets:[{
+        data,
+        borderColor:color,
+        backgroundColor:color+'1f',
+        tension:.35, borderWidth:2,
+        pointRadius:0, pointHoverRadius:5,
+        fill:true
+      }]
+    },
+    options:{
+      responsive:true, maintainAspectRatio:false,
+      plugins:{legend:{display:false},
+        tooltip:{
+          backgroundColor:'#1a1410',
+          titleFont:{family:"'Fraunces',serif",size:13},
+          bodyFont:{family:"'JetBrains Mono',monospace",size:11},
+          padding:10, displayColors:false,
+          callbacks:{title:items=>'Ano '+items[0].label, label:ctx=>`POPIN: ${ctx.raw}`}
+        }
+      },
+      scales:{
+        y:{ min:0, max:90,
+          grid:{color:'#e6dcc7',drawTicks:false},
+          ticks:{font:{family:"'JetBrains Mono',monospace",size:9},stepSize:30,color:'#7a6c5d',padding:4},
+          border:{display:false}
+        },
+        x:{ grid:{display:false},
+          ticks:{font:{family:"'JetBrains Mono',monospace",size:9},color:'#7a6c5d',maxRotation:0,autoSkip:true,maxTicksLimit:5},
+          border:{color:'#d4c4a3'}
+        }
+      }
+    }
+  });
+}
+const argData = [40,38,42,38,42,45,46,40,28,22,20,18,16,18,20,28,31,25,20,28,40,38,34,38,67];
+const brData2 = brData;
+const venData2 = venDataFull;
+miniChart('chartArg', argData, '#c98c3a');
+miniChart('chartBr', brData2, '#b85042');
+miniChart('chartVen', venData2, '#8a3328');
+
+// Hide kbd hint after 9s
+setTimeout(()=>{
+  const h = document.getElementById('kbdHint');
+  if(h){ h.style.transition='opacity .8s'; h.style.opacity='0';
+    setTimeout(()=>h.style.display='none',900); }
+},9000);
+
+// ===== MAPA AMÉRICA LATINA (D3 + TopoJSON real) =====
+(function buildMap(){
+  // POPIN scores by ISO-3 country code
+  const popinByISO3 = {
+    VEN: 66.28, ECU: 49.53, CRI: 36.74, MEX: 32.87, NIC: 32.84,
+    BRA: 31.82, BOL: 31.24, HND: 28.38, PER: 26.04, COL: 24.65,
+    ARG: 21.75, CHL: 21.21, PAN: 18.76, DOM: 16.67, PRY: 15.92,
+    SLV: 15.62, URY: 9.63, GTM: 8.63
+  };
+  const labelByISO3 = {
+    VEN:'VENEZUELA', ECU:'EQUADOR', CRI:'COSTA RICA', MEX:'MÉXICO',
+    NIC:'NICARÁGUA', BRA:'BRASIL', BOL:'BOLÍVIA', HND:'HONDURAS',
+    PER:'PERU', COL:'COLÔMBIA', ARG:'ARGENTINA', CHL:'CHILE',
+    PAN:'PANAMÁ', DOM:'REP. DOM.', PRY:'PARAGUAI', SLV:'EL SALVADOR',
+    URY:'URUGUAI', GTM:'GUATEMALA'
+  };
+  // Latin America country ISO numeric codes (used in world-atlas)
+  // We'll filter by ISO3 mapped from numeric
+  const numericToISO3 = {
+    '032':'ARG','068':'BOL','076':'BRA','152':'CHL','170':'COL',
+    '188':'CRI','192':'CUB','214':'DOM','218':'ECU','222':'SLV',
+    '320':'GTM','328':'GUY','332':'HTI','340':'HND','388':'JAM',
+    '484':'MEX','558':'NIC','591':'PAN','600':'PRY','604':'PER',
+    '630':'PRI','740':'SUR','780':'TTO','858':'URY','862':'VEN','254':'GUF'
+  };
+  // Color scale (matches our palette)
+  function colorFor(score){
+    if(score == null) return '#f0e6d3';
+    if(score >= 60) return '#8a3328';
+    if(score >= 45) return '#b85042';
+    if(score >= 30) return '#c98c3a';
+    if(score >= 20) return '#d9a441';
+    if(score >= 10) return '#e8d9c0';
+    return '#f0e6d3';
+  }
+
+  function render(geo){
+    const svg = d3.select('#mapSvg');
+    const W = 720, H = 920;
+    svg.attr('viewBox', `0 0 ${W} ${H}`).style('display','block');
+    document.getElementById('mapLoading').style.display = 'none';
+
+    // Clear (defensive)
+    svg.selectAll('*').remove();
+
+    // Defs for gradient sea
+    const defs = svg.append('defs');
+    defs.append('linearGradient').attr('id','seaGrad')
+      .attr('x1',0).attr('y1',0).attr('x2',0).attr('y2',1)
+      .selectAll('stop').data([['0','#faf6f0'],['1','#f3ead9']])
+      .enter().append('stop').attr('offset',d=>d[0]).attr('stop-color',d=>d[1]);
+
+    svg.append('rect').attr('width',W).attr('height',H).attr('fill','url(#seaGrad)');
+
+    // Subtle latitude lines
+    const grid = svg.append('g').attr('opacity',.18).attr('stroke','#a99a82').attr('stroke-width',.5).attr('fill','none').attr('stroke-dasharray','3,4');
+    [170,350,530,710,850].forEach(y=>grid.append('line').attr('x1',0).attr('x2',W).attr('y1',y).attr('y2',y));
+
+    // Filter to Latin America countries
+    const latamFeatures = geo.features.filter(f => {
+      const num = String(f.id).padStart(3,'0');
+      return !!numericToISO3[num];
+    }).map(f => {
+      const num = String(f.id).padStart(3,'0');
+      f.iso3 = numericToISO3[num];
+      f.popin = popinByISO3[f.iso3] ?? null;
+      return f;
+    });
+
+    // Projection: Mercator fitted to Latin America bounds
+    const projection = d3.geoMercator();
+    const fc = {type:'FeatureCollection', features: latamFeatures};
+    projection.fitExtent([[40, 70],[W-40, H-70]], fc);
+    const path = d3.geoPath(projection);
+
+    // Equator & Tropic of Capricorn
+    const eqY = projection([0,0])[1];
+    const trY = projection([0,-23.4368])[1];
+    svg.append('line').attr('x1',0).attr('x2',W).attr('y1',eqY).attr('y2',eqY)
+      .attr('stroke','#b85042').attr('stroke-width',.6).attr('stroke-dasharray','8,6').attr('opacity',.32);
+    svg.append('text').attr('x',W-12).attr('y',eqY-5).attr('text-anchor','end')
+      .attr('class','ocean-label').style('font-size','10px').style('letter-spacing','.18em').text('EQUADOR · 0°');
+    svg.append('line').attr('x1',0).attr('x2',W).attr('y1',trY).attr('y2',trY)
+      .attr('stroke','#7a6c5d').attr('stroke-width',.4).attr('stroke-dasharray','4,5').attr('opacity',.22);
+    svg.append('text').attr('x',W-12).attr('y',trY-5).attr('text-anchor','end')
+      .attr('class','ocean-label').style('font-size','9px').style('letter-spacing','.15em').style('opacity','.7').text('TRÓP. CAPRICÓRNIO');
+
+    // Ocean labels (positions tuned for typical projection)
+    svg.append('text').attr('x',60).attr('y',H*0.55).attr('class','ocean-label').style('font-size','18px').text('PACÍFICO');
+    svg.append('text').attr('x',W-60).attr('y',H*0.7).attr('text-anchor','end').attr('class','ocean-label').style('font-size','18px').text('ATLÂNTICO');
+    svg.append('text').attr('x',W*0.34).attr('y',H*0.30).attr('class','ocean-label').style('font-size','13px').style('letter-spacing','.18em').text('CARIBE');
+
+    // Countries
+    const g = svg.append('g');
+    g.selectAll('path').data(latamFeatures).enter().append('path')
+      .attr('d', path)
+      .attr('fill', d => colorFor(d.popin))
+      .attr('stroke','#faf6f0').attr('stroke-width',.7)
+      .attr('class','country')
+      .append('title').text(d => `${labelByISO3[d.iso3] || d.iso3}: ${d.popin != null ? d.popin.toFixed(1) : 'sem dados'}`);
+
+    // Labels
+    const labels = svg.append('g').attr('pointer-events','none');
+    latamFeatures.forEach(d => {
+      if(!d.popin) return;
+      const c = path.centroid(d);
+      if(isNaN(c[0])) return;
+      const score = d.popin;
+      const fontSize = score >= 50 ? 22 : (score >= 30 ? 18 : 14);
+      const dark = score >= 45;
+      const txt = score.toFixed(1).replace('.', ',');
+      labels.append('text')
+        .attr('x', c[0]).attr('y', c[1])
+        .attr('text-anchor','middle')
+        .attr('class', 'cnum' + (dark ? ' cnum-l' : ''))
+        .attr('fill', dark ? '#faf6f0' : '#1a1410')
+        .style('font-size', fontSize+'px').style('font-weight','700')
+        .text(txt);
+      // country name below
+      const showName = ['VEN','BRA','ARG','MEX','COL','PER','CHL','BOL','ECU'].includes(d.iso3);
+      if(showName){
+        labels.append('text')
+          .attr('x', c[0]).attr('y', c[1] + fontSize*0.95)
+          .attr('text-anchor','middle')
+          .attr('class','clbl' + (dark ? ' clbl-l' : ''))
+          .attr('fill', dark ? '#faf6f0' : '#1a1410')
+          .style('font-size','11px').style('letter-spacing','.05em').style('font-weight','500')
+          .text(labelByISO3[d.iso3]);
+      }
+    });
+
+    // Compass rose
+    const compass = svg.append('g').attr('transform','translate(660,82)').attr('opacity',.7);
+    compass.append('circle').attr('r',24).attr('fill','none').attr('stroke','#b85042').attr('stroke-width',1);
+    compass.append('circle').attr('r',2.5).attr('fill','#b85042');
+    compass.append('path').attr('d','M 0,-22 L 4,-2 L 0,2 L -4,-2 Z').attr('fill','#b85042');
+    compass.append('path').attr('d','M 0,22 L 4,2 L 0,-2 L -4,2 Z').attr('fill','#7a6c5d');
+    compass.append('text').attr('y',-30).attr('text-anchor','middle')
+      .attr('class','ocean-label').style('font-size','11px').style('font-style','normal').style('font-weight','600').text('N');
+  }
+
+  function loadMap(){
+    if(typeof d3 === 'undefined' || typeof topojson === 'undefined'){
+      document.getElementById('mapLoading').textContent = 'Erro ao carregar bibliotecas do mapa';
+      return;
+    }
+    fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json')
+      .then(r => r.json())
+      .then(topo => {
+        const geo = topojson.feature(topo, topo.objects.countries);
+        render(geo);
+      })
+      .catch(err => {
+        console.error('Map load failed', err);
+        document.getElementById('mapLoading').textContent = 'Não foi possível carregar o mapa';
+      });
+  }
+  // Defer until libs are surely loaded
+  if(document.readyState === 'complete') loadMap();
+  else window.addEventListener('load', loadMap);
+})();
+</script>
+
+</body>
+</html>

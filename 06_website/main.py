@@ -109,6 +109,10 @@ app.mount("/static", StaticFiles(directory=HERE / "static"), name="static")
 def root():
     return FileResponse(HERE / "static" / "index.html")
 
+@app.get("/apresentacao")
+def apresentacao():
+    return FileResponse(HERE / "static" / "popin-apresentacao.html")
+
 @app.get("/api/dtypes")
 def api_dtypes():
     counts = df.groupby("dtype")["final_score"].count().sort_values(ascending=False)
