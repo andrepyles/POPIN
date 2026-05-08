@@ -164,7 +164,7 @@ The six dimensions are drawn from the Populist Rhetoric Coding Scheme (PRCS) and
 
 If you use POPIN data in academic work, please cite:
 
-> Siqueira, André Pyles (2026). *POPIN v4: A Computational Populism Index for Latin America, 2000–2025*. Master's thesis, [Institution]. Data available at: https://github.com/andrepyles/POPIN
+> Siqueira, André Pyles (2026). *POPIN v4: A Computational Populism Index for Latin America, 2000–2025*. Master's thesis, Universidade Presbiteriana Mackenzie. Data available at: https://github.com/andrepyles/POPIN
 
 ---
 
