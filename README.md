@@ -61,7 +61,6 @@ POPIN/
 │       ├── index.html
 │       ├── css/style.css
 │       ├── js/app.js
-│       └── popin-apresentacao.html
 └── README.md
 ```
 
