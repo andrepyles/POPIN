@@ -4,8 +4,7 @@
 
 The index scores each discourse across six analytical dimensions derived from the ideational approach to populism (Mudde & Kaltwasser, 2017; Hawkins et al., 2019), using a large language model (Qwen3-30B) as the classification engine.
 
-🌐 **Dashboard**: [popin-4tvv.onrender.com](https://popin-4tvv.onrender.com)  
-📊 **Presentation**: [popin-4tvv.onrender.com/apresentacao](https://popin-4tvv.onrender.com/apresentacao)  
+🌐 **Dashboard**: [popin-4tvv.onrender.com](https://popin-4tvv.onrender.com)   
 📦 **Data release**: [Releases → v4.0](https://github.com/andrepyles/POPIN/releases/tag/v4.0)
 
 ---
