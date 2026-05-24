@@ -1,0 +1,4 @@
+pontuados : 879 / 879
+falhas    : 0
+progresso : 100.0%
+job_id    : a974c559

@@ -48,24 +48,6 @@ Each discourse is scored 0–100 on six dimensions, plus a weighted final score:
 
 ---
 
-## Repository structure
-
-```
-POPIN/
-├── 06_website/
-│   ├── main.py               # FastAPI backend
-│   ├── popin_web.duckdb      # Slim DB for the dashboard (no discourse text)
-│   ├── render.yaml           # Render deployment config
-│   ├── requirements.txt
-│   └── static/
-│       ├── index.html
-│       ├── css/style.css
-│       ├── js/app.js
-└── README.md
-```
-
----
-
 ## Data
 
 The full dataset is distributed as a [GitHub Release](https://github.com/andrepyles/POPIN/releases/tag/v4.0):
