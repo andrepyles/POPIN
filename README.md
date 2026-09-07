@@ -2,9 +2,9 @@
 
 **POPIN** (*Populism Index*) is a large-scale computational measurement of populist discourse by Latin American heads of government, covering 19 countries from 2000 to 2025.
 
-The index scores each discourse across six analytical dimensions derived from the ideational approach to populism (Mudde & Kaltwasser, 2017; Hawkins et al., 2019), using a large language model (Qwen3-30B) as the classification engine.
+The index scores each discourse across six analytical dimensions derived from the ideational approach to populism (Mudde & Kaltwasser, 2017; Hawkins et al., 2019), using a large language model as the measurement instrument. The current v4 release uses Qwen3-30B-A3B-Instruct locally through vLLM.
 
-🌐 **Dashboard**: [popin.andrepyles.xyz](https://popin.andrepyles.xyz)
+🌐 **Dashboard**: [popin-4tvv.onrender.com](https://popin-4tvv.onrender.com)
 📦 **Data release**: [Releases → v4.0](https://github.com/andrepyles/POPIN/releases/tag/v4.0)
 
 ---
@@ -34,7 +34,7 @@ The index scores each discourse across six analytical dimensions derived from th
 
 ## Dimensions
 
-Each discourse is scored 0–100 on six dimensions, plus a weighted final score:
+Each discourse is scored 0–100 on six dimensions, plus a final score. Chunks are aggregated using their word counts; the final discourse score is the arithmetic mean of the six dimension scores.
 
 | Dimension | Description |
 |-----------|-------------|
@@ -44,7 +44,7 @@ Each discourse is scored 0–100 on six dimensions, plus a weighted final score:
 | `popular_sovereignty` | Claim that power belongs exclusively to the people |
 | `exclusionary_rhetoric` | Othering of groups portrayed as threats to the people |
 | `crisis_rhetoric` | Framing of politics as an existential crisis requiring urgency |
-| `final_score` | Weighted mean of all six dimensions |
+| `final_score` | Arithmetic mean of the six dimension scores |
 
 ---
 
@@ -72,7 +72,7 @@ con.execute("""
     SELECT d.iso3, ROUND(AVG(s.final_score), 2) AS avg_score, COUNT(*) AS n
     FROM scores s
     JOIN discourses d ON d.id = s.discourse_id
-    WHERE s.final_score IS NOT NULL
+    WHERE s.final_score IS NOT NULL AND d.dtype <> 'INVALID'
     GROUP BY d.iso3
     ORDER BY avg_score DESC
 """).fetchdf()
@@ -96,7 +96,7 @@ con.execute("""
 | `popular_sovereignty` | float | Score 0–100 |
 | `exclusionary_rhetoric` | float | Score 0–100 |
 | `crisis_rhetoric` | float | Score 0–100 |
-| `final_score` | float | Weighted mean 0–100 |
+| `final_score` | float | Arithmetic mean of six dimensions, 0–100 |
 | `model_id` | string | Model used for scoring |
 | `scored_at` | timestamp | Scoring timestamp |
 
@@ -136,9 +136,9 @@ The six dimensions are drawn from the Populist Rhetoric Coding Scheme (PRCS) and
 ### Scoring pipeline
 
 1. **Collection** — Presidential speeches, communiqués, interviews, decrees and letters collected from official government portals and archives
-2. **Classification** — Discourse type assigned via LLM (Qwen3-30B)
-3. **Scoring** — Each discourse chunked and scored on 6 dimensions (0–100) using structured LLM output
-4. **Aggregation** — Country and leader scores computed as means over all scored discourses
+2. **Classification** — Discourse type assigned via LLM; invalid documents are excluded from scoring
+3. **Scoring** — Each discourse is divided into contiguous chunks of up to 800 words and scored on 6 dimensions (0–100) using structured JSON output, with temperature 0
+4. **Aggregation** — Chunk scores are weighted by chunk length; country and leader scores are means over scored discourses
 
 ---
 

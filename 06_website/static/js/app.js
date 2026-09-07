@@ -8,7 +8,9 @@ const I18N = {
   pt: {
     nav_overview:"Visão Geral", nav_countries:"Países", nav_leaders:"Líderes",
     nav_timeseries:"Série Temporal", nav_dimensions:"Dimensões",
-    brand_sub:"Índice de Populismo · América Latina",
+    brand_sub:"Índice de Populismo",
+    github_repo:"Código no GitHub",
+    dataset_label:"Instrumento", dataset_value:"GPT-5.6 Luna · texto integral · v4",
     loading:"Carregando dados…",
     ov_sub:"Populismo na América Latina · 2000–2025",
     ct_sub:"Análise comparativa de 19 países",
@@ -26,11 +28,14 @@ const I18N = {
     chart_radar:"Perfil de Populismo", chart_ranked:"Ranking de Score",
     chart_dim_bars:"Dimensões por País",
     chart_leaders:"Ranking de Líderes",
+    leader_badge:"Top 25 · ≥5 discursos",
+    leader_coverage_note:"O ranking principal exclui líderes com menos de cinco discursos. Use “Todos os casos” para inspecionar a cobertura baixa.",
     chart_ts_line:"Comparação por País",
     chart_movers:"Variação 2000–2025 por País",
     chart_means:"Score Médio por Grupo",
     chart_scatter2d:"Dispersão entre Dimensões",
     f_countries:"Países", f_country:"País", f_all:"Todos os Países",
+    f_min_n:"Cobertura mínima", min_n_5:"≥5 discursos", min_n_1:"Todos os casos",
     f_dimension:"Dimensão", f_group_by:"Agrupar por",
     f_discourse:"Tipo de Discurso", f_filter_by:"Tipo de discurso",
     drawer_dims:"Subdimensões", drawer_trend:"Evolução Histórica", drawer_radar:"Perfil Radar",
@@ -48,7 +53,9 @@ const I18N = {
   en: {
     nav_overview:"Overview", nav_countries:"Countries", nav_leaders:"Leaders",
     nav_timeseries:"Time Series", nav_dimensions:"Dimensions",
-    brand_sub:"Populism Index · Latin America",
+    brand_sub:"Populism Index",
+    github_repo:"Code on GitHub",
+    dataset_label:"Instrument", dataset_value:"GPT-5.6 Luna · full text · v4",
     loading:"Loading dataset…",
     ov_sub:"Populism across Latin America · 2000–2025",
     ct_sub:"Comparative analysis across 19 nations",
@@ -66,11 +73,14 @@ const I18N = {
     chart_radar:"Populism Profile", chart_ranked:"Score Ranking",
     chart_dim_bars:"Dimensions by Country",
     chart_leaders:"Leader Ranking",
+    leader_badge:"Top 25 · ≥5 discourses",
+    leader_coverage_note:"The main ranking excludes leaders with fewer than five discourses. Use “All cases” to inspect low coverage.",
     chart_ts_line:"Country Comparison",
     chart_movers:"Change 2000–2025 by Country",
     chart_means:"Mean Score by Group",
     chart_scatter2d:"Dimension Scatter",
     f_countries:"Countries", f_country:"Country", f_all:"All Countries",
+    f_min_n:"Minimum coverage", min_n_5:"≥5 discourses", min_n_1:"All cases",
     f_dimension:"Dimension", f_group_by:"Group by",
     f_discourse:"Discourse Type", f_filter_by:"Discourse type",
     drawer_dims:"Sub-dimensions", drawer_trend:"Historical Evolution", drawer_radar:"Radar Profile",
@@ -172,8 +182,8 @@ function updateColorStops() {
   }
 }
 
-// ── Tema ──────────────────────────────────────────────────────────────
-let THEME = "dark";
+// ── Tema fixo ─────────────────────────────────────────────────────────
+let THEME = "light";
 
 const BG0 = "rgba(0,0,0,0)";
 let GRID_C = "rgba(250,246,240,.05)";
@@ -182,10 +192,10 @@ let FONT_C = "#c4b49a";
 
 const BASE_LAY = {
   paper_bgcolor: BG0, plot_bgcolor: BG0,
-  font:{ family:"Inter,system-ui,sans-serif", color: FONT_C, size:12 },
+  font:{ family:"IBM Plex Sans,system-ui,sans-serif", color: FONT_C, size:12 },
   margin:{ t:16, r:16, b:40, l:48 },
   colorway: Object.values(COUNTRY_COLORS),
-  hoverlabel:{ bgcolor:"#0F1828", bordercolor:"rgba(255,255,255,.10)", font:{ family:"Inter,system-ui,sans-serif", color:"#E6EEFF", size:13 } },
+  hoverlabel:{ bgcolor:"#0F1828", bordercolor:"rgba(255,255,255,.10)", font:{ family:"IBM Plex Sans,system-ui,sans-serif", color:"#E6EEFF", size:13 } },
 };
 const CFG = { displayModeBar:false, responsive:true };
 const AX = (e={}) => ({ gridcolor:GRID_C, linecolor:GRID_C, zerolinecolor:ZERO_C, tickcolor:FONT_C, ...e });
@@ -264,6 +274,13 @@ const ctryColor = n => COUNTRY_COLORS[n] ?? "#64748B";
 const dimLabel  = k => DIMS.find(d=>d.key===k)?.[LANG] ?? k;
 const dimLabels = () => DIMS.slice(1).map(d => d[LANG]);
 const dtypeQ    = () => GLOBAL_DTYPE && GLOBAL_DTYPE !== "ALL" ? `&dtype=${GLOBAL_DTYPE}` : "";
+const leaderMinN = () => document.getElementById("leader-min-n-filter")?.value || "5";
+const coverageText = c => {
+  const n = Number(c.n || 0).toLocaleString("pt-BR");
+  const p25 = Number.isFinite(Number(c.p25)) ? Number(c.p25).toFixed(1) : "—";
+  const p75 = Number.isFinite(Number(c.p75)) ? Number(c.p75).toFixed(1) : "—";
+  return `n=${n} · p25–p75 ${p25}–${p75}`;
+};
 
 function lay(ov={}) {
   const b = JSON.parse(JSON.stringify(BASE_LAY));
@@ -339,12 +356,6 @@ function initNav() {
     });
   });
 
-  document.getElementById("theme-toggle").addEventListener("click", () => {
-    const next = THEME === "dark" ? "light" : "dark";
-    localStorage.setItem("popin_theme", next);
-    setTheme(next);
-  });
-
   document.getElementById("lang-toggle").addEventListener("click", () => {
     LANG = LANG==="pt" ? "en" : "pt";
     localStorage.setItem("popin_lang", LANG);
@@ -408,7 +419,7 @@ async function refreshAll() {
   const [stats, countries, leaders, yearlyGlobal] = await Promise.all([
     api(`/api/stats?${dtypeQ().slice(1)}`),
     api(`/api/countries?${dtypeQ().slice(1)}`),
-    api(`/api/leaders?n=25${dtypeQ()}`),
+    api(`/api/leaders?n=25&min_n=${leaderMinN()}${dtypeQ()}`),
     api(`/api/yearly_global?${dtypeQ().slice(1)}`),
   ]);
   _cache.stats=stats; _cache.countries=countries; _cache.leaders=leaders;
@@ -425,7 +436,7 @@ async function refreshAll() {
 
   const lfilterSel = document.getElementById("leader-country-filter");
   if(lfilterSel) {
-    document.getElementById("leader-count-badge").textContent = leaders.length;
+    document.getElementById("leader-count-badge").textContent = `${leaders.length} · ${leaderMinN()==="5"?"n≥5":"todos"}`;
     renderLeaderRankList(leaders);
   }
 
@@ -437,11 +448,17 @@ async function refreshAll() {
 
 // ── KPIs ──────────────────────────────────────────────────────────────
 function renderKPIs(stats) {
+  const icons = {
+    discourses: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg>',
+    countries: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.7 5.5 3.7 9S14.5 18.5 12 21M12 3c-2.5 2.5-3.7 5.5-3.7 9S9.5 18.5 12 21"/></svg>',
+    leaders: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a6 6 0 0 1 12 0v2M16 4.5a3 3 0 0 1 0 5.8M18 14a5 5 0 0 1 3 4.5V21"/></svg>',
+    years: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M7 3v4M17 3v4M3 10h18M7 14h3M14 14h3M7 18h3"/></svg>',
+  };
   document.getElementById("kpi-row").innerHTML = [
-    { k:"kpi_discourses", v:stats.n_discourses.toLocaleString("pt-BR"), icon:"📄" },
-    { k:"kpi_countries",  v:stats.n_countries,   icon:"🌎" },
-    { k:"kpi_leaders",    v:stats.n_leaders,      icon:"🎙️" },
-    { k:"kpi_years",      v:`${stats.year_min}–${stats.year_max}`, icon:"📅" },
+    { k:"kpi_discourses", v:stats.n_discourses.toLocaleString("pt-BR"), icon:icons.discourses },
+    { k:"kpi_countries",  v:stats.n_countries,   icon:icons.countries },
+    { k:"kpi_leaders",    v:stats.n_leaders,      icon:icons.leaders },
+    { k:"kpi_years",      v:`${stats.year_min}–${stats.year_max}`, icon:icons.years },
   ].map(c=>`<div class="kpi-card">
     <div class="kpi-icon">${c.icon}</div>
     <div class="kpi-value">${c.v}</div>
@@ -464,6 +481,7 @@ function renderHeroBanner(countries) {
       <div class="hero-tag">${tag}</div>
       <div class="hero-country" style="color:${col}">${flag} ${c.country}</div>
       <div class="hero-score" style="color:${col}">Score: ${c.final_score.toFixed(1)} / 100</div>
+      <div class="hero-coverage">${coverageText(c)}</div>
       <div class="hero-bar-wrap"><div class="hero-bar-fill" style="width:${c.final_score}%;background:${col}"></div></div>
     </div>`;
   };
@@ -480,7 +498,7 @@ function renderCountryCards(countries) {
     return `<div class="cc-row">
       <span class="cc-rank">${i+1}</span>
       <span class="cc-flag-sm">${flag}</span>
-      <span class="cc-label">${c.country}</span>
+      <span class="cc-name-group"><span class="cc-label">${c.country}</span><span class="cc-meta">${coverageText(c)}</span></span>
       <div class="cc-bar-inline">
         <div class="cc-bar-inline-fill" style="width:${pct}%;background:${col}"></div>
       </div>
@@ -500,7 +518,7 @@ function renderMap(countries) {
     locations: countries.map(c => c.iso3),
     z: countries.map(c => c.final_score),
     text: countries.map(c =>
-      `<b>${FLAGS[c.iso3]??""} ${c.country}</b><br>Score: <b>${c.final_score.toFixed(1)}</b><br>${c.n.toLocaleString()} ${t("cc_speeches")}`
+      `<b>${FLAGS[c.iso3]??""} ${c.country}</b><br>Score: <b>${c.final_score.toFixed(1)}</b><br>${coverageText(c)}`
     ),
     hoverinfo: "text",
     colorscale: POP_SCALE,
@@ -521,7 +539,7 @@ function renderMap(countries) {
     lon: withC.map(c => CENTROIDS[c.iso3][1]),
     text: withC.map(c => c.iso3),
     mode: "text",
-    textfont: { color: THEME === "dark" ? "rgba(255,255,255,0.75)" : "rgba(20,36,60,0.6)", size: 8, family:"Inter,system-ui,sans-serif" },
+    textfont: { color: THEME === "dark" ? "rgba(255,255,255,0.75)" : "rgba(20,36,60,0.6)", size: 8, family:"IBM Plex Sans,system-ui,sans-serif" },
     hoverinfo: "none",
     showlegend: false,
   };
@@ -595,7 +613,7 @@ function renderCountryRanked(countries) {
     x:sorted.map(c=>c.final_score), y:sorted.map(c=>`${FLAGS[c.iso3]??""} ${c.country}`),
     text:sorted.map(c=>c.final_score.toFixed(1)),
     textposition:"outside", cliponaxis:false,
-    textfont:{color:FONT_C,size:12,family:"Inter,system-ui,sans-serif"},
+    textfont:{color:FONT_C,size:12,family:"IBM Plex Sans,system-ui,sans-serif"},
     marker:{color:sorted.map(c=>popColor(c.final_score)), opacity:0.88},
     hovertemplate:"<b>%{y}</b><br>Score: <b>%{x:.1f}</b><extra></extra>",
   }], lay({
@@ -610,7 +628,7 @@ let _radarSelected = ["Venezuela","Brazil","Mexico","Argentina"];
 
 function initCountryRadarSelect(countries) {
   const container = document.getElementById("country-radar-select");
-  const names = countries.map(c=>c.country).sort();
+  const names = countries.map(c=>c.country).sort((a,b)=>a.localeCompare(b,"pt-BR"));
   names.forEach(name => {
     const chip = document.createElement("div");
     chip.className = `chip ${_radarSelected.includes(name)?"active":""}`;
@@ -692,8 +710,13 @@ function renderDimBars(countries) {
 
 // ── Leader Rank List ──────────────────────────────────────────────────
 function renderLeaderRankList(leaders) {
+  const container = document.getElementById("leader-rank-list");
+  if (!leaders.length) {
+    container.innerHTML = `<div class="empty-state"><strong>${LANG === "pt" ? "Nenhum líder atende a este filtro." : "No leader matches this filter."}</strong><span>${LANG === "pt" ? "Reduza a cobertura mínima ou escolha outro país." : "Lower the minimum coverage or choose another country."}</span></div>`;
+    return;
+  }
   const sorted = [...leaders].sort((a,b)=>b.final_score-a.final_score);
-  document.getElementById("leader-rank-list").innerHTML = sorted.map((l,i)=>{
+  container.innerHTML = sorted.map((l,i)=>{
     const col = popColor(l.final_score);
     const pct = Math.min(l.final_score,100);
     const rankCls = i===0?"gold":i===1?"silver":i===2?"bronze":"";
@@ -706,10 +729,10 @@ function renderLeaderRankList(leaders) {
     }).replace(/"/g,"&quot;");
     const flag = FLAGS[l.iso3] ?? "";
     return `<div class="lr-item" data-leader="${leaderJson}">
-      <div class="lr-rank ${rankCls}">${i===0?"🥇":i===1?"🥈":i===2?"🥉":"#"+(i+1)}</div>
+      <div class="lr-rank ${rankCls}">#${i+1}</div>
       <div class="lr-info">
         <div class="lr-name">${l.leader_short}</div>
-        <div class="lr-sub">${flag} ${l.country} · ${(l.n||0).toLocaleString("pt-BR")} ${t("cc_speeches")}</div>
+        <div class="lr-sub">${flag} ${l.country} · ${coverageText(l)}</div>
         <div class="lr-click-hint">${t("lr_click_hint")}</div>
       </div>
       <div class="lr-right">
@@ -864,7 +887,7 @@ function initTSCountryChips(countries) {
   const container = document.getElementById("ts-country-chips");
   const defaults  = ["BRA","VEN","MEX","ARG","BOL","COL"];
   TS.countries    = defaults.slice();
-  countries.forEach(c => {
+  [...countries].sort((a,b)=>a.country.localeCompare(b.country,"pt-BR")).forEach(c => {
     const chip = document.createElement("div");
     chip.className = `chip ${defaults.includes(c.iso3)?"active":""}`;
     chip.textContent = `${FLAGS[c.iso3]??""} ${c.country}`;
@@ -986,23 +1009,22 @@ function initDistFilters() {
 // ── Leader filter ─────────────────────────────────────────────────────
 async function initLeaderFilter(countries) {
   const sel = document.getElementById("leader-country-filter");
-  countries.forEach(c=>{ const o=document.createElement("option"); o.value=c.iso3; o.textContent=`${FLAGS[c.iso3]??""} ${c.country}`; sel.appendChild(o); });
-  sel.addEventListener("change",async()=>{
-    const leaders = await api(`/api/leaders?country=${sel.value}&n=25${dtypeQ()}`);
+  const minSel = document.getElementById("leader-min-n-filter");
+  [...countries].sort((a,b)=>a.country.localeCompare(b.country,"pt-BR")).forEach(c=>{ const o=document.createElement("option"); o.value=c.iso3; o.textContent=`${FLAGS[c.iso3]??""} ${c.country}`; sel.appendChild(o); });
+  const refreshLeaderRanking = async()=>{
+    const leaders = await api(`/api/leaders?country=${sel.value}&n=25&min_n=${leaderMinN()}${dtypeQ()}`);
     _cache.leaders = leaders;
-    document.getElementById("leader-count-badge").textContent = leaders.length;
+    document.getElementById("leader-count-badge").textContent = `${leaders.length} · ${leaderMinN()==="5"?"n≥5":"todos"}`;
     renderLeaderRankList(leaders);
-  });
+  };
+  sel.addEventListener("change", refreshLeaderRanking);
+  minSel?.addEventListener("change", refreshLeaderRanking);
 }
 
 // ── Bootstrap ─────────────────────────────────────────────────────────
 async function main() {
-  // Restaurar preferências salvas
-  const savedTheme = localStorage.getItem("popin_theme");
-  if (savedTheme && savedTheme !== THEME) {
-    THEME = savedTheme;
-    document.documentElement.dataset.theme = savedTheme;
-  }
+  // O site usa uma única apresentação clara; não há preferência de tema.
+  document.documentElement.dataset.theme = "light";
   const savedLang = localStorage.getItem("popin_lang");
   if (savedLang) {
     LANG = savedLang;
@@ -1028,7 +1050,7 @@ async function main() {
 
   const [stats, countries, leaders, yearlyGlobal] = await Promise.all([
     api("/api/stats"), api("/api/countries"),
-    api("/api/leaders?n=25"), api("/api/yearly_global"),
+    api(`/api/leaders?n=25&min_n=${leaderMinN()}`), api("/api/yearly_global"),
   ]);
   _cache.stats=stats; _cache.countries=countries; _cache.leaders=leaders;
 
@@ -1048,7 +1070,7 @@ async function main() {
 
   // Leaders
   await initLeaderFilter(countries);
-  document.getElementById("leader-count-badge").textContent = leaders.length;
+  document.getElementById("leader-count-badge").textContent = `${leaders.length} · n≥5`;
   renderLeaderRankList(leaders);
 
   // Time Series
@@ -1065,8 +1087,9 @@ main().catch(err => {
   console.error(err);
   document.getElementById("loader").innerHTML = `
     <div class="loader-inner">
-      <p style="color:#F87171;font-weight:600">Erro ao carregar dados.</p>
-      <p style="font-size:11px;margin-top:4px;opacity:.6">O servidor está rodando em :8000?</p>
-      <p style="font-size:11px;margin-top:2px;opacity:.4">${err.message}</p>
+      <p class="error-title">${LANG === "pt" ? "Não foi possível carregar os dados." : "The data could not be loaded."}</p>
+      <p class="error-copy">${LANG === "pt" ? "Verifique a conexão com o servidor e tente novamente." : "Check the server connection and try again."}</p>
+      <button class="retry-btn" id="retry-btn">${LANG === "pt" ? "Tentar novamente" : "Try again"}</button>
     </div>`;
+  document.getElementById("retry-btn")?.addEventListener("click", () => window.location.reload());
 });

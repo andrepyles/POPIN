@@ -3,3 +3,13 @@
 *.duckdb
 *.xlsx
 *.csv
+.env
+data/gpd_v2_1_20251120/sensitivity_runs/
+
+# resultados e artefatos locais de processamento
+*.jsonl
+*.bak
+*.partial
+*.progress
+*.pyc
+__pycache__/

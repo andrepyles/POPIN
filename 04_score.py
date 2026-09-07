@@ -1,13 +1,14 @@
 """
 POPIN v4 — Step 4: Scoring de populismo via LLM
 
-Pontua cada discurso nas 5 dimensões do POPIN (0.00–100.00):
+Pontua cada discurso nas 6 dimensões do POPIN (0.00–100.00):
   - PeopleCentrism         : referências ao "povo" como ator central
   - AntiElitism            : antagonismo a elites políticas/econômicas/midiáticas
   - MoralDichotomy         : divisão moral entre povo puro e elite corrupta
   - PopularSovereignty     : apelos à soberania e vontade popular
   - ExclusionaryRhetoric   : exclusão de grupos do "povo verdadeiro"
-  - FinalScore             : média simples das 5 dimensões
+  - CrisisRhetoric         : enquadramento da política como crise ou emergência
+  - FinalScore             : média simples das 6 dimensões
 
 Textos longos são divididos em chunks. Os scores finais são a média
 ponderada pelo tamanho de cada chunk.
@@ -40,8 +41,9 @@ VLLM_BASE_URL  = os.getenv("VLLM_BASE_URL", "http://localhost:8080/v1")
 VLLM_API_KEY   = os.getenv("VLLM_API_KEY", "vx")
 VLLM_MODEL     = os.getenv("VLLM_MODEL", "Qwen/Qwen3-30B-A3B-Instruct-2507")
 
-CHUNK_WORDS      = 800   # reduzido: sistema+chunk deve caber em 4096 tokens
-CHECKPOINT_EVERY = 100
+CHUNK_WORDS        = 800   # chunks contíguos, sem overlap
+SCORING_TEMPERATURE = 0.0  # configuração v4; não usar amostragem estocástica
+CHECKPOINT_EVERY   = 100
 DIMENSIONS       = ["people_centrism", "anti_elitism", "moral_dichotomy",
                     "popular_sovereignty", "exclusionary_rhetoric", "crisis_rhetoric"]
 
@@ -50,7 +52,7 @@ DIMENSIONS       = ["people_centrism", "anti_elitism", "moral_dichotomy",
 
 SYSTEM_PROMPT = """\
 You are a political science research assistant specialized in comparative populism across world regions.
-Analyze the political speech excerpt using the 5-dimensional framework below.
+Analyze the political speech excerpt using the 6-dimensional framework below.
 Output ONLY valid minified JSON — no spaces, no newlines, no extra fields.
 
 CONCEPTUAL FRAMEWORK (for scoring only; do NOT include in output):
@@ -134,10 +136,11 @@ def build_user_prompt(chunk: str) -> str:
 # ── Chunking ──────────────────────────────────────────────────────────────────
 
 def split_chunks(text: str, max_words: int = CHUNK_WORDS) -> list[str]:
-    """Divide o texto em chunks de ~max_words palavras.
+    """Divide o texto em chunks contíguos de ~max_words palavras.
 
-    Respeita parágrafos (\\n\\n) mas também quebra parágrafos longos
-    para garantir que nenhum chunk exceda max_words.
+    Respeita quebras de linha, mas também quebra parágrafos longos para
+    garantir que nenhum chunk exceda max_words. Não há sobreposição entre
+    chunks; palavras repetidas não recebem peso duplicado na agregação.
     """
     def words_to_chunks(word_list: list[str]) -> list[str]:
         return [" ".join(word_list[i:i + max_words])
@@ -184,7 +187,7 @@ async def score_chunk(client: AsyncOpenAI, semaphore: asyncio.Semaphore,
                         {"role": "system", "content": SYSTEM_PROMPT},
                         {"role": "user",   "content": build_user_prompt(chunk)},
                     ],
-                    temperature=0.1,
+                    temperature=SCORING_TEMPERATURE,
                     max_tokens=80,
                     extra_body={"chat_template_kwargs": {"enable_thinking": False}},
                 )

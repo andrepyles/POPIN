@@ -1,8 +1,8 @@
 """
 POPIN v4 — Web Application Backend
-Uso: python -m uvicorn main:app --port 8000
+Uso: python -m uvicorn main:app --host 127.0.0.1 --port 8765
      (rodar da pasta 06_website)
-Acesse: http://localhost:8000
+Acesse: http://127.0.0.1:8765
 """
 import os
 from pathlib import Path
@@ -18,9 +18,10 @@ from dotenv import load_dotenv
 HERE = Path(__file__).parent
 load_dotenv(HERE.parent / ".env")
 _db_env = os.getenv("DB_PATH", "")
-# Slim web DB (preferred) — fall back to full DB for local dev
+# Slim web DB is the published snapshot for this dashboard. Prefer it whenever
+# present so a parent .env cannot silently point the site at another database.
 _slim = HERE / "popin_web.duckdb"
-if _slim.exists() and not _db_env:
+if _slim.exists():
     DB_PATH = str(_slim)
 elif _db_env:
     DB_PATH = str((HERE.parent / _db_env).resolve()) if not Path(_db_env).is_absolute() else _db_env
@@ -29,6 +30,7 @@ else:
 
 DIMENSIONS = ["people_centrism", "anti_elitism", "moral_dichotomy",
               "popular_sovereignty", "exclusionary_rhetoric", "crisis_rhetoric"]
+LEADER_MIN_N_DEFAULT = 5
 
 COUNTRY_NAMES = {
     "ARG": "Argentina",   "BOL": "Bolivia",       "BRA": "Brazil",
@@ -77,18 +79,32 @@ def _sub(dtype: str = "") -> pd.DataFrame:
     return df
 
 def _agg_countries(sub: pd.DataFrame):
-    return (sub.groupby(["iso3", "country"])
+    keys = ["iso3", "country"]
+    base = (sub.groupby(keys)
                .agg(n=("final_score", "count"),
                     **{d: (d, "mean") for d in DIMENSIONS},
                     final_score=("final_score", "mean"))
-               .reset_index().sort_values("final_score", ascending=False))
+               .reset_index())
+    spread = (sub.groupby(keys)["final_score"]
+                .quantile([.25, .75]).unstack()
+                .rename(columns={.25: "p25", .75: "p75"})
+                .reset_index())
+    return (base.merge(spread, on=keys, how="left")
+                .sort_values("final_score", ascending=False))
 
 def _agg_leaders(sub: pd.DataFrame):
-    return (sub.groupby(["leader_name", "leader_short", "iso3", "country"])
+    keys = ["leader_name", "leader_short", "iso3", "country"]
+    base = (sub.groupby(keys)
                .agg(n=("final_score", "count"),
                     **{d: (d, "mean") for d in DIMENSIONS},
                     final_score=("final_score", "mean"))
-               .reset_index().sort_values("n", ascending=False))
+               .reset_index())
+    spread = (sub.groupby(keys)["final_score"]
+                .quantile([.25, .75]).unstack()
+                .rename(columns={.25: "p25", .75: "p75"})
+                .reset_index())
+    return (base.merge(spread, on=keys, how="left")
+                .sort_values("n", ascending=False))
 
 # Pre-compute for ALL (fast path)
 leaders_agg    = _agg_leaders(df)
@@ -120,7 +136,8 @@ def stats(dtype: str = Query(default="")):
     ca  = _agg_countries(sub)
     la  = _agg_leaders(sub)
     top_c = ca.nlargest(1, "final_score").iloc[0]
-    top_l = la.nlargest(1, "final_score").iloc[0]
+    eligible_leaders = la[la["n"] >= LEADER_MIN_N_DEFAULT]
+    top_l = (eligible_leaders if not eligible_leaders.empty else la).nlargest(1, "final_score").iloc[0]
     return {
         "n_discourses": int(len(sub)),
         "n_countries":  int(sub["iso3"].nunique()),
@@ -168,11 +185,13 @@ def api_leaders(
     country: str = Query(default="ALL"),
     n: int = Query(default=25),
     dtype: str = Query(default=""),
+    min_n: int = Query(default=LEADER_MIN_N_DEFAULT, ge=1, le=100000),
 ):
     sub = _sub(dtype)
     la  = _agg_leaders(sub)
     if country != "ALL":
         la = la[la["iso3"] == country]
+    la = la[la["n"] >= min_n]
     return la.nlargest(n, "final_score").round(2).to_dict("records")
 
 @app.get("/api/leader_trend")
