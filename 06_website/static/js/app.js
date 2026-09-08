@@ -1,1095 +1,760 @@
-/* ═══════════════════════════════════════════════════════════════════
-   POPIN v4 · App — populismo descomplicado
-   Refs: CNN Election · Our World in Data · Grafana · The Pudding
-═══════════════════════════════════════════════════════════════════ */
+/* POPIN v4 — shared API keys, localized presentation, bounded asynchronous state. */
+"use strict";
 
-// ── i18n ──────────────────────────────────────────────────────────────
 const I18N = {
   pt: {
-    nav_overview:"Visão Geral", nav_countries:"Países", nav_leaders:"Líderes",
-    nav_timeseries:"Série Temporal", nav_dimensions:"Dimensões",
-    brand_sub:"Índice de Populismo",
-    github_repo:"Código no GitHub",
-    dataset_label:"Instrumento", dataset_value:"GPT-5.6 Luna · texto integral · v4",
-    loading:"Carregando dados…",
-    ov_sub:"Populismo na América Latina · 2000–2025",
-    ct_sub:"Análise comparativa de 19 países",
-    ld_sub:"Clique em um líder para ver o perfil completo",
-    ts_sub:"Evolução do populismo · 2000–2025",
-    dm_sub:"Scores médios por dimensão de populismo",
-    kpi_discourses:"Discursos analisados",
-    kpi_countries:"Países cobertos",
-    kpi_leaders:"Líderes identificados",
-    kpi_years:"Anos de dados",
-    cc_speeches:"discursos", cc_title:"Score por País", badge_ranked:"ordenado",
-    badge_final:"Score Final", badge_radar:"Radar", badge_delta:"Δ Score",
-    chart_map:"Mapa do Populismo",
-    chart_trend:"Tendência Global do Populismo",
-    chart_radar:"Perfil de Populismo", chart_ranked:"Ranking de Score",
-    chart_dim_bars:"Dimensões por País",
-    chart_leaders:"Ranking de Líderes",
-    leader_badge:"Top 25 · ≥5 discursos",
-    leader_coverage_note:"O ranking principal exclui líderes com menos de cinco discursos. Use “Todos os casos” para inspecionar a cobertura baixa.",
-    chart_ts_line:"Comparação por País",
-    chart_movers:"Variação 2000–2025 por País",
-    chart_means:"Score Médio por Grupo",
-    chart_scatter2d:"Dispersão entre Dimensões",
-    f_countries:"Países", f_country:"País", f_all:"Todos os Países",
-    f_min_n:"Cobertura mínima", min_n_5:"≥5 discursos", min_n_1:"Todos os casos",
-    f_dimension:"Dimensão", f_group_by:"Agrupar por",
-    f_discourse:"Tipo de Discurso", f_filter_by:"Tipo de discurso",
-    drawer_dims:"Subdimensões", drawer_trend:"Evolução Histórica", drawer_radar:"Perfil Radar",
-    dim_people:"Povo-Centrismo", dim_elite:"Anti-Elitismo", dim_moral:"Dicotomia Moral",
-    dim_sovereignty:"Soberania Popular", dim_excl:"Retórica Excludente", dim_crisis:"Retórica de Crise",
-    lr_click_hint:"ver perfil",
-    hero_most:"Mais populista", hero_least:"Menos populista",
-    legend_title:"Escala de Populismo",
-    legend_low:"Baixo · 0–30", legend_med:"Moderado · 30–50",
-    legend_high:"Alto · 50–65", legend_vhigh:"Muito Alto · 65+",
-    dtype_all:"Todos",
-    dtype_SPEECH:"Discurso", dtype_INTERVIEW:"Entrevista", dtype_DECREE:"Decreto",
-    dtype_LETTER:"Carta", dtype_COMMUNIQUE:"Comunicado", dtype_PRESS_RELEASE:"Nota à Imprensa",
+    nav_overview:"Visão geral", nav_countries:"Países", nav_leaders:"Líderes", nav_about:"Sobre", about_sub:"Pesquisa, método e evidências para usar o POPIN.",
+    nav_timeseries:"Série temporal", nav_dimensions:"Dimensões", brand_sub:"Índice de Populismo",
+    github_repo:"Código no GitHub", dataset_label:"Instrumento",
+    dataset_value:"GPT-5.6 Luna · texto integral · v4", loading:"Carregando dados…",
+    ov_sub:"Média dos discursos analisados", ov_note:"O score varia de 0 a 100. Leia cada média junto do número de discursos e da faixa p25–p75, que reúne os 50% centrais dos casos.",
+    ct_sub:"Compare médias e cobertura por país", ld_sub:"Selecione um líder para examinar seu perfil",
+    ts_sub:"Evolução das médias anuais no período disponível", dm_sub:"Médias e dispersão das dimensões de populismo",
+    kpi_discourses:"Discursos analisados", kpi_countries:"Países cobertos", kpi_leaders:"Líderes identificados", kpi_years:"Período",
+    cc_speeches:"discursos", cc_title:"Score por país", badge_ranked:"Média decrescente", badge_final:"Score final", badge_radar:"Radar", badge_delta:"Primeiro / último ano",
+    chart_map:"Mapa do populismo", chart_trend:"Média anual do corpus", chart_radar:"Perfil de populismo",
+    chart_ranked:"Média e 50% centrais", chart_dim_bars:"Dimensões por país", chart_leaders:"Ranking de líderes",
+    leader_badge:"Líderes", leader_coverage_note:"A cobertura mínima considera o número de discursos de cada líder no recorte selecionado.",
+    chart_ts_line:"Comparação por país", chart_movers:"Primeiro e último ano disponível por país",
+    chart_means:"Média e 50% centrais por grupo", chart_scatter2d:"Dispersão entre dimensões",
+    f_countries:"Países", f_country:"País", f_all:"Todos os países", f_min_n:"Cobertura mínima",
+    min_n_5:"≥5 discursos", min_n_1:"Todos os casos", f_dimension:"Dimensão", f_group_by:"Agrupar por",
+    f_discourse:"Tipo de discurso", f_filter_by:"Tipo de discurso", drawer_dims:"Dimensões", drawer_trend:"Evolução histórica", drawer_radar:"Perfil radar",
+    dim_people:"Povo-centrismo", dim_elite:"Anti-elitismo", dim_moral:"Dicotomia moral", dim_sovereignty:"Soberania popular", dim_excl:"Retórica excludente", dim_crisis:"Retórica de crise",
+    lr_click_hint:"Ver perfil", hero_most:"Maior média no recorte", hero_least:"Menor média no recorte", legend_title:"Score de populismo · 0–100",
+    dtype_all:"Todos os tipos", dtype_SPEECH:"Discurso", dtype_INTERVIEW:"Entrevista", dtype_DECREE:"Decreto", dtype_LETTER:"Carta", dtype_COMMUNIQUE:"Comunicado", dtype_PRESS_RELEASE:"Nota à imprensa",
+    mean:"Média", central50:"p25–p75 · 50% centrais", empty:"Sem dados para este recorte. Ajuste os filtros.", error:"Não foi possível carregar estes dados.", retry:"Tentar novamente",
+    search:"Buscar nos líderes carregados", scope:"Recorte ativo", ready:"Dados atualizados", partial:"Alguns dados não foram carregados", first:"Primeiro ano disponível", last:"Último ano disponível", change:"Variação", export_countries:"Exportar países (CSV)",
+    distribution_note:"Grupos com pelo menos 5 discursos · 2000–2025.",
+    corpus_mean:"Média do corpus", map_caption:"Média dos textos disponíveis em cada país.", country_caption:"Compare a média junto da cobertura.", export_csv:"Baixar CSV",
+    quartile_note:"p25–p75: os 50% centrais dos discursos. Não é um intervalo de confiança.", score_scale:"Score de 0 a 100", trend_caption:"Médias anuais nos marcadores; curvas suavizadas apenas para leitura. A composição do corpus varia ao longo do tempo.",
+    choose_countries:"Selecionar países", search_leader:"Buscar líder", methodology_title:"Sobre os dados e o índice",
+    methodology_copy:"Os valores apresentados são médias dos textos disponíveis no corpus, conforme o filtro selecionado. A cobertura varia entre países, líderes e anos. O intervalo p25–p75 descreve a dispersão dos discursos; não mede a incerteza da média.",
   },
   en: {
-    nav_overview:"Overview", nav_countries:"Countries", nav_leaders:"Leaders",
-    nav_timeseries:"Time Series", nav_dimensions:"Dimensions",
-    brand_sub:"Populism Index",
-    github_repo:"Code on GitHub",
-    dataset_label:"Instrument", dataset_value:"GPT-5.6 Luna · full text · v4",
-    loading:"Loading dataset…",
-    ov_sub:"Populism across Latin America · 2000–2025",
-    ct_sub:"Comparative analysis across 19 nations",
-    ld_sub:"Click on a leader to see the full profile",
-    ts_sub:"Populism evolution · 2000–2025",
-    dm_sub:"Mean scores per populism dimension",
-    kpi_discourses:"Discourses analyzed",
-    kpi_countries:"Countries covered",
-    kpi_leaders:"Leaders identified",
-    kpi_years:"Years of data",
-    cc_speeches:"speeches", cc_title:"Score by Country", badge_ranked:"ranked",
-    badge_final:"Final Score", badge_radar:"Radar", badge_delta:"Δ Score",
-    chart_map:"Populism Map",
-    chart_trend:"Global Populism Trend",
-    chart_radar:"Populism Profile", chart_ranked:"Score Ranking",
-    chart_dim_bars:"Dimensions by Country",
-    chart_leaders:"Leader Ranking",
-    leader_badge:"Top 25 · ≥5 discourses",
-    leader_coverage_note:"The main ranking excludes leaders with fewer than five discourses. Use “All cases” to inspect low coverage.",
-    chart_ts_line:"Country Comparison",
-    chart_movers:"Change 2000–2025 by Country",
-    chart_means:"Mean Score by Group",
-    chart_scatter2d:"Dimension Scatter",
-    f_countries:"Countries", f_country:"Country", f_all:"All Countries",
-    f_min_n:"Minimum coverage", min_n_5:"≥5 discourses", min_n_1:"All cases",
-    f_dimension:"Dimension", f_group_by:"Group by",
-    f_discourse:"Discourse Type", f_filter_by:"Discourse type",
-    drawer_dims:"Sub-dimensions", drawer_trend:"Historical Evolution", drawer_radar:"Radar Profile",
-    dim_people:"People Centrism", dim_elite:"Anti-Elitism", dim_moral:"Moral Dichotomy",
-    dim_sovereignty:"Popular Sovereignty", dim_excl:"Exclusionary Rhetoric", dim_crisis:"Crisis Rhetoric",
-    lr_click_hint:"view profile",
-    hero_most:"Most populist", hero_least:"Least populist",
-    legend_title:"Populism Scale",
-    legend_low:"Low · 0–30", legend_med:"Moderate · 30–50",
-    legend_high:"High · 50–65", legend_vhigh:"Very High · 65+",
-    dtype_all:"All",
-    dtype_SPEECH:"Speech", dtype_INTERVIEW:"Interview", dtype_DECREE:"Decree",
-    dtype_LETTER:"Letter", dtype_COMMUNIQUE:"Communiqué", dtype_PRESS_RELEASE:"Press Release",
-  }
+    nav_overview:"Overview", nav_countries:"Countries", nav_leaders:"Leaders", nav_timeseries:"Time series", nav_dimensions:"Dimensions", brand_sub:"Populism Index", nav_about:"About", about_sub:"Research, method and evidence for using POPIN.",
+    github_repo:"Code on GitHub", dataset_label:"Instrument", dataset_value:"GPT-5.6 Luna · full text · v4", loading:"Loading data…",
+    ov_sub:"Mean score across analyzed discourses", ov_note:"Scores range from 0 to 100. Read each mean with its discourse count and p25–p75 interval, which contains the middle 50% of cases.",
+    ct_sub:"Compare country means and coverage", ld_sub:"Select a leader to examine their profile", ts_sub:"Annual means over the available period", dm_sub:"Means and dispersion of populism dimensions",
+    kpi_discourses:"Discourses analyzed", kpi_countries:"Countries covered", kpi_leaders:"Leaders identified", kpi_years:"Period",
+    cc_speeches:"discourses", cc_title:"Score by country", badge_ranked:"Descending mean", badge_final:"Final score", badge_radar:"Radar", badge_delta:"First / last year",
+    chart_map:"Populism map", chart_trend:"Annual corpus mean", chart_radar:"Populism profile", chart_ranked:"Mean and middle 50%", chart_dim_bars:"Dimensions by country", chart_leaders:"Leader ranking",
+    leader_badge:"Leaders", leader_coverage_note:"Minimum coverage counts each leader’s discourses within the selected scope.",
+    chart_ts_line:"Country comparison", chart_movers:"First and last available year by country", chart_means:"Mean and middle 50% by group", chart_scatter2d:"Dimension scatter",
+    f_countries:"Countries", f_country:"Country", f_all:"All countries", f_min_n:"Minimum coverage", min_n_5:"≥5 discourses", min_n_1:"All cases", f_dimension:"Dimension", f_group_by:"Group by", f_discourse:"Discourse type", f_filter_by:"Discourse type",
+    drawer_dims:"Dimensions", drawer_trend:"Historical evolution", drawer_radar:"Radar profile",
+    dim_people:"People centrism", dim_elite:"Anti-elitism", dim_moral:"Moral dichotomy", dim_sovereignty:"Popular sovereignty", dim_excl:"Exclusionary rhetoric", dim_crisis:"Crisis rhetoric",
+    lr_click_hint:"View profile", hero_most:"Highest mean in scope", hero_least:"Lowest mean in scope", legend_title:"Populism score · 0–100",
+    dtype_all:"All types", dtype_SPEECH:"Speech", dtype_INTERVIEW:"Interview", dtype_DECREE:"Decree", dtype_LETTER:"Letter", dtype_COMMUNIQUE:"Communiqué", dtype_PRESS_RELEASE:"Press release",
+    mean:"Mean", central50:"p25–p75 · middle 50%", empty:"No data for this scope. Adjust the filters.", error:"These data could not be loaded.", retry:"Try again",
+    search:"Search loaded leaders", scope:"Active scope", ready:"Data updated", partial:"Some data could not be loaded", first:"First available year", last:"Last available year", change:"Change", export_countries:"Export countries (CSV)",
+    distribution_note:"Groups with at least 5 discourses · 2000–2025.",
+    corpus_mean:"Corpus mean", map_caption:"Mean of available texts in each country.", country_caption:"Compare each mean with its coverage.", export_csv:"Download CSV",
+    quartile_note:"p25–p75: the middle 50% of discourses. This is not a confidence interval.", score_scale:"Score from 0 to 100", trend_caption:"Markers show annual means; curves are smoothed for display only. Corpus composition changes over time.",
+    choose_countries:"Select countries", search_leader:"Search leaders", methodology_title:"About the data and index",
+    methodology_copy:"Values are means of the texts available in the corpus, under the selected filter. Coverage varies across countries, leaders and years. The p25–p75 interval describes the dispersion of discourses; it does not measure uncertainty in the mean.",
+  },
 };
-
-let LANG = "pt";
-const t = k => I18N[LANG][k] ?? I18N.en[k] ?? k;
-
-// ── Dimensions ────────────────────────────────────────────────────────
 const DIMS = [
-  { key:"final_score",           pt:"Score Final",          en:"Final Score"           },
-  { key:"people_centrism",       pt:"Povo-Centrismo",       en:"People Centrism"       },
-  { key:"anti_elitism",          pt:"Anti-Elitismo",        en:"Anti-Elitism"          },
-  { key:"moral_dichotomy",       pt:"Dicotomia Moral",      en:"Moral Dichotomy"       },
-  { key:"popular_sovereignty",   pt:"Soberania Popular",    en:"Popular Sovereignty"   },
-  { key:"exclusionary_rhetoric", pt:"Retórica Excludente",  en:"Exclusionary Rhetoric" },
-  { key:"crisis_rhetoric",       pt:"Retórica de Crise",    en:"Crisis Rhetoric"       },
+  {key:"final_score", pt:"Score final", en:"Final score"},
+  {key:"people_centrism", pt:"Povo-centrismo", en:"People centrism"},
+  {key:"anti_elitism", pt:"Anti-elitismo", en:"Anti-elitism"},
+  {key:"moral_dichotomy", pt:"Dicotomia moral", en:"Moral dichotomy"},
+  {key:"popular_sovereignty", pt:"Soberania popular", en:"Popular sovereignty"},
+  {key:"exclusionary_rhetoric", pt:"Retórica excludente", en:"Exclusionary rhetoric"},
+  {key:"crisis_rhetoric", pt:"Retórica de crise", en:"Crisis rhetoric"},
 ];
-
-const COUNTRY_COLORS = {
-  Venezuela:"#F87171", Nicaragua:"#FB923C", Bolivia:"#FBBF24", Ecuador:"#34D399",
-  Mexico:"#2DD4BF", Argentina:"#38BDF8", Brazil:"#60A5FA", Peru:"#A78BFA",
-  Colombia:"#F472B6", Paraguay:"#F43F5E", Guatemala:"#86EFAC", Honduras:"#67E8F9",
-  Panama:"#FCD34D", Chile:"#818CF8", "El Salvador":"#E879F9", Uruguay:"#4ADE80",
-  "Dom. Republic":"#FCA5A5", "Costa Rica":"#BEF264", Cuba:"#C084FC",
+// country is the backend key. Neither translations nor sorting change selector values.
+const COUNTRIES = {
+  ARG:["Argentina","Argentina","Argentina"], BOL:["Bolivia","Bolívia","Bolivia"],
+  BRA:["Brazil","Brasil","Brazil"], CHL:["Chile","Chile","Chile"], COL:["Colombia","Colômbia","Colombia"],
+  CRI:["Costa Rica","Costa Rica","Costa Rica"], CUB:["Cuba","Cuba","Cuba"],
+  DOM:["Dom. Republic","República Dominicana","Dominican Republic"], ECU:["Ecuador","Equador","Ecuador"],
+  GTM:["Guatemala","Guatemala","Guatemala"], HND:["Honduras","Honduras","Honduras"],
+  MEX:["Mexico","México","Mexico"], NIC:["Nicaragua","Nicarágua","Nicaragua"],
+  PAN:["Panama","Panamá","Panama"], PER:["Peru","Peru","Peru"], PRY:["Paraguay","Paraguai","Paraguay"],
+  SLV:["El Salvador","El Salvador","El Salvador"], URY:["Uruguay","Uruguai","Uruguay"], VEN:["Venezuela","Venezuela","Venezuela"],
 };
-
-const FLAGS = {
-  ARG:"🇦🇷", BOL:"🇧🇴", BRA:"🇧🇷", CHL:"🇨🇱", COL:"🇨🇴", CRI:"🇨🇷",
-  CUB:"🇨🇺", DOM:"🇩🇴", ECU:"🇪🇨", GTM:"🇬🇹", HND:"🇭🇳", MEX:"🇲🇽",
-  NIC:"🇳🇮", PAN:"🇵🇦", PER:"🇵🇪", PRY:"🇵🇾", SLV:"🇸🇻", URY:"🇺🇾",
-  VEN:"🇻🇪",
-};
-
-// Approximate country centroids [lat, lon]
-const CENTROIDS = {
-  ARG:[-34,-64], BOL:[-17,-65], BRA:[-14,-51], CHL:[-35,-71],
-  COL:[4,-72],   CRI:[10,-84],  CUB:[22,-79],  DOM:[19,-70],
-  ECU:[-2,-78],  GTM:[15,-90],  HND:[15,-87],  MEX:[23,-102],
-  NIC:[13,-85],  PAN:[9,-80],   PER:[-10,-76], PRY:[-23,-58],
-  SLV:[14,-89],  URY:[-33,-56], VEN:[7,-66],
-};
-
-// ── Smooth populism color scale (dual-theme) ──────────────────────────
-const _COLOR_STOPS_DARK = [
-  [  0, [ 26,  20,  16]],   // #1a1410 warm ink — very low
-  [ 22, [ 93, 122,  90]],   // #5d7a5a sage
-  [ 50, [201, 140,  58]],   // #c98c3a ochre
-  [ 72, [184,  80,  66]],   // #b85042 terracotta
-  [100, [138,  51,  40]],   // #8a3328 deep terracotta
-];
-const _COLOR_STOPS_LIGHT = [
-  [  0, [243, 234, 217]],   // #f3ead9 warm paper — very low
-  [ 22, [ 93, 122,  90]],   // #5d7a5a sage
-  [ 50, [201, 140,  58]],   // #c98c3a ochre
-  [ 72, [184,  80,  66]],   // #b85042 terracotta
-  [100, [138,  51,  40]],   // #8a3328 deep terracotta
-];
-
-let _COLOR_STOPS = _COLOR_STOPS_DARK;
-let POP_SCALE = [
-  [0.00, "#1a1410"], [0.22, "#5d7a5a"],
-  [0.50, "#c98c3a"], [0.72, "#b85042"], [1.00, "#8a3328"],
-];
-
-function popColor(score) {
-  const s = Math.max(0, Math.min(100, score ?? 0));
-  let lo = _COLOR_STOPS[0], hi = _COLOR_STOPS[_COLOR_STOPS.length - 1];
-  for (let i = 0; i < _COLOR_STOPS.length - 1; i++) {
-    if (s >= _COLOR_STOPS[i][0] && s <= _COLOR_STOPS[i+1][0]) {
-      lo = _COLOR_STOPS[i]; hi = _COLOR_STOPS[i+1]; break;
-    }
-  }
-  const t = lo[0] === hi[0] ? 0 : (s - lo[0]) / (hi[0] - lo[0]);
-  const r = Math.round(lo[1][0] + t * (hi[1][0] - lo[1][0]));
-  const g = Math.round(lo[1][1] + t * (hi[1][1] - lo[1][1]));
-  const b = Math.round(lo[1][2] + t * (hi[1][2] - lo[1][2]));
-  return `rgb(${r},${g},${b})`;
-}
-
-function updateColorStops() {
-  if (THEME === "dark") {
-    _COLOR_STOPS = _COLOR_STOPS_DARK;
-    POP_SCALE = [[0.00,"#1a1410"],[0.22,"#5d7a5a"],[0.50,"#c98c3a"],[0.72,"#b85042"],[1.00,"#8a3328"]];
-  } else {
-    _COLOR_STOPS = _COLOR_STOPS_LIGHT;
-    POP_SCALE = [[0.00,"#f3ead9"],[0.22,"#5d7a5a"],[0.50,"#c98c3a"],[0.72,"#b85042"],[1.00,"#8a3328"]];
-  }
-}
-
-// ── Tema fixo ─────────────────────────────────────────────────────────
-let THEME = "light";
-
-const BG0 = "rgba(0,0,0,0)";
-let GRID_C = "rgba(250,246,240,.05)";
-let ZERO_C = "rgba(250,246,240,.10)";
-let FONT_C = "#c4b49a";
-
-const BASE_LAY = {
-  paper_bgcolor: BG0, plot_bgcolor: BG0,
-  font:{ family:"IBM Plex Sans,system-ui,sans-serif", color: FONT_C, size:12 },
-  margin:{ t:16, r:16, b:40, l:48 },
-  colorway: Object.values(COUNTRY_COLORS),
-  hoverlabel:{ bgcolor:"#0F1828", bordercolor:"rgba(255,255,255,.10)", font:{ family:"IBM Plex Sans,system-ui,sans-serif", color:"#E6EEFF", size:13 } },
-};
-const CFG = { displayModeBar:false, responsive:true };
-const AX = (e={}) => ({ gridcolor:GRID_C, linecolor:GRID_C, zerolinecolor:ZERO_C, tickcolor:FONT_C, ...e });
-
-function updateThemeVars() {
-  if (THEME === "dark") {
-    GRID_C = "rgba(250,246,240,.06)";
-    ZERO_C = "rgba(250,246,240,.11)";
-    FONT_C = "#c4b49a";   // warm paper label
-    BASE_LAY.font.color = FONT_C;
-    BASE_LAY.hoverlabel.bgcolor = "#2a1f16";
-    BASE_LAY.hoverlabel.bordercolor = "rgba(250,246,240,.12)";
-    BASE_LAY.hoverlabel.font.color = "#f0e6d3";
-  } else {
-    GRID_C = "rgba(26,20,16,.07)";
-    ZERO_C = "rgba(26,20,16,.13)";
-    FONT_C = "#3d2f24";   // ink-soft — alto contraste no claro
-    BASE_LAY.font.color = FONT_C;
-    BASE_LAY.hoverlabel.bgcolor = "#faf6f0";
-    BASE_LAY.hoverlabel.bordercolor = "rgba(214,196,163,.7)";
-    BASE_LAY.hoverlabel.font.color = "#1a1410";
-  }
-}
-
-function mapGeoColors() {
-  return THEME === "dark" ? {
-    bgcolor:      "#2a1f16",   // --card warm dark
-    oceancolor:   "#1a1410",   // --bg ink
-    landcolor:    "#231b14",   // --bg2 slightly lighter
-    countrycolor: "#3d2c1e",   // warm border
-  } : {
-    bgcolor:      "#faf6f0",   // --card paper
-    oceancolor:   "#ede4d6",   // --bg paper-warmer
-    landcolor:    "#f3ead9",   // --card2 paper-warm
-    countrycolor: "#d4c4a3",   // --border2 rule-strong
-  };
-}
-
-async function setTheme(t) {
-  THEME = t;
-  document.documentElement.dataset.theme = t;
-  updateThemeVars();
-  updateColorStops();
-  // Re-renderizar todos os gráficos ativos
-  if (_cache.countries) {
-    renderMap(_cache.countries);
-    renderCountryCards(_cache.countries);
-    renderHeroBanner(_cache.countries);
-    renderCountryRanked(_cache.countries);
-    renderDimBars(_cache.countries);
-    if (_radarSelected.length) renderCountryRadar(_cache.countries, _radarSelected);
-    renderMovers(_cache.countries);
-    renderScatter2D(_cache.countries);
-  }
-  if (_cache.stats)        renderKPIs(_cache.stats);
-  if (_cache.leaders)      renderLeaderRankList(_cache.leaders);
-  if (_cache.yearlyGlobal) renderGlobalTrend(_cache.yearlyGlobal, _activeTrendDim);
-  renderTSLine();
-  renderHistogram();
-}
-
-// ── Helpers ───────────────────────────────────────────────────────────
-const api = async p => { const r = await fetch(p); if(!r.ok) throw new Error(`API ${r.status}: ${p}`); return r.json(); };
-// Responsive chart left margin (bar charts with country names)
-const mL = () => window.innerWidth <= 480 ? 72 : window.innerWidth <= 768 ? 90 : 130;
-// rgba: accepts both "#rrggbb" and "rgb(r,g,b)" strings
-const rgba = (color, a) => {
-  if (color.startsWith("rgb(")) {
-    const [r,g,b] = color.slice(4,-1).split(",").map(Number);
-    return `rgba(${r},${g},${b},${a})`;
-  }
-  const h = color.replace(/^#/,"");
-  return `rgba(${parseInt(h.slice(0,2),16)},${parseInt(h.slice(2,4),16)},${parseInt(h.slice(4,6),16)},${a})`;
-};
-const ctryColor = n => COUNTRY_COLORS[n] ?? "#64748B";
-const dimLabel  = k => DIMS.find(d=>d.key===k)?.[LANG] ?? k;
-const dimLabels = () => DIMS.slice(1).map(d => d[LANG]);
-const dtypeQ    = () => GLOBAL_DTYPE && GLOBAL_DTYPE !== "ALL" ? `&dtype=${GLOBAL_DTYPE}` : "";
-const leaderMinN = () => document.getElementById("leader-min-n-filter")?.value || "5";
-const coverageText = c => {
-  const n = Number(c.n || 0).toLocaleString("pt-BR");
-  const p25 = Number.isFinite(Number(c.p25)) ? Number(c.p25).toFixed(1) : "—";
-  const p75 = Number.isFinite(Number(c.p75)) ? Number(c.p75).toFixed(1) : "—";
-  return `n=${n} · p25–p75 ${p25}–${p75}`;
-};
-
-function lay(ov={}) {
-  const b = JSON.parse(JSON.stringify(BASE_LAY));
-  for(const [k,v] of Object.entries(ov))
-    b[k] = (v && typeof v==="object" && !Array.isArray(v) && b[k] && typeof b[k]==="object") ? {...b[k],...v} : v;
-  return b;
-}
-
-// ── i18n DOM update ───────────────────────────────────────────────────
-function applyI18n() {
-  document.querySelectorAll("[data-i18n]").forEach(el => {
-    const key = el.dataset.i18n;
-    const val = t(key);
-    if(val) el.textContent = val;
-  });
-  document.documentElement.lang = LANG;
-}
-
-// ── Global discourse-type filter ──────────────────────────────────────
-let GLOBAL_DTYPE = "ALL";
-let _allDtypes   = [];
-
-async function initDtypeFilter() {
-  _allDtypes = await api("/api/dtypes");
-  const container = document.getElementById("dtype-chips");
-
-  const totalN = _allDtypes.reduce((s, d) => s + d.n, 0);
-  const fmtN   = n => n >= 1000 ? (n / 1000).toFixed(1) + "k" : String(n);
-
-  const makeChip = (label, value, n) => {
-    const chip = document.createElement("div");
-    chip.className = `chip ${value === GLOBAL_DTYPE ? "active" : ""}`;
-    chip.dataset.dtype = value;
-    if (n != null) {
-      chip.innerHTML = `${label}<span class="chip-n">${fmtN(n)}</span>`;
-    } else {
-      chip.innerHTML = `${label}<span class="chip-n">${fmtN(totalN)}</span>`;
-    }
-    chip.addEventListener("click", () => {
-      if (GLOBAL_DTYPE === value) return;
-      GLOBAL_DTYPE = value;
-      container.querySelectorAll(".chip").forEach(c => c.classList.toggle("active", c.dataset.dtype === value));
-      refreshAll();
-    });
-    return chip;
-  };
-
-  container.appendChild(makeChip(t("dtype_all"), "ALL", null));
-  _allDtypes.forEach(d => container.appendChild(makeChip(t(`dtype_${d.dtype}`) || d.dtype, d.dtype, d.n)));
-}
-
-// ── Navigation ────────────────────────────────────────────────────────
-function navigateTo(sec) {
-  document.querySelectorAll(".nav-item").forEach(i => i.classList.remove("active"));
-  const navItem = document.querySelector(`.nav-item[data-section="${sec}"]`);
-  if (navItem) navItem.classList.add("active");
-  document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
-  const secEl = document.getElementById(`section-${sec}`);
-  if (secEl) secEl.classList.add("active");
-  localStorage.setItem("popin_section", sec);
-  window.dispatchEvent(new Event("resize"));
-}
-
-function initNav() {
-  // Restaurar aba salva (ou "overview" como fallback)
-  const saved = localStorage.getItem("popin_section") ?? "overview";
-  navigateTo(saved);
-
-  document.querySelectorAll(".nav-item").forEach(item => {
-    item.addEventListener("click", () => {
-      navigateTo(item.dataset.section);
-      if (window.innerWidth <= 768) closeMobileSidebar();
-    });
-  });
-
-  document.getElementById("lang-toggle").addEventListener("click", () => {
-    LANG = LANG==="pt" ? "en" : "pt";
-    localStorage.setItem("popin_lang", LANG);
-    document.querySelectorAll(".lang-opt").forEach(el => {
-      el.classList.toggle("active", el.dataset.lang===LANG);
-    });
-    applyI18n();
-    refreshChartLabels();
-    if(_cache.stats)     renderKPIs(_cache.stats);
-    if(_cache.countries) { renderCountryCards(_cache.countries); renderHeroBanner(_cache.countries); }
-    if(_cache.leaders)   renderLeaderRankList(_cache.leaders);
-  });
-
-  // ── Mobile sidebar toggle ─────────────────────────────────────────
-  const sidebar    = document.querySelector(".sidebar");
-  const overlay    = document.getElementById("sidebar-mob-overlay");
-  const toggleBtn  = document.getElementById("sidebar-toggle");
-
-  function openMobileSidebar() {
-    sidebar.classList.add("open");
-    overlay.classList.add("open");
-    document.body.style.overflow = "hidden";
-  }
-  function closeMobileSidebar() {
-    sidebar.classList.remove("open");
-    overlay.classList.remove("open");
-    document.body.style.overflow = "";
-  }
-  // expose to nav-item handler above
-  window.closeMobileSidebar = closeMobileSidebar;
-
-  toggleBtn.addEventListener("click", () => {
-    sidebar.classList.contains("open") ? closeMobileSidebar() : openMobileSidebar();
-  });
-  overlay.addEventListener("click", closeMobileSidebar);
-}
-
-// ── Global cache ──────────────────────────────────────────────────────
-const _cache = {};
-
-function refreshChartLabels() {
-  document.querySelectorAll("#trend-dim-toggle .toggle-btn").forEach(btn => {
-    const dim = DIMS.find(d => d.key === btn.dataset.key);
-    if (dim) btn.textContent = dim[LANG];
-  });
-  document.querySelectorAll("#ts-dim option, #dist-dim option, #dim-bar-select option, #scatter-x option, #scatter-y option").forEach(opt => {
-    const dim = DIMS.find(d => d.key === opt.value);
-    if (dim) opt.textContent = dim[LANG];
-  });
-  // Update dtype chip labels (preserve the .chip-n count span)
-  document.querySelectorAll("#dtype-chips .chip").forEach(chip => {
-    const dv   = chip.dataset.dtype;
-    const span = chip.querySelector(".chip-n");
-    const lbl  = dv === "ALL" ? t("dtype_all") : (t(`dtype_${dv}`) || dv);
-    chip.innerHTML = `${lbl}${span ? span.outerHTML : ""}`;
-  });
-}
-
-// ── Refresh everything after dtype change ─────────────────────────────
-async function refreshAll() {
-  const [stats, countries, leaders, yearlyGlobal] = await Promise.all([
-    api(`/api/stats?${dtypeQ().slice(1)}`),
-    api(`/api/countries?${dtypeQ().slice(1)}`),
-    api(`/api/leaders?n=25&min_n=${leaderMinN()}${dtypeQ()}`),
-    api(`/api/yearly_global?${dtypeQ().slice(1)}`),
-  ]);
-  _cache.stats=stats; _cache.countries=countries; _cache.leaders=leaders;
-
-  renderKPIs(stats);
-  renderHeroBanner(countries);
-  renderCountryCards(countries);
-  renderMap(countries);
-  renderGlobalTrend(yearlyGlobal, _activeTrendDim);
-
-  renderCountryRanked(countries);
-  renderDimBars(countries);
-  if(_radarSelected.length) renderCountryRadar(countries, _radarSelected);
-
-  const lfilterSel = document.getElementById("leader-country-filter");
-  if(lfilterSel) {
-    document.getElementById("leader-count-badge").textContent = `${leaders.length} · ${leaderMinN()==="5"?"n≥5":"todos"}`;
-    renderLeaderRankList(leaders);
-  }
-
-  renderTSLine();
-  renderMovers(countries);
-  renderHistogram();
-  renderScatter2D(countries);
-}
-
-// ── KPIs ──────────────────────────────────────────────────────────────
-function renderKPIs(stats) {
-  const icons = {
-    discourses: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"/><path d="M15 3v4h4M9 12h6M9 16h6"/></svg>',
-    countries: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.7 5.5 3.7 9S14.5 18.5 12 21M12 3c-2.5 2.5-3.7 5.5-3.7 9S9.5 18.5 12 21"/></svg>',
-    leaders: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><path d="M3 21v-2a6 6 0 0 1 12 0v2M16 4.5a3 3 0 0 1 0 5.8M18 14a5 5 0 0 1 3 4.5V21"/></svg>',
-    years: '<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M7 3v4M17 3v4M3 10h18M7 14h3M14 14h3M7 18h3"/></svg>',
-  };
-  document.getElementById("kpi-row").innerHTML = [
-    { k:"kpi_discourses", v:stats.n_discourses.toLocaleString("pt-BR"), icon:icons.discourses },
-    { k:"kpi_countries",  v:stats.n_countries,   icon:icons.countries },
-    { k:"kpi_leaders",    v:stats.n_leaders,      icon:icons.leaders },
-    { k:"kpi_years",      v:`${stats.year_min}–${stats.year_max}`, icon:icons.years },
-  ].map(c=>`<div class="kpi-card">
-    <div class="kpi-icon">${c.icon}</div>
-    <div class="kpi-value">${c.v}</div>
-    <div class="kpi-label">${t(c.k)}</div>
-  </div>`).join("");
-}
-
-// ── Hero Banner (top/bottom country) ─────────────────────────────────
-function renderHeroBanner(countries) {
-  const sorted = [...countries].sort((a,b) => b.final_score - a.final_score);
-  const top = sorted[0];
-  const low = sorted[sorted.length - 1];
-  const container = document.getElementById("hero-row");
-  if(!container) return;
-
-  const card = (c, tag) => {
-    const col = popColor(c.final_score);
-    const flag = FLAGS[c.iso3] ?? "";
-    return `<div class="hero-card">
-      <div class="hero-tag">${tag}</div>
-      <div class="hero-country" style="color:${col}">${flag} ${c.country}</div>
-      <div class="hero-score" style="color:${col}">Score: ${c.final_score.toFixed(1)} / 100</div>
-      <div class="hero-coverage">${coverageText(c)}</div>
-      <div class="hero-bar-wrap"><div class="hero-bar-fill" style="width:${c.final_score}%;background:${col}"></div></div>
-    </div>`;
-  };
-  container.innerHTML = card(top, t("hero_most")) + card(low, t("hero_least"));
-}
-
-// ── Country List (compact ranked rows) ───────────────────────────────
-function renderCountryCards(countries) {
-  const sorted = [...countries].sort((a,b) => b.final_score - a.final_score);
-  document.getElementById("country-cards").innerHTML = sorted.map((c, i) => {
-    const col = popColor(c.final_score);
-    const pct = Math.min(c.final_score, 100);
-    const flag = FLAGS[c.iso3] ?? "";
-    return `<div class="cc-row">
-      <span class="cc-rank">${i+1}</span>
-      <span class="cc-flag-sm">${flag}</span>
-      <span class="cc-name-group"><span class="cc-label">${c.country}</span><span class="cc-meta">${coverageText(c)}</span></span>
-      <div class="cc-bar-inline">
-        <div class="cc-bar-inline-fill" style="width:${pct}%;background:${col}"></div>
-      </div>
-      <span class="cc-score-sm" style="color:${col}">${c.final_score.toFixed(1)}</span>
-    </div>`;
-  }).join("");
-}
-
-// ── Choropleth Map + ISO labels ───────────────────────────────────────
-function renderMap(countries) {
-  const withC = countries.filter(c => CENTROIDS[c.iso3]);
-
-  // Choropleth: filled country shapes
-  const choropleth = {
-    type: "choropleth",
-    locationmode: "ISO-3",
-    locations: countries.map(c => c.iso3),
-    z: countries.map(c => c.final_score),
-    text: countries.map(c =>
-      `<b>${FLAGS[c.iso3]??""} ${c.country}</b><br>Score: <b>${c.final_score.toFixed(1)}</b><br>${coverageText(c)}`
-    ),
-    hoverinfo: "text",
-    colorscale: POP_SCALE,
-    zmin: 0, zmax: 80,
-    showscale: true,
-    colorbar: {
-      thickness: 10, len: 0.72, x: 1.01, outlinewidth: 0,
-      tickcolor: FONT_C, tickfont: {color: FONT_C, size: 10},
-      title: {text: "", font: {size: 10}},
-    },
-    marker: { line: { color: THEME === "dark" ? "#030812" : "#A8C4DC", width: 0.7 } },
-  };
-
-  // ISO labels on top via scattergeo
-  const labels = {
-    type: "scattergeo",
-    lat: withC.map(c => CENTROIDS[c.iso3][0]),
-    lon: withC.map(c => CENTROIDS[c.iso3][1]),
-    text: withC.map(c => c.iso3),
-    mode: "text",
-    textfont: { color: THEME === "dark" ? "rgba(255,255,255,0.75)" : "rgba(20,36,60,0.6)", size: 8, family:"IBM Plex Sans,system-ui,sans-serif" },
-    hoverinfo: "none",
-    showlegend: false,
-  };
-
-  const geo = mapGeoColors();
-  const layout = {
-    paper_bgcolor: BG0,
-    margin: { t:0, r:10, b:0, l:0 },
-    geo: {
-      bgcolor: geo.bgcolor,
-      showland: true,  landcolor: geo.landcolor,
-      showocean: true, oceancolor: geo.oceancolor,
-      showcountries: true, countrycolor: geo.countrycolor,
-      showframe: false, showcoastlines: false,
-      countrywidth: 0.5,
-      projection: { type:"mercator" },
-      lataxis: { range:[-58, 35] },
-      lonaxis: { range:[-118, -28] },
-      showlakes: false,
-    },
-    hoverlabel: BASE_LAY.hoverlabel,
-    showlegend: false,
-  };
-
-  Plotly.newPlot("chart-map", [choropleth, labels], layout, CFG);
-}
-
-// ── Global Trend ──────────────────────────────────────────────────────
-let _activeTrendDim = "final_score";
-
-function renderTrendToggle(yearlyGlobal) {
-  _cache.yearlyGlobal = yearlyGlobal;   // cache para re-render no setTheme
-  const container = document.getElementById("trend-dim-toggle");
-  container.innerHTML = "";
-  DIMS.forEach(d => {
-    const btn = document.createElement("div");
-    btn.className = `toggle-btn ${d.key===_activeTrendDim?"active":""}`;
-    btn.textContent = d[LANG];
-    btn.dataset.key = d.key;
-    btn.addEventListener("click", () => {
-      _activeTrendDim = d.key;
-      container.querySelectorAll(".toggle-btn").forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      renderGlobalTrend(yearlyGlobal, _activeTrendDim);
-    });
-    container.appendChild(btn);
-  });
-  renderGlobalTrend(yearlyGlobal, _activeTrendDim);
-}
-
-function renderGlobalTrend(data, dim) {
-  Plotly.newPlot("chart-trend", [{
-    type:"scatter", mode:"lines+markers",
-    x:data.map(d=>d.year), y:data.map(d=>d[dim]),
-    line:{ color:"#4F8EF7", width:2.5, shape:"spline" },
-    marker:{ size:5, color:"#4F8EF7" },
-    fill:"tozeroy", fillcolor:rgba("#4F8EF7",.07),
-    hovertemplate:"%{x}: <b>%{y:.1f}</b><extra></extra>",
-  }], lay({
-    margin:{t:10,r:16,b:38,l:48},
-    xaxis:AX({dtick:2}),
-    yaxis:AX({range:[0,80]}),
-  }), CFG);
-}
-
-// ── Countries Section ─────────────────────────────────────────────────
-function renderCountryRanked(countries) {
-  const sorted = [...countries].sort((a,b)=>a.final_score-b.final_score);
-  Plotly.newPlot("chart-country-box",[{
-    type:"bar", orientation:"h",
-    x:sorted.map(c=>c.final_score), y:sorted.map(c=>`${FLAGS[c.iso3]??""} ${c.country}`),
-    text:sorted.map(c=>c.final_score.toFixed(1)),
-    textposition:"outside", cliponaxis:false,
-    textfont:{color:FONT_C,size:12,family:"IBM Plex Sans,system-ui,sans-serif"},
-    marker:{color:sorted.map(c=>popColor(c.final_score)), opacity:0.88},
-    hovertemplate:"<b>%{y}</b><br>Score: <b>%{x:.1f}</b><extra></extra>",
-  }], lay({
-    margin:{t:10,r:55,b:36,l:mL()},
-    xaxis:AX({range:[0,95]}),
-    yaxis:AX(),
-    bargap:0.28, showlegend:false,
-  }), CFG);
-}
-
+const CATEGORY_COLORS = ["#185a82","#9b392e","#007f86","#70419b","#386d32","#a54d06","#a82e65","#465c94","#736008","#426864","#802e36","#396a9b","#80582b","#685380","#26704f","#8c4567","#4c5d25","#975139","#414a70"];
+const NAVY = "#183b56", TEAL = "#007f86", INK = "#334155", GRID = "#e2e8f0";
+const SANS = "IBM Plex Sans,system-ui,sans-serif", MONO = "IBM Plex Mono,monospace";
+const SCORE_STOPS = [[0,[232,241,250]],[25,[181,209,232]],[50,[112,163,200]],[75,[58,112,153]],[100,[24,59,86]]];
+const POP_SCALE = SCORE_STOPS.map(([v,c]) => [v/100,`rgb(${c.join(",")})`]);
+const LEADER_LIMIT = 200; // main.py: n is Query(default=25), with no declared maximum.
+const $ = id => document.getElementById(id);
+const all = selector => Array.from(document.querySelectorAll(selector));
+let LANG = "pt", GLOBAL_DTYPE = "ALL", _activeTrendDim = "final_score";
+let _dimBarKey = "people_centrism", _scatterX = "people_centrism", _scatterY = "anti_elitism";
 let _radarSelected = ["Venezuela","Brazil","Mexico","Argentina"];
-
-function initCountryRadarSelect(countries) {
-  const container = document.getElementById("country-radar-select");
-  const names = countries.map(c=>c.country).sort((a,b)=>a.localeCompare(b,"pt-BR"));
-  names.forEach(name => {
-    const chip = document.createElement("div");
-    chip.className = `chip ${_radarSelected.includes(name)?"active":""}`;
-    chip.textContent = name;
-    chip.addEventListener("click",()=>{
-      if(_radarSelected.includes(name)){
-        if(_radarSelected.length<=1)return;
-        _radarSelected=_radarSelected.filter(n=>n!==name);
-        chip.classList.remove("active");
-      } else {
-        if(_radarSelected.length>=7)return;
-        _radarSelected.push(name);
-        chip.classList.add("active");
-      }
-      renderCountryRadar(countries,_radarSelected);
-    });
-    container.appendChild(chip);
-  });
-  renderCountryRadar(countries,_radarSelected);
+const TS = {countries:["BRA","VEN","MEX","ARG","BOL","COL"], dim:"final_score"};
+const DIST = {dim:"final_score", group:"country"};
+const _cache = {}, countryCatalog = new Map();
+let _allDtypes = [], scopeVersion = 0, lastRefresh = null;
+const t = key => I18N[LANG][key] ?? I18N.pt[key] ?? key;
+const locale = () => LANG === "pt" ? "pt-BR" : "en-US";
+const valid = value => value !== null && value !== undefined && value !== "" && Number.isFinite(Number(value));
+const fmt = (value, digits=1) => valid(value) ? new Intl.NumberFormat(locale(), {minimumFractionDigits:digits,maximumFractionDigits:digits}).format(Number(value)) : "—";
+const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const text = (id,value) => { if ($(id)) $(id).textContent = value; };
+const html = (id,value) => { if ($(id)) $(id).innerHTML = value; };
+const dimLabel = key => DIMS.find(d => d.key === key)?.[LANG] ?? key;
+const dtypeLabel = key => key === "ALL" ? t("dtype_all") : I18N[LANG][`dtype_${key}`] ?? key;
+const countryName = value => {
+  const row = typeof value === "object" && value ? COUNTRIES[value.iso3] : COUNTRIES[value];
+  const key = typeof value === "object" && value ? value.country ?? value.iso3 : value;
+  return (row ?? Object.values(COUNTRIES).find(c => c[0] === key))?.[LANG === "pt" ? 1 : 2] ?? key ?? "—";
+};
+const countryLabel = c => `${c.iso3} · ${countryName(c)}`;
+const ctryColor = key => CATEGORY_COLORS[Math.max(0,Object.keys(COUNTRIES).findIndex(iso => iso === key || COUNTRIES[iso][0] === key)) % CATEGORY_COLORS.length];
+const countryMarker = iso => `<span class="country-code">${escapeHTML(iso)}</span>`;
+const coverageText = c => `n=${fmt(c.n,0)} · p25–p75 ${fmt(c.p25)}–${fmt(c.p75)}`;
+const leaderMinN = () => $("leader-min-n-filter")?.value || "5";
+const leaderCountry = () => $("leader-country-filter")?.value || "ALL";
+const scoreWidth = value => valid(value) ? Math.min(100,Math.max(0,Number(value))) : 0;
+function popColor(value) {
+  const score = scoreWidth(value);
+  const index = Math.min(3,Math.floor(score/25));
+  const [start,lo] = SCORE_STOPS[index], [end,hi] = SCORE_STOPS[index+1];
+  return `rgb(${lo.map((v,i) => Math.round(v+(hi[i]-v)*(score-start)/(end-start))).join(",")})`;
+}
+function storage(key,value) {
+  try { return value === undefined ? localStorage.getItem(key) : localStorage.setItem(key,value); }
+  catch { return null; } // Private browsing/storage policies must not prevent initialization.
+}
+function url(path,params={}) {
+  const query = new URLSearchParams({...params, ...(GLOBAL_DTYPE === "ALL" ? {} : {dtype:GLOBAL_DTYPE})});
+  return `/api/${path}?${query}`;
 }
 
-function renderCountryRadar(countries, selected) {
-  const dimKeys = DIMS.slice(1).map(d=>d.key);
-  const labels  = [...dimLabels(), dimLabel(DIMS[1].key)];
-  const traces  = selected.map(name => {
-    const c   = countries.find(x=>x.country===name); if(!c) return null;
-    const col = ctryColor(name);
-    return { type:"scatterpolar", mode:"lines+markers", name,
-      r:[...dimKeys.map(k=>c[k]),c[dimKeys[0]]], theta:labels,
-      fill:"toself", fillcolor:rgba(col,.08),
-      line:{color:col,width:2}, marker:{size:4,color:col},
-      hovertemplate:"<b>%{theta}</b>: %{r:.1f}<extra></extra>",
-    };
-  }).filter(Boolean);
-  Plotly.newPlot("chart-country-radar", traces, lay({
-    margin:{t:20,r:30,b:20,l:30},
-    polar:{ bgcolor:BG0,
-      radialaxis:{range:[0,80],tickfont:{size:9},gridcolor:GRID_C,linecolor:GRID_C},
-      angularaxis:{gridcolor:GRID_C,tickfont:{size:10}},
-    },
-    legend:{font:{size:10},bgcolor:BG0},
-  }), CFG);
+// Per-resource generations cover filters within a scope; scopeVersion covers dtype changes.
+// The generation check is still required when an abort arrives after a response was delivered.
+const requests = new Map(), resourceStates = new Map(), viewStates = new Map();
+function cancelRequest(key) {
+  requests.get(key)?.controller.abort();
+  requests.delete(key);
+  resourceStates.delete(key);
 }
-
-// ── Dimension Bars per Country (replaces heatmap) ─────────────────────
-let _dimBarKey = "people_centrism";
-
-function initDimBarSelect() {
-  const sel = document.getElementById("dim-bar-select");
-  DIMS.slice(1).forEach(d => {
-    const o = document.createElement("option");
-    o.value = d.key; o.textContent = d[LANG];
-    sel.appendChild(o);
-  });
-  sel.addEventListener("change", () => {
-    _dimBarKey = sel.value;
-    if(_cache.countries) renderDimBars(_cache.countries);
-  });
-}
-
-function renderDimBars(countries) {
-  const sorted = [...countries].sort((a,b) => a[_dimBarKey] - b[_dimBarKey]);
-  Plotly.newPlot("chart-dim-bars",[{
-    type:"bar", orientation:"h",
-    x: sorted.map(c => c[_dimBarKey]),
-    y: sorted.map(c => `${FLAGS[c.iso3]??""} ${c.country}`),
-    text: sorted.map(c => (c[_dimBarKey]||0).toFixed(1)),
-    textposition:"outside", cliponaxis:false,
-    textfont:{color:FONT_C,size:12},
-    marker:{color: sorted.map(c => popColor(c[_dimBarKey]||0)), opacity:0.88},
-    hovertemplate:"<b>%{y}</b><br>Score: <b>%{x:.1f}</b><extra></extra>",
-  }], lay({
-    margin:{t:10,r:55,b:36,l:mL()},
-    xaxis:AX({range:[0,95]}),
-    yaxis:AX(),
-    bargap:0.28, showlegend:false,
-  }), CFG);
-}
-
-// ── Leader Rank List ──────────────────────────────────────────────────
-function renderLeaderRankList(leaders) {
-  const container = document.getElementById("leader-rank-list");
-  if (!leaders.length) {
-    container.innerHTML = `<div class="empty-state"><strong>${LANG === "pt" ? "Nenhum líder atende a este filtro." : "No leader matches this filter."}</strong><span>${LANG === "pt" ? "Reduza a cobertura mínima ou escolha outro país." : "Lower the minimum coverage or choose another country."}</span></div>`;
-    return;
-  }
-  const sorted = [...leaders].sort((a,b)=>b.final_score-a.final_score);
-  container.innerHTML = sorted.map((l,i)=>{
-    const col = popColor(l.final_score);
-    const pct = Math.min(l.final_score,100);
-    const rankCls = i===0?"gold":i===1?"silver":i===2?"bronze":"";
-    const leaderJson = JSON.stringify({
-      name:l.leader_name, short:l.leader_short, country:l.country, iso3:l.iso3,
-      score:l.final_score, n:l.n,
-      people_centrism:l.people_centrism, anti_elitism:l.anti_elitism,
-      moral_dichotomy:l.moral_dichotomy, popular_sovereignty:l.popular_sovereignty,
-      exclusionary_rhetoric:l.exclusionary_rhetoric, crisis_rhetoric:l.crisis_rhetoric
-    }).replace(/"/g,"&quot;");
-    const flag = FLAGS[l.iso3] ?? "";
-    return `<div class="lr-item" data-leader="${leaderJson}">
-      <div class="lr-rank ${rankCls}">#${i+1}</div>
-      <div class="lr-info">
-        <div class="lr-name">${l.leader_short}</div>
-        <div class="lr-sub">${flag} ${l.country} · ${coverageText(l)}</div>
-        <div class="lr-click-hint">${t("lr_click_hint")}</div>
-      </div>
-      <div class="lr-right">
-        <div class="lr-score" style="color:${col}">${l.final_score.toFixed(1)}</div>
-        <div class="lr-bar-wrap">
-          <div class="lr-bar-fill" style="width:${pct}%;background:${col}"></div>
-          <div class="lr-bar-mid"></div>
-        </div>
-        <div class="lr-click-hint">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          ${t("lr_click_hint")}
-        </div>
-      </div>
-    </div>`;
-  }).join("");
-  document.querySelectorAll(".lr-item").forEach(el => {
-    el.addEventListener("click", () => openLeaderDrawer(JSON.parse(el.dataset.leader)));
-  });
-}
-
-// ── Leader Drawer ─────────────────────────────────────────────────────
-async function openLeaderDrawer(leader) {
-  const overlay = document.getElementById("drawer-overlay");
-  const drawer  = document.getElementById("leader-drawer");
-
-  document.getElementById("drawer-name").textContent = leader.short;
-  document.getElementById("drawer-meta").textContent =
-    `${FLAGS[leader.iso3]??""} ${leader.country} (${leader.iso3}) · ${(leader.n||0).toLocaleString("pt-BR")} ${t("cc_speeches")}`;
-
-  const col = popColor(leader.score);
-  document.getElementById("drawer-score-row").innerHTML = `
-    <div class="drawer-score-big" style="color:${col}">${leader.score.toFixed(1)}</div>
-    <div class="drawer-score-label">${t("badge_final")}<br><span style="color:var(--text3);font-size:11px">0–100</span></div>`;
-
-  const dimKeys = DIMS.slice(1);
-  document.getElementById("drawer-dims").innerHTML = dimKeys.map(d => {
-    const val = leader[d.key] ?? 0;
-    const c   = popColor(val);
-    const pct = Math.min(val,100);
-    return `<div class="dim-bar-row">
-      <div class="dim-bar-label">${d[LANG]}</div>
-      <div class="dim-bar-track"><div class="dim-bar-fill" style="width:${pct}%;background:${c}"></div></div>
-      <div class="dim-bar-val" style="color:${c}">${val.toFixed(1)}</div>
-    </div>`;
-  }).join("");
-
-  overlay.classList.add("open");
-  drawer.classList.add("open");
-
+async function request(key,path,onData,onStart,onError) {
+  cancelRequest(key);
+  const ticket = {controller:new AbortController(), scope:scopeVersion};
+  requests.set(key,ticket);
+  resourceStates.set(key,"loading");
+  const current = () => requests.get(key) === ticket && ticket.scope === scopeVersion;
+  onStart?.();
+  updateRefreshStatus();
+  const timeout = setTimeout(() => ticket.controller.abort(),30000);
   try {
-    const trend = await api(`/api/leader_trend?names=${encodeURIComponent(leader.name)}${dtypeQ()}`);
-    if(trend.length) {
-      trend.sort((a,b)=>a.year-b.year);
-      Plotly.newPlot("chart-drawer-trend",[{
-        type:"scatter", mode:"lines+markers",
-        x:trend.map(r=>r.year), y:trend.map(r=>r.final_score),
-        line:{color:col,width:2.5,shape:"spline"},
-        marker:{size:5,color:col},
-        fill:"tozeroy", fillcolor:rgba(col,.08),
-        hovertemplate:"%{x}: <b>%{y:.1f}</b><extra></extra>",
-      }], lay({
-        margin:{t:10,r:10,b:36,l:44},
-        xaxis:AX({dtick:2}),
-        yaxis:AX({range:[0,80]}),
-      }), CFG);
+    const response = await fetch(path,{signal:ticket.controller.signal});
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    if (!current()) return;
+    onData(data);
+    resourceStates.set(key,"ready");
+  } catch (error) {
+    if (!current()) return;
+    resourceStates.set(key,"error");
+    onError?.(error);
+    console.warn(`POPIN ${key}:`,error.message);
+  } finally {
+    clearTimeout(timeout);
+    if (current()) {
+      requests.delete(key);
+      if (![...resourceStates.values()].includes("loading")) lastRefresh = new Date();
+      updateRefreshStatus();
     }
-  } catch(e) { console.warn("Trend error:", e); }
-
-  const dimKeys2 = DIMS.slice(1).map(d=>d.key);
-  const labels   = [...dimLabels(), dimLabel(DIMS[1].key)];
-  const vals     = [...dimKeys2.map(k=>leader[k]??0), leader[dimKeys2[0]]??0];
-  Plotly.newPlot("chart-drawer-radar",[{
-    type:"scatterpolar", mode:"lines+markers", name:leader.short,
-    r:vals, theta:labels,
-    fill:"toself", fillcolor:rgba(col,.10),
-    line:{color:col,width:2.5}, marker:{size:5,color:col},
-    hovertemplate:"<b>%{theta}</b>: %{r:.1f}<extra></extra>",
-  }], lay({
-    margin:{t:16,r:16,b:16,l:16},
-    polar:{ bgcolor:BG0,
-      radialaxis:{range:[0,80],tickfont:{size:8},gridcolor:GRID_C,linecolor:GRID_C},
-      angularaxis:{gridcolor:GRID_C,tickfont:{size:10}},
-    },
-    showlegend:false,
-  }), CFG);
-}
-
-function closeLeaderDrawer() {
-  document.getElementById("drawer-overlay").classList.remove("open");
-  document.getElementById("leader-drawer").classList.remove("open");
-}
-
-// ── Time Series ───────────────────────────────────────────────────────
-const TS = { countries:[], dim:"final_score" };
-
-async function renderTSLine() {
-  if(!TS.countries.length) return;
-  const data = await api(`/api/yearly?countries=${TS.countries.join(",")}` +
-    `&dim=${TS.dim}${dtypeQ()}`);
-  const byC  = {};
-  data.forEach(d => (byC[d.iso3]=byC[d.iso3]||[]).push(d));
-  const traces = Object.entries(byC).map(([,rows])=>{
-    rows.sort((a,b)=>a.year-b.year);
-    return { type:"scatter", mode:"lines+markers", name:rows[0].country,
-      x:rows.map(r=>r.year), y:rows.map(r=>r.score),
-      line:{color:ctryColor(rows[0].country),width:2.5,shape:"spline"},
-      marker:{size:5}, hovertemplate:"%{x}: <b>%{y:.1f}</b><extra></extra>",
-    };
-  });
-  Plotly.newPlot("chart-ts-line", traces, lay({
-    margin:{t:10,r:16,b:44,l:52},
-    xaxis:AX({dtick:2}),
-    yaxis:AX({range:[0,80],title:{text:dimLabel(TS.dim),font:{size:11}}}),
-    legend:{font:{size:10},bgcolor:BG0},
-  }), CFG);
-}
-
-// ── Top Movers (replaces heatmap) ─────────────────────────────────────
-async function renderMovers(countries) {
-  const data = await api(`/api/yearly?countries=${countries.map(c=>c.iso3).join(",")}` +
-    `&dim=final_score${dtypeQ()}`);
-  const byC = {};
-  data.forEach(d => (byC[d.country]=byC[d.country]||[]).push(d));
-
-  const deltas = Object.entries(byC).map(([name, rows]) => {
-    rows.sort((a,b)=>a.year-b.year);
-    const first = rows[0]?.score ?? 0;
-    const last  = rows[rows.length-1]?.score ?? 0;
-    return { country: name, iso3: rows[0]?.iso3, delta: +(last-first).toFixed(2) };
-  }).sort((a,b)=>a.delta-b.delta);
-
-  const colors = deltas.map(d => d.delta >= 0 ? "#F87171" : "#4ADE80");
-
-  Plotly.newPlot("chart-movers",[{
-    type:"bar", orientation:"h",
-    x: deltas.map(d=>d.delta),
-    y: deltas.map(d=>`${FLAGS[d.iso3]??""} ${d.country}`),
-    text: deltas.map(d=>(d.delta>=0?"+":"")+d.delta.toFixed(1)),
-    textposition:"outside", cliponaxis:false,
-    textfont:{color:FONT_C,size:12},
-    marker:{color:colors, opacity:0.85},
-    hovertemplate:"<b>%{y}</b><br>Variação: <b>%{x:+.1f}</b><extra></extra>",
-  }], lay({
-    margin:{t:10,r:55,b:36,l:mL()},
-    xaxis:AX({title:{text:"Δ Score",font:{size:11}}}),
-    yaxis:AX(),
-    bargap:0.3, showlegend:false,
-  }), CFG);
-}
-
-function initTSCountryChips(countries) {
-  const container = document.getElementById("ts-country-chips");
-  const defaults  = ["BRA","VEN","MEX","ARG","BOL","COL"];
-  TS.countries    = defaults.slice();
-  [...countries].sort((a,b)=>a.country.localeCompare(b.country,"pt-BR")).forEach(c => {
-    const chip = document.createElement("div");
-    chip.className = `chip ${defaults.includes(c.iso3)?"active":""}`;
-    chip.textContent = `${FLAGS[c.iso3]??""} ${c.country}`;
-    chip.addEventListener("click",()=>{
-      if(TS.countries.includes(c.iso3)){
-        if(TS.countries.length<=1)return;
-        TS.countries=TS.countries.filter(x=>x!==c.iso3); chip.classList.remove("active");
-      } else { TS.countries.push(c.iso3); chip.classList.add("active"); }
-      renderTSLine();
-    });
-    container.appendChild(chip);
-  });
-}
-
-function initTSFilters() {
-  const sel = document.getElementById("ts-dim");
-  DIMS.forEach(d=>{ const o=document.createElement("option"); o.value=d.key; o.textContent=d[LANG]; sel.appendChild(o); });
-  sel.addEventListener("change",()=>{ TS.dim=sel.value; renderTSLine(); });
-}
-
-// ── Dimensions ────────────────────────────────────────────────────────
-const DIST = { dim:"final_score", group:"country" };
-
-async function renderHistogram() {
-  const data   = await api(`/api/distribution?dim=${DIST.dim}&group=${DIST.group}${dtypeQ()}`);
-  const colors = Object.values(COUNTRY_COLORS);
-  const traces = data.slice(0,25).map((d,i)=>({
-    type:"bar", name:d.group,
-    x:[d.group], y:[d.mean],
-    text:[d.mean.toFixed(1)], textposition:"outside", cliponaxis:false,
-    textfont:{color:FONT_C,size:12},
-    error_y:{type:"data",array:[(d.q3-d.q1)/2],visible:true,color:GRID_C,thickness:1.5,width:4},
-    marker:{color:DIST.group==="country"?popColor(d.mean):colors[i%colors.length],opacity:0.88},
-    hovertemplate:`<b>${d.group}</b><br>Média: ${d.mean.toFixed(1)}<br>IQR: ${d.q1.toFixed(1)}–${d.q3.toFixed(1)}<br>n=${d.n}<extra></extra>`,
-  }));
-  Plotly.newPlot("chart-hist", traces, lay({
-    margin:{t:10,r:16,b:90,l:52},
-    xaxis:AX({tickangle:-40,tickfont:{size:10}}),
-    yaxis:AX({range:[0,105]}),
-    showlegend:false, bargap:0.3,
-  }), CFG);
-}
-
-// ── 2D Scatter (replaces correlation heatmap) ─────────────────────────
-let _scatterX = "people_centrism", _scatterY = "anti_elitism";
-
-function initScatterSelects() {
-  ["scatter-x","scatter-y"].forEach((id, idx) => {
-    const sel = document.getElementById(id);
-    DIMS.slice(1).forEach(d => {
-      const o = document.createElement("option");
-      o.value = d.key; o.textContent = d[LANG];
-      sel.appendChild(o);
-    });
-    sel.value = idx===0 ? _scatterX : _scatterY;
-    sel.addEventListener("change", () => {
-      _scatterX = document.getElementById("scatter-x").value;
-      _scatterY = document.getElementById("scatter-y").value;
-      if(_cache.countries) renderScatter2D(_cache.countries);
-    });
-  });
-}
-
-function renderScatter2D(countries) {
-  // Sort to find outliers (top+bottom 4) that will get labels
-  const sortedByX = [...countries].sort((a,b) => b[_scatterX] - a[_scatterX]);
-  const outlierSet = new Set([
-    ...sortedByX.slice(0,3).map(c=>c.iso3),
-    ...sortedByX.slice(-2).map(c=>c.iso3),
-    ...[...countries].sort((a,b)=>b[_scatterY]-a[_scatterY]).slice(0,2).map(c=>c.iso3),
-  ]);
-
-  const main = {
-    type:"scatter", mode:"markers",
-    x: countries.map(c=>c[_scatterX]),
-    y: countries.map(c=>c[_scatterY]),
-    customdata: countries.map(c=>[c.country, c.final_score, c.iso3]),
-    marker:{
-      size: countries.map(c => 9 + c.final_score * 0.12),
-      color: countries.map(c=>c.final_score),
-      colorscale: POP_SCALE,
-      cmin:0, cmax:80, showscale:false,
-      line:{color: THEME === "dark" ? "rgba(255,255,255,.15)" : "rgba(0,0,0,.12)", width:1},
-      opacity:0.9,
-    },
-    hovertemplate:"<b>%{customdata[0]}</b><br>%{xaxis.title.text}: <b>%{x:.1f}</b><br>%{yaxis.title.text}: <b>%{y:.1f}</b><br>Score final: <b>%{customdata[1]:.1f}</b><extra></extra>",
-  };
-
-  // Outlier labels only
-  const labeled = countries.filter(c => outlierSet.has(c.iso3));
-  const labelTrace = {
-    type:"scatter", mode:"text",
-    x: labeled.map(c=>c[_scatterX]),
-    y: labeled.map(c=>c[_scatterY]),
-    text: labeled.map(c=>`${FLAGS[c.iso3]??""} ${c.iso3}`),
-    textposition:"top center",
-    textfont:{size:9, color:FONT_C},
-    hoverinfo:"none",
-    showlegend:false,
-  };
-
-  Plotly.newPlot("chart-scatter2d", [main, labelTrace], lay({
-    margin:{t:10,r:20,b:50,l:60},
-    xaxis:AX({title:{text:dimLabel(_scatterX),font:{size:11}},range:[0,100]}),
-    yaxis:AX({title:{text:dimLabel(_scatterY),font:{size:11}},range:[0,100]}),
-    showlegend:false,
-  }), CFG);
-}
-
-function initDistFilters() {
-  const dimSel=document.getElementById("dist-dim");
-  DIMS.forEach(d=>{ const o=document.createElement("option"); o.value=d.key; o.textContent=d[LANG]; dimSel.appendChild(o); });
-  const groupSel=document.getElementById("dist-group");
-  const refresh=()=>{ DIST.dim=dimSel.value; DIST.group=groupSel.value; renderHistogram(); };
-  dimSel.addEventListener("change",refresh);
-  groupSel.addEventListener("change",refresh);
-}
-
-// ── Leader filter ─────────────────────────────────────────────────────
-async function initLeaderFilter(countries) {
-  const sel = document.getElementById("leader-country-filter");
-  const minSel = document.getElementById("leader-min-n-filter");
-  [...countries].sort((a,b)=>a.country.localeCompare(b.country,"pt-BR")).forEach(c=>{ const o=document.createElement("option"); o.value=c.iso3; o.textContent=`${FLAGS[c.iso3]??""} ${c.country}`; sel.appendChild(o); });
-  const refreshLeaderRanking = async()=>{
-    const leaders = await api(`/api/leaders?country=${sel.value}&n=25&min_n=${leaderMinN()}${dtypeQ()}`);
-    _cache.leaders = leaders;
-    document.getElementById("leader-count-badge").textContent = `${leaders.length} · ${leaderMinN()==="5"?"n≥5":"todos"}`;
-    renderLeaderRankList(leaders);
-  };
-  sel.addEventListener("change", refreshLeaderRanking);
-  minSel?.addEventListener("change", refreshLeaderRanking);
-}
-
-// ── Bootstrap ─────────────────────────────────────────────────────────
-async function main() {
-  // O site usa uma única apresentação clara; não há preferência de tema.
-  document.documentElement.dataset.theme = "light";
-  const savedLang = localStorage.getItem("popin_lang");
-  if (savedLang) {
-    LANG = savedLang;
-    document.querySelectorAll(".lang-opt").forEach(el => {
-      el.classList.toggle("active", el.dataset.lang === LANG);
-    });
   }
-
-  updateThemeVars();
-  updateColorStops();
-  applyI18n();
-  initNav();
-  initDistFilters();
-  initTSFilters();
-  initDimBarSelect();
-  initScatterSelects();
-
-  document.getElementById("drawer-close").addEventListener("click", closeLeaderDrawer);
-  document.getElementById("drawer-overlay").addEventListener("click", closeLeaderDrawer);
-
-  // Init dtype filter first
-  await initDtypeFilter();
-
-  const [stats, countries, leaders, yearlyGlobal] = await Promise.all([
-    api("/api/stats"), api("/api/countries"),
-    api(`/api/leaders?n=25&min_n=${leaderMinN()}`), api("/api/yearly_global"),
-  ]);
-  _cache.stats=stats; _cache.countries=countries; _cache.leaders=leaders;
-
-  document.getElementById("loader").classList.add("hidden");
-
-  // Overview
-  renderKPIs(stats);
-  renderHeroBanner(countries);
-  renderCountryCards(countries);
-  renderMap(countries);
-  renderTrendToggle(yearlyGlobal);
-
-  // Countries
-  initCountryRadarSelect(countries);
-  renderCountryRanked(countries);
-  renderDimBars(countries);
-
-  // Leaders
-  await initLeaderFilter(countries);
-  document.getElementById("leader-count-badge").textContent = `${leaders.length} · n≥5`;
-  renderLeaderRankList(leaders);
-
-  // Time Series
-  initTSCountryChips(countries);
-  renderTSLine();
-  renderMovers(countries);
-
-  // Dimensions
-  renderHistogram();
-  renderScatter2D(countries);
+}
+function updateRefreshStatus() {
+  const values = [...resourceStates.values()];
+  const state = values.includes("loading") ? "loading" : values.includes("error") ? "error" : "ready";
+  const el = $("refresh-status");
+  if (el) {
+    el.dataset.state = state;
+    el.classList.toggle("is-error",state === "error");
+    el.classList.toggle("is-loading",state === "loading");
+    el.setAttribute("role","status");
+    el.textContent = t(state === "error" ? "partial" : state === "loading" ? "loading" : "ready") +
+      (state === "ready" && lastRefresh ? ` · ${new Intl.DateTimeFormat(locale(),{hour:"2-digit",minute:"2-digit"}).format(lastRefresh)}` : "");
+  }
+  updateScopeSummary();
+}
+function updateScopeSummary() {
+  const country = leaderCountry();
+  const suffix = $("section-leaders")?.classList.contains("active")
+    ? ` · ${country === "ALL" ? t("f_all") : countryName(country)} · n≥${fmt(leaderMinN(),0)}` : "";
+  text("scope-summary",`${t("scope")}: ${dtypeLabel(GLOBAL_DTYPE)}${suffix}`);
+}
+function stateMarkup(kind) {
+  return `<div class="chart-empty ${kind === "error" ? "error-state is-error" : kind === "loading" ? "empty-state is-loading" : "empty-state"}" role="${kind === "error" ? "alert" : "status"}"><p>${t(kind === "loading" ? "loading" : kind === "error" ? "error" : "empty")}</p>${kind === "error" ? `<button type="button" class="retry-btn">${t("retry")}</button>` : ""}</div>`;
+}
+function setState(id,kind,retry) {
+  const el = $(id);
+  if (!el) return;
+  viewStates.set(id,{kind,retry});
+  el.setAttribute("aria-busy",String(kind === "loading"));
+  if (id.startsWith("chart-")) schedulePlot(id,{state:kind,retry});
+  else {
+    el.innerHTML = stateMarkup(kind);
+    el.querySelector(".retry-btn")?.addEventListener("click",retry);
+  }
+}
+function clearState(id) {
+  viewStates.delete(id);
+  $(id)?.setAttribute("aria-busy","false");
 }
 
-main().catch(err => {
-  console.error(err);
-  document.getElementById("loader").innerHTML = `
-    <div class="loader-inner">
-      <p class="error-title">${LANG === "pt" ? "Não foi possível carregar os dados." : "The data could not be loaded."}</p>
-      <p class="error-copy">${LANG === "pt" ? "Verifique a conexão com o servidor e tente novamente." : "Check the server connection and try again."}</p>
-      <button class="retry-btn" id="retry-btn">${LANG === "pt" ? "Tentar novamente" : "Try again"}</button>
-    </div>`;
-  document.getElementById("retry-btn")?.addEventListener("click", () => window.location.reload());
-});
+// Plotly renders are serialized per container. Hidden plots keep only their latest spec.
+// ResizeObserver measures the container; navigation flushes and resizes newly visible plots.
+const plots = new Map();
+let resizeFrame = null;
+const visible = el => !!el && el.getClientRects().length > 0 && !el.closest("[inert]");
+function axis(overrides={}) {
+  return {gridcolor:GRID,zerolinecolor:"#94a3b8",linecolor:GRID,automargin:true,
+    tickfont:{family:MONO,color:INK,size:11},...overrides};
+}
+const scoreAxis = overrides => axis({range:[0,100],tickvals:[0,20,40,60,80,100],...overrides});
+function layout(overrides={}) {
+  return {paper_bgcolor:"rgba(0,0,0,0)",plot_bgcolor:"rgba(0,0,0,0)",autosize:true,
+    font:{family:SANS,color:INK,size:12},separators:LANG === "pt" ? ",." : ".,",
+    margin:{t:16,r:24,b:68,l:56},colorway:CATEGORY_COLORS,
+    hoverlabel:{bgcolor:"#ffffff",bordercolor:"#cbd5e1",font:{family:SANS,color:INK,size:13}},
+    showlegend:true,legend:{orientation:"h",x:0,y:-0.2,xanchor:"left",yanchor:"top",font:{family:SANS,size:11},bgcolor:"rgba(0,0,0,0)"},...overrides};
+}
+function plot(id,traces,overrides={}) {
+  if (!traces.length) { setState(id,"empty"); return; }
+  clearState(id);
+  // ResizeObserver follows the container: keep explicit row-based chart heights
+  // on that container too, so responsive resize does not restore the CSS default.
+  if (overrides.height && $(id)) $(id).style.height = `${overrides.height}px`;
+  schedulePlot(id,{traces,layout:layout(overrides)});
+}
+function schedulePlot(id,spec) {
+  if (!$(id)) return;
+  let slot = plots.get(id);
+  if (!slot) { slot = {revision:0,rendered:0,running:false}; plots.set(id,slot); }
+  slot.spec = spec;
+  slot.revision++;
+  flushPlot(id);
+}
+async function flushPlot(id) {
+  const el = $(id), slot = plots.get(id);
+  if (!slot || slot.running || slot.rendered === slot.revision || (!slot.spec.state && !visible(el))) return;
+  slot.running = true;
+  const revision = slot.revision, spec = slot.spec;
+  try {
+    if (spec.state) {
+      if (el.data && typeof Plotly !== "undefined") Plotly.purge(el);
+      el.innerHTML = stateMarkup(spec.state);
+      el.querySelector(".retry-btn")?.addEventListener("click",spec.retry);
+    } else {
+      if (!el.data) el.replaceChildren();
+      await Plotly.react(el,spec.traces,spec.layout,{displayModeBar:false,responsive:false});
+    }
+  } catch (error) {
+    if (revision === slot.revision) {
+      el.innerHTML = stateMarkup("error");
+      el.querySelector(".retry-btn")?.addEventListener("click",() => schedulePlot(id,spec));
+    }
+    console.warn(`POPIN plot ${id}:`,error.message);
+  } finally {
+    slot.rendered = revision;
+    slot.running = false;
+    if (slot.rendered !== slot.revision) void flushPlot(id);
+  }
+}
+function resizeVisiblePlots() {
+  if (resizeFrame !== null) return;
+  resizeFrame = requestAnimationFrame(() => {
+    resizeFrame = null;
+    for (const [id,slot] of plots) {
+      const el = $(id);
+      if (!visible(el)) continue;
+      if (slot.rendered !== slot.revision) void flushPlot(id);
+      else if (!slot.running && el.data && typeof Plotly !== "undefined") {
+        Promise.resolve(Plotly.Plots.resize(el)).catch(() => {});
+      }
+    }
+  });
+}
+function initPlotSizing() {
+  if (typeof ResizeObserver !== "undefined") {
+    const dimensions = new WeakMap();
+    const observer = new ResizeObserver(entries => {
+      let changed = false;
+      for (const entry of entries) {
+        const size = `${Math.round(entry.contentRect.width)}:${Math.round(entry.contentRect.height)}`;
+        if (dimensions.get(entry.target) !== size) { dimensions.set(entry.target,size); changed = true; }
+      }
+      if (changed) resizeVisiblePlots();
+    });
+    all('[id^="chart-"]').forEach(el => observer.observe(el));
+  }
+  window.addEventListener("resize",resizeVisiblePlots);
+  document.fonts?.ready.then(resizeVisiblePlots);
+}
+const barMargin = () => ({t:16,r:40,b:82,l:window.innerWidth <= 768 ? 100 : 170});
+const polarLayout = () => ({margin:{t:30,r:70,b:100,l:70},polar:{bgcolor:"rgba(0,0,0,0)",
+  radialaxis:scoreAxis({tickfont:{family:MONO,size:10,color:INK}}),angularaxis:{gridcolor:GRID,tickfont:{family:SANS,color:INK,size:11}}}});
+function scoreBarTrace(rows,key) {
+  return {type:"bar",orientation:"h",name:dimLabel(key),x:rows.map(c => c[key]),y:rows.map(countryLabel),
+    text:rows.map(c => fmt(c[key])),textposition:"outside",cliponaxis:false,textfont:{family:MONO,color:INK},
+    marker:{color:rows.map(c => popColor(c[key]))},
+    hovertext:rows.map(c => `${escapeHTML(countryLabel(c))}<br>${escapeHTML(dimLabel(key))}: ${fmt(c[key])}<br>n=${fmt(c.n,0)}`),hoverinfo:"text"};
+}
+function intervalTrace(rows,{horizontal=false,label=c => c.group,q1="q1",q3="q3"}={}) {
+  const x = [], y = [], hovertext = [];
+  for (const row of rows) {
+    if (!valid(row[q1]) || !valid(row[q3])) continue;
+    const group = label(row);
+    x.push(...(horizontal ? [row[q1],row[q3],null] : [group,group,null]));
+    y.push(...(horizontal ? [group,group,null] : [row[q1],row[q3],null]));
+    const hint = `${escapeHTML(group)}<br>${t("central50")}: ${fmt(row[q1])}–${fmt(row[q3])}<br>n=${fmt(row.n,0)}`;
+    hovertext.push(hint,hint,"");
+  }
+  return {type:"scatter",mode:"lines+markers",name:t("central50"),x,y,connectgaps:false,
+    line:{color:INK,width:2,shape:"linear"},marker:{color:INK,size:7,symbol:horizontal ? "line-ns" : "line-ew"},hovertext,hoverinfo:"text"};
+}
+
+function renderKPIs(stats) {
+  clearState("kpi-row");
+  html("kpi-row",[
+    ["kpi_discourses",fmt(stats.n_discourses,0)],["kpi_countries",fmt(stats.n_countries,0)],
+    ["kpi_leaders",fmt(stats.n_leaders,0)],["kpi_years",`${stats.year_min ?? "—"}–${stats.year_max ?? "—"}`],
+  ].map(([label,value]) => `<div class="kpi-card"><span class="kpi-label">${t(label)}</span><span class="kpi-value">${escapeHTML(value)}</span></div>`).join(""));
+  text("corpus-average",fmt(stats.avg_score));
+}
+function renderHeroBanner(countries) {
+  clearState("hero-row");
+  const sorted = [...countries].filter(c => valid(c.final_score)).sort((a,b) => b.final_score-a.final_score);
+  html("hero-row",sorted.length ? [[sorted[0],"hero_most"],[sorted.at(-1),"hero_least"]].map(([c,key]) =>
+    `<div class="hero-card"><span class="hero-tag">${t(key)}</span><span class="hero-country">${countryMarker(c.iso3)} ${escapeHTML(countryName(c))}</span><span class="hero-score">${fmt(c.final_score)} / 100</span><span class="hero-coverage">${coverageText(c)}</span></div>`).join("") : "");
+}
+function renderCountryCards(countries) {
+  if (!countries.length) { setState("country-cards","empty"); return; }
+  clearState("country-cards");
+  const sorted = [...countries].sort((a,b) => b.final_score-a.final_score);
+  html("country-cards",`<table class="country-table"><caption>${t("cc_title")} · ${t("badge_ranked")}</caption><thead><tr><th scope="col">${t("f_country")}</th><th scope="col">${t("mean")}</th><th scope="col">${t("kpi_discourses")}</th><th scope="col">p25–p75</th></tr></thead><tbody>${sorted.map(c =>
+    `<tr><th scope="row"><button type="button" class="country-link" data-country="${escapeHTML(c.iso3)}">${countryMarker(c.iso3)} <span>${escapeHTML(countryName(c))}</span></button></th><td class="country-mean"><span>${fmt(c.final_score)}</span><span class="score-microbar" aria-hidden="true"><span style="display:block;width:${scoreWidth(c.final_score)}%;background:${popColor(c.final_score)}"></span></span></td><td>${fmt(c.n,0)}</td><td>${fmt(c.p25)}–${fmt(c.p75)}</td></tr>`).join("")}</tbody></table>`);
+  $("country-cards")?.querySelectorAll("[data-country]").forEach(button => button.addEventListener("click",() => {
+    if ($("leader-country-filter")) $("leader-country-filter").value = button.dataset.country;
+    navigateTo("leaders");
+    void refreshLeaders();
+  }));
+}
+function renderMap(countries) {
+  plot("chart-map",countries.length ? [{type:"choropleth",locationmode:"ISO-3",locations:countries.map(c => c.iso3),z:countries.map(c => c.final_score),
+    colorscale:POP_SCALE,zmin:0,zmax:100,showscale:false,
+    marker:{line:{color:"#ffffff",width:0.8}},hovertext:countries.map(c => `${escapeHTML(countryLabel(c))}<br>${t("mean")}: ${fmt(c.final_score)}<br>${coverageText(c)}`),hoverinfo:"text"}] : [],
+    {margin:{t:10,r:15,b:10,l:0},showlegend:false,geo:{bgcolor:"rgba(0,0,0,0)",showland:true,landcolor:"#e2e8f0",showocean:true,oceancolor:"#f8fafc",showcountries:true,countrycolor:"#cbd5e1",showframe:false,showcoastlines:false,projection:{type:"mercator"},lataxis:{range:[-58,35]},lonaxis:{range:[-118,-28]}}});
+}
+function renderGlobalTrend(rows,dim=_activeTrendDim) {
+  const data = [...rows].sort((a,b) => a.year-b.year);
+  plot("chart-trend",data.length ? [{type:"scatter",mode:"lines+markers",name:dimLabel(dim),x:data.map(r => r.year),y:data.map(r => r[dim]),
+    connectgaps:false,line:{color:NAVY,width:2.5,shape:"spline",smoothing:0.5},marker:{size:5},hovertext:data.map(r => `${r.year} · ${dimLabel(dim)}: ${fmt(r[dim])}<br>n=${fmt(r.n,0)}`),hoverinfo:"text"}] : [],
+    {xaxis:axis({tickformat:"d"}),yaxis:scoreAxis({title:{text:dimLabel(dim)}})});
+}
+function renderCountryRanked(countries) {
+  const rows = [...countries].sort((a,b) => a.final_score-b.final_score);
+  plot("chart-country-box",rows.length ? [intervalTrace(rows,{horizontal:true,label:countryLabel,q1:"p25",q3:"p75"}),
+    {type:"scatter",mode:"markers",name:t("mean"),x:rows.map(c => c.final_score),y:rows.map(countryLabel),
+      marker:{color:rows.map(c => popColor(c.final_score)),size:10,line:{color:NAVY,width:1}},
+      hovertext:rows.map(c => `${escapeHTML(countryLabel(c))}<br>${t("mean")}: ${fmt(c.final_score)}<br>${coverageText(c)}`),hoverinfo:"text"}] : [],
+    {margin:barMargin(),xaxis:scoreAxis(),yaxis:axis({categoryorder:"array",categoryarray:rows.map(countryLabel)}),height:Math.max(450,rows.length*27+120)});
+}
+function radarTrace(c,name,color) {
+  const dimensions = [...DIMS.slice(1),DIMS[1]];
+  return {type:"scatterpolar",mode:"lines+markers",name,r:dimensions.map(d => c[d.key] ?? null),theta:dimensions.map(d => d[LANG]),
+    line:{color,width:2,shape:"linear"},marker:{size:4,color},connectgaps:false,
+    hovertext:dimensions.map(d => `${escapeHTML(name)}<br>${d[LANG]}: ${fmt(c[d.key])}`),hoverinfo:"text"};
+}
+function renderCountryRadar(countries) {
+  plot("chart-country-radar",countries.filter(c => _radarSelected.includes(c.country)).map(c => radarTrace(c,countryName(c),ctryColor(c.iso3))),polarLayout());
+}
+function renderDimBars(countries) {
+  const rows = [...countries].sort((a,b) => a[_dimBarKey]-b[_dimBarKey]);
+  plot("chart-dim-bars",rows.length ? [scoreBarTrace(rows,_dimBarKey)] : [],
+    {margin:barMargin(),xaxis:scoreAxis({range:[0,105]}),yaxis:axis(),bargap:0.3,height:Math.max(450,rows.length*27+120)});
+}
+function renderTSLine() {
+  const groups = new Map();
+  (_cache.yearly ?? []).forEach(r => { if (!groups.has(r.iso3)) groups.set(r.iso3,[]); groups.get(r.iso3).push(r); });
+  plot("chart-ts-line",[...groups.values()].map(rows => {
+    rows.sort((a,b) => a.year-b.year);
+    return {type:"scatter",mode:"lines+markers",name:countryName(rows[0]),x:rows.map(r => r.year),y:rows.map(r => r.score),connectgaps:false,
+      line:{color:ctryColor(rows[0].iso3),width:2,shape:"spline",smoothing:0.5},marker:{size:4},
+      hovertext:rows.map(r => `${escapeHTML(countryName(r))} · ${r.year}<br>${dimLabel(TS.dim)}: ${fmt(r.score)}`),hoverinfo:"text"};
+  }),{xaxis:axis({tickformat:"d"}),yaxis:scoreAxis({title:{text:dimLabel(TS.dim)}}),margin:{t:16,r:24,b:125,l:60}});
+}
+function renderMovers() {
+  const groups = new Map();
+  (_cache.movers ?? []).forEach(r => { if (!groups.has(r.iso3)) groups.set(r.iso3,[]); groups.get(r.iso3).push(r); });
+  const rows = [...groups.values()].filter(group => group.length >= 2).map(group => {
+    group.sort((a,b) => a.year-b.year);
+    return {...group[0],first:group[0],last:group.at(-1),delta:group.at(-1).score-group[0].score};
+  }).sort((a,b) => a.delta-b.delta);
+  const x = [],y = [];
+  rows.forEach(r => { x.push(r.first.score,r.last.score,null); y.push(countryLabel(r),countryLabel(r),null); });
+  const traces = [{type:"scatter",mode:"lines",x,y,connectgaps:false,line:{color:"#94a3b8",width:2,shape:"linear"},showlegend:false,hoverinfo:"skip"},
+    ...["first","last"].map(key => ({type:"scatter",mode:"markers",name:t(key),x:rows.map(r => r[key].score),y:rows.map(countryLabel),
+      marker:{color:key === "first" ? NAVY : TEAL,size:9,symbol:key === "first" ? "circle-open" : "diamond"},
+      hovertext:rows.map(r => `${escapeHTML(countryLabel(r))}<br>${r.first.year}: ${fmt(r.first.score)} · ${r.last.year}: ${fmt(r.last.score)}<br>${t("change")}: ${fmt(r.delta)}`),hoverinfo:"text"}))];
+  plot("chart-movers",rows.length ? traces : [],{margin:barMargin(),xaxis:scoreAxis({title:{text:t("badge_final")}}),yaxis:axis(),height:Math.max(400,rows.length*27+120)});
+}
+function renderHistogram() {
+  const rows = _cache.distribution ?? [];
+  const label = r => DIST.group === "country" ? countryName(r.group) : dtypeLabel(r.group);
+  plot("chart-hist",rows.length ? [intervalTrace(rows,{label,horizontal:true}),{type:"scatter",mode:"markers",name:t("mean"),
+    y:rows.map(label),x:rows.map(r => r.mean),marker:{size:9,color:rows.map(r => popColor(r.mean)),line:{color:NAVY,width:1}},
+    hovertext:rows.map(r => `${escapeHTML(label(r))}<br>${t("mean")}: ${fmt(r.mean)}<br>${t("central50")}: ${fmt(r.q1)}–${fmt(r.q3)}<br>n=${fmt(r.n,0)}`),hoverinfo:"text"}] : [],
+    {height:Math.max(420,rows.length*28+145),margin:{...barMargin(),b:115},yaxis:axis({autorange:"reversed",categoryorder:"array",categoryarray:rows.map(label)}),xaxis:scoreAxis({title:{text:dimLabel(DIST.dim)}}),legend:{orientation:"h",x:0,y:-0.18}});
+  text("distribution-note",t("distribution_note"));
+}
+function renderScatter2D(countries) {
+  plot("chart-scatter2d",countries.length ? [{type:"scatter",mode:"markers+text",name:t("f_countries"),
+    x:countries.map(c => c[_scatterX]),y:countries.map(c => c[_scatterY]),text:countries.map(c => c.iso3),textposition:"top center",textfont:{family:SANS,color:INK,size:10},
+    marker:{size:10,color:countries.map(c => c.final_score),colorscale:POP_SCALE,cmin:0,cmax:100,showscale:true,line:{color:NAVY,width:1},colorbar:{title:{text:t("badge_final")},thickness:10,tickvals:[0,20,40,60,80,100],outlinewidth:0}},
+    hovertext:countries.map(c => `${escapeHTML(countryLabel(c))}<br>${dimLabel(_scatterX)}: ${fmt(c[_scatterX])}<br>${dimLabel(_scatterY)}: ${fmt(c[_scatterY])}<br>${t("badge_final")}: ${fmt(c.final_score)}<br>n=${fmt(c.n,0)}`),hoverinfo:"text"}] : [],
+    {xaxis:scoreAxis({title:{text:dimLabel(_scatterX)}}),yaxis:scoreAxis({title:{text:dimLabel(_scatterY)}}),showlegend:false});
+}
+
+const searchKey = value => String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase(locale());
+function renderLeaderRankList(leaders) {
+  const query = searchKey($("leader-search")?.value).trim();
+  const sorted = [...leaders].sort((a,b) => b.final_score-a.final_score);
+  const rows = sorted.map((leader,index) => ({leader,rank:index+1})).filter(({leader:l}) =>
+    searchKey(`${l.leader_name} ${l.leader_short} ${countryName(l)} ${l.iso3}`).includes(query));
+  const limit = leaders.length >= LEADER_LIMIT ? (LANG === "pt" ? " · limite de 200 atingido" : " · 200 limit reached") : "";
+  text("leader-count-badge",`${fmt(rows.length,0)} / ${fmt(leaders.length,0)} ${LANG === "pt" ? "líderes carregados" : "loaded leaders"} · n≥${fmt(leaderMinN(),0)}${limit}`);
+  if (!rows.length) { setState("leader-rank-list","empty"); return; }
+  clearState("leader-rank-list");
+  html("leader-rank-list",rows.map(({leader:l,rank},index) =>
+    `<button class="lr-item" type="button" data-index="${index}" aria-haspopup="dialog" aria-controls="leader-drawer"><span class="lr-rank">${rank}</span><span class="lr-info"><span class="lr-name">${escapeHTML(l.leader_short || l.leader_name)}</span><span class="lr-sub">${escapeHTML(countryLabel(l))} · ${coverageText(l)}</span></span><span class="lr-right"><span class="lr-score">${fmt(l.final_score)}</span><span class="lr-bar-wrap" aria-hidden="true"><span class="lr-bar-fill" style="display:block;width:${scoreWidth(l.final_score)}%;background:${popColor(l.final_score)}"></span></span><span class="lr-click-hint">${t("lr_click_hint")}</span></span></button>`).join(""));
+  $("leader-rank-list")?.querySelectorAll(".lr-item").forEach(button => button.addEventListener("click",() => openLeaderDrawer(rows[Number(button.dataset.index)].leader,button)));
+}
+
+let drawerLeader = null, drawerTrend = null, lastDrawerTrigger = null, backgroundInert = [], savedOverflow = "";
+function renderDrawerProfile() {
+  const leader = drawerLeader;
+  if (!leader) return;
+  text("drawer-name",leader.leader_short || leader.leader_name);
+  text("drawer-meta",`${countryLabel(leader)} · ${coverageText(leader)}`);
+  html("drawer-score-row",`<span class="drawer-score-big">${fmt(leader.final_score)}</span><span class="drawer-score-label">${t("badge_final")} · 0–100</span>`);
+  html("drawer-dims",DIMS.slice(1).map(d => `<div class="dim-bar-row"><span class="dim-bar-label">${d[LANG]}</span><span class="dim-bar-track" aria-hidden="true"><span class="dim-bar-fill" style="display:block;width:${scoreWidth(leader[d.key])}%;background:${popColor(leader[d.key])}"></span></span><span class="dim-bar-val">${fmt(leader[d.key])}</span></div>`).join(""));
+  plot("chart-drawer-radar",[radarTrace(leader,leader.leader_short || leader.leader_name,NAVY)],polarLayout());
+}
+function renderDrawerTrend() {
+  if (!drawerLeader || drawerTrend === null) return;
+  const rows = [...drawerTrend].sort((a,b) => a.year-b.year);
+  plot("chart-drawer-trend",rows.length ? [{type:"scatter",mode:"lines+markers",name:t("mean"),x:rows.map(r => r.year),y:rows.map(r => r.final_score),
+    line:{color:NAVY,width:2,shape:"spline",smoothing:0.5},marker:{size:5},connectgaps:false,
+    hovertext:rows.map(r => `${r.year}: ${fmt(r.final_score)}`),hoverinfo:"text"}] : [],
+    {xaxis:axis({tickformat:"d"}),yaxis:scoreAxis(),margin:{t:16,r:16,b:65,l:45}});
+}
+function fetchDrawerTrend() {
+  const leader = drawerLeader;
+  if (!leader) return Promise.resolve();
+  return request("drawer",url("leader_trend",{names:leader.leader_name}),data => {
+    if (drawerLeader !== leader) return;
+    drawerTrend = data;
+    renderDrawerTrend();
+  },() => { drawerTrend = null; setState("chart-drawer-trend","loading"); },() => setState("chart-drawer-trend","error",fetchDrawerTrend));
+}
+function openLeaderDrawer(leader,trigger=document.activeElement) {
+  const drawer = $("leader-drawer");
+  if (!drawer) return;
+  if (!drawerLeader) {
+    lastDrawerTrigger = trigger;
+    savedOverflow = document.body.style.overflow;
+    // Keep existing inert states, including a closed mobile navigation menu.
+    backgroundInert = all("body > main, #site-sidebar, #sidebar-toggle").filter(el => !el.contains(drawer)).map(el => [el,el.inert]);
+    backgroundInert.forEach(([el]) => { el.inert = true; });
+  }
+  drawerLeader = leader;
+  drawer.inert = false;
+  drawer.classList.add("open");
+  drawer.setAttribute("aria-hidden","false");
+  drawer.setAttribute("tabindex","-1");
+  $("drawer-overlay")?.classList.add("open");
+  document.body.style.overflow = "hidden";
+  renderDrawerProfile();
+  ($("drawer-close") ?? drawer).focus();
+  void fetchDrawerTrend();
+  resizeVisiblePlots();
+}
+function closeLeaderDrawer() {
+  if (!drawerLeader) return;
+  cancelRequest("drawer");
+  drawerLeader = null; drawerTrend = null;
+  const drawer = $("leader-drawer");
+  drawer?.classList.remove("open");
+  drawer?.setAttribute("aria-hidden","true");
+  if (drawer) drawer.inert = true;
+  $("drawer-overlay")?.classList.remove("open");
+  backgroundInert.forEach(([el,inert]) => { el.inert = inert; });
+  backgroundInert = [];
+  document.body.style.overflow = savedOverflow;
+  if (lastDrawerTrigger?.isConnected) lastDrawerTrigger.focus();
+  else document.querySelector('.nav-item[aria-current="page"]')?.focus();
+  lastDrawerTrigger = null;
+  updateRefreshStatus();
+  resizeVisiblePlots();
+}
+function drawerKeydown(event) {
+  if (!drawerLeader) return;
+  if (event.key === "Escape") { event.preventDefault(); closeLeaderDrawer(); return; }
+  if (event.key !== "Tab") return;
+  const drawer = $("leader-drawer");
+  const focusable = Array.from(drawer.querySelectorAll('button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')).filter(visible);
+  const first = focusable[0] ?? drawer, last = focusable.at(-1) ?? drawer;
+  if (event.shiftKey && (document.activeElement === first || !focusable.includes(document.activeElement))) {
+    event.preventDefault(); last.focus();
+  } else if (!event.shiftKey && (document.activeElement === last || !focusable.includes(document.activeElement))) {
+    event.preventDefault(); first.focus();
+  }
+}
+
+function navigateTo(section) {
+  if (!$("section-"+section)) section = "overview";
+  all(".nav-item[data-section]").forEach(el => {
+    const active = el.dataset.section === section;
+    el.classList.toggle("active",active);
+    if (active) el.setAttribute("aria-current","page"); else el.removeAttribute("aria-current");
+  });
+  all(".section").forEach(el => { const active = el.id === "section-"+section; el.classList.toggle("active",active); el.hidden = !active; });
+  storage("popin_section",section);
+  if ($("global-filter-bar")) $("global-filter-bar").hidden = section === "about";
+  updateScopeSummary();
+  resizeVisiblePlots();
+}
+function setMobileMenu(open) {
+  const sidebar = $("site-sidebar"), nav = sidebar?.querySelector(".nav");
+  open = !!open && window.innerWidth <= 768;
+  sidebar?.classList.toggle("open",open);
+  $("sidebar-mob-overlay")?.classList.toggle("open",open);
+  $("sidebar-toggle")?.setAttribute("aria-expanded",String(open));
+  // The sidebar is now a topbar: never hide the brand/language controls with aria-hidden.
+  sidebar?.removeAttribute("aria-hidden");
+  if (nav) {
+    nav.inert = window.innerWidth <= 768 && !open;
+    nav.setAttribute("aria-hidden",String(nav.inert));
+  }
+}
+function initNav() {
+  navigateTo(storage("popin_section") || "overview");
+  all(".nav-item[data-section]").forEach(el => el.addEventListener("click",() => {
+    navigateTo(el.dataset.section); setMobileMenu(false);
+    if (window.innerWidth <= 768) $("sidebar-toggle")?.focus();
+  }));
+  $("lang-toggle")?.addEventListener("click",() => setLanguage(LANG === "pt" ? "en" : "pt"));
+  $("sidebar-toggle")?.addEventListener("click",() => setMobileMenu(!$("site-sidebar")?.classList.contains("open")));
+  $("sidebar-mob-overlay")?.addEventListener("click",() => setMobileMenu(false));
+  window.addEventListener("resize",() => setMobileMenu($("site-sidebar")?.classList.contains("open")));
+  setMobileMenu(false);
+  document.addEventListener("keydown",event => {
+    if (drawerLeader) { drawerKeydown(event); return; }
+    if (event.key === "Escape" && $("site-sidebar")?.classList.contains("open")) {
+      setMobileMenu(false); $("sidebar-toggle")?.focus();
+    }
+  });
+}
+function applyI18n() {
+  all("[data-about-lang]").forEach(el => { el.hidden = el.dataset.aboutLang !== LANG; });
+  all("[data-i18n]").forEach(el => {
+    const value = I18N[LANG][el.dataset.i18n];
+    if (value !== undefined) el.textContent = value; // Preserve new parent-authored copy without a known key.
+  });
+  document.documentElement.lang = LANG === "pt" ? "pt-BR" : "en";
+  all(".lang-opt").forEach(el => el.classList.toggle("active",el.dataset.lang === LANG));
+  const labels = {"leader-search":t("search"),"leader-country-filter":t("f_country"),"leader-min-n-filter":t("f_min_n"),"ts-dim":t("f_dimension"),"dist-dim":t("f_dimension"),"dist-group":t("f_group_by"),"dim-bar-select":t("f_dimension"),"scatter-x":`${t("f_dimension")} X`,"scatter-y":`${t("f_dimension")} Y`,"drawer-close":LANG === "pt" ? "Fechar perfil" : "Close profile","sidebar-toggle":LANG === "pt" ? "Menu de navegação" : "Navigation menu","lang-toggle":LANG === "pt" ? "Switch to English" : "Mudar para português"};
+  for (const [id,label] of Object.entries(labels)) $(id)?.setAttribute("aria-label",label);
+  if ($("leader-search")) $("leader-search").placeholder = t("search");
+  text("export-countries",t("export_csv"));
+  text("distribution-note",t("distribution_note"));
+}
+function setLanguage(language) {
+  LANG = language === "en" ? "en" : "pt";
+  storage("popin_lang",LANG);
+  applyI18n();
+  buildDtypeChips(); buildCountryControls(); buildDimensionControls();
+  if (_cache.stats) renderKPIs(_cache.stats);
+  if (_cache.countries) renderCountries(_cache.countries);
+  if (_cache.leaders) renderLeaderRankList(_cache.leaders);
+  if (_cache.yearlyGlobal) renderGlobalTrend(_cache.yearlyGlobal);
+  if (_cache.yearly) renderTSLine();
+  if (_cache.movers) renderMovers();
+  if (_cache.distribution) renderHistogram();
+  renderDrawerProfile(); renderDrawerTrend();
+  for (const [id,state] of [...viewStates]) setState(id,state.kind,state.retry);
+  updateRefreshStatus(); resizeVisiblePlots();
+}
+function buildDtypeChips() {
+  const el = $("dtype-chips");
+  if (!el || !_allDtypes.length) return;
+  clearState("dtype-chips");
+  const rows = [{dtype:"ALL",n:_allDtypes.reduce((sum,d) => sum+Number(d.n),0)},..._allDtypes];
+  el.innerHTML = rows.map(d => `<button type="button" class="chip${d.dtype === GLOBAL_DTYPE ? " active" : ""}" data-dtype="${escapeHTML(d.dtype)}" aria-pressed="${d.dtype === GLOBAL_DTYPE}">${escapeHTML(dtypeLabel(d.dtype))}<span class="chip-n">${fmt(d.n,0)}</span></button>`).join("");
+  el.querySelectorAll("[data-dtype]").forEach(button => button.addEventListener("click",() => {
+    if (GLOBAL_DTYPE === button.dataset.dtype) return;
+    GLOBAL_DTYPE = button.dataset.dtype;
+    el.querySelectorAll("[data-dtype]").forEach(chip => { const active = chip.dataset.dtype === GLOBAL_DTYPE; chip.classList.toggle("active",active); chip.setAttribute("aria-pressed",String(active)); });
+    void refreshAll();
+  }));
+}
+function buildCountryControls() {
+  const rows = [...countryCatalog.values()].sort((a,b) => countryName(a).localeCompare(countryName(b),locale()));
+  const select = $("leader-country-filter"), selected = leaderCountry();
+  if (select) {
+    select.innerHTML = `<option value="ALL">${t("f_all")}</option>` + rows.map(c => `<option value="${escapeHTML(c.iso3)}">${escapeHTML(countryLabel(c))}</option>`).join("");
+    if (selected !== "ALL" && !rows.some(c => c.iso3 === selected)) {
+      const option = document.createElement("option"); option.value = selected; option.textContent = countryName(selected); select.appendChild(option);
+    }
+    select.value = selected;
+  }
+  for (const [id,radar] of [["country-radar-select",true],["ts-country-chips",false]]) {
+    const el = $(id);
+    if (!el) continue;
+    el.innerHTML = rows.map(c => {
+      const active = radar ? _radarSelected.includes(c.country) : TS.countries.includes(c.iso3);
+      return `<button type="button" class="chip${active ? " active" : ""}" data-country="${escapeHTML(c.iso3)}" aria-pressed="${active}">${escapeHTML(countryName(c))}</button>`;
+    }).join("");
+    el.querySelectorAll("[data-country]").forEach(button => button.addEventListener("click",() => {
+      const c = countryCatalog.get(button.dataset.country);
+      const key = radar ? c.country : c.iso3, chosen = radar ? _radarSelected : TS.countries;
+      const next = chosen.includes(key) ? chosen.filter(v => v !== key) : [...chosen,key];
+      if (radar) _radarSelected = next; else TS.countries = next;
+      const active = next.includes(key); button.classList.toggle("active",active); button.setAttribute("aria-pressed",String(active));
+      if (radar && _cache.countries) renderCountryRadar(_cache.countries);
+      else if (!radar) void refreshYearly();
+    }));
+  }
+}
+function buildDimensionControls() {
+  for (const [id,value,dimensions] of [["dim-bar-select",_dimBarKey,DIMS.slice(1)],["ts-dim",TS.dim,DIMS],["dist-dim",DIST.dim,DIMS],["scatter-x",_scatterX,DIMS.slice(1)],["scatter-y",_scatterY,DIMS.slice(1)]]) {
+    if (!$(id)) continue;
+    html(id,dimensions.map(d => `<option value="${d.key}">${d[LANG]}</option>`).join(""));
+    $(id).value = value;
+  }
+  html("trend-dim-toggle",DIMS.map(d => `<button type="button" class="toggle-btn${d.key === _activeTrendDim ? " active" : ""}" data-key="${d.key}" aria-pressed="${d.key === _activeTrendDim}">${d[LANG]}</button>`).join(""));
+  $("trend-dim-toggle")?.querySelectorAll("[data-key]").forEach(button => button.addEventListener("click",() => {
+    _activeTrendDim = button.dataset.key;
+    $("trend-dim-toggle").querySelectorAll("[data-key]").forEach(el => { const active = el.dataset.key === _activeTrendDim; el.classList.toggle("active",active); el.setAttribute("aria-pressed",String(active)); });
+    if (_cache.yearlyGlobal) renderGlobalTrend(_cache.yearlyGlobal); // Never capture an old dtype response.
+  }));
+}
+
+const COUNTRY_VIEWS = ["hero-row","country-cards","chart-map","chart-country-box","chart-country-radar","chart-dim-bars","chart-scatter2d"];
+function renderCountries(countries) {
+  renderHeroBanner(countries); renderCountryCards(countries); renderMap(countries);
+  renderCountryRanked(countries); renderCountryRadar(countries); renderDimBars(countries); renderScatter2D(countries);
+}
+function refreshCountries() {
+  return request("countries",url("countries"),data => {
+    _cache.countries = data;
+    data.forEach(c => countryCatalog.set(c.iso3,c));
+    buildCountryControls(); renderCountries(data);
+    if ($("export-countries")) $("export-countries").disabled = !data.length;
+  },() => {
+    delete _cache.countries;
+    COUNTRY_VIEWS.forEach(id => setState(id,"loading"));
+    if ($("export-countries")) $("export-countries").disabled = true;
+  },() => COUNTRY_VIEWS.forEach(id => setState(id,"error",refreshCountries)));
+}
+function refreshStats() {
+  return request("stats",url("stats"),data => { _cache.stats = data; renderKPIs(data); },
+    () => { delete _cache.stats; text("corpus-average","—"); setState("kpi-row","loading"); },
+    () => setState("kpi-row","error",refreshStats));
+}
+function refreshLeaders() {
+  closeLeaderDrawer(); updateScopeSummary();
+  return request("leaders",url("leaders",{country:leaderCountry(),n:LEADER_LIMIT,min_n:leaderMinN()}),data => {
+    _cache.leaders = data; renderLeaderRankList(data);
+  },() => { delete _cache.leaders; text("leader-count-badge","—"); setState("leader-rank-list","loading"); },
+    () => setState("leader-rank-list","error",refreshLeaders));
+}
+function refreshGlobalTrend() {
+  return request("globalTrend",url("yearly_global"),data => { _cache.yearlyGlobal = data; renderGlobalTrend(data); },
+    () => { delete _cache.yearlyGlobal; setState("chart-trend","loading"); },() => setState("chart-trend","error",refreshGlobalTrend));
+}
+function refreshYearly() {
+  if (!TS.countries.length) {
+    cancelRequest("yearly"); _cache.yearly = []; renderTSLine(); updateRefreshStatus(); return Promise.resolve();
+  }
+  return request("yearly",url("yearly",{countries:TS.countries.join(","),dim:TS.dim}),data => { _cache.yearly = data; renderTSLine(); },
+    () => { delete _cache.yearly; setState("chart-ts-line","loading"); },() => setState("chart-ts-line","error",refreshYearly));
+}
+function refreshMovers() {
+  return request("movers",url("yearly",{dim:"final_score"}),data => { _cache.movers = data; renderMovers(); },
+    () => { delete _cache.movers; setState("chart-movers","loading"); },() => setState("chart-movers","error",refreshMovers));
+}
+function refreshDistribution() {
+  return request("distribution",url("distribution",{dim:DIST.dim,group:DIST.group,year_min:2000,year_max:2025}),data => { _cache.distribution = data; renderHistogram(); },
+    () => { delete _cache.distribution; setState("chart-hist","loading"); },() => setState("chart-hist","error",refreshDistribution));
+}
+function refreshDtypes() {
+  return request("dtypes","/api/dtypes",data => { _allDtypes = data; buildDtypeChips(); },
+    () => setState("dtype-chips","loading"),() => setState("dtype-chips","error",refreshDtypes));
+}
+async function refreshAll() {
+  scopeVersion++;
+  closeLeaderDrawer();
+  for (const key of [...requests.keys()]) cancelRequest(key);
+  resourceStates.clear();
+  updateScopeSummary();
+  await Promise.allSettled([refreshStats(),refreshCountries(),refreshLeaders(),refreshGlobalTrend(),refreshYearly(),refreshMovers(),refreshDistribution(),
+    ...(!_allDtypes.length ? [refreshDtypes()] : [])]);
+}
+function countriesCSV(countries) {
+  // Machine-readable decimal points; labels and metadata preserve API identity and scope.
+  const cell = value => `"${String(value ?? "").replace(/^[=+@\-\t\r]/,"'$&").replace(/"/g,'""')}"`;
+  const fields = ["iso3","country","country_display","dtype","n","final_score","p25","p75",...DIMS.slice(1).map(d => d.key)];
+  return "\uFEFF"+[fields,...countries.map(c => fields.map(key => key === "country_display" ? countryName(c) : key === "dtype" ? GLOBAL_DTYPE : c[key]))].map(row => row.map(cell).join(",")).join("\r\n");
+}
+function exportCountries() {
+  if (!_cache.countries?.length) return;
+  const objectURL = URL.createObjectURL(new Blob([countriesCSV(_cache.countries)],{type:"text/csv;charset=utf-8"}));
+  const link = document.createElement("a");
+  link.href = objectURL; link.download = `popin-countries-${GLOBAL_DTYPE.replace(/[^a-z0-9_-]/gi,"_")}.csv`;
+  document.body.appendChild(link); link.click(); link.remove();
+  setTimeout(() => URL.revokeObjectURL(objectURL),1000);
+}
+function bindControls() {
+  $("leader-country-filter")?.addEventListener("change",refreshLeaders);
+  $("leader-min-n-filter")?.addEventListener("change",refreshLeaders);
+  $("leader-search")?.addEventListener("input",() => { if (_cache.leaders) renderLeaderRankList(_cache.leaders); });
+  $("dim-bar-select")?.addEventListener("change",event => { _dimBarKey = event.target.value; if (_cache.countries) renderDimBars(_cache.countries); });
+  $("ts-dim")?.addEventListener("change",event => { TS.dim = event.target.value; void refreshYearly(); });
+  for (const id of ["dist-dim","dist-group"]) $(id)?.addEventListener("change",() => {
+    DIST.dim = $("dist-dim")?.value ?? DIST.dim; DIST.group = $("dist-group")?.value ?? DIST.group; void refreshDistribution();
+  });
+  for (const id of ["scatter-x","scatter-y"]) $(id)?.addEventListener("change",() => {
+    _scatterX = $("scatter-x")?.value ?? _scatterX; _scatterY = $("scatter-y")?.value ?? _scatterY;
+    if (_cache.countries) renderScatter2D(_cache.countries);
+  });
+  $("drawer-close")?.addEventListener("click",closeLeaderDrawer);
+  $("drawer-overlay")?.addEventListener("click",closeLeaderDrawer);
+  $("export-countries")?.addEventListener("click",exportCountries);
+}
+async function main() {
+  LANG = storage("popin_lang") === "en" ? "en" : "pt";
+  document.documentElement.dataset.theme = "light";
+  if ($("leader-drawer")) { $("leader-drawer").inert = true; $("leader-drawer").setAttribute("aria-hidden","true"); }
+  // Keep availability stable through empty dtype responses, without making up measurements.
+  Object.entries(COUNTRIES).forEach(([iso3,row]) => countryCatalog.set(iso3,{iso3,country:row[0]}));
+  if ($("chart-hist") && !$("distribution-note")) {
+    const note = document.createElement("p"); note.id = "distribution-note"; note.className = "section-note";
+    $("chart-hist").insertAdjacentElement("afterend",note);
+  }
+  applyI18n(); buildDimensionControls(); buildCountryControls(); bindControls(); initNav(); initPlotSizing();
+  // Loading is local to each region; navigation and independent resources remain usable.
+  $("loader")?.classList.add("hidden");
+  if ($("loader")) $("loader").hidden = true;
+  await refreshAll();
+}
+if (typeof document !== "undefined") {
+  const start = () => main().catch(error => {
+    console.error("POPIN initialization:",error);
+    setState("kpi-row","error",() => window.location.reload());
+  });
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded",start,{once:true});
+  else void start();
+}

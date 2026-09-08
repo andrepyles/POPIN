@@ -1,0 +1,470 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-08T12:40:20Z",
+  "title": "Design System: POPIN",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Cool Paper",
+        "tonalRamp": [
+          "oklch(15.00% 0.0034 247.86)",
+          "oklch(26.43% 0.0034 247.86)",
+          "oklch(37.86% 0.0034 247.86)",
+          "oklch(49.29% 0.0034 247.86)",
+          "oklch(60.71% 0.0034 247.86)",
+          "oklch(72.14% 0.0034 247.86)",
+          "oklch(83.57% 0.0034 247.86)",
+          "oklch(95.00% 0.0034 247.86)"
+        ]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "White Surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.0000 89.88)",
+          "oklch(26.43% 0.0000 89.88)",
+          "oklch(37.86% 0.0000 89.88)",
+          "oklch(49.29% 0.0000 89.88)",
+          "oklch(60.71% 0.0000 89.88)",
+          "oklch(72.14% 0.0000 89.88)",
+          "oklch(83.57% 0.0000 89.88)",
+          "oklch(95.00% 0.0000 89.88)"
+        ]
+      },
+      "card2": {
+        "role": "neutral",
+        "displayName": "Inset Mist",
+        "tonalRamp": [
+          "oklch(15.00% 0.0076 228.85)",
+          "oklch(26.43% 0.0076 228.85)",
+          "oklch(37.86% 0.0076 228.85)",
+          "oklch(49.29% 0.0076 228.85)",
+          "oklch(60.71% 0.0076 228.85)",
+          "oklch(72.14% 0.0076 228.85)",
+          "oklch(83.57% 0.0076 228.85)",
+          "oklch(95.00% 0.0076 228.85)"
+        ]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Research Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0407 241.66)",
+          "oklch(26.43% 0.0407 241.66)",
+          "oklch(37.86% 0.0407 241.66)",
+          "oklch(49.29% 0.0407 241.66)",
+          "oklch(60.71% 0.0407 241.66)",
+          "oklch(72.14% 0.0407 241.66)",
+          "oklch(83.57% 0.0407 241.66)",
+          "oklch(95.00% 0.0407 241.66)"
+        ]
+      },
+      "text2": {
+        "role": "neutral",
+        "displayName": "Secondary Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0389 237.86)",
+          "oklch(26.43% 0.0389 237.86)",
+          "oklch(37.86% 0.0389 237.86)",
+          "oklch(49.29% 0.0389 237.86)",
+          "oklch(60.71% 0.0389 237.86)",
+          "oklch(72.14% 0.0389 237.86)",
+          "oklch(83.57% 0.0389 237.86)",
+          "oklch(95.00% 0.0389 237.86)"
+        ]
+      },
+      "text3": {
+        "role": "neutral",
+        "displayName": "Annotation Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0310 241.63)",
+          "oklch(26.43% 0.0310 241.63)",
+          "oklch(37.86% 0.0310 241.63)",
+          "oklch(49.29% 0.0310 241.63)",
+          "oklch(60.71% 0.0310 241.63)",
+          "oklch(72.14% 0.0310 241.63)",
+          "oklch(83.57% 0.0310 241.63)",
+          "oklch(95.00% 0.0310 241.63)"
+        ]
+      },
+      "brand": {
+        "role": "primary",
+        "displayName": "Instrument Teal",
+        "tonalRamp": [
+          "oklch(15.00% 0.0820 203.83)",
+          "oklch(26.43% 0.0820 203.83)",
+          "oklch(37.86% 0.0820 203.83)",
+          "oklch(49.29% 0.0820 203.83)",
+          "oklch(60.71% 0.0820 203.83)",
+          "oklch(72.14% 0.0820 203.83)",
+          "oklch(83.57% 0.0820 203.83)",
+          "oklch(95.00% 0.0820 203.83)"
+        ]
+      },
+      "brand2": {
+        "role": "primary",
+        "displayName": "Research Navy",
+        "tonalRamp": [
+          "oklch(15.00% 0.0625 244.49)",
+          "oklch(26.43% 0.0625 244.49)",
+          "oklch(37.86% 0.0625 244.49)",
+          "oklch(49.29% 0.0625 244.49)",
+          "oklch(60.71% 0.0625 244.49)",
+          "oklch(72.14% 0.0625 244.49)",
+          "oklch(83.57% 0.0625 244.49)",
+          "oklch(95.00% 0.0625 244.49)"
+        ]
+      },
+      "brand-gl": {
+        "role": "secondary",
+        "displayName": "Selection Wash",
+        "tonalRamp": [
+          "oklch(15.00% 0.0127 196.94)",
+          "oklch(26.43% 0.0127 196.94)",
+          "oklch(37.86% 0.0127 196.94)",
+          "oklch(49.29% 0.0127 196.94)",
+          "oklch(60.71% 0.0127 196.94)",
+          "oklch(72.14% 0.0127 196.94)",
+          "oklch(83.57% 0.0127 196.94)",
+          "oklch(95.00% 0.0127 196.94)"
+        ]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Quiet Divider",
+        "tonalRamp": [
+          "oklch(15.00% 0.0102 238.52)",
+          "oklch(26.43% 0.0102 238.52)",
+          "oklch(37.86% 0.0102 238.52)",
+          "oklch(49.29% 0.0102 238.52)",
+          "oklch(60.71% 0.0102 238.52)",
+          "oklch(72.14% 0.0102 238.52)",
+          "oklch(83.57% 0.0102 238.52)",
+          "oklch(95.00% 0.0102 238.52)"
+        ]
+      },
+      "border2": {
+        "role": "neutral",
+        "displayName": "Control Stroke",
+        "tonalRamp": [
+          "oklch(15.00% 0.0208 238.72)",
+          "oklch(26.43% 0.0208 238.72)",
+          "oklch(37.86% 0.0208 238.72)",
+          "oklch(49.29% 0.0208 238.72)",
+          "oklch(60.71% 0.0208 238.72)",
+          "oklch(72.14% 0.0208 238.72)",
+          "oklch(83.57% 0.0208 238.72)",
+          "oklch(95.00% 0.0208 238.72)"
+        ]
+      },
+      "score-0": {
+        "role": "secondary",
+        "displayName": "Score 0",
+        "tonalRamp": [
+          "oklch(15.00% 0.0155 247.99)",
+          "oklch(26.43% 0.0155 247.99)",
+          "oklch(37.86% 0.0155 247.99)",
+          "oklch(49.29% 0.0155 247.99)",
+          "oklch(60.71% 0.0155 247.99)",
+          "oklch(72.14% 0.0155 247.99)",
+          "oklch(83.57% 0.0155 247.99)",
+          "oklch(95.00% 0.0155 247.99)"
+        ]
+      },
+      "score-25": {
+        "role": "secondary",
+        "displayName": "Score 25",
+        "tonalRamp": [
+          "oklch(15.00% 0.0440 243.01)",
+          "oklch(26.43% 0.0440 243.01)",
+          "oklch(37.86% 0.0440 243.01)",
+          "oklch(49.29% 0.0440 243.01)",
+          "oklch(60.71% 0.0440 243.01)",
+          "oklch(72.14% 0.0440 243.01)",
+          "oklch(83.57% 0.0440 243.01)",
+          "oklch(95.00% 0.0440 243.01)"
+        ]
+      },
+      "score-50": {
+        "role": "secondary",
+        "displayName": "Score 50",
+        "tonalRamp": [
+          "oklch(15.00% 0.0770 240.76)",
+          "oklch(26.43% 0.0770 240.76)",
+          "oklch(37.86% 0.0770 240.76)",
+          "oklch(49.29% 0.0770 240.76)",
+          "oklch(60.71% 0.0770 240.76)",
+          "oklch(72.14% 0.0770 240.76)",
+          "oklch(83.57% 0.0770 240.76)",
+          "oklch(95.00% 0.0770 240.76)"
+        ]
+      },
+      "score-75": {
+        "role": "secondary",
+        "displayName": "Score 75",
+        "tonalRamp": [
+          "oklch(15.00% 0.0867 243.45)",
+          "oklch(26.43% 0.0867 243.45)",
+          "oklch(37.86% 0.0867 243.45)",
+          "oklch(49.29% 0.0867 243.45)",
+          "oklch(60.71% 0.0867 243.45)",
+          "oklch(72.14% 0.0867 243.45)",
+          "oklch(83.57% 0.0867 243.45)",
+          "oklch(95.00% 0.0867 243.45)"
+        ]
+      },
+      "plot-ink": {
+        "role": "neutral",
+        "displayName": "Plot Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.0392 257.29)",
+          "oklch(26.43% 0.0392 257.29)",
+          "oklch(37.86% 0.0392 257.29)",
+          "oklch(49.29% 0.0392 257.29)",
+          "oklch(60.71% 0.0392 257.29)",
+          "oklch(72.14% 0.0392 257.29)",
+          "oklch(83.57% 0.0392 257.29)",
+          "oklch(95.00% 0.0392 257.29)"
+        ]
+      },
+      "plot-grid": {
+        "role": "neutral",
+        "displayName": "Plot Grid",
+        "tonalRamp": [
+          "oklch(15.00% 0.0126 255.51)",
+          "oklch(26.43% 0.0126 255.51)",
+          "oklch(37.86% 0.0126 255.51)",
+          "oklch(49.29% 0.0126 255.51)",
+          "oklch(60.71% 0.0126 255.51)",
+          "oklch(72.14% 0.0126 255.51)",
+          "oklch(83.57% 0.0126 255.51)",
+          "oklch(95.00% 0.0126 255.51)"
+        ]
+      },
+      "plot-teal": {
+        "role": "secondary",
+        "displayName": "Plot Teal",
+        "tonalRamp": [
+          "oklch(15.00% 0.0923 201.59)",
+          "oklch(26.43% 0.0923 201.59)",
+          "oklch(37.86% 0.0923 201.59)",
+          "oklch(49.29% 0.0923 201.59)",
+          "oklch(60.71% 0.0923 201.59)",
+          "oklch(72.14% 0.0923 201.59)",
+          "oklch(83.57% 0.0923 201.59)",
+          "oklch(95.00% 0.0923 201.59)"
+        ]
+      },
+      "focus": {
+        "role": "secondary",
+        "displayName": "Focus Cyan",
+        "tonalRamp": [
+          "oklch(15.00% 0.1038 219.22)",
+          "oklch(26.43% 0.1038 219.22)",
+          "oklch(37.86% 0.1038 219.22)",
+          "oklch(49.29% 0.1038 219.22)",
+          "oklch(60.71% 0.1038 219.22)",
+          "oklch(72.14% 0.1038 219.22)",
+          "oklch(83.57% 0.1038 219.22)",
+          "oklch(95.00% 0.1038 219.22)"
+        ]
+      },
+      "error": {
+        "role": "secondary",
+        "displayName": "Error Red",
+        "tonalRamp": [
+          "oklch(15.00% 0.1637 25.70)",
+          "oklch(26.43% 0.1637 25.70)",
+          "oklch(37.86% 0.1637 25.70)",
+          "oklch(49.29% 0.1637 25.70)",
+          "oklch(60.71% 0.1637 25.70)",
+          "oklch(72.14% 0.1637 25.70)",
+          "oklch(83.57% 0.1637 25.70)",
+          "oklch(95.00% 0.1637 25.70)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Section headline",
+        "purpose": "Active exploration section; 25px on mobile."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading and controls."
+      },
+      "label": {
+        "displayName": "Supporting label",
+        "purpose": "Captions, metadata and field context."
+      },
+      "metric": {
+        "displayName": "Corpus metric",
+        "purpose": "Tabular KPI values; 24px on mobile."
+      },
+      "plot-tick": {
+        "displayName": "Chart tick",
+        "purpose": "Mono numeric axis labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "mobile-navigation",
+        "value": "0 12px 18px rgba(23,45,61,.05)",
+        "purpose": "Open mobile navigation only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "140ms ease",
+        "purpose": "Profile scrim opacity; shared CSS variable."
+      },
+      {
+        "name": "drawer",
+        "value": "transform 180ms ease, visibility 180ms",
+        "purpose": "Profile entrance and exit."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important; scroll-behavior: auto",
+        "purpose": "Applied under prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop-max",
+        "value": "1180px"
+      },
+      {
+        "name": "stacked-panels-max",
+        "value": "900px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "768px"
+      },
+      {
+        "name": "large-desktop-min",
+        "value": "1500px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Text action",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Underlined CSV export action.",
+      "html": "<button class=\"ds-text\" type=\"button\">Baixar CSV</button>",
+      "css": ".ds-text{font-family:'IBM Plex Sans',system-ui,sans-serif;border:0;background:transparent;color:var(--brand,#006b73);font-size:12px;padding:0 2px;min-height:30px;text-decoration:underline;text-underline-offset:3px;cursor:pointer}.ds-text:disabled{opacity:.55;cursor:wait}.ds-text:focus-visible{outline:3px solid var(--focus,#178eaa);outline-offset:3px}"
+    },
+    {
+      "name": "Dimension toggle",
+      "kind": "button",
+      "refersTo": "button-toggle",
+      "description": "Compact dimension selector with an explicit pressed state.",
+      "html": "<button class=\"ds-toggle\" type=\"button\" aria-pressed=\"false\">Score final</button>",
+      "css": ".ds-toggle{font-family:'IBM Plex Sans',system-ui,sans-serif;border:1px solid var(--border,#dfe6eb);background:var(--card,#fff);color:var(--text,#172d3d);border-radius:4px;padding:6px 10px;font-size:11px;min-height:34px;cursor:pointer}.ds-toggle[aria-pressed=true]{border-color:var(--brand,#006b73);background:var(--brand-gl,#e5f1f1);color:var(--brand,#006b73)}.ds-toggle:focus-visible{outline:3px solid var(--focus,#178eaa);outline-offset:3px}"
+    },
+    {
+      "name": "Retry action",
+      "kind": "button",
+      "refersTo": "button-retry",
+      "description": "Local retry action beneath a resource error.",
+      "html": "<button class=\"ds-retry\" type=\"button\">Tentar novamente</button>",
+      "css": ".ds-retry{font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:14px;line-height:1.5;min-height:40px;margin-top:14px;border:1px solid var(--border2,#bdcbd5);border-radius:4px;background:var(--card,#fff);padding:8px 16px;color:var(--brand,#006b73);cursor:pointer}.ds-retry:disabled{opacity:.55;cursor:wait}.ds-retry:focus-visible{outline:3px solid var(--focus,#178eaa);outline-offset:3px}"
+    },
+    {
+      "name": "Filter chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Country or discourse-type selection; the sample uses a real country label without fabricated counts.",
+      "html": "<button class=\"ds-chip\" type=\"button\" aria-pressed=\"true\">Brasil</button>",
+      "css": ".ds-chip{font-family:'IBM Plex Sans',system-ui,sans-serif;padding:7px 12px;border:1px solid var(--border2,#bdcbd5);border-radius:4px;background:var(--card,#fff);color:var(--text,#172d3d);font-size:12px;min-height:36px;line-height:1.3;cursor:pointer}.ds-chip:hover{border-color:var(--brand,#006b73);color:var(--brand,#006b73)}.ds-chip[aria-pressed=true]{background:var(--brand-gl,#e5f1f1);border-color:var(--brand,#006b73);color:#005c63;font-weight:600}.ds-chip:focus-visible{outline:3px solid var(--focus,#178eaa);outline-offset:3px}"
+    },
+    {
+      "name": "Metadata badge",
+      "kind": "chip",
+      "refersTo": "badge",
+      "description": "Passive chart metadata.",
+      "html": "<span class=\"ds-badge\">Score final</span>",
+      "css": ".ds-badge{font-family:'IBM Plex Sans',system-ui,sans-serif;padding:3px 7px;border-radius:3px;background:var(--card2,#edf3f6);font-size:11px;color:var(--text2,#465e6e);font-weight:400;line-height:1.5}"
+    },
+    {
+      "name": "Labeled search field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Native field geometry and focus treatment.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-label\">Buscar líder</span><input class=\"ds-input\" type=\"search\" placeholder=\"Buscar nos líderes carregados\"></label>",
+      "css": ".ds-field{font-family:'IBM Plex Sans',system-ui,sans-serif;display:flex;flex-direction:column;gap:6px;min-width:170px;max-width:100%}.ds-label{font-size:12px;color:var(--text2,#465e6e);font-weight:500}.ds-input{font-family:'IBM Plex Sans',system-ui,sans-serif;color:var(--text,#172d3d);line-height:1.5;border:1px solid var(--border2,#bdcbd5);border-radius:4px;padding:8px 12px;background:var(--card,#fff);max-width:100%;min-height:40px;font-size:13px;caret-color:var(--brand,#006b73)}.ds-input:focus-visible{outline:3px solid var(--focus,#178eaa);outline-offset:3px}"
+    },
+    {
+      "name": "Section navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Horizontal desktop navigation; the application controls mobile disclosure.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Seções do dashboard\"><button class=\"ds-nav-item\" type=\"button\" aria-current=\"page\">Visão geral</button><button class=\"ds-nav-item\" type=\"button\">Países</button></nav>",
+      "css": ".ds-nav{display:flex;gap:4px;background:var(--card,#fff)}.ds-nav-item{font-family:'IBM Plex Sans',system-ui,sans-serif;min-height:40px;border:0;border-bottom:3px solid transparent;background:transparent;padding:4px 13px 0;color:var(--text2,#465e6e);font-size:14px;font-weight:500;white-space:nowrap;cursor:pointer}.ds-nav-item:hover{color:var(--brand,#006b73);background:#f7fafb}.ds-nav-item[aria-current=page]{color:var(--brand,#006b73);border-bottom-color:var(--brand,#006b73);font-weight:600}.ds-nav-item:focus-visible{outline:3px solid var(--focus,#178eaa);outline-offset:3px}@media(max-width:768px){.ds-nav{flex-direction:column;gap:2px}.ds-nav-item{text-align:left;border-bottom:0;border-left:3px solid transparent;min-height:44px;padding:10px 12px}.ds-nav-item[aria-current=page]{border-left-color:var(--brand,#006b73);background:var(--brand-gl,#e5f1f1)}}"
+    },
+    {
+      "name": "Research panel",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Flat chart container with source caption treatment; no invented chart data.",
+      "html": "<div class=\"ds-card\"><p class=\"ds-caption\">Compare a média junto da cobertura.</p></div>",
+      "css": ".ds-card{font-family:'IBM Plex Sans',system-ui,sans-serif;font-size:14px;line-height:1.5;color:var(--text,#172d3d);background:var(--card,#fff);border:1px solid var(--border,#dfe6eb);border-radius:var(--radius,8px);padding:22px;min-width:0;margin-bottom:24px}.ds-caption{color:var(--text3,#596b79);font-size:12px;margin:5px 0 0;max-width:600px}@media(max-width:1180px){.ds-card{padding:18px}}@media(max-width:768px){.ds-card{padding:16px 12px;border-radius:6px;margin-bottom:20px}}"
+    },
+    {
+      "name": "Continuous score legend",
+      "kind": "custom",
+      "description": "The actual five-anchor blue scale; labels indicate numerical positions, not bins.",
+      "html": "<div class=\"ds-legend\" aria-label=\"Score de 0 a 100\"><div class=\"ds-track\"></div><div class=\"ds-ends\"><span>0</span><span>25</span><span>50</span><span>75</span><span>100</span></div></div>",
+      "css": ".ds-legend{width:210px;max-width:100%;color:var(--text2,#465e6e)}.ds-track{height:7px;border-radius:1px;background:linear-gradient(90deg,#e8f1fa,#b5d1e8,#70a3c8,#3a7099,#183b56)}.ds-ends{display:flex;justify-content:space-between;margin-top:5px;font-family:var(--ff-mono,'IBM Plex Mono',monospace);font-size:10px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Observatório público de dados",
+    "overview": "POPIN is a light research observatory for researchers and journalists. Navy anchors identity and quantitative reading; teal identifies actions and selection. Useful density comes from aligned numbers, broad comparison surfaces and restrained borders.\n\nThe implemented surface has a horizontal header, five exploration sections, a research About section and a shared discourse-type scope. Its visual language supports reading the available corpus, comparing coverage and opening a leader profile without losing context. The interface remains light and uses native HTML/CSS/JavaScript with Plotly.",
+    "keyCharacteristics": [
+      "Light neutral surfaces with navy and teal.",
+      "Continuous blue score encoding from 0 to 100.",
+      "IBM Plex Sans with tabular numbers and selective IBM Plex Mono.",
+      "Coverage and distribution beside comparative means."
+    ],
+    "rules": [
+      {
+        "name": "The Continuous Score Rule",
+        "body": "Use the same continuous blue interpolation for score magnitude. The stops at 0, 25, 50, 75 and 100 are interpolation anchors, never score categories.",
+        "section": "colors"
+      },
+      {
+        "name": "The Identity Color Rule",
+        "body": "Use teal for control selection and stable categorical colors for compared series or endpoint identity; neither defines a score threshold.",
+        "section": "colors"
+      },
+      {
+        "name": "The Comparable Numbers Rule",
+        "body": "Use tabular numerals for metrics, scores and coverage; preserve localized decimal formatting and the dash for unavailable values.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "Use borders and tonal separation for research surfaces; reserve the implemented shadow for the open mobile navigation.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve all five exploration sections and the shared active-scope summary.",
+      "Do show means with discourse counts and p25–p75 wherever supplied; the interval describes the middle 50% of discourses.",
+      "Do retain the continuous 0–100 legend, localized numbers, keyboard focus and reduced-motion behavior.",
+      "Do derive displayed totals from the real filtered dataset; the authorized full-corpus baseline is 45,492 observations."
+    ],
+    "donts": [
+      "Don't add artificial populist/non-populist categories or color thresholds.",
+      "Don't describe quartiles as confidence intervals or standard errors, or turn missing values into zero.",
+      "Don't introduce a dark theme, a permanent desktop sidebar, decorative score medals or a new display font.",
+      "Don't change backend contracts, source observations or score values as part of visual documentation."
+    ]
+  }
+}
