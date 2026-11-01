@@ -2,7 +2,7 @@
   "release": "POPIN v4",
   "package_revision": "4.1.0",
   "release_date": "2026-11-01",
-  "status": "prepared_for_v4.1.0_release",
+  "status": "published_v4.1.0",
   "snapshot_date": "2026-09-06",
   "repository": "https://github.com/andrepyles/POPIN",
   "release_url": "https://github.com/andrepyles/POPIN/releases/tag/v4.1.0",
@@ -61,7 +61,18 @@
     "score": "arithmetic_mean_of_six_dimensions",
     "primary_dtype": "SPEECH",
     "posthoc_gpd_rescaling": false,
-    "cohort_note": "The 900 pilot documents are distinct from the full-run documents; both cohorts are retained with explicit provenance."
+    "cohort_note": "The 900 pilot documents are distinct from the full-run documents; both cohorts are retained with explicit provenance.",
+    "execution_job": {
+      "path": "25_luna_all_noninvalid_openai_batch.py",
+      "sha256": "99d077808b365382fda2a17fb9ecea73a9f1225e359ab1f279602ae0ca38a13b",
+      "run_id": "luna__all_noninvalid__openai__v4",
+      "provider": "openai_direct_batch",
+      "api": "OpenAI Batch API",
+      "scope": "dtype <> 'INVALID'",
+      "input": "available full text per discourse, one request per document",
+      "prompt_source": "04_score.py:SYSTEM_PROMPT",
+      "note": "Driver is included as execution provenance. The frozen database snapshot is sufficient to regenerate published tables without rerunning model calls."
+    }
   },
   "exports": {
     "csv": {
@@ -136,6 +147,8 @@
     "GPD_V2_1_20251120_MANIFEST.md",
     "LALLPI_V2025_MANIFEST.md",
     "CITATION.cff",
-    "requirements-reproducibility.txt"
+    "requirements-reproducibility.txt",
+    "docs/LUNA_BATCH_JOB.md",
+    "25_luna_all_noninvalid_openai_batch.py"
   ]
 }

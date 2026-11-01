@@ -10,7 +10,8 @@ The index and six measurement dimensions remain POPIN v4. Release v4.1.0 package
 | 2 | `50_generate_final_tables.py` | Selects GPT-5.6 v4 full-text scores, exports CSV/Parquet and descriptive SPEECH tables |
 | 3 | `tools/reproduce_validation_audit.py` | Recomputes GPD, LALLPI, model-comparison, prompt-sensitivity and integrity outputs from DuckDB and packaged audit inputs |
 | 4 | `51_generate_validation_tables.py` | Consolidates the reproducible validation outputs for publication |
-| 5 | `04_score.py` | Contains the original POPIN v4 measurement prompt and the legacy Qwen/vLLM chunked scorer |
+| 5 | `25_luna_all_noninvalid_openai_batch.py` | Driver used for the GPT-5.6 Luna full-text v4 scoring run |
+| 6 | `04_score.py` | Contains the original POPIN v4 measurement prompt and the legacy Qwen/vLLM chunked scorer |
 
 Run the export generator from the repository root after downloading the release database to `popin.duckdb`:
 
@@ -21,6 +22,8 @@ python 51_generate_validation_tables.py
 ```
 
 By default, outputs are written to `data/release_v4/`. Set `DB_PATH` to use a database in another location and `OUT_DIR` to change the output directory.
+
+The manuscript's score snapshot is already in `popin.duckdb`; rerunning the Luna batch is not needed to regenerate manuscript tables. The batch driver is included to document the original scoring procedure. Running it submits model requests and requires an OpenAI API key; see `docs/LUNA_BATCH_JOB.md` before running it.
 
 ## Execution and import history
 
