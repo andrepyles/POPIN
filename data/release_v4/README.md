@@ -1,6 +1,6 @@
 # POPIN v4.1.0 — score exports and analysis tables
 
-This folder contains compact exports for the manuscript snapshot, derived from the full `popin.duckdb` analytical database distributed as a v4.1.0 GitHub release asset.
+This folder contains compact analysis tables and audit inputs for the manuscript snapshot, derived from the full `popin.duckdb` analytical database distributed as a v4.1.0 GitHub release asset. The score CSV and Parquet are distributed as separate release assets and are generated locally by `50_generate_final_tables.py`.
 
 ## Files
 

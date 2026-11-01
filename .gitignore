@@ -6,11 +6,9 @@
 .env
 data/gpd_v2_1_20251120/sensitivity_runs/
 
-# Publish the compact reproducibility exports and manifests; keep large local
-# research databases and raw source files out of Git.
+# Keep compact audit inputs and manifests in Git. The full database and score
+# exports are distributed as release assets; generated exports stay local.
 !data/release_v4/
-!data/release_v4/*.csv
-!data/release_v4/*.parquet
 !data/release_v4/*.md
 !data/release_v4/*.json
 !data/release_v4/analysis/

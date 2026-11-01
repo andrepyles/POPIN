@@ -57,12 +57,12 @@ The manuscript snapshot and the earlier model snapshot are separate. Download th
 | File | Size | Contents |
 |------|------|----------|
 | `popin.duckdb` | ~1.5 GB | Full analytical database — discourses, scores, source and run metadata |
-| `popin_v4_scores.csv` | ~6.6 MB | Frozen GPT-5.6 v4 scores, with scoring cohort provenance |
-| `popin_v4_scores.parquet` | ~1.1 MB | Same score table in Parquet format |
+| `popin_v4_scores.csv` | ~9.2 MB | Frozen GPT-5.6 v4 scores, with scoring cohort provenance |
+| `popin_v4_scores.parquet` | ~1.0 MB | Same score table in Parquet format |
 
 The 45,492-document score snapshot contains 44,592 records from the full run and 900 records from a separately identified pilot run. Both are exported with their `score_scope`, `score_coverage`, and `source_kind` fields. The pilot records are never presented as if they came from the full-run batch. See the release manifest and reproducibility guide for exact filters and hashes.
 
-To regenerate the exports and analysis tables, install the pinned dependencies from `requirements-reproducibility.txt` and follow [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md).
+To regenerate the exports and analysis tables, install the pinned dependencies from [`requirements.txt`](requirements.txt) and follow [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md).
 
 ### Querying the database
 

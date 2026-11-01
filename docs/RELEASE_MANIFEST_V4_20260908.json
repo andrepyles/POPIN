@@ -79,13 +79,15 @@
       "path": "data/release_v4/popin_v4_scores.csv",
       "rows": 45492,
       "size_bytes": 9240939,
-      "sha256": "a1139fb237c956f81385cc68e365a23ca94a261d7ed9cd3d96429d5f6a860024"
+      "sha256": "a1139fb237c956f81385cc68e365a23ca94a261d7ed9cd3d96429d5f6a860024",
+      "release_asset": "popin_v4_scores.csv"
     },
     "parquet": {
       "path": "data/release_v4/popin_v4_scores.parquet",
       "rows": 45492,
       "size_bytes": 1035894,
-      "sha256": "c435f3353a2aa9b3223f81677e99291ec3091c40a44f1355b34bc6df0a1f8229"
+      "sha256": "c435f3353a2aa9b3223f81677e99291ec3091c40a44f1355b34bc6df0a1f8229",
+      "release_asset": "popin_v4_scores.parquet"
     }
   },
   "analysis": {
@@ -127,7 +129,7 @@
       "source_audit_script": "tools/reproduce_validation_audit.py",
       "source_audit_script_sha256": "96272b066f3f552da967104f574669204a331aa156db61ed9ecdc046dab6cd9d"
     },
-    "python_requirements": "requirements-reproducibility.txt"
+    "python_requirements": "requirements.txt"
   },
   "version_history": {
     "v4.0": "Qwen3-30B-A3B-Instruct, 800-word chunked scoring; earlier independent score snapshot.",
@@ -147,7 +149,7 @@
     "GPD_V2_1_20251120_MANIFEST.md",
     "LALLPI_V2025_MANIFEST.md",
     "CITATION.cff",
-    "requirements-reproducibility.txt",
+    "requirements.txt",
     "docs/LUNA_BATCH_JOB.md",
     "25_luna_all_noninvalid_openai_batch.py"
   ]

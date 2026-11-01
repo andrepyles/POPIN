@@ -22,12 +22,12 @@ Keep the database read-only. It is the full research database; `06_website/popin
 
 ## Rebuild score exports and descriptive tables
 
-Environment: Python 3, `duckdb`, `pandas`, and `numpy`; pinned versions are in `requirements-reproducibility.txt`. DuckDB writes the Parquet export directly; `pyarrow` is not required.
+Environment: Python 3, `duckdb`, `pandas`, and `numpy`; pinned versions are in `requirements.txt`. DuckDB writes the Parquet export directly; `pyarrow` is not required.
 
 Install the pinned analysis dependencies with:
 
 ```bash
-python -m pip install -r requirements-reproducibility.txt
+python -m pip install -r requirements.txt
 ```
 
 Place `popin.duckdb` in the repository root or set `DB_PATH`, then run:
@@ -38,7 +38,7 @@ python 50_generate_final_tables.py
 
 The script reads `discourses` and `scores` in read-only mode. It selects model `gpt-5.6-luna`, prompt `v4`, `status='ok'`, `chunked=false`, scopes `full` and `pilot`, and excludes `INVALID`. It checks for duplicate IDs, missing scores, and the frozen row/cohort counts before writing.
 
-Outputs under `data/release_v4/`:
+Outputs under `data/release_v4/` (the score CSV and Parquet are attached to the GitHub release and are generated locally by this command):
 
 - `popin_v4_scores.csv` and `popin_v4_scores.parquet`: one selected score per document with full/pilot cohort provenance.
 - `analysis/country_speech.csv`, `leader_speech.csv`, `year_speech.csv`, and `dimension_speech.csv`: descriptive summaries of the 34,821 `SPEECH` records.

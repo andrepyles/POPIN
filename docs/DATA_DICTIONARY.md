@@ -68,7 +68,7 @@ The database also retains `raw_gpd_long`, `raw_gpd_wide`, `raw_lallpi_index`, `j
 
 ## Frozen export fields
 
-`data/release_v4/popin_v4_scores.csv` and `.parquet` contain one selected score per non-invalid document. Besides the document metadata and six scores, they include `prompt_version`, `provider`, `score_scope`, `score_coverage`, `source_kind`, `chunked`, and `scored_at` so that the full and pilot cohorts remain identifiable.
+The release assets `popin_v4_scores.csv` and `popin_v4_scores.parquet` (also generated under `data/release_v4/` when running `50_generate_final_tables.py`) contain one selected score per non-invalid document. Besides the document metadata and six scores, they include `prompt_version`, `provider`, `score_scope`, `score_coverage`, `source_kind`, `chunked`, and `scored_at` so that the full and pilot cohorts remain identifiable.
 
 ## Interpretation
 
