@@ -1,0 +1,141 @@
+{
+  "release": "POPIN v4",
+  "package_revision": "4.1.0",
+  "release_date": "2026-11-01",
+  "status": "prepared_for_v4.1.0_release",
+  "snapshot_date": "2026-09-06",
+  "repository": "https://github.com/andrepyles/POPIN",
+  "release_url": "https://github.com/andrepyles/POPIN/releases/tag/v4.1.0",
+  "primary_database": {
+    "asset": "popin.duckdb",
+    "size_bytes": 1519923200,
+    "sha256": "81f78edb283a7acc37f7e86f57005970639e07252d45bab5e6f8e72ca80bf133",
+    "tables": [
+      "discourses",
+      "scores",
+      "raw_gpd_long",
+      "raw_gpd_wide",
+      "raw_lallpi_index",
+      "jobs",
+      "v_all_scores_navigable"
+    ],
+    "analysis_source": "scores joined to discourses",
+    "role_note": "Full analytical database; 06_website/popin_web.duckdb is a dashboard-only snapshot."
+  },
+  "snapshot": {
+    "observations": 45492,
+    "speech_observations": 34821,
+    "countries": 19,
+    "leaders": 105,
+    "year_min": 2000,
+    "year_max": 2025,
+    "excluded_dtype": "INVALID",
+    "score_cohorts": [
+      {
+        "scope": "full",
+        "coverage": "all_noninvalid",
+        "documents": 44592
+      },
+      {
+        "scope": "pilot",
+        "coverage": "pilot",
+        "documents": 900
+      }
+    ]
+  },
+  "scoring": {
+    "model_id": "gpt-5.6-luna",
+    "model_label": "GPT-5.6 Luna",
+    "prompt_id": "v4",
+    "input": "available full text per discourse",
+    "chunked": false,
+    "status": "ok",
+    "dimensions": [
+      "people_centrism",
+      "anti_elitism",
+      "moral_dichotomy",
+      "popular_sovereignty",
+      "exclusionary_rhetoric",
+      "crisis_rhetoric"
+    ],
+    "score": "arithmetic_mean_of_six_dimensions",
+    "primary_dtype": "SPEECH",
+    "posthoc_gpd_rescaling": false,
+    "cohort_note": "The 900 pilot documents are distinct from the full-run documents; both cohorts are retained with explicit provenance."
+  },
+  "exports": {
+    "csv": {
+      "path": "data/release_v4/popin_v4_scores.csv",
+      "rows": 45492,
+      "size_bytes": 9240939,
+      "sha256": "a1139fb237c956f81385cc68e365a23ca94a261d7ed9cd3d96429d5f6a860024"
+    },
+    "parquet": {
+      "path": "data/release_v4/popin_v4_scores.parquet",
+      "rows": 45492,
+      "size_bytes": 1035894,
+      "sha256": "c435f3353a2aa9b3223f81677e99291ec3091c40a44f1355b34bc6df0a1f8229"
+    }
+  },
+  "analysis": {
+    "generator": "50_generate_final_tables.py",
+    "descriptive_population": "dtype = SPEECH",
+    "tables": {
+      "country_speech": {
+        "path": "data/release_v4/analysis/country_speech.csv",
+        "size_bytes": 3290,
+        "sha256": "1e71b496dea62c0dbb1a744d461492b0300e1a7b09dc8b4fba25cfaa271ed7f0"
+      },
+      "leader_speech": {
+        "path": "data/release_v4/analysis/leader_speech.csv",
+        "size_bytes": 20337,
+        "sha256": "fb2b4d874bcf5c2e294b9f47c0135de5f730871f3ad13f047f8ecffa204e39bb"
+      },
+      "year_speech": {
+        "path": "data/release_v4/analysis/year_speech.csv",
+        "size_bytes": 4233,
+        "sha256": "fc57d53c8bd9286439f2caa334f84a726dc6ebceb26f5382b72e2fff97514fb3"
+      },
+      "dimension_speech": {
+        "path": "data/release_v4/analysis/dimension_speech.csv",
+        "size_bytes": 995,
+        "sha256": "dc9572a9959d772154cd190c22cb781fa046393664d7bb4df0a482cc98a4b895"
+      }
+    },
+    "validation_generator": "51_generate_validation_tables.py",
+    "validation_directory": "data/release_v4/analysis/validation",
+    "validation_metadata": {
+      "path": "data/release_v4/analysis/validation/validation_metadata.json",
+      "size_bytes": 3852,
+      "sha256": "87e02265d94e4c1d58572aacd7e7a0e044a9b4c093848be05119bea5ba551f1f"
+    },
+    "source_inputs": {
+      "path": "data/release_v4/analysis/source_inputs",
+      "manifest": "data/release_v4/analysis/source_inputs/source_manifest.json",
+      "manifest_sha256": "9a4b8ca4f57155e2be3f8f91ef41a977a8144b68525ff55d4fe01b377caa9d24",
+      "source_audit_script": "tools/reproduce_validation_audit.py",
+      "source_audit_script_sha256": "96272b066f3f552da967104f574669204a331aa156db61ed9ecdc046dab6cd9d"
+    },
+    "python_requirements": "requirements-reproducibility.txt"
+  },
+  "version_history": {
+    "v4.0": "Qwen3-30B-A3B-Instruct, 800-word chunked scoring; earlier independent score snapshot.",
+    "v4.1.0": "Package/reproducibility revision accompanying the GPT-5.6 Luna, prompt v4, unchunked manuscript snapshot."
+  },
+  "source_and_redistribution": "The full text coverage follows the previously published v4.0 corpus. Original source attribution and source-specific terms continue to apply; see source manifests and release notes.",
+  "supporting_documents": [
+    "docs/DATA_DICTIONARY.md",
+    "docs/REPRODUCIBILITY.md",
+    "docs/CODE_MAP.md",
+    "data/release_v4/README.md",
+    "data/release_v4/analysis/validation/README.md",
+    "data/release_v4/analysis/validation/validation_metadata.json",
+    "data/release_v4/analysis/source_inputs/README.md",
+    "data/release_v4/analysis/source_inputs/source_manifest.json",
+    "tools/reproduce_validation_audit.py",
+    "GPD_V2_1_20251120_MANIFEST.md",
+    "LALLPI_V2025_MANIFEST.md",
+    "CITATION.cff",
+    "requirements-reproducibility.txt"
+  ]
+}

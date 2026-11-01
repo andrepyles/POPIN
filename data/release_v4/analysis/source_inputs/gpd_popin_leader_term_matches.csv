@@ -1,0 +1,362 @@
+gpd_country,gpd_iso3,gpd_leader,gpd_term,gpd_yearbegin,gpd_yearend,gpd_totalaverage,popin_leader_name,popin_n_speeches,popin_mean,popin_sd,popin_se,popin_min_year,popin_max_year,leader_candidates,decision
+Albania,,Sali Berisha,1,2005,2009,0,,,,,,,,,NO_POPIN_LEADER
+Albania,,Sali Berisha,2,2009,2013,.125,,,,,,,,,NO_POPIN_LEADER
+Albania,,Edi Rama,1,2013,2017,.1375,,,,,,,,,NO_POPIN_LEADER
+Argentina,ARG,Juan Domingo Peron,1,1946,1955,1.5,,,,,,,,,NO_POPIN_LEADER
+Argentina,ARG,Carlos Menem,1,1989,1999,.75,,,,,,,,,NO_POPIN_LEADER
+Argentina,ARG,Fernando de la Rua,1,2000,2001,.175,Fernando de la Rua,2,43.365001,24.091129,17.035001,2000,2001,Fernando de la Rua,C_leader_term_unique
+Argentina,ARG,Eduardo Duhalde,1,2002,2003,.53333336,Eduardo Alberto Duhalde,1,53.209999,,,2002,2002,Eduardo Alberto Duhalde,C_leader_term_unique
+Argentina,ARG,Nestor Kirchner,1,2003,2007,.25,Néstor Carlos Kirchner Ostoic,676,46.586894,22.105681,0.850218,2003,2006,Néstor Carlos Kirchner Ostoic,C_leader_term_unique
+Argentina,ARG,Cristina Fernandez,1,2008,2011,0,Cristina Fernández de Kirchner,1812,36.176755,17.042515,0.400364,2008,2011,Cristina Fernández de Kirchner,C_leader_term_unique
+Argentina,ARG,Cristina Fernandez,2,2011,2015,.1875,Cristina Fernández de Kirchner,1423,36.567112,16.791448,0.445129,2011,2014,Cristina Fernández de Kirchner,C_leader_term_unique
+Argentina,ARG,Mauricio Macri,1,2016,2019,.037500001,Mauricio Macri,471,32.035584,15.476738,0.713130,2016,2018,Mauricio Macri,C_leader_term_unique
+Argentina,ARG,Alberto FernÃ¡ndez,1,2020,2023,.28749999,Alberto Fernández,494,45.809980,15.066289,0.677864,2020,2022,Alberto Fernández,C_leader_term_unique
+Armenia,,Robert Kocharyan,1,1998,2003,0,,,,,,,,,NO_POPIN_LEADER
+Armenia,,Robert Kocharyan,2,2003,2008,0,,,,,,,,,NO_POPIN_LEADER
+Armenia,,Serzh Azati Sargsyan,1,2008,2013,.75,,,,,,,,,NO_POPIN_LEADER
+Armenia,,Serzh Azati Sargsyan,2,2013,2018,.2,,,,,,,,,NO_POPIN_LEADER
+Australia,,John Howard,2,1998,2001,.16249999,,,,,,,,,NO_POPIN_LEADER
+Australia,,John Howard,3,2002,2004,.087499999,,,,,,,,,NO_POPIN_LEADER
+Australia,,John Howard,4,2004,2007,.0625,,,,,,,,,NO_POPIN_LEADER
+Australia,,Kevin Rudd,1,2008,2010,.15000001,,,,,,,,,NO_POPIN_LEADER
+Australia,,Julia Gillard,1,2010,2013,.1125,,,,,,,,,NO_POPIN_LEADER
+Australia,,Tony Abbott,1,2013,2015,.15000001,,,,,,,,,NO_POPIN_LEADER
+Australia,,Malcolm Turnbull,1,2015,2018,.1,,,,,,,,,NO_POPIN_LEADER
+Australia,,Scott Morrison,1,2018,2022,.15625,,,,,,,,,NO_POPIN_LEADER
+Austria,,Wolfgang Schussel,1,2000,2002,.13333334,,,,,,,,,NO_POPIN_LEADER
+Austria,,Wolfgang Schussel,2,2003,2006,0,,,,,,,,,NO_POPIN_LEADER
+Austria,,Alfred Gusenbauer,1,2007,2008,.28749999,,,,,,,,,NO_POPIN_LEADER
+Austria,,Werner Faymann,1,2009,2013,.075000003,,,,,,,,,NO_POPIN_LEADER
+Austria,,Werner Faymann,2,2014,2016,.1,,,,,,,,,NO_POPIN_LEADER
+Austria,,Christian Kern,1,2016,2017,.27500001,,,,,,,,,NO_POPIN_LEADER
+Austria,,Sebastian Kurz,1,2018,2019,.075000003,,,,,,,,,NO_POPIN_LEADER
+Azerbaijan,,Ilham Aliyev,2,2008,2013,0,,,,,,,,,NO_POPIN_LEADER
+Belarus,,Alexander Lukashenko,2,2001,2006,1.5,,,,,,,,,NO_POPIN_LEADER
+Belarus,,Alexander Lukashenko,3,2006,2010,1.25,,,,,,,,,NO_POPIN_LEADER
+Belarus,,Alexander Lukashenko,4,2011,2015,.75,,,,,,,,,NO_POPIN_LEADER
+Belarus,,Alexander Lukashenko,5,2016,2020,.44999999,,,,,,,,,NO_POPIN_LEADER
+Bolivia,BOL,Gonzalo Sanchez de Lozada,2,2002,2003,.22499999,Gonzalo Sánchez de Lozada Sánchez Bustamante,2,56.010000,7.339769,5.190001,2002,2003,Gonzalo Sánchez de Lozada Sánchez Bustamante,C_leader_term_unique
+Bolivia,BOL,Carlos Mesa,1,2003,2005,.125,Carlos Diego Mesa Gisbert,1,46.250000,,,2004,2004,Carlos Diego Mesa Gisbert,C_leader_term_unique
+Bolivia,BOL,Evo Morales,1,2006,2009,1.5,Juan Evo Morales Ayma,4,63.514999,9.430774,4.715387,2006,2009,Juan Evo Morales Ayma,C_leader_term_unique
+Bolivia,BOL,Evo Morales,2,2010,2014,1,Juan Evo Morales Ayma,80,50.590375,12.439563,1.390785,2010,2014,Juan Evo Morales Ayma,C_leader_term_unique
+Bolivia,BOL,Evo Morales,3,2015,2019,1.4625,Juan Evo Morales Ayma,77,39.077792,21.515671,2.451938,2015,2019,Juan Evo Morales Ayma,C_leader_term_unique
+Bolivia,BOL,Jeanine AÃ±ez,1,2020,2020,.1125,,,,,,,,,NO_POPIN_LEADER
+Bolivia,BOL,Luis Arce Catacora,1,2021,current,.77499998,,,,,,,,Luis Alberto Arce Catacora,NO_POPIN_SPEECHES
+Brazil,BRA,Getulio Vargas,1,1934,1945,1,,,,,,,,,NO_POPIN_LEADER
+Brazil,BRA,Getulio Vargas,2,1951,1954,.91666669,,,,,,,,,NO_POPIN_LEADER
+Brazil,BRA,Fernando Henrique Cardoso,2,1999,2002,0,Fernando Henrique Cardoso,471,18.901295,11.126505,0.512682,2000,2002,Fernando Henrique Cardoso,C_leader_term_unique
+Brazil,BRA,Luiz Inacio Lula da Silva,1,2003,2010,.25,Luiz Inácio Lula da Silva,1983,36.755194,15.488707,0.347819,2003,2010,Luiz Inácio Lula da Silva,C_leader_term_unique
+Brazil,BRA,Dilma Rousseff,1,2011,2014,0,Dilma Vana Rousseff,438,25.098493,13.537450,0.646844,2011,2014,Dilma Vana Rousseff,C_leader_term_unique
+Brazil,BRA,Dilma Rousseff,2,2015,2016,.33750001,Dilma Vana Rousseff,138,26.758406,18.855928,1.605123,2015,2016,Dilma Vana Rousseff,C_leader_term_unique
+Brazil,BRA,Michel Temer,1,2016,2018,0,Michel Temer,190,21.629421,12.023058,0.872244,2017,2018,Michel Temer,C_leader_term_unique
+Brazil,BRA,Jair Bolsonaro,1,2019,2022,.5,Jair Messias Bolsonaro,381,42.937454,20.331801,1.041630,2019,2022,Jair Messias Bolsonaro,C_leader_term_unique
+Bulgaria,,Simeon Borisov Sakskoburggotski,1,2001,2005,.125,,,,,,,,,NO_POPIN_LEADER
+Bulgaria,,Sergei Stanishev,1,2005,2009,.083333336,,,,,,,,,NO_POPIN_LEADER
+Bulgaria,,Boyko Borisov,1,2009,2013,.625,,,,,,,,,NO_POPIN_LEADER
+Bulgaria,,Boyko Borisov,2,2015,2016,.15555556,,,,,,,,,NO_POPIN_LEADER
+Bulgaria,,Boyko Borisov,3,2017,2021,.13333334,,,,,,,,,NO_POPIN_LEADER
+Canada,,Jean Chretien,3,2001,2003,.025,,,,,,,,,NO_POPIN_LEADER
+Canada,,Paul Martin,1,2004,2005,.25,,,,,,,,,NO_POPIN_LEADER
+Canada,,Stephen Harper,1,2006,2008,.25,,,,,,,,,NO_POPIN_LEADER
+Canada,,Stephen Harper,2,2008,2011,.1875,,,,,,,,,NO_POPIN_LEADER
+Canada,,Stephen Harper,3,2011,2015,.22499999,,,,,,,,,NO_POPIN_LEADER
+Canada,,Justin Trudeau,1,2016,2019,.1125,,,,,,,,,NO_POPIN_LEADER
+Chile,CHL,Ricardo Lagos,1,2000,2006,.083333336,Ricardo Froilán Lagos Escobar,440,24.071296,12.779813,0.609254,2000,2005,Ricardo Froilán Lagos Escobar,C_leader_term_unique
+Chile,CHL,Michelle Bachelet,1,2006,2010,0,Verónica Michelle Bachelet Jeria,4,31.942500,4.617729,2.308865,2006,2009,Verónica Michelle Bachelet Jeria,C_leader_term_unique
+Chile,CHL,Sebastian Pinera,1,2010,2014,0,Miguel Juan Sebastián Piñera Echenique,102,28.177549,15.563220,1.540988,2010,2013,Miguel Juan Sebastián Piñera Echenique,C_leader_term_unique
+Chile,CHL,Michelle Bachelet,2,2014,2018,.21250001,Verónica Michelle Bachelet Jeria,904,21.342279,10.995213,0.365695,2014,2017,Verónica Michelle Bachelet Jeria,C_leader_term_unique
+Chile,CHL,Sebastian Pinera,2,2018,2022,.15000001,Miguel Juan Sebastián Piñera Echenique,380,27.893947,12.931833,0.663389,2018,2021,Miguel Juan Sebastián Piñera Echenique,C_leader_term_unique
+Chile,CHL,Gabriel Boric,1,2022,current,.087499999,,,,,,,,Gabriel Boric Font,NO_POPIN_SPEECHES
+Colombia,COL,Andres Pastrana,1,1998,2002,.025,Andres Pastrana Arango,295,30.303458,15.994714,0.931248,2000,2001,Andres Pastrana Arango,C_leader_term_unique
+Colombia,COL,Alvaro Uribe,1,2002,2010,0,Álvaro Uribe Vélez,1697,36.051190,13.953122,0.338712,2002,2009,Álvaro Uribe Vélez,C_leader_term_unique
+Colombia,COL,Juan Manuel Santos,1,2010,2014,0,Juan Manuel Santos Calderón,784,27.916339,14.706231,0.525223,2010,2014,Juan Manuel Santos Calderón,C_leader_term_unique
+Colombia,COL,Juan Manuel Santos,2,2014,2018,.0625,Juan Manuel Santos Calderón,767,31.440052,14.684324,0.530220,2014,2017,Juan Manuel Santos Calderón,C_leader_term_unique
+Colombia,COL,IvÃ¡n Duque,1,2018,2022,0,Iván Duque Márquez,1017,31.948859,14.157432,0.443940,2018,2021,Iván Duque Márquez,C_leader_term_unique
+Colombia,COL,Gustavo Petro,1,2022,current,.47499999,,,,,,,,Gustavo Francisco Petro Urrego,NO_POPIN_SPEECHES
+Costa Rica,CRI,Miguel Angel Rodriguez,1,1998,2002,.083333336,Miguel Angel Rodriguez Echeverria,2,31.805000,1.944544,1.375000,2000,2001,Miguel Angel Rodriguez Echeverria,C_leader_term_unique
+Costa Rica,CRI,Abel Pacheco,1,2002,2006,.22222222,Abel Pacheco de la Espriella,4,40.395000,12.405530,6.202765,2002,2005,Abel Pacheco de la Espriella,C_leader_term_unique
+Costa Rica,CRI,Oscar Arias,2,2006,2010,0,Óscar Arias Sánchez,4,44.812500,3.385010,1.692505,2006,2009,Óscar Arias Sánchez,C_leader_term_unique
+Costa Rica,CRI,Laura Chinchilla Miranda,1,2010,2014,0,Laura Chinchilla Miranda,4,20.605000,8.593678,4.296839,2010,2013,Laura Chinchilla Miranda,C_leader_term_unique
+Costa Rica,CRI,Luis Guillermo Solis,1,2014,2018,.40000001,Luis Guillermo Solís Rivera,4,21.800000,8.550918,4.275459,2014,2017,Luis Guillermo Solís Rivera,C_leader_term_unique
+Costa Rica,CRI,Carlos Alvarado Quesada,1,2018,2022,0,Carlos Alvarado Quesada,4,41.375000,4.038065,2.019033,2018,2021,Carlos Alvarado Quesada,C_leader_term_unique
+Costa Rica,CRI,Rodrigo Chaves,1,2022,current,.625,,,,,,,,Rodrigo Chaves Robles,NO_POPIN_SPEECHES
+Croatia,,Franjo Tudman,1,1990,1999,.625,,,,,,,,,NO_POPIN_LEADER
+Croatia,,Ivica Racan,1,2000,2003,0,,,,,,,,,NO_POPIN_LEADER
+Croatia,,Ivo Sanader,1,2004,2009,.5,,,,,,,,,NO_POPIN_LEADER
+Croatia,,Zoran Milanovic,1,2012,2015,.175,,,,,,,,,NO_POPIN_LEADER
+Croatia,,Andrej Plenkovic,1,2016,2020,0,,,,,,,,,NO_POPIN_LEADER
+Cuba,CUB,Miguel DÃ­az-Canel,1,2019,2023,.83749998,Miguel Díaz-Canel Bermúdez,141,53.315603,16.632506,1.400710,2019,2023,Miguel Díaz-Canel Bermúdez,C_leader_term_unique
+Czechia,,Milos Zeman,1,1998,2002,0,,,,,,,,,NO_POPIN_LEADER
+Czechia,,Vaclav Klaus,1,2003,2008,.625,,,,,,,,,NO_POPIN_LEADER
+Czechia,,Mirek Topolanek,1,2006,2009,1,,,,,,,,,NO_POPIN_LEADER
+Czechia,,Vaclav Klaus,2,2008,2013,1,,,,,,,,,NO_POPIN_LEADER
+Czechia,,Petr Necas,1,2010,2013,.125,,,,,,,,,NO_POPIN_LEADER
+Czechia,,Milos Zeman,2,2013,2017,.15000001,,,,,,,,,NO_POPIN_LEADER
+Czechia,,Bohuslav Sobotka,1,2014,2017,0,,,,,,,,,NO_POPIN_LEADER
+Dominican Republic,DOM,Hipolito Mejia,1,2000,2004,.075000003,Rafael Hipólito Mejía Domínguez,5,44.058000,5.285320,2.363667,2000,2003,Rafael Hipólito Mejía Domínguez,C_leader_term_unique
+Dominican Republic,DOM,Leonel Fernandez,2,2004,2008,.25,Leonel Antonio Fernández Reyna,4,28.150000,20.015322,10.007661,2005,2008,Leonel Antonio Fernández Reyna,C_leader_term_unique
+Dominican Republic,DOM,Leonel Fernandez,3,2008,2012,.25,Leonel Antonio Fernández Reyna,3,40.669999,12.936045,7.468629,2008,2011,Leonel Antonio Fernández Reyna,C_leader_term_unique
+Dominican Republic,DOM,Danilo Medina,1,2012,2016,.175,Danilo Medina Sánchez,423,30.738014,16.292211,0.792154,2012,2016,Danilo Medina Sánchez,C_leader_term_unique
+Dominican Republic,DOM,Danilo Medina,2,2016,2020,.375,Danilo Medina Sánchez,541,28.328799,15.915903,0.684278,2016,2020,Danilo Medina Sánchez,C_leader_term_unique
+Dominican Republic,DOM,Luis Abinader,1,2020,2024,.075000003,Luis Rodolfo Abinader Corona,154,29.803377,16.042545,1.292745,2020,2024,Luis Rodolfo Abinader Corona,C_leader_term_unique
+Ecuador,ECU,Jose Maria Velasco Ibarra,6,1968,1971,1.6666666,,,,,,,,,NO_POPIN_LEADER
+Ecuador,ECU,Gustavo Noboa,1,2000,2002,.23333333,Gustavo José Joaquín Noboa Bejarano,3,37.140001,17.137013,9.894059,2000,2002,Gustavo José Joaquín Noboa Bejarano,C_leader_term_unique
+Ecuador,ECU,Lucio Gutierrez,1,2003,2005,.96666664,Lucio Edwin Gutiérrez Borbúa,1,25.670000,,,2004,2004,Lucio Edwin Gutiérrez Borbúa,C_leader_term_unique
+Ecuador,ECU,Alfredo Palacio,1,2005,2006,.3888889,Luis Alfredo Palacio González,2,44.620000,19.304016,13.650001,2005,2006,Luis Alfredo Palacio González,C_leader_term_unique
+Ecuador,ECU,Rafael Correa,1,2007,2009,1.25,Rafael Vicente Correa Delgado,80,63.892875,12.750245,1.425521,2007,2009,Rafael Vicente Correa Delgado,C_leader_term_unique
+Ecuador,ECU,Rafael Correa,2,2009,2013,1.7333333,Rafael Vicente Correa Delgado,253,59.081146,12.737718,0.800813,2009,2013,Rafael Vicente Correa Delgado,C_leader_term_unique
+Ecuador,ECU,Rafael Correa,3,2013,2017,1.525,Rafael Vicente Correa Delgado,352,56.838097,15.439073,0.822905,2013,2016,Rafael Vicente Correa Delgado,C_leader_term_unique
+Ecuador,ECU,Lenin Moreno,1,2017,2021,.1875,Lenín Boltaire Moreno Garcés,281,40.478719,15.239715,0.909125,2017,2020,Lenín Boltaire Moreno Garcés,C_leader_term_unique
+Ecuador,ECU,Guillermo Lasso,1,2021,2023,.36000001,Guillermo Alberto Santiago Lasso Mendoza,293,37.570580,16.812504,0.982197,2021,2022,Guillermo Alberto Santiago Lasso Mendoza,C_leader_term_unique
+El Salvador,SLV,Francisco Flores,1,1999,2004,0,Francisco Guillermo Flores Perez,7,48.968572,22.815947,8.623618,2000,2003,Francisco Guillermo Flores Perez,C_leader_term_unique
+El Salvador,SLV,Antonio Saca,1,2004,2009,.58333331,Elías Antonio Saca González,1131,25.699478,13.829243,0.411213,2004,2008,Elías Antonio Saca González,C_leader_term_unique
+El Salvador,SLV,Mauricio Funes,1,2009,2014,.625,Carlos Mauricio Funes Cartagena,27,40.178519,15.512032,2.985292,2009,2013,Carlos Mauricio Funes Cartagena,C_leader_term_unique
+El Salvador,SLV,Salvador Sanchez Ceren,1,2014,2019,.625,Salvador Sánchez Cerén,116,27.924914,15.256004,1.416484,2014,2019,Salvador Sánchez Cerén,C_leader_term_unique
+El Salvador,SLV,Nayib Bukele,1,2019,2024,.5,Nayib Armando Bukele Ortez,936,32.074904,19.764897,0.646036,2020,2024,Nayib Armando Bukele Ortez,C_leader_term_unique
+Estonia,,Andrus Ansip,1,2005,2007,0,,,,,,,,,NO_POPIN_LEADER
+Estonia,,Andrus Ansip,2,2007,2011,.125,,,,,,,,,NO_POPIN_LEADER
+Estonia,,Andrus Ansip,3,2011,2014,0,,,,,,,,,NO_POPIN_LEADER
+Finland,,Tarja Halonen,1,2006,2012,0,,,,,,,,,NO_POPIN_LEADER
+France,,Jacques Chirac,2,2002,2007,.050000001,,,,,,,,,NO_POPIN_LEADER
+France,,Nicolas Sarkozy,1,2007,2012,.2,,,,,,,,,NO_POPIN_LEADER
+France,,Francois Hollande,1,2012,2017,.1375,,,,,,,,,NO_POPIN_LEADER
+France,,Emmanuel Macron,1,2017,2022,.15000001,,,,,,,,,NO_POPIN_LEADER
+Georgia,,Mikheil Saakashvili,1,2004,2007,.75,,,,,,,,,NO_POPIN_LEADER
+Georgia,,Mikheil Saakashvili,2,2008,2013,.375,,,,,,,,,NO_POPIN_LEADER
+Georgia,,Bidzina Ivanishvili,1,2012,2013,.25,,,,,,,,,NO_POPIN_LEADER
+Georgia,,Giorgi Margvelashvili,1,2014,2018,.32499999,,,,,,,,,NO_POPIN_LEADER
+Georgia,,Giorgi Kvirikashvili,1,2016,2018,.1,,,,,,,,,NO_POPIN_LEADER
+Germany,,Gerhard Schroeder,1,1998,2005,0,,,,,,,,,NO_POPIN_LEADER
+Germany,,Angela Merkel,1,2006,2009,0,,,,,,,,,NO_POPIN_LEADER
+Germany,,Angela Merkel,2,2009,2013,.050000001,,,,,,,,,NO_POPIN_LEADER
+Germany,,Angela Merkel,3,2014,2018,.037500001,,,,,,,,,NO_POPIN_LEADER
+Ghana,,John Kufuor,1,2005,2008,.25,,,,,,,,,NO_POPIN_LEADER
+Greece,,Antonis Samaras,1,2012,2014,.34999999,,,,,,,,,NO_POPIN_LEADER
+Greece,,Alexis Tspiras,1,2015,2019,.25,,,,,,,,,NO_POPIN_LEADER
+Guatemala,GTM,Oscar Berger,1,2004,2007,0,Óscar José Rafael Berger Perdomo,4,26.492500,21.797821,10.898911,2004,2007,Óscar José Rafael Berger Perdomo,C_leader_term_unique
+Guatemala,GTM,Alvaro Colom Caballero,1,2008,2011,.125,,,,,,,,,NO_POPIN_LEADER
+Guatemala,GTM,Otto Perez Molina,1,2012,2015,.34999999,Otto Fernando Pérez Molina,24,28.241250,19.804312,4.042538,2012,2014,Otto Fernando Pérez Molina,C_leader_term_unique
+Guatemala,GTM,Jimmy Morales,1,2016,2019,.15000001,Jimmy Ernesto Morales Cabrera,127,30.774961,19.765577,1.753911,2016,2019,Jimmy Ernesto Morales Cabrera,C_leader_term_unique
+Guatemala,GTM,Alejandro Giammattei,1,2020,2023,.16249999,Alejandro Eduardo Giammattei Falla,17,42.612941,19.082427,4.628168,2020,2023,Alejandro Eduardo Giammattei Falla,C_leader_term_unique
+Honduras,HND,Carlos Flores,1,1998,2001,.050000001,Carlos Roberto Flores,1,37.200001,,,2000,2000,Carlos Roberto Flores,C_leader_term_unique
+Honduras,HND,Ricardo Maduro,1,2002,2005,0,Ricardo Rodolfo Maduro Joest,4,42.614999,8.569452,4.284726,2002,2005,Ricardo Rodolfo Maduro Joest,C_leader_term_unique
+Honduras,HND,Manuel Zelaya,1,2006,2009,.5,José Manuel Zelaya Rosales,2,52.590000,8.527706,6.029999,2006,2007,José Manuel Zelaya Rosales,C_leader_term_unique
+Honduras,HND,Porfirio Lobo Sosa,1,2010,2013,.33333334,Porfirio Lobo Sosa,3,29.199999,23.406595,13.513804,2010,2013,Porfirio Lobo Sosa,C_leader_term_unique
+Honduras,HND,Juan Orlando Hernandez,1,2014,2021,.46250001,Juan Orlando Hernández,711,39.603333,14.794192,0.554826,2015,2021,Juan Orlando Hernández,C_leader_term_unique
+Honduras,HND,Xiomara Castro,1,2022,current,.125,,,,,,,,Iris Xiomara Castro Sarmiento,NO_POPIN_SPEECHES
+Hungary,,Gyula Horn,1,1994,1998,.033333331,,,,,,,,,NO_POPIN_LEADER
+Hungary,,Viktor Orban,1,1998,2002,.375,,,,,,,,,NO_POPIN_LEADER
+Hungary,,Ferenc Gyurcsany,1,2004,2009,0,,,,,,,,,NO_POPIN_LEADER
+Hungary,,Viktor Orban,2,2010,2014,.875,,,,,,,,,NO_POPIN_LEADER
+Hungary,,Viktor Orban,3,2014,2018,.82499999,,,,,,,,,NO_POPIN_LEADER
+India,,Atal Bihari Vajpayee,3,1999,2004,.037500001,,,,,,,,,NO_POPIN_LEADER
+India,,Manmohan Singh,1,2004,2009,0,,,,,,,,,NO_POPIN_LEADER
+India,,Manmohan Singh,2,2009,2014,0,,,,,,,,,NO_POPIN_LEADER
+India,,Narendra Modi,1,2014,2019,.55000001,,,,,,,,,NO_POPIN_LEADER
+Indonesia,,Megawati Sukarnoputri,1,2001,2004,.28749999,,,,,,,,,NO_POPIN_LEADER
+Indonesia,,Susilo Bambang Yudhoyono,1,2004,2009,.050000001,,,,,,,,,NO_POPIN_LEADER
+Indonesia,,Susilo Bambang Yudhoyono,2,2009,2014,0,,,,,,,,,NO_POPIN_LEADER
+Indonesia,,Joko Widodo,1,2014,2019,.075000003,,,,,,,,,NO_POPIN_LEADER
+Iran,,Mahmoud Ahmadinejad,1,2005,2013,1.1666666,,,,,,,,,NO_POPIN_LEADER
+Ireland,,Bertie Ahern,1,2002,2008,.037500001,,,,,,,,,NO_POPIN_LEADER
+Ireland,,Brian Cowen,1,2008,2011,.025,,,,,,,,,NO_POPIN_LEADER
+Ireland,,Enda Kenny,1,2011,2017,.1,,,,,,,,,NO_POPIN_LEADER
+Israel,,Menachem Begin,1,1977,1981,.0125,,,,,,,,,NO_POPIN_LEADER
+Israel,,Menachem Begin,2,1981,1983,.28749999,,,,,,,,,NO_POPIN_LEADER
+Israel,,Yitzhak Shamir,1,1986,1988,.16249999,,,,,,,,,NO_POPIN_LEADER
+Israel,,Yitzhak Shamir,2,1989,1992,.15000001,,,,,,,,,NO_POPIN_LEADER
+Israel,,Benjamin Netanyahu,1,1996,1999,.1875,,,,,,,,,NO_POPIN_LEADER
+Israel,,Ehud Barak,1,1999,2001,.050000001,,,,,,,,,NO_POPIN_LEADER
+Israel,,Ariel Sharon,1,2001,2002,.0125,,,,,,,,,NO_POPIN_LEADER
+Israel,,Ariel Sharon,2,2003,2006,.33750001,,,,,,,,,NO_POPIN_LEADER
+Israel,,Ehud Olmert,1,2006,2009,.087499999,,,,,,,,,NO_POPIN_LEADER
+Israel,,Benjamin Netanyahu,2,2009,2013,.087499999,,,,,,,,,NO_POPIN_LEADER
+Israel,,Benjamin Netanyahu,3,2013,2015,.16249999,,,,,,,,,NO_POPIN_LEADER
+Israel,,Benjamin Netanyahu,4,2015,2019,.42500001,,,,,,,,,NO_POPIN_LEADER
+Israel,,Benjamin Netanyahu,5,2020,2021,.71249998,,,,,,,,,NO_POPIN_LEADER
+Israel,,Naftali Bennett,1,2021,2022,.025,,,,,,,,,NO_POPIN_LEADER
+Israel,,Yair Lapid,1,2022,2022,.0125,,,,,,,,,NO_POPIN_LEADER
+Italy,,Silvio Berlusconi,1,2001,2006,.75,,,,,,,,,NO_POPIN_LEADER
+Italy,,Romano Prodi,2,2006,2008,.075000003,,,,,,,,,NO_POPIN_LEADER
+Italy,,Silvio Berlusconi,2,2008,2011,.875,,,,,,,,,NO_POPIN_LEADER
+Italy,,Matteo Renzi,1,2014,2016,.037500001,,,,,,,,,NO_POPIN_LEADER
+Italy,,Giuseppe Conte,1,2018,2020,.6875,,,,,,,,,NO_POPIN_LEADER
+Japan,,Shinzo Abe,1,2006,2007,.25,,,,,,,,,NO_POPIN_LEADER
+Japan,,Yoshihiko Noda,1,2011,2012,0,,,,,,,,,NO_POPIN_LEADER
+Japan,,Shinzo Abe,2,2013,2020,.050000001,,,,,,,,,NO_POPIN_LEADER
+Kazakhstan,,Nursultan Nazarbayev I,2,1999,2005,.25,,,,,,,,,NO_POPIN_LEADER
+Kazakhstan,,Nursultan Nazarbayev I,3,2006,2011,.125,,,,,,,,,NO_POPIN_LEADER
+Kazakhstan,,Nursultan Nazarbayev I,4,2011,2015,0,,,,,,,,,NO_POPIN_LEADER
+Kyrgyzstan,,Kurmanbek S. Bakiyev,1,2005,2010,0,,,,,,,,,NO_POPIN_LEADER
+Kyrgyzstan,,Almazbek S. Atambayev,1,2012,2017,1,,,,,,,,,NO_POPIN_LEADER
+Latvia,,Einars Repse,1,2003,2004,.5,,,,,,,,,NO_POPIN_LEADER
+Latvia,,Aigars Kalvitis,1,2005,2007,.5,,,,,,,,,NO_POPIN_LEADER
+Latvia,,Valdis Dombrovskis,1,2009,2013,0,,,,,,,,,NO_POPIN_LEADER
+Latvia,,Laimdota Straujuma,1,2014,2015,0,,,,,,,,,NO_POPIN_LEADER
+Latvia,,Maris Kucinskis,1,2016,2018,0,,,,,,,,,NO_POPIN_LEADER
+Lithuania,,Algirdas Brazauskas,1,2001,2006,.16666667,,,,,,,,,NO_POPIN_LEADER
+Lithuania,,Valdas Adamkus,1,2004,2009,0,,,,,,,,,NO_POPIN_LEADER
+Lithuania,,Andrius Kubilius,1,2009,2012,0,,,,,,,,,NO_POPIN_LEADER
+Lithuania,,Dalia Grybauskaite,1,2009,2014,.375,,,,,,,,,NO_POPIN_LEADER
+Lithuania,,Algirdas Butkevicius,1,2013,2016,.15000001,,,,,,,,,NO_POPIN_LEADER
+Lithuania,,Dalia Grybauskaite,2,2014,2019,.27500001,,,,,,,,,NO_POPIN_LEADER
+Malaysia,,Abdullah Ahmad Badawi,1,2003,2009,.21250001,,,,,,,,,NO_POPIN_LEADER
+Malaysia,,Najib Tun Razak,1,2009,2013,.037500001,,,,,,,,,NO_POPIN_LEADER
+Malaysia,,Najib Tun Razak,2,2013,2018,.15000001,,,,,,,,,NO_POPIN_LEADER
+Malaysia,,Mahathir Mohamad,1,2018,2020,.48750001,,,,,,,,,NO_POPIN_LEADER
+Mexico,MEX,Lazaro Cardenas,1,1935,1940,.625,,,,,,,,,NO_POPIN_LEADER
+Mexico,MEX,Vicente Fox,1,2001,2006,.25,Vicente Fox Quesada,4,28.335000,3.902397,1.951198,2002,2005,Vicente Fox Quesada,C_leader_term_unique
+Mexico,MEX,Felipe Calderon,1,2007,2012,.125,Felipe de Jesús Calderón Hinojosa,95,36.265579,10.523795,1.079719,2007,2011,Felipe de Jesús Calderón Hinojosa,C_leader_term_unique
+Mexico,MEX,Enrique Pena Nieto,1,2013,2018,0,Enrique Peña Nieto,896,21.101629,13.308145,0.444594,2013,2017,Enrique Peña Nieto,C_leader_term_unique
+Mexico,MEX,Andres Manuel Lopez Obrador,1,2019,2024,.96249998,Andrés Manuel López Obrador,1329,32.800173,13.881610,0.380783,2019,2023,Andrés Manuel López Obrador,C_leader_term_unique
+Moldova,,Vladimir Voronin,1,2001,2009,1,,,,,,,,,NO_POPIN_LEADER
+Moldova,,Vlad Filat,1,2009,2013,.375,,,,,,,,,NO_POPIN_LEADER
+Moldova,,Marian Lupu,1,2011,2012,.125,,,,,,,,,NO_POPIN_LEADER
+Moldova,,Nicolae Timofti,1,2012,2016,.037500001,,,,,,,,,NO_POPIN_LEADER
+Moldova,,Pavel Filip,1,2016,2019,.050000001,,,,,,,,,NO_POPIN_LEADER
+Mongolia,,Nambaryn Enkhbayar,1,2005,2009,.083333336,,,,,,,,,NO_POPIN_LEADER
+Montenegro,,Milo Djukanovic,3,2008,2010,.125,,,,,,,,,NO_POPIN_LEADER
+Montenegro,,Milo Djukanovic,4,2011,2016,0,,,,,,,,,NO_POPIN_LEADER
+Montenegro,,Dusko Markovic,1,2017,2018,.63749999,,,,,,,,,NO_POPIN_LEADER
+Myanmar,,Thein Sein,1,2011,2016,.083300002,,,,,,,,,NO_POPIN_LEADER
+Myanmar,,Min Aung Hlaing,1,2011,2020,0,,,,,,,,,NO_POPIN_LEADER
+Myanmar,,Aung San Suu Kyi,1,2016,2020,0,,,,,,,,,NO_POPIN_LEADER
+Netherlands,,Jan Peter Balkenende,1,2002,2006,.22499999,,,,,,,,,NO_POPIN_LEADER
+Netherlands,,Jan Peter Balkenende,2,2007,2010,.25,,,,,,,,,NO_POPIN_LEADER
+Netherlands,,Mark Rutte,1,2010,2012,.32499999,,,,,,,,,NO_POPIN_LEADER
+Netherlands,,Mark Rutte,2,2013,2017,.2,,,,,,,,,NO_POPIN_LEADER
+Nicaragua,NIC,Enrique Bolanos,1,2002,2006,0,Enrique José Bolaños Geyer,293,30.959283,16.853605,0.984598,2002,2006,Enrique José Bolaños Geyer,C_leader_term_unique
+Nicaragua,NIC,Daniel Ortega,1,2007,2011,1.25,José Daniel Ortega Saavedra,5,53.177999,13.909572,6.220550,2007,2011,José Daniel Ortega Saavedra,C_leader_term_unique
+Nicaragua,NIC,Daniel Ortega,2,2012,2016,1,José Daniel Ortega Saavedra,214,43.893411,18.674087,1.276534,2012,2016,José Daniel Ortega Saavedra,C_leader_term_unique
+Nicaragua,NIC,Daniel Ortega,3,2017,2021,.85000002,José Daniel Ortega Saavedra,168,45.639285,20.716164,1.598287,2017,2021,José Daniel Ortega Saavedra,C_leader_term_unique
+Nicaragua,NIC,Daniel Ortega,4,2022,current,1.075,,,,,,,,José Daniel Ortega Saavedra,NO_POPIN_SPEECHES
+North Macedonia,,Nikola Gruevski,1,2006,2008,.375,,,,,,,,,NO_POPIN_LEADER
+North Macedonia,,Nikola Gruevski,2,2008,2014,1,,,,,,,,,NO_POPIN_LEADER
+North Macedonia,,Nikola Gruevski,3,2014,2015,.40000001,,,,,,,,,NO_POPIN_LEADER
+Norway,,Kjell Magne Bondevik,2,2001,2005,.1,,,,,,,,,NO_POPIN_LEADER
+Norway,,Jens Stoltenberg,2,2005,2009,.16666667,,,,,,,,,NO_POPIN_LEADER
+Norway,,Jens Stoltenberg,3,2009,2013,.21250001,,,,,,,,,NO_POPIN_LEADER
+Norway,,Erna Solberg,1,2013,2017,0,,,,,,,,,NO_POPIN_LEADER
+Norway,,Erna Solberg,2,2017,2021,.175,,,,,,,,,NO_POPIN_LEADER
+Panama,PAN,Martin Torrijos,1,2004,2009,.22222222,Martín Erasto Torrijos Espino,4,21.587500,14.030285,7.015143,2004,2008,Martín Erasto Torrijos Espino,C_leader_term_unique
+Panama,PAN,Ricardo Martinelli,1,2009,2014,.5,Ricardo Martinelli Berrocal,198,33.430454,19.353711,1.375408,2009,2013,Ricardo Martinelli Berrocal,C_leader_term_unique
+Panama,PAN,Juan Carlos Varela,1,2014,2019,.25,Juan Carlos Varela,109,36.711468,17.934560,1.717819,2014,2018,Juan Carlos Varela,C_leader_term_unique
+Panama,PAN,Laurentino Cortizo,1,2019,2024,.28749999,Laurentino Cortizo Cohen,219,34.031279,16.615705,1.122785,2019,2023,Laurentino Cortizo Cohen,C_leader_term_unique
+Paraguay,PRY,Nicanor Duarte,1,2003,2008,.5,Óscar Nicanor Duarte Frutos,4,34.370000,17.605069,8.802534,2003,2006,Óscar Nicanor Duarte Frutos,C_leader_term_unique
+Paraguay,PRY,Fernando Lugo,1,2008,2012,0,Fernando Armindo Lugo Méndez,80,40.475375,16.749680,1.872671,2009,2012,Fernando Armindo Lugo Méndez,C_leader_term_unique
+Paraguay,PRY,Federico Franco,1,2012,2013,0,,,,,,,,,NO_POPIN_LEADER
+Paraguay,PRY,Horacio Cartes,1,2013,2018,.2375,Horacio Manuel Cartes Jara,182,29.174560,17.073667,1.265584,2013,2017,Horacio Manuel Cartes Jara,C_leader_term_unique
+Paraguay,PRY,Mario Abdo Benitez,1,2018,2023,.087499999,Mario Abdo Benítez,39,24.677949,15.222106,2.437488,2018,2023,Mario Abdo Benítez,C_leader_term_unique
+Peru,PER,Alejandro Toledo,1,2001,2006,.33333334,Alejandro Celestino Toledo Manrique,4,49.055000,10.450664,5.225332,2001,2005,Alejandro Celestino Toledo Manrique,C_leader_term_unique
+Peru,PER,Alan Garcia,1,2006,2011,1,Alan Gabriel Ludwig García Pérez,5,40.012001,18.510160,8.277995,2006,2010,Alan Gabriel Ludwig García Pérez,C_leader_term_unique
+Peru,PER,Ollanta Humala,1,2011,2016,.5,Ollanta Moisés Humala Tasso,365,32.074493,17.319377,0.906538,2011,2015,Ollanta Moisés Humala Tasso,C_leader_term_unique
+Peru,PER,Pedro Pablo Kuczynski,1,2016,2018,.037500001,Pedro Pablo Kuczynski Goddard,97,27.445773,16.435397,1.668762,2016,2017,Pedro Pablo Kuczynski Goddard,C_leader_term_unique
+Peru,PER,MartÃ­n Vizcarra,1,2018,2020,.1375,,,,,,,,,NO_POPIN_LEADER
+Peru,PER,Pedro Castillo,1,2021,2022,.58749998,José Pedro Castillo Terrones,65,40.102462,19.281515,2.391578,2021,2021,José Pedro Castillo Terrones,C_leader_term_unique
+Peru,PER,Dina Boluarte,1,2023,current,.625,,,,,,,,Dina Ercilia Boluarte Zegarra,NO_POPIN_SPEECHES
+Philippines,,Joseph Estrada,1,1998,2000,.55000001,,,,,,,,,NO_POPIN_LEADER
+Philippines,,Gloria Macapagal Arroyo,1,2001,2004,.40000001,,,,,,,,,NO_POPIN_LEADER
+Philippines,,Gloria Macapagal Arroyo,2,2004,2010,.33750001,,,,,,,,,NO_POPIN_LEADER
+Philippines,,Benigno Aquino III,1,2010,2016,.80000001,,,,,,,,,NO_POPIN_LEADER
+Philippines,,Rodrigo Duterte,1,2016,2022,1.375,,,,,,,,,NO_POPIN_LEADER
+Poland,,Aleksander Kwasniewski,2,2001,2005,.21250001,,,,,,,,,NO_POPIN_LEADER
+Poland,,Leszek Miller,1,2001,2004,.175,,,,,,,,,NO_POPIN_LEADER
+Poland,,Jaroslaw Kaczynski,1,2006,2007,.25,,,,,,,,,NO_POPIN_LEADER
+Poland,,Lech Kaczynski,1,2006,2010,.75,,,,,,,,,NO_POPIN_LEADER
+Poland,,Bronislaw Komorowski,1,2010,2015,.16249999,,,,,,,,,NO_POPIN_LEADER
+Poland,,Donald Tusk,1,2011,2014,0,,,,,,,,,NO_POPIN_LEADER
+Poland,,Andrzej Duda,1,2015,2018,.375,,,,,,,,,NO_POPIN_LEADER
+Poland,,Beate Szydlo,1,2016,2017,.86250001,,,,,,,,,NO_POPIN_LEADER
+Puerto Rico,PRI,Pedro Pierluisi,1,2021,2024,.16249999,,,,,,,,,NO_POPIN_LEADER
+Romania,,Adrian Nastase,1,2001,2004,.32499999,,,,,,,,,NO_POPIN_LEADER
+Romania,,Ion Iliescu,3,2001,2004,.30000001,,,,,,,,,NO_POPIN_LEADER
+Romania,,Traian Basescu,1,2005,2009,.5,,,,,,,,,NO_POPIN_LEADER
+Romania,,Calin Popescu-Tariceanu,1,2005,2008,.375,,,,,,,,,NO_POPIN_LEADER
+Romania,,Emil Boc,1,2009,2011,.25,,,,,,,,,NO_POPIN_LEADER
+Romania,,Traian Basescu,2,2010,2014,0,,,,,,,,,NO_POPIN_LEADER
+Romania,,Viktor Ponta,1,2012,2015,.375,,,,,,,,,NO_POPIN_LEADER
+Romania,,Klaus Werner Iohannis,1,2015,2019,.27500001,,,,,,,,,NO_POPIN_LEADER
+Romania,,Dacian Ciolos,1,2016,2016,.30000001,,,,,,,,,NO_POPIN_LEADER
+Russia,,Vladimir Putin,1,2000,2004,.050000001,,,,,,,,,NO_POPIN_LEADER
+Russia,,Vladimir Putin,2,2004,2008,.025,,,,,,,,,NO_POPIN_LEADER
+Russia,,Vladimir Putin,3,2008,2012,.5,,,,,,,,,NO_POPIN_LEADER
+Russia,,Dimitri Medvedev,1,2012,2019,0,,,,,,,,,NO_POPIN_LEADER
+Russia,,Vladimir Putin,4,2012,2018,.5,,,,,,,,,NO_POPIN_LEADER
+Serbia,,Zoran Dindic,1,2001,2003,.25,,,,,,,,,NO_POPIN_LEADER
+Serbia,,Vojislav Kostunica,1,2004,2008,.5,,,,,,,,,NO_POPIN_LEADER
+Serbia,,Boris Tadic,1,2008,2012,.125,,,,,,,,,NO_POPIN_LEADER
+Serbia,,Tomislav Nikolic,1,2012,2017,.33333334,,,,,,,,,NO_POPIN_LEADER
+Serbia,,Aleksandar Vucic,1,2014,2017,.36666667,,,,,,,,,NO_POPIN_LEADER
+Singapore,,Goh Chok Tong,2,1997,2001,0,,,,,,,,,NO_POPIN_LEADER
+Singapore,,Goh Chok Tong,3,2002,2004,0,,,,,,,,,NO_POPIN_LEADER
+Singapore,,Lee Hsien Loong,1,2004,2011,0,,,,,,,,,NO_POPIN_LEADER
+Singapore,,Lee Hsien Loong,2,2011,2015,.037500001,,,,,,,,,NO_POPIN_LEADER
+Singapore,,Lee Hsien Loong,3,2015,2020,0,,,,,,,,,NO_POPIN_LEADER
+Slovakia,,Vladimir Meciar,1,1995,1998,1.6666666,,,,,,,,,NO_POPIN_LEADER
+Slovakia,,Mikulas Dzurinda,1,1998,2002,.25,,,,,,,,,NO_POPIN_LEADER
+Slovakia,,Mikulas Dzurinda,2,2002,2006,.375,,,,,,,,,NO_POPIN_LEADER
+Slovakia,,Robert Fico,1,2006,2010,.75,,,,,,,,,NO_POPIN_LEADER
+Slovakia,,Robert Fico,2,2012,2016,.1,,,,,,,,,NO_POPIN_LEADER
+Slovakia,,Robert Fico,3,2016,2018,.0625,,,,,,,,,NO_POPIN_LEADER
+Slovenia,,Janez Jansa,1,2005,2008,.75,,,,,,,,,NO_POPIN_LEADER
+Slovenia,,Borut Pahor,1,2009,2011,0,,,,,,,,,NO_POPIN_LEADER
+South Africa,,Nelson Mandela,1,1994,1999,.1,,,,,,,,,NO_POPIN_LEADER
+South Africa,,Thabo Mbeki,1,1999,2004,.041666668,,,,,,,,,NO_POPIN_LEADER
+South Africa,,Thabo Mbeki,2,2004,2008,.15000001,,,,,,,,,NO_POPIN_LEADER
+South Africa,,Jacob Zuma,1,2009,2014,.22499999,,,,,,,,,NO_POPIN_LEADER
+South Africa,,Jacob Zuma,2,2014,2017,.15000001,,,,,,,,,NO_POPIN_LEADER
+South Africa,,Cyril Ramaphosa,1,2018,2024,.15000001,,,,,,,,,NO_POPIN_LEADER
+Spain,,Jose Maria Aznar,1,1996,2000,.050000001,,,,,,,,,NO_POPIN_LEADER
+Spain,,Jose Maria Aznar,2,2000,2004,.050000001,,,,,,,,,NO_POPIN_LEADER
+Spain,,Jose Luis Rodriguez Zapatero,1,2004,2008,0,,,,,,,,,NO_POPIN_LEADER
+Spain,,Jose Luis Rodriguez Zapatero,2,2008,2011,.36250001,,,,,,,,,NO_POPIN_LEADER
+Spain,,Mariano Rajoy,1,2012,2016,.0125,,,,,,,,,NO_POPIN_LEADER
+Spain,,Mariano Rajoy,2,2016,2018,.22499999,,,,,,,,,NO_POPIN_LEADER
+Sweden,,Goran Persson,1,2002,2006,0,,,,,,,,,NO_POPIN_LEADER
+Sweden,,Fredrik Reinfeldt,1,2006,2014,0,,,,,,,,,NO_POPIN_LEADER
+Sweden,,Stefan Lofven,1,2014,2021,.1,,,,,,,,,NO_POPIN_LEADER
+Switzerland,,Doris Leuthard/Christophe Darbellay,1,2017,2017,.26666668,,,,,,,,,NO_POPIN_LEADER
+Switzerland,,Alan Berset/Christian Levrat,1,2018,2018,.25,,,,,,,,,NO_POPIN_LEADER
+Switzerland,,Guy Parmelin/Christoph Blocher,1,2021,2021,.56666666,,,,,,,,,NO_POPIN_LEADER
+Taiwan,,Chen Shui Bian,1,2000,2004,.4375,,,,,,,,,NO_POPIN_LEADER
+Taiwan,,Chen Shui Bian,2,2004,2008,.80000001,,,,,,,,,NO_POPIN_LEADER
+Taiwan,,Ma Ying-jeou,1,2008,2012,.16249999,,,,,,,,,NO_POPIN_LEADER
+Taiwan,,Ma Ying-jeou,2,2012,2016,0,,,,,,,,,NO_POPIN_LEADER
+Taiwan,,Tsai Ing-wen,1,2016,2020,.64999998,,,,,,,,,NO_POPIN_LEADER
+Tajikistan,,Emomali Rahmon,1,1995,1999,.73333335,,,,,,,,,NO_POPIN_LEADER
+Tajikistan,,Emomali Rahmon,2,2000,2006,1.2333333,,,,,,,,,NO_POPIN_LEADER
+Tajikistan,,Emomali Rahmon,3,2007,2013,.26666668,,,,,,,,,NO_POPIN_LEADER
+Tajikistan,,Emomali Rahmon,4,2014,2020,.80000001,,,,,,,,,NO_POPIN_LEADER
+Turkey,,Recep T. Erdogan,1,2003,2007,.125,,,,,,,,,NO_POPIN_LEADER
+Turkey,,Recep T. Erdogan,2,2007,2011,.875,,,,,,,,,NO_POPIN_LEADER
+Turkey,,Recep T. Erdogan,3,2011,2014,.875,,,,,,,,,NO_POPIN_LEADER
+Turkey,,Recep T. Erdogan,4,2014,2018,1.4666667,,,,,,,,,NO_POPIN_LEADER
+Turkmenistan,,Saparmurat Niyazov,1,1991,2006,.25,,,,,,,,,NO_POPIN_LEADER
+Turkmenistan,,Gurbanguly Berdimuhamedow,1,2007,2022,0,,,,,,,,,NO_POPIN_LEADER
+UK,,Tony Blair,2,2001,2005,.1,,,,,,,,,NO_POPIN_LEADER
+UK,,Tony Blair,3,2005,2007,.125,,,,,,,,,NO_POPIN_LEADER
+UK,,Gordon Brown,1,2007,2010,.075000003,,,,,,,,,NO_POPIN_LEADER
+UK,,David Cameron,1,2010,2016,.0125,,,,,,,,,NO_POPIN_LEADER
+UK,,Theresa May,1,2016,2019,.48750001,,,,,,,,,NO_POPIN_LEADER
+Ukraine,,Viktor Yushchenko,1,2005,2009,1.125,,,,,,,,,NO_POPIN_LEADER
+Ukraine,,Yulia Tymoshenko,1,2008,2010,.75,,,,,,,,,NO_POPIN_LEADER
+Ukraine,,Viktor Yanukovych,1,2010,2013,.625,,,,,,,,,NO_POPIN_LEADER
+Ukraine,,Petro Poroshenko,1,2014,2019,.75,,,,,,,,,NO_POPIN_LEADER
+Ukraine,,Volodymyr Groysman,1,2016,2019,.033333331,,,,,,,,,NO_POPIN_LEADER
+United States,,George W. Bush,1,2001,2004,.21250001,,,,,,,,,NO_POPIN_LEADER
+United States,,George W. Bush,2,2005,2008,.1875,,,,,,,,,NO_POPIN_LEADER
+United States,,Barack Obama,1,2009,2012,.15000001,,,,,,,,,NO_POPIN_LEADER
+United States,,Barack Obama,2,2013,2016,.28749999,,,,,,,,,NO_POPIN_LEADER
+United States,,Donald Trump,1,2017,2020,.77916664,,,,,,,,,NO_POPIN_LEADER
+Uruguay,URY,Jorge Batlle,1,2000,2005,.21666667,Jorge Luis Batlle Ibáñez,328,19.417744,10.721833,0.592014,2000,2004,Jorge Luis Batlle Ibáñez,C_leader_term_unique
+Uruguay,URY,Tabare Vazquez,1,2005,2010,.25,Tabaré Ramón Vázquez Rosas,444,21.061284,12.885278,0.611508,2005,2009,Tabaré Ramón Vázquez Rosas,C_leader_term_unique
+Uruguay,URY,Jose Mujica,1,2010,2015,.125,José Alberto Mujica Cordano,191,33.818377,15.659735,1.133099,2010,2014,José Alberto Mujica Cordano,C_leader_term_unique
+Uruguay,URY,Tabare Vazquez,2,2015,2020,.21250001,Tabaré Ramón Vázquez Rosas,137,23.945620,14.530847,1.241454,2015,2019,Tabaré Ramón Vázquez Rosas,C_leader_term_unique
+Uruguay,URY,Luis Lacalle Pou,1,2020,2025,.075000003,Luis Alberto Aparicio Alejandro Lacalle Pou,530,26.050642,12.820385,0.556882,2020,2024,Luis Alberto Aparicio Alejandro Lacalle Pou,C_leader_term_unique
+Uzbekistan,,Islam Karimov,2,2000,2006,0,,,,,,,,,NO_POPIN_LEADER
+Uzbekistan,,Islam Karimov,3,2008,2015,.25,,,,,,,,,NO_POPIN_LEADER
+Venezuela,VEN,Hugo Chavez,1,1999,2006,1.9166666,Hugo Rafael Chávez Frías,743,61.011844,11.861660,0.435162,2000,2006,Hugo Rafael Chávez Frías,C_leader_term_unique
+Venezuela,VEN,Hugo Chavez,2,2007,2012,1.75,Hugo Rafael Chávez Frías,293,61.483242,14.193686,0.829204,2007,2012,Hugo Rafael Chávez Frías,C_leader_term_unique
+Venezuela,VEN,Hugo Chavez,3,2013,2013,1.6666666,Hugo Rafael Chávez Frías,120,60.551500,15.300848,1.396770,2013,2013,Hugo Rafael Chávez Frías,C_leader_term_unique
+Venezuela,VEN,NicolÃ¡s Maduro,1,2013,2018,1.6375,Nicolás Maduro Moros,1512,64.848896,15.486742,0.398276,2013,2018,Nicolás Maduro Moros,C_leader_term_unique
+Venezuela,VEN,NicolÃ¡s Maduro,2,2019,2024,1.5625,Nicolás Maduro Moros,813,61.884785,16.916946,0.593303,2019,2024,Nicolás Maduro Moros,C_leader_term_unique

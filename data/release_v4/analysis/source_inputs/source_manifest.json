@@ -1,0 +1,67 @@
+{
+  "release": "POPIN v4.1.0",
+  "purpose": "Frozen audit crosswalk and model-response inputs for tools/reproduce_validation_audit.py",
+  "sources": {
+    "gpd_doi": "10.7910/DVN/LFTQEZ",
+    "lallpi_doi": "10.7910/DVN/KEJ9VF",
+    "gpd_license": "CC0-1.0 per Harvard Dataverse",
+    "lallpi_distribution": "source is referenced in the research DuckDB; consult official data page for terms"
+  },
+  "files": [
+    {
+      "path": "data/release_v4/analysis/source_inputs/README.md",
+      "size_bytes": 1669,
+      "sha256": "9bed1fd60b476ad50ee32e09fb65a780e81ff2d11fbe9272d2cd8f98fd884ee5"
+    },
+    {
+      "path": "data/release_v4/analysis/source_inputs/gpd_popin_leader_term_matches.csv",
+      "size_bytes": 34669,
+      "sha256": "cc1f292b27a54c42a3a0a740459e6142e5651031de22f6015b8d7023e5c76686"
+    },
+    {
+      "path": "data/release_v4/analysis/source_inputs/gpd_popin_match_review.csv",
+      "size_bytes": 276707,
+      "sha256": "d6bd7ac7e72ce6076e40b8c4cb2d345e165030077305eb3fcf7f00563bc49968"
+    },
+    {
+      "path": "data/release_v4/analysis/source_inputs/sensitivity_runs/deepseek_deepseek-v4-flash-0731__neutral.jsonl",
+      "size_bytes": 2049485,
+      "sha256": "10abcaa839eb31d8c1e4ef149f0a2be388fd5ddbb14e4302f1e00166a64fe3c6"
+    },
+    {
+      "path": "data/release_v4/analysis/source_inputs/sensitivity_runs/deepseek_deepseek-v4-flash-0731__v4.jsonl",
+      "size_bytes": 2044176,
+      "sha256": "eade8de0ef729cf000406e29b0f5e5f7f628c2bf19e252f10545ecea3d93f9d1"
+    },
+    {
+      "path": "data/release_v4/analysis/source_inputs/sensitivity_runs/openai_gpt-5.6-luna__neutral.jsonl",
+      "size_bytes": 23046,
+      "sha256": "5b23783d84c487e80aed15e778a4cbdf6c564f86f0e66c2d1b4621921e65d7a6"
+    },
+    {
+      "path": "data/release_v4/analysis/source_inputs/sensitivity_runs/openai_gpt-5.6-luna__neutral_full_900.jsonl",
+      "size_bytes": 13712592,
+      "sha256": "64a3cff9961d89333e5ced2b602a6c6efaa6965badc8863d91931b6a4eea278f"
+    },
+    {
+      "path": "data/release_v4/analysis/source_inputs/sensitivity_runs/openai_gpt-5.6-luna__neutral_full_900.meta.json",
+      "size_bytes": 760,
+      "sha256": "0cd93cf14939f5dfd518bc4ace7c0c5bea45804a0e043cd8298e6194516cb6b1"
+    },
+    {
+      "path": "data/release_v4/analysis/source_inputs/sensitivity_runs/openai_gpt-5.6-luna__v4.jsonl",
+      "size_bytes": 22858,
+      "sha256": "4293a197d53b41627d3b7090a4f63b0aa6ac2854a05c65ede57e3fd430bfcdca"
+    },
+    {
+      "path": "data/release_v4/analysis/source_inputs/sensitivity_runs/qwen_qwen3-30b-a3b-instruct-2507__neutral.jsonl",
+      "size_bytes": 2075097,
+      "sha256": "d81ec7f49b57ef6a66c2dcbd05e0f8f2291e105862c7ca520b3cd73bb9a80714"
+    },
+    {
+      "path": "data/release_v4/analysis/source_inputs/sensitivity_test_sample.csv",
+      "size_bytes": 179179,
+      "sha256": "e50d2ccba45a8a7237111c21d37c926c8cae6960a104982b359174138da0f702"
+    }
+  ]
+}

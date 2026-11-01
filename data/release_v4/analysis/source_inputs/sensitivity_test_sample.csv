@@ -1,0 +1,901 @@
+discourse_id,iso3,leader_name,filename,discourse_date,discourse_year,word_count,baseline_final_score,score_bin,selection_source,gpd_term_key,gpd_split,gpd_match_kind,gpd_country,gpd_leader,gpd_term,gpd_totalaverage
+604fdbcd421bd162,ARG,Fernando de la Rua,ARG_2000_1.txt,2000-01-01,2000,4130,60.400002,6,gpd_term_anchor,Argentina|Fernando de la Rua|1,test_locked,leader_term_anchor,Argentina,Fernando de la Rua,1,.175
+e2ad09d2ff055fc0,ARG,Fernando de la Rua,ARG_2001_1.txt,2001-01-01,2001,2958,26.330000,2,gpd_term_anchor,Argentina|Fernando de la Rua|1,test_locked,leader_term_anchor,Argentina,Fernando de la Rua,1,.175
+29225dead70b0b48,ARG,Eduardo Alberto Duhalde,ARG_2002_1.txt,2002-01-01,2002,4120,53.209999,5,gpd_term_anchor,Argentina|Eduardo Duhalde|1,development,leader_term_anchor,Argentina,Eduardo Duhalde,1,.53333336
+5afd70ba876b7d89,ARG,Néstor Carlos Kirchner Ostoic,ARG_2003_123.txt,2003-06-26,2003,543,67.230003,6,gpd_term_anchor,Argentina|Nestor Kirchner|1,development,leader_term_anchor,Argentina,Nestor Kirchner,1,.25
+448cc990653cc8fb,ARG,Néstor Carlos Kirchner Ostoic,ARG_2003_143.txt,2003-05-25,2003,5646,51.869999,5,gpd_text_anchor,Argentina|Nestor Kirchner|1,development,text_anchor,Argentina,Nestor Kirchner,1,.25
+af940821f9995da8,ARG,Néstor Carlos Kirchner Ostoic,ARG_2004_62.txt,2004-09-15,2004,1847,33.259998,3,gpd_text_anchor,Argentina|Nestor Kirchner|1,development,text_anchor,Argentina,Nestor Kirchner,1,.25
+d3c59dd5a4577a7d,ARG,Néstor Carlos Kirchner Ostoic,ARG_2004_149.txt,2004-05-06,2004,3775,27.129999,2,gpd_text_anchor,Argentina|Nestor Kirchner|1,development,text_anchor,Argentina,Nestor Kirchner,1,.25
+e4f40a85ab679e48,ARG,Néstor Carlos Kirchner Ostoic,ARG_2005_44.txt,2005-10-05,2005,40,63.950001,6,gpd_term_anchor,Argentina|Nestor Kirchner|1,development,leader_term_anchor,Argentina,Nestor Kirchner,1,.25
+1af854a9b4f5eae4,ARG,Néstor Carlos Kirchner Ostoic,ARG_2005_201.txt,2005-02-21,2005,1972,68.500000,6,gpd_term_anchor,Argentina|Nestor Kirchner|1,development,leader_term_anchor,Argentina,Nestor Kirchner,1,.25
+c79cc6b195e1dfa2,ARG,Néstor Carlos Kirchner Ostoic,ARG_2005_15.txt,2005-11-30,2005,943,16.299999,1,gpd_term_anchor,Argentina|Nestor Kirchner|1,development,leader_term_anchor,Argentina,Nestor Kirchner,1,.25
+fda394febd74893d,ARG,Néstor Carlos Kirchner Ostoic,ARG_2005_192.txt,2005-03-09,2005,1104,62.220001,6,gpd_term_anchor,Argentina|Nestor Kirchner|1,development,leader_term_anchor,Argentina,Nestor Kirchner,1,.25
+e62862f770cc1ef7,ARG,Néstor Carlos Kirchner Ostoic,ARG_2005_34.txt,2005-10-18,2005,2594,72.550003,7,gpd_text_anchor,Argentina|Nestor Kirchner|1,development,text_anchor,Argentina,Nestor Kirchner,1,.25
+562248e1b06aa3e4,ARG,Cristina Fernández de Kirchner,ARG_2007_421.txt,2007-04-20,2007,31,0.000000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+30c326ad814d190c,ARG,Cristina Fernández de Kirchner,ARG_2008_656.txt,2008-05-29,2008,936,16.320000,1,stratified_country_score,Argentina|Cristina Fernandez|1,test_locked,leader_term_anchor,Argentina,Cristina Fernandez,1,0
+4bfedf8870421acf,ARG,Cristina Fernández de Kirchner,ARG_2009_872.txt,2009-03-09,2009,654,51.369999,5,stratified_country_score,Argentina|Cristina Fernandez|1,test_locked,leader_term_anchor,Argentina,Cristina Fernandez,1,0
+e7926aee90dd8428,ARG,Cristina Fernández de Kirchner,ARG_2010_447.txt,2010-08-06,2010,1827,32.509998,3,gpd_term_anchor,Argentina|Cristina Fernandez|1,test_locked,leader_term_anchor,Argentina,Cristina Fernandez,1,0
+ba70017ccec42da6,ARG,Cristina Fernández de Kirchner,ARG_2010_639.txt,2010-06-03,2010,2775,35.770000,3,gpd_term_anchor,Argentina|Cristina Fernandez|1,test_locked,leader_term_anchor,Argentina,Cristina Fernandez,1,0
+9a148783824c2199,ARG,Cristina Fernández de Kirchner,ARG_2010_997.txt,2010-01-25,2010,528,13.730000,1,gpd_term_anchor,Argentina|Cristina Fernandez|1,test_locked,leader_term_anchor,Argentina,Cristina Fernandez,1,0
+04815062302182c2,ARG,Cristina Fernández de Kirchner,ARG_2010_262.txt,2010-09-29,2010,2337,31.129999,3,stratified_country_score,Argentina|Cristina Fernandez|1,test_locked,leader_term_anchor,Argentina,Cristina Fernandez,1,0
+60c05abb126e78c6,ARG,Cristina Fernández de Kirchner,ARG_2010_542.txt,2010-07-06,2010,381,16.709999,1,stratified_country_score,Argentina|Cristina Fernandez|1,test_locked,leader_term_anchor,Argentina,Cristina Fernandez,1,0
+d47b363997dc622b,ARG,Cristina Fernández de Kirchner,ARG_2011_260.txt,2011-08-18,2011,487,10.930000,1,gpd_term_anchor,Argentina|Cristina Fernandez|2,development,leader_term_anchor,Argentina,Cristina Fernandez,1,0
+cf48ef3bdfcdda41,ARG,Cristina Fernández de Kirchner,ARG_2011_793.txt,2011-02-04,2011,444,13.590000,1,gpd_term_anchor,Argentina|Cristina Fernandez|2,development,leader_term_anchor,Argentina,Cristina Fernandez,1,0
+0b7d061ebe7958a3,ARG,Cristina Fernández de Kirchner,ARG_2011_271.txt,2011-08-15,2011,1588,49.849998,4,gpd_text_anchor,Argentina|Cristina Fernandez|1,test_locked,text_anchor,Argentina,Cristina Fernandez,1,0
+ea1cc7bc1ee7f595,ARG,Cristina Fernández de Kirchner,ARG_2011_585.txt,2011-04-19,2011,2210,62.369999,6,gpd_text_anchor,Argentina|Cristina Fernandez|1,test_locked,text_anchor,Argentina,Cristina Fernandez,1,0
+63fd3690898e1a15,ARG,Cristina Fernández de Kirchner,ARG_2012_195.txt,2012-08-28,2012,2008,36.689999,3,gpd_term_anchor,Argentina|Cristina Fernandez|2,development,leader_term_anchor,Argentina,Cristina Fernandez,2,.1875
+48064b0613f3aedf,ARG,Cristina Fernández de Kirchner,ARG_2012_177.txt,2012-09-11,2012,1406,65.660004,6,gpd_term_anchor,Argentina|Cristina Fernandez|2,development,leader_term_anchor,Argentina,Cristina Fernandez,2,.1875
+5565e03b727c70db,ARG,Cristina Fernández de Kirchner,ARG_2012_405.txt,2012-04-23,2012,2679,24.730000,2,gpd_text_anchor,Argentina|Cristina Fernandez|2,development,text_anchor,Argentina,Cristina Fernandez,2,.1875
+6c0374bbe8dc4796,ARG,Cristina Fernández de Kirchner,ARG_2012_414.txt,2012-04-16,2012,6237,57.959999,5,gpd_text_anchor,Argentina|Cristina Fernandez|2,development,text_anchor,Argentina,Cristina Fernandez,2,.1875
+50cd2c74b213b045,ARG,Cristina Fernández de Kirchner,ARG_2013_433.txt,2013-07-15,2013,2488,43.560001,4,gpd_term_anchor,Argentina|Cristina Fernandez|2,development,leader_term_anchor,Argentina,Cristina Fernandez,2,.1875
+9f17348a6e3b84da,ARG,Cristina Fernández de Kirchner,ARG_2014_697.txt,2014-06-15,2014,2916,55.540001,5,gpd_text_anchor,Argentina|Cristina Fernandez|2,development,text_anchor,Argentina,Cristina Fernandez,2,.1875
+6639930d99f612d7,ARG,Mauricio Macri,ARG_2015_165.txt,2015-09-16,2015,5584,40.360001,4,stratified_country_score,,not_in_gpd_term,none,,,,
+b9f16045cfc74607,ARG,Mauricio Macri,ARG_2015_543.txt,2015-03-31,2015,2036,43.730000,4,stratified_country_score,,not_in_gpd_term,none,,,,
+3047dc96bfc18a59,ARG,Mauricio Macri,ARG_2015_86.txt,2015-10-26,2015,278,0.200000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+8435a7f43f4e5f6f,ARG,Mauricio Macri,ARG_2016_75.txt,2016-07-15,2016,570,52.119999,5,gpd_term_anchor,Argentina|Mauricio Macri|1,test_locked,leader_term_anchor,Argentina,Mauricio Macri,1,.037500001
+b0e624330e20ddcd,ARG,Mauricio Macri,ARG_2016_80.txt,2016-07-11,2016,1511,51.380001,5,gpd_term_anchor,Argentina|Mauricio Macri|1,test_locked,leader_term_anchor,Argentina,Mauricio Macri,1,.037500001
+b4c6303feb4216b1,ARG,Mauricio Macri,ARG_2016_43.txt,2016-09-20,2016,1625,11.940000,1,gpd_text_anchor,Argentina|Mauricio Macri|1,test_locked,text_anchor,Argentina,Mauricio Macri,1,.037500001
+e7ae38be2c6389c5,ARG,Mauricio Macri,ARG_2017_48.txt,2017-09-20,2017,1339,35.160000,3,gpd_term_anchor,Argentina|Mauricio Macri|1,test_locked,leader_term_anchor,Argentina,Mauricio Macri,1,.037500001
+091688f4451dce16,ARG,Mauricio Macri,ARG_2017_128.txt,2017-04-06,2017,1326,23.719999,2,gpd_term_anchor,Argentina|Mauricio Macri|1,test_locked,leader_term_anchor,Argentina,Mauricio Macri,1,.037500001
+1131cb9d31bed9bc,ARG,Mauricio Macri,ARG_2018_63.txt,2018-09-27,2018,660,13.220000,1,gpd_term_anchor,Argentina|Mauricio Macri|1,test_locked,leader_term_anchor,Argentina,Mauricio Macri,1,.037500001
+cdacf9976f917d3e,ARG,Alberto Fernández,ARG_2019_103.txt,2019-05-22,2019,1179,20.889999,2,stratified_country_score,,not_in_gpd_term,none,,,,
+e871a1c1a59072be,ARG,Alberto Fernández,ARG_2019_127.txt,2019-03-18,2019,773,25.030001,2,stratified_country_score,,not_in_gpd_term,none,,,,
+52bb1507d7bf36ee,ARG,Alberto Fernández,ARG_2020_108.txt,2020-07-03,2020,1609,54.250000,5,gpd_term_anchor,Argentina|Alberto FernÃ¡ndez|1,test_locked,leader_term_anchor,Argentina,Alberto FernÃ¡ndez,1,.28749999
+ea786cdb335d6ae9,ARG,Alberto Fernández,ARG_2020_76.txt,2020-08-31,2020,2845,62.029999,6,gpd_term_anchor,Argentina|Alberto FernÃ¡ndez|1,test_locked,leader_term_anchor,Argentina,Alberto FernÃ¡ndez,1,.28749999
+15e79ced258f2357,ARG,Alberto Fernández,ARG_2021_135.txt,2021-04-16,2021,3380,47.180000,4,gpd_term_anchor,Argentina|Alberto FernÃ¡ndez|1,test_locked,leader_term_anchor,Argentina,Alberto FernÃ¡ndez,1,.28749999
+80d9a8282219bc8d,ARG,Alberto Fernández,ARG_2022_98.txt,2022-06-21,2022,2152,61.320000,6,gpd_term_anchor,Argentina|Alberto FernÃ¡ndez|1,test_locked,leader_term_anchor,Argentina,Alberto FernÃ¡ndez,1,.28749999
+456b7945772bcb5b,ARG,Alberto Fernández,ARG_2022_149.txt,2022-02-25,2022,299,47.060001,4,gpd_term_anchor,Argentina|Alberto FernÃ¡ndez|1,test_locked,leader_term_anchor,Argentina,Alberto FernÃ¡ndez,1,.28749999
+bb5689d4ed15d96a,ARG,Javier Gerardo Milei,ARG_2024_66.txt,2024-05-24,2024,204,70.870003,7,stratified_country_score,,not_in_gpd_term,none,,,,
+8dc468790b3f8b56,ARG,Javier Gerardo Milei,ARG_2024_19.txt,2024-11-15,2024,1392,80.360001,8,stratified_country_score,,not_in_gpd_term,none,,,,
+b5664140f1df8f84,ARG,Javier Gerardo Milei,ARG_2025_8.txt,2025-11-13,2025,9404,35.799999,3,stratified_country_score,,not_in_gpd_term,none,,,,
+8d61a53adcd2e9f4,ARG,Javier Gerardo Milei,ARG_2025_40.txt,2025-07-05,2025,3849,62.259998,6,stratified_country_score,,not_in_gpd_term,none,,,,
+73ee85be96b41837,BOL,Gonzalo Sánchez de Lozada Sánchez Bustamante,BOL_2002_1.txt,2002-01-01,2002,1240,61.200001,6,gpd_term_anchor,Bolivia|Gonzalo Sanchez de Lozada|2,test_locked,text_anchor,Bolivia,Gonzalo Sanchez de Lozada,2,.22499999
+b7cc9868532705f0,BOL,Gonzalo Sánchez de Lozada Sánchez Bustamante,BOL_2003_1.txt,2003-01-01,2003,2303,50.820000,5,gpd_term_anchor,Bolivia|Gonzalo Sanchez de Lozada|2,test_locked,leader_term_anchor,Bolivia,Gonzalo Sanchez de Lozada,2,.22499999
+1b4cbb2474a70ab4,BOL,Carlos Diego Mesa Gisbert,BOL_2004_1.txt,2004-01-01,2004,2314,46.250000,4,gpd_term_anchor,Bolivia|Carlos Mesa|1,test_locked,leader_term_anchor,Bolivia,Carlos Mesa,1,.125
+c4ce625e9eace1ef,BOL,Juan Evo Morales Ayma,BOL_2006_1.txt,2006-01-01,2006,2132,68.970001,6,gpd_term_anchor,Bolivia|Evo Morales|1,test_locked,leader_term_anchor,Bolivia,Evo Morales,1,1.5
+9f40b7c1d8e28493,BOL,Juan Evo Morales Ayma,BOL_2007_1.txt,2007-01-01,2007,860,63.930000,6,gpd_term_anchor,Bolivia|Evo Morales|1,test_locked,leader_term_anchor,Bolivia,Evo Morales,1,1.5
+582cfd33ccc9b4aa,BOL,Juan Evo Morales Ayma,BOL_2008_1.txt,2008-01-01,2008,918,50.099998,5,gpd_term_anchor,Bolivia|Evo Morales|1,test_locked,leader_term_anchor,Bolivia,Evo Morales,1,1.5
+3dd5ef313a666c23,BOL,Juan Evo Morales Ayma,BOL_2009_1.txt,2009-01-01,2009,2308,71.059998,7,gpd_term_anchor,Bolivia|Evo Morales|1,test_locked,leader_term_anchor,Bolivia,Evo Morales,1,1.5
+69d21cd0fea9c5e6,BOL,Juan Evo Morales Ayma,BOL_2010_1.txt,2010-01-01,2010,2695,61.270000,6,gpd_text_anchor,Bolivia|Evo Morales|2,test_locked,text_anchor,Bolivia,Evo Morales,2,1
+b208c896db455888,BOL,Juan Evo Morales Ayma,BOL_2013_3.txt,2013-11-18,2013,105,39.070000,3,stratified_country_score,Bolivia|Evo Morales|2,test_locked,leader_term_anchor,Bolivia,Evo Morales,2,1
+d8dbab2c92e8882f,BOL,Juan Evo Morales Ayma,BOL_2014_51.txt,2014-09-26,2014,3206,66.419998,6,gpd_term_anchor,Bolivia|Evo Morales|2,test_locked,leader_term_anchor,Bolivia,Evo Morales,2,1
+522b7e518f2ba7c9,BOL,Juan Evo Morales Ayma,BOL_2014_69.txt,2014-09-05,2014,896,41.310001,4,gpd_term_anchor,Bolivia|Evo Morales|2,test_locked,leader_term_anchor,Bolivia,Evo Morales,2,1
+400037380d5ec5df,BOL,Juan Evo Morales Ayma,BOL_2014_57.txt,2014-09-22,2014,1285,44.139999,4,gpd_term_anchor,Bolivia|Evo Morales|2,test_locked,leader_term_anchor,Bolivia,Evo Morales,2,1
+4ab5c993a6c5ceac,BOL,Juan Evo Morales Ayma,BOL_2014_87.txt,2014-10-04,2014,161,37.150002,3,gpd_term_anchor,Bolivia|Evo Morales|2,test_locked,leader_term_anchor,Bolivia,Evo Morales,2,1
+363c4d4ee48f55d8,BOL,Juan Evo Morales Ayma,BOL_2014_71.txt,2014-09-04,2014,1914,69.739998,6,gpd_term_anchor,Bolivia|Evo Morales|2,test_locked,leader_term_anchor,Bolivia,Evo Morales,2,1
+bb3cd23a46e26069,BOL,Juan Evo Morales Ayma,BOL_2014_15.txt,2014-12-11,2014,2779,52.470001,5,stratified_country_score,Bolivia|Evo Morales|2,test_locked,leader_term_anchor,Bolivia,Evo Morales,2,1
+0b7ad98fb3bafea0,BOL,Juan Evo Morales Ayma,BOL_2014_91.txt,2014-02-24,2014,65,33.959999,3,stratified_country_score,Bolivia|Evo Morales|2,test_locked,leader_term_anchor,Bolivia,Evo Morales,2,1
+f4f7e463bdd4d5cc,BOL,Juan Evo Morales Ayma,BOL_2014_32.txt,2014-11-14,2014,1415,69.870003,6,stratified_country_score,Bolivia|Evo Morales|2,test_locked,leader_term_anchor,Bolivia,Evo Morales,2,1
+7f835072827fa943,BOL,Juan Evo Morales Ayma,BOL_2014_43.txt,2014-10-03,2014,1290,73.800003,7,stratified_country_score,Bolivia|Evo Morales|2,test_locked,leader_term_anchor,Bolivia,Evo Morales,2,1
+401761e1f447c60a,BOL,Juan Evo Morales Ayma,BOL_2014_7.txt,2014-12-19,2014,1836,71.320000,7,stratified_country_score,Bolivia|Evo Morales|2,test_locked,leader_term_anchor,Bolivia,Evo Morales,2,1
+ec3fee95b928f238,BOL,Juan Evo Morales Ayma,BOL_2014_63.txt,2014-09-11,2014,440,72.150002,7,stratified_country_score,Bolivia|Evo Morales|2,test_locked,leader_term_anchor,Bolivia,Evo Morales,2,1
+37c941ddc392b23d,BOL,Juan Evo Morales Ayma,BOL_2015_24.txt,2015-05-07,2015,4880,8.980000,0,gpd_term_anchor,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+ed49ae3840f1a951,BOL,Juan Evo Morales Ayma,BOL_2015_13.txt,2015-09-30,2015,4222,68.860001,6,gpd_text_anchor,Bolivia|Evo Morales|3,test_locked,text_anchor,Bolivia,Evo Morales,3,1.4625
+5d82a406a4fd1421,BOL,Juan Evo Morales Ayma,BOL_2015_16.txt,2015-08-01,2015,175,63.119999,6,stratified_country_score,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+fc061fa731fd39a8,BOL,Juan Evo Morales Ayma,BOL_2016_24.txt,2016-01-22,2016,30,48.200001,4,stratified_country_score,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+561ea0ac1c830c7d,BOL,Juan Evo Morales Ayma,BOL_2016_15.txt,2016-02-13,2016,26,20.870001,2,stratified_country_score,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+0ee77530e85aba2b,BOL,Juan Evo Morales Ayma,BOL_2016_16.txt,2016-02-12,2016,58,26.490000,2,stratified_country_score,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+ac51a9d9d724155a,BOL,Juan Evo Morales Ayma,BOL_2016_9.txt,2016-04-22,2016,593,69.320000,6,stratified_country_score,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+3b35ea3be86ee2f8,BOL,Juan Evo Morales Ayma,BOL_2016_33.txt,2016-01-20,2016,80,12.460000,1,stratified_country_score,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+432e42200c99c65a,BOL,Juan Evo Morales Ayma,BOL_2018_1.txt,2018-11-09,2018,85,14.830000,1,gpd_term_anchor,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+2d1b03c1ad837141,BOL,Juan Evo Morales Ayma,BOL_2018_11.txt,2018-10-24,2018,134,0.250000,0,gpd_term_anchor,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+838e2a1b63fc1511,BOL,Juan Evo Morales Ayma,BOL_2018_5.txt,2018-04-30,2018,112,26.049999,2,gpd_term_anchor,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+ace988162001c6c5,BOL,Juan Evo Morales Ayma,BOL_2018_3.txt,2018-07-02,2018,111,24.330000,2,gpd_term_anchor,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+57343c5798288cee,BOL,Juan Evo Morales Ayma,BOL_2018_13.txt,2018-09-20,2018,95,31.950001,3,stratified_country_score,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+a5dd8b1a756a2584,BOL,Juan Evo Morales Ayma,BOL_2018_21.txt,2018-03-08,2018,52,4.950000,0,stratified_country_score,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+817c1786fa1b5284,BOL,Juan Evo Morales Ayma,BOL_2019_3.txt,2019-06-27,2019,96,15.080000,1,stratified_country_score,Bolivia|Evo Morales|3,test_locked,leader_term_anchor,Bolivia,Evo Morales,3,1.4625
+6b31ac6e2f38be18,BOL,Luis Alberto Arce Catacora,BOL_2020_13.txt,2020-11-16,2020,85,11.550000,1,stratified_country_score,,not_in_gpd_term,none,,,,
+59b3170e8d6a9594,BOL,Luis Alberto Arce Catacora,BOL_2021_18.txt,2021-01-23,2021,102,29.820000,2,stratified_country_score,,not_in_gpd_term,none,,,,
+06825ca300bba914,BOL,Luis Alberto Arce Catacora,BOL_2022_7.txt,2022-02-11,2022,58,5.250000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+a7a6e04be97f4edb,BOL,Luis Alberto Arce Catacora,BOL_2023_16.txt,2023-05-23,2023,118,26.590000,2,stratified_country_score,,not_in_gpd_term,none,,,,
+1c5dec0ff0d2a9c0,BOL,Luis Alberto Arce Catacora,BOL_2023_18.txt,2023-05-10,2023,89,17.700001,1,stratified_country_score,,not_in_gpd_term,none,,,,
+9efdb26428dd8e6d,BOL,Luis Alberto Arce Catacora,BOL_2023_25.txt,2023-12-18,2023,125,50.950001,5,stratified_country_score,,not_in_gpd_term,none,,,,
+df07632337737532,BOL,Luis Alberto Arce Catacora,BOL_2023_10.txt,2023-06-21,2023,83,5.610000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+d5a60e97919d55b5,BOL,Luis Alberto Arce Catacora,BOL_2024_1.txt,2024-12-26,2024,115,40.830002,4,stratified_country_score,,not_in_gpd_term,none,,,,
+eb78527dee4ec389,BOL,Luis Alberto Arce Catacora,BOL_2025_9.txt,2025-03-26,2025,95,54.619999,5,stratified_country_score,,not_in_gpd_term,none,,,,
+80dac84b5aa374d0,BOL,Luis Alberto Arce Catacora,BOL_2025_12.txt,2025-04-23,2025,218,40.900002,4,stratified_country_score,,not_in_gpd_term,none,,,,
+410dd57eef01678e,BOL,Luis Alberto Arce Catacora,BOL_2025_15.txt,2025-03-26,2025,121,38.310001,3,stratified_country_score,,not_in_gpd_term,none,,,,
+31ed2264de90ae0e,BOL,Luis Alberto Arce Catacora,BOL_2025_8.txt,2025-04-14,2025,167,9.560000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+e65925bd6dc1d7bc,BRA,Fernando Henrique Cardoso,BRA_2000_50.txt,2000-01-01,2000,1004,1.690000,0,gpd_term_anchor,Brazil|Fernando Henrique Cardoso|2,test_locked,leader_term_anchor,Brazil,Fernando Henrique Cardoso,2,0
+a78adb64ae3e2b3a,BRA,Fernando Henrique Cardoso,BRA_2000_62.txt,2000-01-01,2000,420,6.870000,0,gpd_term_anchor,Brazil|Fernando Henrique Cardoso|2,test_locked,leader_term_anchor,Brazil,Fernando Henrique Cardoso,2,0
+343aae05f2c648b3,BRA,Fernando Henrique Cardoso,BRA_2000_22.txt,2000-01-01,2000,2008,36.680000,3,gpd_text_anchor,Brazil|Fernando Henrique Cardoso|2,test_locked,text_anchor,Brazil,Fernando Henrique Cardoso,2,0
+9ffef936a52e942a,BRA,Fernando Henrique Cardoso,BRA_2001_86.txt,2001-01-01,2001,3429,16.590000,1,gpd_term_anchor,Brazil|Fernando Henrique Cardoso|2,test_locked,leader_term_anchor,Brazil,Fernando Henrique Cardoso,2,0
+5f3a7c3c4a3af07d,BRA,Fernando Henrique Cardoso,BRA_2001_93.txt,2001-01-01,2001,575,10.590000,1,stratified_country_score,Brazil|Fernando Henrique Cardoso|2,test_locked,leader_term_anchor,Brazil,Fernando Henrique Cardoso,2,0
+8d17190904f9ed88,BRA,Fernando Henrique Cardoso,BRA_2001_129.txt,2001-01-01,2001,2142,18.450001,1,gpd_text_anchor,Brazil|Fernando Henrique Cardoso|2,test_locked,text_anchor,Brazil,Fernando Henrique Cardoso,2,0
+e23ea06fa6c2baaf,BRA,Fernando Henrique Cardoso,BRA_2002_47.txt,2002-01-01,2002,1874,12.230000,1,gpd_term_anchor,Brazil|Fernando Henrique Cardoso|2,test_locked,leader_term_anchor,Brazil,Fernando Henrique Cardoso,2,0
+202cde37803fdbe0,BRA,Fernando Henrique Cardoso,BRA_2002_160.txt,2002-01-01,2002,1917,18.620001,1,gpd_term_anchor,Brazil|Fernando Henrique Cardoso|2,test_locked,leader_term_anchor,Brazil,Fernando Henrique Cardoso,2,0
+79471afa3770f710,BRA,Fernando Henrique Cardoso,BRA_2002_2.txt,2002-01-01,2002,1629,10.950000,1,gpd_text_anchor,Brazil|Fernando Henrique Cardoso|2,test_locked,text_anchor,Brazil,Fernando Henrique Cardoso,2,0
+4dc811039f4d8910,BRA,Luiz Inácio Lula da Silva,BRA_2003_84.txt,2003-01-01,2003,2040,57.730000,5,gpd_term_anchor,Brazil|Luiz Inacio Lula da Silva|1,test_locked,leader_term_anchor,Brazil,Luiz Inacio Lula da Silva,1,.25
+59210c6ed6b3f267,BRA,Luiz Inácio Lula da Silva,BRA_2003_106.txt,2003-01-01,2003,1145,61.020000,6,gpd_text_anchor,Brazil|Luiz Inacio Lula da Silva|1,test_locked,text_anchor,Brazil,Luiz Inacio Lula da Silva,1,.25
+b6cf58d30e635526,BRA,Luiz Inácio Lula da Silva,BRA_2004_1.txt,2004-01-01,2004,1062,27.410000,2,gpd_term_anchor,Brazil|Luiz Inacio Lula da Silva|1,test_locked,leader_term_anchor,Brazil,Luiz Inacio Lula da Silva,1,.25
+f615216e69dce1ef,BRA,Luiz Inácio Lula da Silva,BRA_2004_3.txt,2004-01-01,2004,1598,51.750000,5,gpd_text_anchor,Brazil|Luiz Inacio Lula da Silva|1,test_locked,text_anchor,Brazil,Luiz Inacio Lula da Silva,1,.25
+b7a792ee41fe1f6c,BRA,Luiz Inácio Lula da Silva,BRA_2005_80.txt,2005-01-01,2005,1761,26.799999,2,gpd_term_anchor,Brazil|Luiz Inacio Lula da Silva|1,test_locked,leader_term_anchor,Brazil,Luiz Inacio Lula da Silva,1,.25
+1a13b7778e7dcb7e,BRA,Luiz Inácio Lula da Silva,BRA_2005_55.txt,2005-01-01,2005,555,35.020000,3,stratified_country_score,Brazil|Luiz Inacio Lula da Silva|1,test_locked,leader_term_anchor,Brazil,Luiz Inacio Lula da Silva,1,.25
+36b8e775ca92ca0e,BRA,Luiz Inácio Lula da Silva,BRA_2005_10.txt,2005-01-01,2005,3158,43.700001,4,gpd_text_anchor,Brazil|Luiz Inacio Lula da Silva|1,test_locked,text_anchor,Brazil,Luiz Inacio Lula da Silva,1,.25
+90da44381b29fadc,BRA,Luiz Inácio Lula da Silva,BRA_2006_25.txt,2006-01-01,2006,1212,36.040001,3,gpd_term_anchor,Brazil|Luiz Inacio Lula da Silva|1,test_locked,leader_term_anchor,Brazil,Luiz Inacio Lula da Silva,1,.25
+dd3f38846b15b043,BRA,Luiz Inácio Lula da Silva,BRA_2006_157.txt,2006-01-01,2006,1906,41.669998,4,stratified_country_score,Brazil|Luiz Inacio Lula da Silva|1,test_locked,leader_term_anchor,Brazil,Luiz Inacio Lula da Silva,1,.25
+68e45576e9a3a06e,BRA,Luiz Inácio Lula da Silva,BRA_2007_20.txt,2007-01-01,2007,2072,61.599998,6,stratified_country_score,Brazil|Luiz Inacio Lula da Silva|1,test_locked,leader_term_anchor,Brazil,Luiz Inacio Lula da Silva,1,.25
+d8a7e1ce692de2ff,BRA,Luiz Inácio Lula da Silva,BRA_2008_5.txt,2008-01-01,2008,1284,16.059999,1,stratified_country_score,Brazil|Luiz Inacio Lula da Silva|1,test_locked,leader_term_anchor,Brazil,Luiz Inacio Lula da Silva,1,.25
+ebd952ef71dcf114,BRA,Luiz Inácio Lula da Silva,BRA_2010_131.txt,2010-01-01,2010,3423,61.610001,6,gpd_term_anchor,Brazil|Luiz Inacio Lula da Silva|1,test_locked,leader_term_anchor,Brazil,Luiz Inacio Lula da Silva,1,.25
+147dac454edb44f0,BRA,Dilma Vana Rousseff,BRA_2011_22.txt,2011-11-18,2011,1443,28.959999,2,gpd_term_anchor,Brazil|Dilma Rousseff|1,test_locked,leader_term_anchor,Brazil,Dilma Rousseff,1,0
+5f4cd4513f0240bc,BRA,Dilma Vana Rousseff,BRA_2011_26.txt,2011-11-09,2011,1186,22.969999,2,gpd_term_anchor,Brazil|Dilma Rousseff|1,test_locked,leader_term_anchor,Brazil,Dilma Rousseff,1,0
+affdcb8aef87afb1,BRA,Dilma Vana Rousseff,BRA_2012_28.txt,2012-11-19,2012,1952,11.500000,1,gpd_term_anchor,Brazil|Dilma Rousseff|1,test_locked,leader_term_anchor,Brazil,Dilma Rousseff,1,0
+cebab0109bcb65ad,BRA,Dilma Vana Rousseff,BRA_2012_24.txt,2012-11-28,2012,2908,15.980000,1,gpd_term_anchor,Brazil|Dilma Rousseff|1,test_locked,leader_term_anchor,Brazil,Dilma Rousseff,1,0
+9245e70f1cca3568,BRA,Dilma Vana Rousseff,BRA_2014_75.txt,2014-04-15,2014,2757,37.119999,3,gpd_term_anchor,Brazil|Dilma Rousseff|1,test_locked,leader_term_anchor,Brazil,Dilma Rousseff,1,0
+9e962ba7fcfef687,BRA,Dilma Vana Rousseff,BRA_2015_80.txt,2015-05-27,2015,1988,9.960000,0,gpd_term_anchor,Brazil|Dilma Rousseff|2,test_locked,leader_term_anchor,Brazil,Dilma Rousseff,2,.33750001
+9b3c681f6737e237,BRA,Dilma Vana Rousseff,BRA_2015_98.txt,2015-03-31,2015,999,17.020000,1,gpd_term_anchor,Brazil|Dilma Rousseff|2,test_locked,leader_term_anchor,Brazil,Dilma Rousseff,2,.33750001
+f5f5c46d2511bdc9,BRA,Dilma Vana Rousseff,BRA_2015_16.txt,2015-12-11,2015,1724,26.959999,2,gpd_term_anchor,Brazil|Dilma Rousseff|2,test_locked,leader_term_anchor,Brazil,Dilma Rousseff,2,.33750001
+6c0cc42667baf7d1,BRA,Dilma Vana Rousseff,BRA_2016_2.txt,2016-05-10,2016,2761,67.339996,6,gpd_term_anchor,Brazil|Dilma Rousseff|2,test_locked,leader_term_anchor,Brazil,Dilma Rousseff,2,.33750001
+a3a02017c326caa3,BRA,Dilma Vana Rousseff,BRA_2016_27.txt,2016-02-19,2016,2719,28.040001,2,gpd_term_anchor,Brazil|Dilma Rousseff|2,test_locked,leader_term_anchor,Brazil,Dilma Rousseff,2,.33750001
+1c1aa7190c1de20f,BRA,Michel Temer,BRA_2017_104.txt,2017-06-05,2017,1272,17.020000,1,gpd_term_anchor,Brazil|Michel Temer|1,development,leader_term_anchor,Brazil,Michel Temer,1,0
+9d37a9af91cb33b4,BRA,Michel Temer,BRA_2017_126.txt,2017-04-06,2017,793,6.310000,0,gpd_term_anchor,Brazil|Michel Temer|1,development,leader_term_anchor,Brazil,Michel Temer,1,0
+09ccadaae0107ab8,BRA,Michel Temer,BRA_2017_18.txt,2017-12-18,2017,1695,20.730000,2,gpd_term_anchor,Brazil|Michel Temer|1,development,leader_term_anchor,Brazil,Michel Temer,1,0
+f4954acc833f5732,BRA,Michel Temer,BRA_2017_2.txt,2017-01-01,2017,879,0.170000,0,gpd_term_anchor,Brazil|Michel Temer|1,development,leader_term_anchor,Brazil,Michel Temer,1,0
+8e4a78b15f847532,BRA,Michel Temer,BRA_2017_154.txt,2017-01-12,2017,2155,18.809999,1,gpd_text_anchor,Brazil|Michel Temer|1,development,text_anchor,Brazil,Michel Temer,1,0
+60ac342bfbc35b9e,BRA,Michel Temer,BRA_2017_134.txt,2017-02-21,2017,1601,27.920000,2,gpd_text_anchor,Brazil|Michel Temer|1,development,text_anchor,Brazil,Michel Temer,1,0
+5732ebfa2284d267,BRA,Michel Temer,BRA_2018_8.txt,2018-05-04,2018,5847,18.590000,1,gpd_term_anchor,Brazil|Michel Temer|1,development,leader_term_anchor,Brazil,Michel Temer,1,0
+107f7a1093aaa694,BRA,Jair Messias Bolsonaro,BRA_2019_17.txt,2019-03-20,2019,831,20.760000,2,gpd_term_anchor,Brazil|Jair Bolsonaro|1,development,leader_term_anchor,Brazil,Jair Bolsonaro,1,.5
+5a16a15319b9928d,BRA,Jair Messias Bolsonaro,BRA_2019_109.txt,2019-08-20,2019,322,45.310001,4,gpd_term_anchor,Brazil|Jair Bolsonaro|1,development,leader_term_anchor,Brazil,Jair Bolsonaro,1,.5
+b6a90a746b52c71b,BRA,Jair Messias Bolsonaro,BRA_2019_46.txt,2019-05-10,2019,435,34.520000,3,gpd_term_anchor,Brazil|Jair Bolsonaro|1,development,leader_term_anchor,Brazil,Jair Bolsonaro,1,.5
+0b86fa354e2101af,BRA,Jair Messias Bolsonaro,BRA_2019_94.txt,2019-08-01,2019,1475,71.699997,7,stratified_country_score,Brazil|Jair Bolsonaro|1,development,leader_term_anchor,Brazil,Jair Bolsonaro,1,.5
+30690c7f4aaef379,BRA,Jair Messias Bolsonaro,BRA_2019_3.txt,2019-01-07,2019,910,47.860001,4,gpd_text_anchor,Brazil|Jair Bolsonaro|1,development,text_anchor,Brazil,Jair Bolsonaro,1,.5
+993a2c21bf43395d,BRA,Jair Messias Bolsonaro,BRA_2019_103.txt,2019-08-14,2019,1428,82.660004,8,stratified_country_score,Brazil|Jair Bolsonaro|1,development,leader_term_anchor,Brazil,Jair Bolsonaro,1,.5
+f6760ded49820490,BRA,Jair Messias Bolsonaro,BRA_2021_33.txt,2021-09-17,2021,901,45.000000,4,gpd_term_anchor,Brazil|Jair Bolsonaro|1,development,leader_term_anchor,Brazil,Jair Bolsonaro,1,.5
+d37e3df6501f5660,BRA,Jair Messias Bolsonaro,BRA_2022_72.txt,2022-06-06,2022,518,28.280001,2,gpd_term_anchor,Brazil|Jair Bolsonaro|1,development,leader_term_anchor,Brazil,Jair Bolsonaro,1,.5
+8da2e7ba781beab9,BRA,Luiz Inácio Lula da Silva,BRA_2023_221.txt,2023-01-24,2023,1341,25.940001,2,stratified_country_score,,not_in_gpd_term,none,,,,
+3b921f214731d11c,BRA,Luiz Inácio Lula da Silva,BRA_2023_137.txt,2023-06-12,2023,849,3.000000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+d8e978f22ca87a25,BRA,Luiz Inácio Lula da Silva,BRA_2024_227.txt,2024-01-15,2024,708,9.270000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+507d3d22c0e52ef1,BRA,Luiz Inácio Lula da Silva,BRA_2025_45.txt,2025-11-12,2025,3925,53.000000,5,stratified_country_score,,not_in_gpd_term,none,,,,
+e85109c3bc4f9561,CHL,Ricardo Froilán Lagos Escobar,CHL_2000_84.txt,2001-04-06,2000,3967,13.700000,1,gpd_term_anchor,Chile|Ricardo Lagos|1,test_locked,leader_term_anchor,Chile,Ricardo Lagos,1,.083333336
+6b017e71d8b04979,CHL,Ricardo Froilán Lagos Escobar,CHL_2000_47.txt,2003-06-08,2000,2964,23.530001,2,gpd_text_anchor,Chile|Ricardo Lagos|1,test_locked,text_anchor,Chile,Ricardo Lagos,1,.083333336
+9042d142d619dd69,CHL,Ricardo Froilán Lagos Escobar,CHL_2001_22.txt,2003-12-16,2001,3078,11.420000,1,gpd_term_anchor,Chile|Ricardo Lagos|1,test_locked,leader_term_anchor,Chile,Ricardo Lagos,1,.083333336
+e7a36167fe70fdc0,CHL,Ricardo Froilán Lagos Escobar,CHL_2002_149.txt,2002-07-08,2002,2321,27.860001,2,gpd_term_anchor,Chile|Ricardo Lagos|1,test_locked,leader_term_anchor,Chile,Ricardo Lagos,1,.083333336
+4fd4c23ebc21d491,CHL,Ricardo Froilán Lagos Escobar,CHL_2003_40.txt,2000-06-13,2003,1950,38.900002,3,gpd_term_anchor,Chile|Ricardo Lagos|1,test_locked,leader_term_anchor,Chile,Ricardo Lagos,1,.083333336
+6ca51a1a2730cfff,CHL,Ricardo Froilán Lagos Escobar,CHL_2005_4.txt,2005-07-15,2005,1711,7.330000,0,gpd_term_anchor,Chile|Ricardo Lagos|1,test_locked,leader_term_anchor,Chile,Ricardo Lagos,1,.083333336
+f5f0ad4aa5e1a761,CHL,Verónica Michelle Bachelet Jeria,CHL_2006_1.txt,2006-01-01,2006,11505,31.950001,3,gpd_term_anchor,Chile|Michelle Bachelet|1,test_locked,leader_term_anchor,Chile,Michelle Bachelet,1,0
+e25c02e5137c0e9f,CHL,Verónica Michelle Bachelet Jeria,CHL_2007_1.txt,2007-01-01,2007,15523,31.850000,3,gpd_term_anchor,Chile|Michelle Bachelet|1,test_locked,leader_term_anchor,Chile,Michelle Bachelet,1,0
+c2c4a59697999df2,CHL,Verónica Michelle Bachelet Jeria,CHL_2008_1.txt,2008-01-01,2008,20696,26.330000,2,gpd_term_anchor,Chile|Michelle Bachelet|1,test_locked,leader_term_anchor,Chile,Michelle Bachelet,1,0
+4ace008943284ee0,CHL,Verónica Michelle Bachelet Jeria,CHL_2009_1.txt,2009-01-01,2009,15515,37.639999,3,gpd_term_anchor,Chile|Michelle Bachelet|1,test_locked,leader_term_anchor,Chile,Michelle Bachelet,1,0
+d1f7f2b99059ba3c,CHL,Miguel Juan Sebastián Piñera Echenique,CHL_2010_45.txt,2010-04-19,2010,204,42.619999,4,gpd_term_anchor,Chile|Sebastian Pinera|1,development,leader_term_anchor,Chile,Sebastian Pinera,1,0
+d637e43a911234f8,CHL,Miguel Juan Sebastián Piñera Echenique,CHL_2010_39.txt,2010-05-26,2010,180,29.850000,2,gpd_term_anchor,Chile|Sebastian Pinera|1,development,leader_term_anchor,Chile,Sebastian Pinera,1,0
+577f63796f2ff939,CHL,Miguel Juan Sebastián Piñera Echenique,CHL_2011_7.txt,2011-07-08,2011,98,32.959999,3,gpd_term_anchor,Chile|Sebastian Pinera|1,development,leader_term_anchor,Chile,Sebastian Pinera,1,0
+0719aaf95fba8828,CHL,Miguel Juan Sebastián Piñera Echenique,CHL_2012_5.txt,2012-09-16,2012,225,23.850000,2,gpd_term_anchor,Chile|Sebastian Pinera|1,development,leader_term_anchor,Chile,Sebastian Pinera,1,0
+9b3fc881c01aaa3a,CHL,Miguel Juan Sebastián Piñera Echenique,CHL_2013_6.txt,2013-03-08,2013,378,27.540001,2,gpd_term_anchor,Chile|Sebastian Pinera|1,development,leader_term_anchor,Chile,Sebastian Pinera,1,0
+9baf3900e2ddbe5c,CHL,Verónica Michelle Bachelet Jeria,CHL_2014_10.txt,2014-06-04,2014,164,9.440000,0,gpd_term_anchor,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+e24f453476790ae5,CHL,Verónica Michelle Bachelet Jeria,CHL_2014_253.txt,2014-09-10,2014,238,13.590000,1,stratified_country_score,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+20abee1b22f11a2d,CHL,Verónica Michelle Bachelet Jeria,CHL_2014_100.txt,2014-05-15,2014,2109,19.410000,1,stratified_country_score,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+0dea13ddb9f31be6,CHL,Verónica Michelle Bachelet Jeria,CHL_2014_189.txt,2014-07-24,2014,1683,28.490000,2,stratified_country_score,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+f38476d5e3ceff12,CHL,Verónica Michelle Bachelet Jeria,CHL_2014_280.txt,2014-09-30,2014,859,9.890000,0,stratified_country_score,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+a7fe4acb6de67df8,CHL,Verónica Michelle Bachelet Jeria,CHL_2015_350.txt,2015-09-30,2015,1301,17.629999,1,gpd_term_anchor,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+d29987c007968b75,CHL,Verónica Michelle Bachelet Jeria,CHL_2015_2.txt,2015-10-15,2015,833,7.930000,0,gpd_term_anchor,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+7ea3622b6534f264,CHL,Verónica Michelle Bachelet Jeria,CHL_2015_146.txt,2015-05-06,2015,1960,21.680000,2,gpd_term_anchor,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+d3be0324af29e57c,CHL,Verónica Michelle Bachelet Jeria,CHL_2015_163.txt,2015-05-19,2015,1138,16.969999,1,stratified_country_score,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+4390db114a8ddbd7,CHL,Verónica Michelle Bachelet Jeria,CHL_2015_349.txt,2015-09-30,2015,1569,25.350000,2,stratified_country_score,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+322a543d907b8fd1,CHL,Verónica Michelle Bachelet Jeria,CHL_2015_343.txt,2015-09-27,2015,535,6.960000,0,stratified_country_score,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+54735c9a23fb24eb,CHL,Verónica Michelle Bachelet Jeria,CHL_2015_379.txt,2015-10-15,2015,4371,37.790001,3,gpd_text_anchor,Chile|Michelle Bachelet|2,test_locked,text_anchor,Chile,Michelle Bachelet,2,.21250001
+99b72f606cc027dd,CHL,Verónica Michelle Bachelet Jeria,CHL_2016_37.txt,2016-02-22,2016,1059,9.360000,0,gpd_term_anchor,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+ad256120a4a5ea43,CHL,Verónica Michelle Bachelet Jeria,CHL_2016_36.txt,2016-02-01,2016,717,0.260000,0,stratified_country_score,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+176958f339eb9343,CHL,Verónica Michelle Bachelet Jeria,CHL_2016_75.txt,2016-04-04,2016,766,55.369999,5,stratified_country_score,Chile|Michelle Bachelet|2,test_locked,leader_term_anchor,Chile,Michelle Bachelet,2,.21250001
+e67e6cd7ecbb2e28,CHL,Miguel Juan Sebastián Piñera Echenique,CHL_2018_9.txt,2018-11-25,2018,3519,31.930000,3,gpd_term_anchor,Chile|Sebastian Pinera|2,test_locked,leader_term_anchor,Chile,Sebastian Pinera,2,.15000001
+772821e55893fbf0,CHL,Miguel Juan Sebastián Piñera Echenique,CHL_2018_170.txt,2018-03-11,2018,1368,52.759998,5,gpd_term_anchor,Chile|Sebastian Pinera|2,test_locked,leader_term_anchor,Chile,Sebastian Pinera,2,.15000001
+3eace0f3e62c9c75,CHL,Miguel Juan Sebastián Piñera Echenique,CHL_2018_147.txt,2018-04-03,2018,1523,49.369999,4,gpd_term_anchor,Chile|Sebastian Pinera|2,test_locked,leader_term_anchor,Chile,Sebastian Pinera,2,.15000001
+4ef122003c870fbb,CHL,Miguel Juan Sebastián Piñera Echenique,CHL_2018_37.txt,2018-08-27,2018,2053,19.260000,1,gpd_term_anchor,Chile|Sebastian Pinera|2,test_locked,leader_term_anchor,Chile,Sebastian Pinera,2,.15000001
+471368789944a149,CHL,Miguel Juan Sebastián Piñera Echenique,CHL_2018_11.txt,2018-11-16,2018,2572,23.309999,2,gpd_text_anchor,Chile|Sebastian Pinera|2,test_locked,text_anchor,Chile,Sebastian Pinera,2,.15000001
+dcc7f96014ed12d2,CHL,Miguel Juan Sebastián Piñera Echenique,CHL_2020_73.txt,2020-04-15,2020,536,35.299999,3,gpd_term_anchor,Chile|Sebastian Pinera|2,test_locked,leader_term_anchor,Chile,Sebastian Pinera,2,.15000001
+15e8e1621386f483,CHL,Gabriel Boric Font,CHL_2022_63.txt,2022-06-28,2022,602,33.290001,3,stratified_country_score,,not_in_gpd_term,none,,,,
+c9fc970b6881fe39,CHL,Gabriel Boric Font,CHL_2022_58.txt,2022-07-04,2022,760,53.889999,5,stratified_country_score,,not_in_gpd_term,none,,,,
+e76e1584b3720b98,CHL,Gabriel Boric Font,CHL_2022_102.txt,2022-03-11,2022,3133,62.849998,6,gpd_text_anchor,,not_in_gpd_term,text_anchor,,,,
+57b6907e8a9f533f,CHL,Gabriel Boric Font,CHL_2023_49.txt,2023-08-09,2023,3092,47.330002,4,stratified_country_score,,not_in_gpd_term,none,,,,
+aa00f75b657505a2,CHL,Gabriel Boric Font,CHL_2023_91.txt,2023-06-21,2023,2217,44.939999,4,stratified_country_score,,not_in_gpd_term,none,,,,
+73080689099b3874,CHL,Gabriel Boric Font,CHL_2023_86.txt,2023-06-25,2023,2378,45.139999,4,stratified_country_score,,not_in_gpd_term,none,,,,
+3a654ff7cfb5644d,CHL,Gabriel Boric Font,CHL_2023_76.txt,2023-07-04,2023,939,3.360000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+3344079341600f1a,CHL,Gabriel Boric Font,CHL_2023_48.txt,2023-08-02,2023,1781,69.529999,6,stratified_country_score,,not_in_gpd_term,none,,,,
+b5b3e9df5e1e410c,CHL,Gabriel Boric Font,CHL_2023_42.txt,2023-08-11,2023,2507,64.320000,6,stratified_country_score,,not_in_gpd_term,none,,,,
+71009a3cf7659efb,CHL,Gabriel Boric Font,CHL_2024_114.txt,2024-03-14,2024,1444,31.719999,3,stratified_country_score,,not_in_gpd_term,none,,,,
+09de5d34c30debb4,CHL,Gabriel Boric Font,CHL_2025_181.txt,2025-03-04,2025,1301,32.270000,3,stratified_country_score,,not_in_gpd_term,none,,,,
+a45577d2f09089b7,CHL,Gabriel Boric Font,CHL_2025_166.txt,2025-04-02,2025,3730,20.549999,2,stratified_country_score,,not_in_gpd_term,none,,,,
+ca652fec57a3ece7,CHL,Gabriel Boric Font,CHL_2025_46.txt,2025-10-22,2025,2483,54.490002,5,stratified_country_score,,not_in_gpd_term,none,,,,
+69c5ec4e4052ae61,CHL,Gabriel Boric Font,CHL_2025_203.txt,2025-01-06,2025,1467,62.450001,6,stratified_country_score,,not_in_gpd_term,none,,,,
+5ba6322afe8a6ef0,COL,Andres Pastrana Arango,COL_2001_61.txt,2001-01-01,2001,147,0.000000,0,gpd_term_anchor,Colombia|Andres Pastrana|1,test_locked,leader_term_anchor,Colombia,Andres Pastrana,1,.025
+760fdbb280c42956,COL,Andres Pastrana Arango,COL_2001_241.txt,2001-01-01,2001,1938,13.500000,1,gpd_term_anchor,Colombia|Andres Pastrana|1,test_locked,leader_term_anchor,Colombia,Andres Pastrana,1,.025
+0bcd293e03e3b22d,COL,Andres Pastrana Arango,COL_2001_92.txt,2001-01-01,2001,1529,28.500000,2,gpd_term_anchor,Colombia|Andres Pastrana|1,test_locked,leader_term_anchor,Colombia,Andres Pastrana,1,.025
+d452ef20fe6c3539,COL,Andres Pastrana Arango,COL_2001_201.txt,2001-01-01,2001,2537,49.070000,4,gpd_term_anchor,Colombia|Andres Pastrana|1,test_locked,leader_term_anchor,Colombia,Andres Pastrana,1,.025
+c49b05a1c46cda84,COL,Andres Pastrana Arango,COL_2001_112.txt,2001-01-01,2001,3592,37.189999,3,gpd_term_anchor,Colombia|Andres Pastrana|1,test_locked,leader_term_anchor,Colombia,Andres Pastrana,1,.025
+1be564379969fe8c,COL,Álvaro Uribe Vélez,COL_2002_13.txt,2002-08-07,2002,2132,62.099998,6,gpd_text_anchor,Colombia|Alvaro Uribe|1,development,text_anchor,Colombia,Alvaro Uribe,1,0
+94d56c7787ff7690,COL,Álvaro Uribe Vélez,COL_2003_111.txt,2003-07-10,2003,2906,43.849998,4,gpd_term_anchor,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+5cf7d7510bde3751,COL,Álvaro Uribe Vélez,COL_2003_113.txt,2003-07-08,2003,1867,34.630001,3,stratified_country_score,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+16314820f7a37480,COL,Álvaro Uribe Vélez,COL_2003_36.txt,2003-04-24,2003,2014,23.490000,2,stratified_country_score,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+51b06b2eabf095fb,COL,Álvaro Uribe Vélez,COL_2004_125.txt,2004-10-26,2004,3765,38.180000,3,gpd_text_anchor,Colombia|Alvaro Uribe|1,development,text_anchor,Colombia,Alvaro Uribe,1,0
+0380e1a849ba5e55,COL,Álvaro Uribe Vélez,COL_2005_83.txt,2005-05-20,2005,2792,19.750000,1,gpd_term_anchor,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+d0080db8a6e7ca68,COL,Álvaro Uribe Vélez,COL_2005_41.txt,2005-03-15,2005,1473,47.509998,4,stratified_country_score,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+8f836f65ba55401c,COL,Álvaro Uribe Vélez,COL_2005_307.txt,2005-11-11,2005,3770,40.250000,4,stratified_country_score,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+787bc78a5bb050f9,COL,Álvaro Uribe Vélez,COL_2005_178.txt,2005-08-26,2005,4194,23.780001,2,stratified_country_score,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+e7abffcec4ab5c58,COL,Álvaro Uribe Vélez,COL_2006_188.txt,2006-09-05,2006,3750,24.660000,2,stratified_country_score,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+7dbaa1dbcf5e126f,COL,Álvaro Uribe Vélez,COL_2007_90.txt,2007-10-02,2007,7391,34.209999,3,stratified_country_score,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+4c75437ff0fae52e,COL,Álvaro Uribe Vélez,COL_2007_140.txt,2007-12-07,2007,4572,62.590000,6,stratified_country_score,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+33c0b4274298f346,COL,Álvaro Uribe Vélez,COL_2008_128.txt,2008-10-21,2008,872,17.770000,1,gpd_term_anchor,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+26505c5ced859015,COL,Álvaro Uribe Vélez,COL_2009_19.txt,2009-02-11,2009,2533,45.349998,4,gpd_term_anchor,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+29568ff8bf52d0cf,COL,Álvaro Uribe Vélez,COL_2009_100.txt,2009-06-16,2009,2992,29.620001,2,gpd_term_anchor,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+582ff00e7fcbcc3a,COL,Álvaro Uribe Vélez,COL_2009_16.txt,2009-02-13,2009,5025,51.380001,5,stratified_country_score,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+7721636625a28706,COL,Álvaro Uribe Vélez,COL_2009_214.txt,2009-10-02,2009,309,10.590000,1,stratified_country_score,Colombia|Alvaro Uribe|1,development,leader_term_anchor,Colombia,Alvaro Uribe,1,0
+f9c4466d36dbef5b,COL,Juan Manuel Santos Calderón,COL_2010_133.txt,2010-06-04,2010,4374,38.240002,3,gpd_term_anchor,Colombia|Juan Manuel Santos|1,test_locked,leader_term_anchor,Colombia,Juan Manuel Santos,1,0
+1906d4e017f0e4a7,COL,Juan Manuel Santos Calderón,COL_2010_7.txt,2010-02-16,2010,2647,26.510000,2,gpd_term_anchor,Colombia|Juan Manuel Santos|1,test_locked,leader_term_anchor,Colombia,Juan Manuel Santos,1,0
+2fc71c677832ae46,COL,Juan Manuel Santos Calderón,COL_2011_50.txt,2011-10-07,2011,215,12.100000,1,stratified_country_score,Colombia|Juan Manuel Santos|1,test_locked,leader_term_anchor,Colombia,Juan Manuel Santos,1,0
+b5582409c4bc82d6,COL,Juan Manuel Santos Calderón,COL_2013_43.txt,2013-10-31,2013,369,10.570000,1,gpd_term_anchor,Colombia|Juan Manuel Santos|1,test_locked,leader_term_anchor,Colombia,Juan Manuel Santos,1,0
+c58ae059713a1a32,COL,Juan Manuel Santos Calderón,COL_2013_222.txt,2013-07-03,2013,418,16.709999,1,gpd_term_anchor,Colombia|Juan Manuel Santos|1,test_locked,leader_term_anchor,Colombia,Juan Manuel Santos,1,0
+f3ebb14dcca29fd6,COL,Juan Manuel Santos Calderón,COL_2013_22.txt,2013-11-28,2013,244,10.590000,1,gpd_term_anchor,Colombia|Juan Manuel Santos|1,test_locked,leader_term_anchor,Colombia,Juan Manuel Santos,1,0
+cab9c145c91fa683,COL,Juan Manuel Santos Calderón,COL_2013_21.txt,2013-12-02,2013,177,0.260000,0,stratified_country_score,Colombia|Juan Manuel Santos|1,test_locked,leader_term_anchor,Colombia,Juan Manuel Santos,1,0
+a0c7476a48e70c4e,COL,Juan Manuel Santos Calderón,COL_2015_40.txt,2015-11-30,2015,264,23.530001,2,gpd_term_anchor,Colombia|Juan Manuel Santos|2,development,leader_term_anchor,Colombia,Juan Manuel Santos,2,.0625
+83421068411f898d,COL,Juan Manuel Santos Calderón,COL_2015_36.txt,2015-12-01,2015,230,9.550000,0,gpd_term_anchor,Colombia|Juan Manuel Santos|2,development,leader_term_anchor,Colombia,Juan Manuel Santos,2,.0625
+33de41a403a11fbb,COL,Juan Manuel Santos Calderón,COL_2015_67.txt,2015-11-12,2015,419,48.450001,4,gpd_term_anchor,Colombia|Juan Manuel Santos|2,development,leader_term_anchor,Colombia,Juan Manuel Santos,2,.0625
+7603d511953a6e09,COL,Juan Manuel Santos Calderón,COL_2015_125.txt,2015-09-25,2015,665,47.540001,4,gpd_term_anchor,Colombia|Juan Manuel Santos|2,development,leader_term_anchor,Colombia,Juan Manuel Santos,2,.0625
+d8c109054f4e7418,COL,Juan Manuel Santos Calderón,COL_2015_113.txt,2015-10-02,2015,934,19.510000,1,gpd_term_anchor,Colombia|Juan Manuel Santos|2,development,leader_term_anchor,Colombia,Juan Manuel Santos,2,.0625
+6cddeea1c50b32e1,COL,Juan Manuel Santos Calderón,COL_2015_306.txt,2015-06-10,2015,668,6.090000,0,stratified_country_score,Colombia|Juan Manuel Santos|2,development,leader_term_anchor,Colombia,Juan Manuel Santos,2,.0625
+def0d3ff6d30e6d6,COL,Iván Duque Márquez,COL_2018_181.txt,2018-09-22,2018,1127,34.790001,3,gpd_term_anchor,Colombia|IvÃ¡n Duque|1,test_locked,leader_term_anchor,Colombia,IvÃ¡n Duque,1,0
+e65723c4ba063240,COL,Iván Duque Márquez,COL_2018_3.txt,2018-12-24,2018,705,42.669998,4,gpd_term_anchor,Colombia|IvÃ¡n Duque|1,test_locked,leader_term_anchor,Colombia,IvÃ¡n Duque,1,0
+fa471a7775844279,COL,Iván Duque Márquez,COL_2018_68.txt,2018-11-21,2018,1832,46.290001,4,stratified_country_score,Colombia|IvÃ¡n Duque|1,test_locked,leader_term_anchor,Colombia,IvÃ¡n Duque,1,0
+01f7518c7e2e0472,COL,Iván Duque Márquez,COL_2018_90.txt,2018-11-09,2018,3115,55.509998,5,stratified_country_score,Colombia|IvÃ¡n Duque|1,test_locked,leader_term_anchor,Colombia,IvÃ¡n Duque,1,0
+8c9ebe8dbe4395fb,COL,Iván Duque Márquez,COL_2019_290.txt,2019-04-03,2019,2559,13.690000,1,gpd_term_anchor,Colombia|IvÃ¡n Duque|1,test_locked,leader_term_anchor,Colombia,IvÃ¡n Duque,1,0
+7dd9038efb733c3f,COL,Iván Duque Márquez,COL_2019_219.txt,2019-05-18,2019,3980,32.560001,3,stratified_country_score,Colombia|IvÃ¡n Duque|1,test_locked,leader_term_anchor,Colombia,IvÃ¡n Duque,1,0
+1eba741d34aa95cf,COL,Iván Duque Márquez,COL_2019_85.txt,2019-08-22,2019,637,15.000000,1,stratified_country_score,Colombia|IvÃ¡n Duque|1,test_locked,leader_term_anchor,Colombia,IvÃ¡n Duque,1,0
+97b9a62859b7e7a0,COL,Iván Duque Márquez,COL_2019_243.txt,2019-05-04,2019,1207,9.780000,0,stratified_country_score,Colombia|IvÃ¡n Duque|1,test_locked,leader_term_anchor,Colombia,IvÃ¡n Duque,1,0
+ff4fbf28d7918300,COL,Iván Duque Márquez,COL_2020_77.txt,2020-07-10,2020,1122,45.860001,4,gpd_term_anchor,Colombia|IvÃ¡n Duque|1,test_locked,leader_term_anchor,Colombia,IvÃ¡n Duque,1,0
+889009352f470282,COL,Iván Duque Márquez,COL_2020_52.txt,2020-09-04,2020,2369,46.110001,4,gpd_text_anchor,Colombia|IvÃ¡n Duque|1,test_locked,text_anchor,Colombia,IvÃ¡n Duque,1,0
+84d2419b2a0e1f7c,COL,Iván Duque Márquez,COL_2021_185.txt,2021-06-20,2021,2917,41.130001,4,gpd_term_anchor,Colombia|IvÃ¡n Duque|1,test_locked,leader_term_anchor,Colombia,IvÃ¡n Duque,1,0
+24dd4bc6be208695,COL,Gustavo Francisco Petro Urrego,COL_2022_37.txt,2022-10-31,2022,4595,54.270000,5,stratified_country_score,,not_in_gpd_term,none,,,,
+38ea8ac1a9e137a5,COL,Gustavo Francisco Petro Urrego,COL_2022_6.txt,2022-12-03,2022,3563,71.610001,7,stratified_country_score,,not_in_gpd_term,none,,,,
+7e706a4ea676b6fb,COL,Gustavo Francisco Petro Urrego,COL_2024_60.txt,2024-05-31,2024,3029,67.839996,6,stratified_country_score,,not_in_gpd_term,none,,,,
+fa2f0b9e3f7b43bd,COL,Gustavo Francisco Petro Urrego,COL_2024_57.txt,2024-06-28,2024,5839,70.879997,7,stratified_country_score,,not_in_gpd_term,none,,,,
+2a9a32af9681d3cc,CRI,Miguel Angel Rodriguez Echeverria,CRI_2000_1.txt,2000-01-01,2000,10886,30.430000,3,gpd_term_anchor,Costa Rica|Miguel Angel Rodriguez|1,test_locked,leader_term_anchor,Costa Rica,Miguel Angel Rodriguez,1,.083333336
+548bb4050e0435ec,CRI,Miguel Angel Rodriguez Echeverria,CRI_2001_1.txt,2001-01-01,2001,11804,33.180000,3,gpd_term_anchor,Costa Rica|Miguel Angel Rodriguez|1,test_locked,leader_term_anchor,Costa Rica,Miguel Angel Rodriguez,1,.083333336
+13b6b3816ab6b8bf,CRI,Abel Pacheco de la Espriella,CRI_2002_1.txt,2002-01-01,2002,2093,31.389999,3,gpd_term_anchor,Costa Rica|Abel Pacheco|1,development,leader_term_anchor,Costa Rica,Abel Pacheco,1,.22222222
+1272a4aed618f786,CRI,Abel Pacheco de la Espriella,CRI_2003_1.txt,2003-01-01,2003,773,54.150002,5,gpd_term_anchor,Costa Rica|Abel Pacheco|1,development,leader_term_anchor,Costa Rica,Abel Pacheco,1,.22222222
+84bdf8f368a6d85a,CRI,Abel Pacheco de la Espriella,CRI_2004_1.txt,2004-01-01,2004,1884,47.509998,4,gpd_term_anchor,Costa Rica|Abel Pacheco|1,development,leader_term_anchor,Costa Rica,Abel Pacheco,1,.22222222
+d8b7c7e0a286098f,CRI,Abel Pacheco de la Espriella,CRI_2005_1.txt,2005-01-01,2005,665,28.530001,2,gpd_term_anchor,Costa Rica|Abel Pacheco|1,development,leader_term_anchor,Costa Rica,Abel Pacheco,1,.22222222
+0bdbd6c10da20491,CRI,Óscar Arias Sánchez,CRI_2006_1.txt,2006-01-01,2006,3468,49.270000,4,gpd_term_anchor,Costa Rica|Oscar Arias|2,test_locked,text_anchor,Costa Rica,Oscar Arias,2,0
+d2e7d2ca2bc2f84f,CRI,Óscar Arias Sánchez,CRI_2007_1.txt,2007-01-01,2007,9033,41.090000,4,gpd_term_anchor,Costa Rica|Oscar Arias|2,test_locked,leader_term_anchor,Costa Rica,Oscar Arias,2,0
+9daf3088cf743515,CRI,Óscar Arias Sánchez,CRI_2008_1.txt,2008-01-01,2008,3739,44.880001,4,gpd_term_anchor,Costa Rica|Oscar Arias|2,test_locked,leader_term_anchor,Costa Rica,Oscar Arias,2,0
+79329a0c4252c40c,CRI,Óscar Arias Sánchez,CRI_2009_1.txt,2009-01-01,2009,4163,44.009998,4,gpd_term_anchor,Costa Rica|Oscar Arias|2,test_locked,leader_term_anchor,Costa Rica,Oscar Arias,2,0
+5e7173c56e0d943b,CRI,Laura Chinchilla Miranda,CRI_2010_1.txt,2010-01-01,2010,1215,14.760000,1,gpd_term_anchor,Costa Rica|Laura Chinchilla Miranda|1,development,leader_term_anchor,Costa Rica,Laura Chinchilla Miranda,1,0
+366170651dbf42e7,CRI,Laura Chinchilla Miranda,CRI_2011_1.txt,2011-01-01,2011,1279,14.160000,1,gpd_term_anchor,Costa Rica|Laura Chinchilla Miranda|1,development,leader_term_anchor,Costa Rica,Laura Chinchilla Miranda,1,0
+2174749115f111a4,CRI,Laura Chinchilla Miranda,CRI_2012_1.txt,2012-01-01,2012,8369,32.680000,3,gpd_term_anchor,Costa Rica|Laura Chinchilla Miranda|1,development,leader_term_anchor,Costa Rica,Laura Chinchilla Miranda,1,0
+7a13eafe062d4a19,CRI,Laura Chinchilla Miranda,CRI_2013_1.txt,2013-01-01,2013,8464,20.820000,2,gpd_term_anchor,Costa Rica|Laura Chinchilla Miranda|1,development,leader_term_anchor,Costa Rica,Laura Chinchilla Miranda,1,0
+29068bc2035e9c27,CRI,Luis Guillermo Solís Rivera,CRI_2014_1.txt,2014-01-01,2014,1122,13.670000,1,gpd_term_anchor,Costa Rica|Luis Guillermo Solis|1,test_locked,leader_term_anchor,Costa Rica,Luis Guillermo Solis,1,.40000001
+535cb28b5c0c32d1,CRI,Luis Guillermo Solís Rivera,CRI_2015_1.txt,2015-01-01,2015,2507,33.480000,3,gpd_term_anchor,Costa Rica|Luis Guillermo Solis|1,test_locked,leader_term_anchor,Costa Rica,Luis Guillermo Solis,1,.40000001
+913c81a40abb987a,CRI,Luis Guillermo Solís Rivera,CRI_2016_1.txt,2016-01-01,2016,3365,22.320000,2,gpd_term_anchor,Costa Rica|Luis Guillermo Solis|1,test_locked,leader_term_anchor,Costa Rica,Luis Guillermo Solis,1,.40000001
+a09de885fb35f9a6,CRI,Luis Guillermo Solís Rivera,CRI_2017_1.txt,2017-01-01,2017,19357,17.730000,1,gpd_term_anchor,Costa Rica|Luis Guillermo Solis|1,test_locked,leader_term_anchor,Costa Rica,Luis Guillermo Solis,1,.40000001
+ffebe52a9cad73df,CRI,Carlos Alvarado Quesada,CRI_2018_1.txt,2018-01-01,2018,2355,42.160000,4,gpd_term_anchor,Costa Rica|Carlos Alvarado Quesada|1,test_locked,leader_term_anchor,Costa Rica,Carlos Alvarado Quesada,1,0
+13611bcb7e958b8b,CRI,Carlos Alvarado Quesada,CRI_2019_1.txt,2019-01-01,2019,1858,46.700001,4,gpd_term_anchor,Costa Rica|Carlos Alvarado Quesada|1,test_locked,leader_term_anchor,Costa Rica,Carlos Alvarado Quesada,1,0
+75317522bdd6880b,CRI,Carlos Alvarado Quesada,CRI_2020_1.txt,2020-01-01,2020,8608,37.520000,3,gpd_term_anchor,Costa Rica|Carlos Alvarado Quesada|1,test_locked,leader_term_anchor,Costa Rica,Carlos Alvarado Quesada,1,0
+2e0aeeb3d3dea737,CRI,Carlos Alvarado Quesada,CRI_2021_1.txt,2021-01-01,2021,2091,39.119999,3,gpd_term_anchor,Costa Rica|Carlos Alvarado Quesada|1,test_locked,leader_term_anchor,Costa Rica,Carlos Alvarado Quesada,1,0
+dd8cc8118282023f,CRI,Rodrigo Chaves Robles,CRI_2022_1.txt,2022-01-01,2022,3206,65.879997,6,stratified_country_score,,not_in_gpd_term,none,,,,
+50b43f314a0ca4ce,CRI,Rodrigo Chaves Robles,CRI_2023_1.txt,2023-01-01,2023,3787,62.000000,6,stratified_country_score,,not_in_gpd_term,none,,,,
+fa8472bd8f4ac1b3,CRI,Rodrigo Chaves Robles,CRI_2024_1.txt,2024-01-01,2024,10140,59.919998,5,stratified_country_score,,not_in_gpd_term,none,,,,
+b93c9449b98a9616,CUB,Fidel Castro Ruz,CUB_2000_14.txt,2000-09-06,2000,666,68.139999,6,stratified_country_score,,not_in_gpd_term,none,,,,
+981d97b7958df374,CUB,Fidel Castro Ruz,CUB_2000_18.txt,2000-07-05,2000,2364,70.459999,7,stratified_country_score,,not_in_gpd_term,none,,,,
+a5f43e59ae017279,CUB,Fidel Castro Ruz,CUB_2001_14.txt,2001-05-01,2001,2998,73.209999,7,stratified_country_score,,not_in_gpd_term,none,,,,
+035914259d7994fd,CUB,Fidel Castro Ruz,CUB_2001_3.txt,2001-04-25,2001,5444,47.919998,4,stratified_country_score,,not_in_gpd_term,none,,,,
+b6a4c76636a475db,CUB,Fidel Castro Ruz,CUB_2001_20.txt,2001-08-13,2001,3179,28.889999,2,stratified_country_score,,not_in_gpd_term,none,,,,
+926e4228cbe2edbf,CUB,Fidel Castro Ruz,CUB_2002_2.txt,2002-03-21,2002,136,13.540000,1,stratified_country_score,,not_in_gpd_term,none,,,,
+13206fa64752d7fd,CUB,Fidel Castro Ruz,CUB_2003_2.txt,2003-01-21,2003,3583,6.610000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+3e3e81b58f108082,CUB,Fidel Castro Ruz,CUB_2003_11.txt,2003-03-08,2003,1209,13.410000,1,stratified_country_score,,not_in_gpd_term,none,,,,
+beb4b11c508d688c,CUB,Fidel Castro Ruz,CUB_2004_6.txt,2004-05-01,2004,8172,70.089996,7,stratified_country_score,,not_in_gpd_term,none,,,,
+9cc2ef139c7b9620,CUB,Fidel Castro Ruz,CUB_2006_8.txt,2006-04-24,2006,1220,14.900000,1,stratified_country_score,,not_in_gpd_term,none,,,,
+e9f7b5d46292d127,CUB,Fidel Castro Ruz,CUB_2006_13.txt,2006-07-31,2006,630,67.050003,6,stratified_country_score,,not_in_gpd_term,none,,,,
+f237af4f99327c00,CUB,Fidel Castro Ruz,CUB_2006_6.txt,2006-01-24,2006,897,83.779999,8,stratified_country_score,,not_in_gpd_term,none,,,,
+20a3f4cbae6f6a27,CUB,Fidel Castro Ruz,CUB_2006_5.txt,2006-01-22,2006,979,84.040001,8,stratified_country_score,,not_in_gpd_term,none,,,,
+b524e1478549db15,CUB,Fidel Castro Ruz,CUB_2007_3.txt,2007-08-16,2007,8197,36.430000,3,stratified_country_score,,not_in_gpd_term,none,,,,
+198ae7da83b5dcfa,CUB,Fidel Castro Ruz,CUB_2007_34.txt,2007-07-17,2007,322,6.010000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+7f93aac796fde596,CUB,Fidel Castro Ruz,CUB_2007_8.txt,2007-04-10,2007,905,80.800003,8,stratified_country_score,,not_in_gpd_term,none,,,,
+4e31e41fafb5f58b,CUB,Raúl Castro Ruz,CUB_2008_28.txt,2008-12-27,2008,3986,39.060001,3,stratified_country_score,,not_in_gpd_term,none,,,,
+50198e0c12c89d02,CUB,Fidel Castro Ruz,CUB_2008_12.txt,2008-02-02,2008,197,13.850000,1,stratified_country_score,,not_in_gpd_term,none,,,,
+9c1da3f39112532a,CUB,Fidel Castro Ruz,CUB_2008_2.txt,2008-01-08,2008,337,37.009998,3,stratified_country_score,,not_in_gpd_term,none,,,,
+249ed00ee383a4c3,CUB,Raúl Castro Ruz,CUB_2009_3.txt,2009-01-30,2009,318,7.050000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+2504cb3c35f1ee59,CUB,Raúl Castro Ruz,CUB_2010_2.txt,2010-02-23,2010,1363,29.549999,2,stratified_country_score,,not_in_gpd_term,none,,,,
+dc9b750430b02093,CUB,Raúl Castro Ruz,CUB_2013_4.txt,2013-12-10,2013,439,26.400000,2,stratified_country_score,,not_in_gpd_term,none,,,,
+79bcf71fdc0192be,CUB,Raúl Castro Ruz,CUB_2014_20.txt,2020-10-14,2014,962,20.770000,2,stratified_country_score,,not_in_gpd_term,none,,,,
+90149247be73bb70,CUB,Raúl Castro Ruz,CUB_2014_11.txt,2014-01-29,2014,491,11.290000,1,stratified_country_score,,not_in_gpd_term,none,,,,
+b90a378efbff95a2,CUB,Raúl Castro Ruz,CUB_2014_6.txt,2014-07-17,2014,403,23.379999,2,stratified_country_score,,not_in_gpd_term,none,,,,
+4a13cc4880f9dcc1,CUB,Raúl Castro Ruz,CUB_2016_5.txt,2016-02-02,2016,1113,8.300000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+7a4343fec87ed270,CUB,Raúl Castro Ruz,CUB_2017_1.txt,2017-12-09,2017,928,35.020000,3,stratified_country_score,,not_in_gpd_term,none,,,,
+685dd4be0177169e,CUB,Miguel Díaz-Canel Bermúdez,CUB_2019_16.txt,2019-07-02,2019,904,28.950001,2,gpd_term_anchor,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+8fd45a8a2169b609,CUB,Miguel Díaz-Canel Bermúdez,CUB_2019_21.txt,2019-03-29,2019,1503,29.740000,2,gpd_term_anchor,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+525b8df6aa22a218,CUB,Miguel Díaz-Canel Bermúdez,CUB_2019_22.txt,2019-02-09,2019,2313,49.220001,4,stratified_country_score,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+56ff21d669c12279,CUB,Miguel Díaz-Canel Bermúdez,CUB_2021_15.txt,2021-06-12,2021,5975,49.660000,4,gpd_term_anchor,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+0c08c6a9cae0ce56,CUB,Miguel Díaz-Canel Bermúdez,CUB_2021_25.txt,2021-10-26,2021,493,57.139999,5,stratified_country_score,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+5328e14442f3dcc4,CUB,Miguel Díaz-Canel Bermúdez,CUB_2021_20.txt,2021-12-14,2021,1394,72.300003,7,stratified_country_score,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+0a24ce4bd867c8f7,CUB,Miguel Díaz-Canel Bermúdez,CUB_2022_13.txt,2022-04-19,2022,7079,54.340000,5,stratified_country_score,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+cea020b09ddf506e,CUB,Miguel Díaz-Canel Bermúdez,CUB_2022_2.txt,2022-12-11,2022,3798,65.180000,6,gpd_text_anchor,Cuba|Miguel DÃ­az-Canel|1,test_locked,text_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+96dfc4c2b234a174,CUB,Miguel Díaz-Canel Bermúdez,CUB_2022_18.txt,2022-12-20,2022,2785,54.730000,5,gpd_text_anchor,Cuba|Miguel DÃ­az-Canel|1,test_locked,text_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+d4af7d5973b0c624,CUB,Miguel Díaz-Canel Bermúdez,CUB_2023_24.txt,2023-12-27,2023,5005,55.240002,5,gpd_term_anchor,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+e70c005094a904d6,CUB,Miguel Díaz-Canel Bermúdez,CUB_2023_4.txt,2023-12-03,2023,437,33.630001,3,gpd_term_anchor,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+92d1130e7aeba159,CUB,Miguel Díaz-Canel Bermúdez,CUB_2023_16.txt,2023-05-26,2023,1662,59.610001,5,stratified_country_score,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+32c692b87fea1932,CUB,Miguel Díaz-Canel Bermúdez,CUB_2023_3.txt,2023-12-03,2023,658,46.000000,4,stratified_country_score,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+d6f4b7538c86cb9b,CUB,Miguel Díaz-Canel Bermúdez,CUB_2023_15.txt,2023-06-22,2023,811,41.619999,4,stratified_country_score,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+61bde3fef0ef447c,CUB,Miguel Díaz-Canel Bermúdez,CUB_2023_39.txt,2023-03-27,2023,1352,53.180000,5,stratified_country_score,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+90ef341f0c065107,CUB,Miguel Díaz-Canel Bermúdez,CUB_2023_26.txt,2023-12-27,2023,624,1.130000,0,stratified_country_score,Cuba|Miguel DÃ­az-Canel|1,test_locked,leader_term_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+67311cc85452a264,CUB,Miguel Díaz-Canel Bermúdez,CUB_2023_10.txt,2023-09-19,2023,2699,59.340000,5,gpd_text_anchor,Cuba|Miguel DÃ­az-Canel|1,test_locked,text_anchor,Cuba,Miguel DÃ­az-Canel,1,.83749998
+ff2daa1265e9d27c,CUB,Miguel Díaz-Canel Bermúdez,CUB_2024_3.txt,2024-12-20,2024,909,82.279999,8,stratified_country_score,,not_in_gpd_term,none,,,,
+30153de26d1e46c9,CUB,Miguel Díaz-Canel Bermúdez,CUB_2025_9.txt,2025-02-03,2025,3614,63.270000,6,stratified_country_score,,not_in_gpd_term,none,,,,
+076c28382951f532,CUB,Miguel Díaz-Canel Bermúdez,CUB_2025_11.txt,2025-07-08,2025,625,64.300003,6,stratified_country_score,,not_in_gpd_term,none,,,,
+85d2c01d68fc136f,DOM,Rafael Hipólito Mejía Domínguez,DOM_2000_1.txt,2000-01-01,2000,805,51.169998,5,gpd_term_anchor,Dominican Republic|Hipolito Mejia|1,test_locked,leader_term_anchor,Dominican Republic,Hipolito Mejia,1,.075000003
+cca1c5a03668def8,DOM,Rafael Hipólito Mejía Domínguez,DOM_2001_1.txt,2001-01-01,2001,5907,47.700001,4,gpd_term_anchor,Dominican Republic|Hipolito Mejia|1,test_locked,leader_term_anchor,Dominican Republic,Hipolito Mejia,1,.075000003
+c6fa4601f8baaf9c,DOM,Rafael Hipólito Mejía Domínguez,DOM_2001_3.txt,2001-01-01,2001,10387,40.380001,4,gpd_term_anchor,Dominican Republic|Hipolito Mejia|1,test_locked,leader_term_anchor,Dominican Republic,Hipolito Mejia,1,.075000003
+0d79e44db5d17468,DOM,Rafael Hipólito Mejía Domínguez,DOM_2002_1.txt,2002-01-01,2002,7980,38.360001,3,gpd_term_anchor,Dominican Republic|Hipolito Mejia|1,test_locked,leader_term_anchor,Dominican Republic,Hipolito Mejia,1,.075000003
+05c001a08a4d16b4,DOM,Rafael Hipólito Mejía Domínguez,DOM_2003_1.txt,2003-01-01,2003,4681,42.680000,4,gpd_term_anchor,Dominican Republic|Hipolito Mejia|1,test_locked,leader_term_anchor,Dominican Republic,Hipolito Mejia,1,.075000003
+74d926cb66ab81bf,DOM,Leonel Antonio Fernández Reyna,DOM_2005_1.txt,2005-01-01,2005,6954,32.540001,3,gpd_term_anchor,Dominican Republic|Leonel Fernandez|2,test_locked,leader_term_anchor,Dominican Republic,Leonel Fernandez,2,.25
+ce7328fae11c5daa,DOM,Leonel Antonio Fernández Reyna,DOM_2006_1.txt,2006-01-01,2006,1200,28.889999,2,gpd_term_anchor,Dominican Republic|Leonel Fernandez|2,test_locked,leader_term_anchor,Dominican Republic,Leonel Fernandez,2,.25
+c30d72f3ccc8e33b,DOM,Leonel Antonio Fernández Reyna,DOM_2007_1.txt,2007-01-01,2007,1028,1.410000,0,gpd_term_anchor,Dominican Republic|Leonel Fernandez|2,test_locked,leader_term_anchor,Dominican Republic,Leonel Fernandez,2,.25
+08fa2603a82ab587,DOM,Leonel Antonio Fernández Reyna,DOM_2008_1.txt,2008-01-01,2008,6142,49.759998,4,gpd_term_anchor,Dominican Republic|Leonel Fernandez|3,development,text_anchor,Dominican Republic,Leonel Fernandez,2,.25
+a01d7f7d7479ecd6,DOM,Leonel Antonio Fernández Reyna,DOM_2009_1.txt,2009-01-01,2009,1839,46.389999,4,gpd_term_anchor,Dominican Republic|Leonel Fernandez|3,development,leader_term_anchor,Dominican Republic,Leonel Fernandez,3,.25
+7fd381d4bbed4e9b,DOM,Leonel Antonio Fernández Reyna,DOM_2011_1.txt,2011-01-01,2011,13094,25.860001,2,gpd_term_anchor,Dominican Republic|Leonel Fernandez|3,development,leader_term_anchor,Dominican Republic,Leonel Fernandez,3,.25
+4d2e1031a4e16b60,DOM,Danilo Medina Sánchez,DOM_2012_33.txt,2012-11-09,2012,827,10.690000,1,stratified_country_score,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+04d565e17c228b5a,DOM,Danilo Medina Sánchez,DOM_2013_141.txt,2013-04-05,2013,1538,43.950001,4,stratified_country_score,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+9b2220b1b5f4c07f,DOM,Danilo Medina Sánchez,DOM_2013_54.txt,2013-09-19,2013,1554,9.190000,0,stratified_country_score,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+ca3578333cdaa4a2,DOM,Danilo Medina Sánchez,DOM_2013_33.txt,2013-10-30,2013,196,14.370000,1,stratified_country_score,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+6a491e89f5432537,DOM,Danilo Medina Sánchez,DOM_2013_194.txt,2013-01-22,2013,51,9.890000,0,stratified_country_score,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+551369e4a59cb51d,DOM,Danilo Medina Sánchez,DOM_2013_30.txt,2013-11-01,2013,183,0.260000,0,stratified_country_score,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+55c3e8e78ed93874,DOM,Danilo Medina Sánchez,DOM_2014_153.txt,2014-01-07,2014,202,0.000000,0,gpd_term_anchor,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+2ca36f77e6e3c481,DOM,Danilo Medina Sánchez,DOM_2014_143.txt,2014-02-12,2014,706,15.040000,1,gpd_term_anchor,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+8a4c5be2176812f1,DOM,Danilo Medina Sánchez,DOM_2014_78.txt,2014-06-29,2014,1591,49.990002,4,gpd_term_anchor,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+3db97a87a29a7bd3,DOM,Danilo Medina Sánchez,DOM_2014_10.txt,2014-12-13,2014,716,23.379999,2,stratified_country_score,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+bd332d1dbaced157,DOM,Danilo Medina Sánchez,DOM_2014_3.txt,2014-12-18,2014,1583,19.600000,1,stratified_country_score,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+3d1d9dd7aff25a5a,DOM,Danilo Medina Sánchez,DOM_2015_85.txt,2015-03-22,2015,1295,29.270000,2,gpd_term_anchor,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+92fb09ec487b59c4,DOM,Danilo Medina Sánchez,DOM_2015_58.txt,2015-07-15,2015,3606,0.600000,0,gpd_term_anchor,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+f70ff5b26e8523e4,DOM,Danilo Medina Sánchez,DOM_2015_12.txt,2015-12-01,2015,71,39.910000,3,stratified_country_score,Dominican Republic|Danilo Medina|1,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,1,.175
+95fa24a6afdcb5c8,DOM,Danilo Medina Sánchez,DOM_2015_67.txt,2015-06-18,2015,2705,48.990002,4,gpd_text_anchor,Dominican Republic|Danilo Medina|1,test_locked,text_anchor,Dominican Republic,Danilo Medina,1,.175
+21df6817b0422451,DOM,Danilo Medina Sánchez,DOM_2016_73.txt,2016-06-30,2016,2524,50.220001,5,gpd_text_anchor,Dominican Republic|Danilo Medina|1,test_locked,text_anchor,Dominican Republic,Danilo Medina,1,.175
+392196827ee4e68d,DOM,Danilo Medina Sánchez,DOM_2016_39.txt,2016-09-21,2016,2151,37.759998,3,gpd_text_anchor,Dominican Republic|Danilo Medina|1,test_locked,text_anchor,Dominican Republic,Danilo Medina,1,.175
+dfecd41be39fd911,DOM,Danilo Medina Sánchez,DOM_2017_82.txt,2017-07-26,2017,4081,50.869999,5,gpd_term_anchor,Dominican Republic|Danilo Medina|2,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,2,.375
+ca92eb1aaea9f861,DOM,Danilo Medina Sánchez,DOM_2018_64.txt,2018-09-19,2018,109,22.850000,2,gpd_term_anchor,Dominican Republic|Danilo Medina|2,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,2,.375
+36f40c958b298df2,DOM,Danilo Medina Sánchez,DOM_2018_148.txt,2018-05-01,2018,237,10.440000,1,gpd_term_anchor,Dominican Republic|Danilo Medina|2,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,2,.375
+9327294df4028aa0,DOM,Danilo Medina Sánchez,DOM_2018_159.txt,2018-04-14,2018,1102,24.250000,2,gpd_term_anchor,Dominican Republic|Danilo Medina|2,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,2,.375
+3b220f8c5004a404,DOM,Danilo Medina Sánchez,DOM_2018_5.txt,2018-12-18,2018,4933,36.230000,3,stratified_country_score,Dominican Republic|Danilo Medina|2,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,2,.375
+5fad48698e551c90,DOM,Danilo Medina Sánchez,DOM_2018_46.txt,2018-10-24,2018,2593,28.200001,2,gpd_text_anchor,Dominican Republic|Danilo Medina|2,test_locked,text_anchor,Dominican Republic,Danilo Medina,2,.375
+e58f65deaf7545d1,DOM,Danilo Medina Sánchez,DOM_2019_96.txt,2019-06-14,2019,5350,13.170000,1,gpd_term_anchor,Dominican Republic|Danilo Medina|2,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,2,.375
+6fb364982ab16841,DOM,Danilo Medina Sánchez,DOM_2019_49.txt,2019-09-15,2019,285,59.980000,5,stratified_country_score,Dominican Republic|Danilo Medina|2,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,2,.375
+91a38ec4f01ade2f,DOM,Danilo Medina Sánchez,DOM_2020_67.txt,2020-01-07,2020,1548,28.250000,2,stratified_country_score,Dominican Republic|Danilo Medina|2,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,2,.375
+de60fe68a4af7aea,DOM,Danilo Medina Sánchez,DOM_2020_58.txt,2020-01-22,2020,297,45.959999,4,stratified_country_score,Dominican Republic|Danilo Medina|2,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,2,.375
+53245c331c167897,DOM,Danilo Medina Sánchez,DOM_2020_2.txt,2020-08-11,2020,9210,50.189999,5,stratified_country_score,Dominican Republic|Danilo Medina|2,test_locked,leader_term_anchor,Dominican Republic,Danilo Medina,2,.375
+073d9b2a9f933baf,DOM,Luis Rodolfo Abinader Corona,DOM_2021_16.txt,2021-05-30,2021,1648,69.339996,6,gpd_term_anchor,Dominican Republic|Luis Abinader|1,test_locked,leader_term_anchor,Dominican Republic,Luis Abinader,1,.075000003
+95e366a0a48a6719,DOM,Luis Rodolfo Abinader Corona,DOM_2021_2.txt,2021-12-10,2021,468,66.620003,6,stratified_country_score,Dominican Republic|Luis Abinader|1,test_locked,leader_term_anchor,Dominican Republic,Luis Abinader,1,.075000003
+87465b0dfe72c2d9,DOM,Luis Rodolfo Abinader Corona,DOM_2022_1.txt,2022-10-08,2022,6315,46.340000,4,gpd_term_anchor,Dominican Republic|Luis Abinader|1,test_locked,leader_term_anchor,Dominican Republic,Luis Abinader,1,.075000003
+e4a6962b524f2863,DOM,Luis Rodolfo Abinader Corona,DOM_2022_6.txt,2022-06-19,2022,2943,60.820000,6,stratified_country_score,Dominican Republic|Luis Abinader|1,test_locked,leader_term_anchor,Dominican Republic,Luis Abinader,1,.075000003
+b8766f501774113b,DOM,Luis Rodolfo Abinader Corona,DOM_2022_7.txt,2022-06-10,2022,1382,43.389999,4,gpd_text_anchor,Dominican Republic|Luis Abinader|1,test_locked,text_anchor,Dominican Republic,Luis Abinader,1,.075000003
+bf2507e883cb3706,DOM,Luis Rodolfo Abinader Corona,DOM_2023_12.txt,2023-10-31,2023,7159,21.370001,2,gpd_term_anchor,Dominican Republic|Luis Abinader|1,test_locked,leader_term_anchor,Dominican Republic,Luis Abinader,1,.075000003
+fdb68fe5a824efda,DOM,Luis Rodolfo Abinader Corona,DOM_2024_55.txt,2024-07-16,2024,202,10.570000,1,gpd_term_anchor,Dominican Republic|Luis Abinader|1,test_locked,leader_term_anchor,Dominican Republic,Luis Abinader,1,.075000003
+1c6e5698e7141870,DOM,Luis Rodolfo Abinader Corona,DOM_2024_65.txt,2024-06-24,2024,198,24.830000,2,gpd_term_anchor,Dominican Republic|Luis Abinader|1,test_locked,leader_term_anchor,Dominican Republic,Luis Abinader,1,.075000003
+5c41e43ce1d1b199,ECU,Gustavo José Joaquín Noboa Bejarano,ECU_2000_1.txt,2000-01-01,2000,696,18.000000,1,gpd_term_anchor,Ecuador|Gustavo Noboa|1,test_locked,leader_term_anchor,Ecuador,Gustavo Noboa,1,.23333333
+36e5b1462f2f7370,ECU,Gustavo José Joaquín Noboa Bejarano,ECU_2001_1.txt,2001-01-01,2001,2227,42.360001,4,gpd_term_anchor,Ecuador|Gustavo Noboa|1,test_locked,text_anchor,Ecuador,Gustavo Noboa,1,.23333333
+4c41083dd46cad13,ECU,Gustavo José Joaquín Noboa Bejarano,ECU_2002_1.txt,2002-01-01,2002,1191,51.060001,5,gpd_term_anchor,Ecuador|Gustavo Noboa|1,test_locked,leader_term_anchor,Ecuador,Gustavo Noboa,1,.23333333
+44d1f2d21d6dd3d9,ECU,Lucio Edwin Gutiérrez Borbúa,ECU_2004_1.txt,2004-01-01,2004,2914,25.670000,2,gpd_term_anchor,Ecuador|Lucio Gutierrez|1,test_locked,leader_term_anchor,Ecuador,Lucio Gutierrez,1,.96666664
+d78f9f9b2379c190,ECU,Luis Alfredo Palacio González,ECU_2005_1.txt,2005-01-01,2005,630,58.270000,5,gpd_term_anchor,Ecuador|Alfredo Palacio|1,test_locked,leader_term_anchor,Ecuador,Alfredo Palacio,1,.3888889
+9104d5d632ef9f25,ECU,Luis Alfredo Palacio González,ECU_2006_1.txt,2006-01-01,2006,1667,30.969999,3,gpd_term_anchor,Ecuador|Alfredo Palacio|1,test_locked,leader_term_anchor,Ecuador,Alfredo Palacio,1,.3888889
+40550b5a122f384d,ECU,Rafael Vicente Correa Delgado,ECU_2007_16.txt,2007-08-10,2007,344,66.830002,6,gpd_term_anchor,Ecuador|Rafael Correa|1,development,leader_term_anchor,Ecuador,Rafael Correa,1,1.25
+c196e31042945211,ECU,Rafael Vicente Correa Delgado,ECU_2007_18.txt,2007-08-09,2007,1474,73.529999,7,gpd_term_anchor,Ecuador|Rafael Correa|1,development,leader_term_anchor,Ecuador,Rafael Correa,1,1.25
+5909a0007f7ae401,ECU,Rafael Vicente Correa Delgado,ECU_2007_58.txt,2007-01-15,2007,4713,71.459999,7,gpd_text_anchor,Ecuador|Rafael Correa|1,development,text_anchor,Ecuador,Rafael Correa,1,1.25
+2c1641b953837985,ECU,Rafael Vicente Correa Delgado,ECU_2007_9.txt,2007-09-25,2007,1589,65.830002,6,gpd_text_anchor,Ecuador|Rafael Correa|1,development,text_anchor,Ecuador,Rafael Correa,1,1.25
+580a1ca3a7e68dbf,ECU,Rafael Vicente Correa Delgado,ECU_2008_4.txt,2008-11-19,2008,4605,57.599998,5,gpd_term_anchor,Ecuador|Rafael Correa|1,development,leader_term_anchor,Ecuador,Rafael Correa,1,1.25
+c6486196d34465ab,ECU,Rafael Vicente Correa Delgado,ECU_2009_17.txt,2009-05-05,2009,2097,73.660004,7,gpd_term_anchor,Ecuador|Rafael Correa|2,test_locked,leader_term_anchor,Ecuador,Rafael Correa,1,1.25
+579413f5acce9c76,ECU,Rafael Vicente Correa Delgado,ECU_2009_4.txt,2009-12-06,2009,3861,62.099998,6,gpd_term_anchor,Ecuador|Rafael Correa|1,development,leader_term_anchor,Ecuador,Rafael Correa,1,1.25
+e92b4790b2521035,ECU,Rafael Vicente Correa Delgado,ECU_2010_43.txt,2010-01-16,2010,2768,74.839996,7,stratified_country_score,Ecuador|Rafael Correa|2,test_locked,leader_term_anchor,Ecuador,Rafael Correa,2,1.7333333
+866a7d6de850d983,ECU,Rafael Vicente Correa Delgado,ECU_2010_17.txt,2010-09-07,2010,2189,25.110001,2,stratified_country_score,Ecuador|Rafael Correa|2,test_locked,leader_term_anchor,Ecuador,Rafael Correa,2,1.7333333
+4b627f24f5d0469e,ECU,Rafael Vicente Correa Delgado,ECU_2011_3.txt,2011-12-06,2011,7180,49.880001,4,gpd_term_anchor,Ecuador|Rafael Correa|2,test_locked,leader_term_anchor,Ecuador,Rafael Correa,2,1.7333333
+4a04d37c12e7b9a8,ECU,Rafael Vicente Correa Delgado,ECU_2012_44.txt,2012-07-25,2012,2151,51.400002,5,gpd_term_anchor,Ecuador|Rafael Correa|2,test_locked,leader_term_anchor,Ecuador,Rafael Correa,2,1.7333333
+4efc0a74d94f00dd,ECU,Rafael Vicente Correa Delgado,ECU_2012_46.txt,2012-07-24,2012,2386,72.550003,7,gpd_term_anchor,Ecuador|Rafael Correa|2,test_locked,leader_term_anchor,Ecuador,Rafael Correa,2,1.7333333
+127acaf4a6e4b1ad,ECU,Rafael Vicente Correa Delgado,ECU_2012_59.txt,2012-06-04,2012,7118,65.580002,6,gpd_text_anchor,Ecuador|Rafael Correa|2,test_locked,text_anchor,Ecuador,Rafael Correa,2,1.7333333
+532a8b221e59393e,ECU,Rafael Vicente Correa Delgado,ECU_2012_49.txt,2012-07-17,2012,4136,63.639999,6,gpd_text_anchor,Ecuador|Rafael Correa|2,test_locked,text_anchor,Ecuador,Rafael Correa,2,1.7333333
+68e315b703db744f,ECU,Rafael Vicente Correa Delgado,ECU_2013_2.txt,2013-12-26,2013,1272,67.070000,6,gpd_term_anchor,Ecuador|Rafael Correa|3,development,leader_term_anchor,Ecuador,Rafael Correa,2,1.7333333
+b5061c8c8bffd6f7,ECU,Rafael Vicente Correa Delgado,ECU_2013_10.txt,2013-01-01,2013,2181,49.700001,4,gpd_term_anchor,Ecuador|Rafael Correa|3,development,leader_term_anchor,Ecuador,Rafael Correa,2,1.7333333
+ae853c290f3a192c,ECU,Rafael Vicente Correa Delgado,ECU_2013_75.txt,2013-01-12,2013,5287,73.779999,7,gpd_text_anchor,Ecuador|Rafael Correa|2,test_locked,text_anchor,Ecuador,Rafael Correa,2,1.7333333
+f831af7a746512dd,ECU,Rafael Vicente Correa Delgado,ECU_2015_116.txt,2015-03-26,2015,3113,64.550003,6,gpd_term_anchor,Ecuador|Rafael Correa|3,development,leader_term_anchor,Ecuador,Rafael Correa,3,1.525
+0be6b1985f636689,ECU,Rafael Vicente Correa Delgado,ECU_2015_101.txt,2015-05-07,2015,5552,69.250000,6,gpd_term_anchor,Ecuador|Rafael Correa|3,development,leader_term_anchor,Ecuador,Rafael Correa,3,1.525
+52c8221761e7d0fb,ECU,Rafael Vicente Correa Delgado,ECU_2015_27.txt,2015-10-12,2015,2654,55.750000,5,gpd_term_anchor,Ecuador|Rafael Correa|3,development,leader_term_anchor,Ecuador,Rafael Correa,3,1.525
+961715c8d1aee7d1,ECU,Rafael Vicente Correa Delgado,ECU_2015_72.txt,2015-07-01,2015,3503,80.309998,8,stratified_country_score,Ecuador|Rafael Correa|3,development,leader_term_anchor,Ecuador,Rafael Correa,3,1.525
+01c649eaa98c59d2,ECU,Rafael Vicente Correa Delgado,ECU_2015_38.txt,2015-09-28,2015,2600,52.340000,5,gpd_text_anchor,Ecuador|Rafael Correa|3,development,text_anchor,Ecuador,Rafael Correa,3,1.525
+133a9b70385f0ca1,ECU,Lenín Boltaire Moreno Garcés,ECU_2017_66.txt,2017-07-18,2017,2067,35.639999,3,gpd_term_anchor,Ecuador|Lenin Moreno|1,test_locked,leader_term_anchor,Ecuador,Lenin Moreno,1,.1875
+abda8312607fef08,ECU,Lenín Boltaire Moreno Garcés,ECU_2019_122.txt,2019-03-01,2019,9825,33.599998,3,stratified_country_score,Ecuador|Lenin Moreno|1,test_locked,leader_term_anchor,Ecuador,Lenin Moreno,1,.1875
+b8ebb38a4fb18e53,ECU,Lenín Boltaire Moreno Garcés,ECU_2020_42.txt,2020-09-30,2020,462,46.950001,4,gpd_term_anchor,Ecuador|Lenin Moreno|1,test_locked,leader_term_anchor,Ecuador,Lenin Moreno,1,.1875
+169b929bccc24f55,ECU,Lenín Boltaire Moreno Garcés,ECU_2020_28.txt,2020-10-19,2020,6233,43.639999,4,gpd_term_anchor,Ecuador|Lenin Moreno|1,test_locked,leader_term_anchor,Ecuador,Lenin Moreno,1,.1875
+126b87463b6716e9,ECU,Lenín Boltaire Moreno Garcés,ECU_2020_17.txt,2020-11-20,2020,2841,52.759998,5,gpd_term_anchor,Ecuador|Lenin Moreno|1,test_locked,leader_term_anchor,Ecuador,Lenin Moreno,1,.1875
+bc8efd2e6c3c7f09,ECU,Lenín Boltaire Moreno Garcés,ECU_2020_9.txt,2020-12-11,2020,308,8.100000,0,gpd_term_anchor,Ecuador|Lenin Moreno|1,test_locked,leader_term_anchor,Ecuador,Lenin Moreno,1,.1875
+1c2462aa973ce6a1,ECU,Lenín Boltaire Moreno Garcés,ECU_2020_22.txt,2020-10-28,2020,2474,36.990002,3,stratified_country_score,Ecuador|Lenin Moreno|1,test_locked,leader_term_anchor,Ecuador,Lenin Moreno,1,.1875
+a611730dc9f80b8b,ECU,Guillermo Alberto Santiago Lasso Mendoza,ECU_2021_39.txt,2021-01-01,2021,778,64.900002,6,gpd_term_anchor,Ecuador|Guillermo Lasso|1,test_locked,leader_term_anchor,Ecuador,Guillermo Lasso,1,.36000001
+1314cbe9aff3b987,ECU,Guillermo Alberto Santiago Lasso Mendoza,ECU_2021_71.txt,2021-01-01,2021,1525,11.810000,1,stratified_country_score,Ecuador|Guillermo Lasso|1,test_locked,leader_term_anchor,Ecuador,Guillermo Lasso,1,.36000001
+c1817e8b802f1c46,ECU,Guillermo Alberto Santiago Lasso Mendoza,ECU_2022_163.txt,2022-01-01,2022,1180,52.520000,5,gpd_term_anchor,Ecuador|Guillermo Lasso|1,test_locked,leader_term_anchor,Ecuador,Guillermo Lasso,1,.36000001
+515d70fa48ca97f6,ECU,Guillermo Alberto Santiago Lasso Mendoza,ECU_2022_118.txt,2022-01-01,2022,2693,59.080002,5,gpd_term_anchor,Ecuador|Guillermo Lasso|1,test_locked,leader_term_anchor,Ecuador,Guillermo Lasso,1,.36000001
+c3b5ec66684b4491,ECU,Guillermo Alberto Santiago Lasso Mendoza,ECU_2022_128.txt,2022-01-01,2022,1533,12.750000,1,gpd_term_anchor,Ecuador|Guillermo Lasso|1,test_locked,leader_term_anchor,Ecuador,Guillermo Lasso,1,.36000001
+976dd39a770df413,ECU,Guillermo Alberto Santiago Lasso Mendoza,ECU_2022_23.txt,2022-01-01,2022,1103,41.290001,4,gpd_term_anchor,Ecuador|Guillermo Lasso|1,test_locked,leader_term_anchor,Ecuador,Guillermo Lasso,1,.36000001
+ef560fe31988935b,ECU,Guillermo Alberto Santiago Lasso Mendoza,ECU_2022_46.txt,2022-01-01,2022,741,24.170000,2,stratified_country_score,Ecuador|Guillermo Lasso|1,test_locked,leader_term_anchor,Ecuador,Guillermo Lasso,1,.36000001
+3123366c5fe8640e,ECU,Guillermo Alberto Santiago Lasso Mendoza,ECU_2022_124.txt,2022-01-01,2022,618,7.990000,0,stratified_country_score,Ecuador|Guillermo Lasso|1,test_locked,leader_term_anchor,Ecuador,Guillermo Lasso,1,.36000001
+3ff7d8c5b978ec8b,ECU,Guillermo Alberto Santiago Lasso Mendoza,ECU_2022_130.txt,2022-01-01,2022,349,6.240000,0,stratified_country_score,Ecuador|Guillermo Lasso|1,test_locked,leader_term_anchor,Ecuador,Guillermo Lasso,1,.36000001
+329f1d1f252fad16,ECU,Guillermo Alberto Santiago Lasso Mendoza,ECU_2022_37.txt,2022-01-01,2022,2591,51.660000,5,gpd_text_anchor,Ecuador|Guillermo Lasso|1,test_locked,text_anchor,Ecuador,Guillermo Lasso,1,.36000001
+78f227f259a6ed20,ECU,Guillermo Alberto Santiago Lasso Mendoza,ECU_2022_64.txt,2022-01-01,2022,2665,36.150002,3,gpd_text_anchor,Ecuador|Guillermo Lasso|1,test_locked,text_anchor,Ecuador,Guillermo Lasso,1,.36000001
+13cbeadd389bcba2,ECU,Daniel Noboa,ECU_2023_14.txt,2023-01-01,2023,1251,13.560000,1,stratified_country_score,,not_in_gpd_term,none,,,,
+024a8863793fe377,ECU,Daniel Noboa,ECU_2024_164.txt,2024-05-23,2024,480,41.549999,4,stratified_country_score,,not_in_gpd_term,none,,,,
+357c07f6d817014d,ECU,Daniel Noboa,ECU_2024_93.txt,2024-08-28,2024,704,58.430000,5,stratified_country_score,,not_in_gpd_term,none,,,,
+a9dc2bc3dfbafad0,ECU,Daniel Noboa,ECU_2025_109.txt,2025-03-25,2025,630,63.070000,6,stratified_country_score,,not_in_gpd_term,none,,,,
+ec161d774bd43328,GTM,Alfonso Antonio Portillo Cabrera,GTM_2003_1.txt,2003-01-01,2003,2026,32.040001,3,stratified_country_score,,not_in_gpd_term,none,,,,
+6f97795873bd02f2,GTM,Óscar José Rafael Berger Perdomo,GTM_2004_1.txt,2004-01-01,2004,1909,9.830000,0,gpd_term_anchor,Guatemala|Oscar Berger|1,test_locked,leader_term_anchor,Guatemala,Oscar Berger,1,0
+5bc6f41cd06e1691,GTM,Óscar José Rafael Berger Perdomo,GTM_2005_1.txt,2005-01-01,2005,2540,54.980000,5,gpd_term_anchor,Guatemala|Oscar Berger|1,test_locked,leader_term_anchor,Guatemala,Oscar Berger,1,0
+4e5c1120c759d8ae,GTM,Óscar José Rafael Berger Perdomo,GTM_2006_1.txt,2006-01-01,2006,2685,32.119999,3,gpd_term_anchor,Guatemala|Oscar Berger|1,test_locked,text_anchor,Guatemala,Oscar Berger,1,0
+69a905c62d1623d1,GTM,Óscar José Rafael Berger Perdomo,GTM_2007_1.txt,2007-01-01,2007,2008,9.040000,0,gpd_term_anchor,Guatemala|Oscar Berger|1,test_locked,leader_term_anchor,Guatemala,Oscar Berger,1,0
+587934f454b961d6,GTM,Álvaro Colom Caballeros,GTM_2009_24.txt,2009-05-13,2009,393,59.900002,5,stratified_country_score,,not_in_gpd_term,none,,,,
+e29b234b49fb0034,GTM,Álvaro Colom Caballeros,GTM_2009_7.txt,2009-10-10,2009,763,75.160004,7,stratified_country_score,,not_in_gpd_term,none,,,,
+d80a2d7edef05b75,GTM,Otto Fernando Pérez Molina,GTM_2012_15.txt,2012-03-13,2012,256,2.180000,0,gpd_term_anchor,Guatemala|Otto Perez Molina|1,development,leader_term_anchor,Guatemala,Otto Perez Molina,1,.34999999
+35a08215c822ea29,GTM,Otto Fernando Pérez Molina,GTM_2012_14.txt,2012-03-23,2012,427,75.639999,7,gpd_term_anchor,Guatemala|Otto Perez Molina|1,development,leader_term_anchor,Guatemala,Otto Perez Molina,1,.34999999
+9570afd554f39d57,GTM,Otto Fernando Pérez Molina,GTM_2012_28.txt,2012-01-25,2012,317,17.610001,1,gpd_term_anchor,Guatemala|Otto Perez Molina|1,development,leader_term_anchor,Guatemala,Otto Perez Molina,1,.34999999
+129eef37ccd29939,GTM,Otto Fernando Pérez Molina,GTM_2013_6.txt,2013-07-12,2013,254,45.279999,4,gpd_term_anchor,Guatemala|Otto Perez Molina|1,development,leader_term_anchor,Guatemala,Otto Perez Molina,1,.34999999
+05c5d8fcebefc59c,GTM,Otto Fernando Pérez Molina,GTM_2013_18.txt,2013-01-15,2013,383,16.770000,1,gpd_term_anchor,Guatemala|Otto Perez Molina|1,development,leader_term_anchor,Guatemala,Otto Perez Molina,1,.34999999
+a2eae65189b1e3e3,GTM,Héctor Alejandro Baltazar Maldonado Aguirre,GTM_2015_19.txt,2015-11-17,2015,492,0.000000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+8afcb65191d64a52,GTM,Jimmy Ernesto Morales Cabrera,GTM_2016_39.txt,2016-09-22,2016,2070,41.490002,4,gpd_term_anchor,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+ad1d9e2370542e9a,GTM,Jimmy Ernesto Morales Cabrera,GTM_2016_20.txt,2016-11-04,2016,242,11.510000,1,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+a254342d947488b6,GTM,Jimmy Ernesto Morales Cabrera,GTM_2016_151.txt,2016-03-22,2016,75,17.450001,1,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+7a901a195c643f92,GTM,Jimmy Ernesto Morales Cabrera,GTM_2016_75.txt,2016-07-18,2016,163,37.259998,3,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+612008a079abd328,GTM,Jimmy Ernesto Morales Cabrera,GTM_2016_133.txt,2016-04-20,2016,573,16.730000,1,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+90c7184868c30164,GTM,Jimmy Ernesto Morales Cabrera,GTM_2016_120.txt,2016-05-13,2016,157,9.410000,0,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+7dc98d62f345ea99,GTM,Jimmy Ernesto Morales Cabrera,GTM_2017_12.txt,2017-10-11,2017,161,34.160000,3,gpd_term_anchor,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+ad6090f99d08ce8c,GTM,Jimmy Ernesto Morales Cabrera,GTM_2017_19.txt,2017-09-24,2017,731,75.940002,7,gpd_term_anchor,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+2cdbe90302c9d5fc,GTM,Jimmy Ernesto Morales Cabrera,GTM_2017_11.txt,2017-10-13,2017,1517,49.169998,4,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+f93efbb743be74fc,GTM,Jimmy Ernesto Morales Cabrera,GTM_2017_101.txt,2017-01-20,2017,1495,80.730003,8,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+6b55795fa0e68ea9,GTM,Jimmy Ernesto Morales Cabrera,GTM_2017_37.txt,2017-08-30,2017,757,64.940002,6,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+71bb33bb03a20c84,GTM,Jimmy Ernesto Morales Cabrera,GTM_2017_21.txt,2017-09-20,2017,2089,13.280000,1,gpd_text_anchor,Guatemala|Jimmy Morales|1,development,text_anchor,Guatemala,Jimmy Morales,1,.15000001
+1330c073b7df7fb2,GTM,Jimmy Ernesto Morales Cabrera,GTM_2018_64.txt,2018-05-25,2018,119,50.779999,5,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+da307fdd6cb6b7a2,GTM,Jimmy Ernesto Morales Cabrera,GTM_2018_81.txt,2018-01-28,2018,480,62.660000,6,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+6a3b9fd516276b70,GTM,Jimmy Ernesto Morales Cabrera,GTM_2018_18.txt,2018-10-11,2018,2205,25.320000,2,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+dbd24c71b348ae47,GTM,Jimmy Ernesto Morales Cabrera,GTM_2018_48.txt,2018-07-10,2018,1029,25.190001,2,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+9362113da6283bd6,GTM,Jimmy Ernesto Morales Cabrera,GTM_2018_70.txt,2018-04-20,2018,2231,68.599998,6,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+776f401e21d24db8,GTM,Jimmy Ernesto Morales Cabrera,GTM_2018_12.txt,2018-11-04,2018,221,8.100000,0,stratified_country_score,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+2feb12e7119ccf6f,GTM,Jimmy Ernesto Morales Cabrera,GTM_2018_61.txt,2018-05-31,2018,1343,30.910000,3,gpd_text_anchor,Guatemala|Jimmy Morales|1,development,text_anchor,Guatemala,Jimmy Morales,1,.15000001
+1116b01e44c94f3f,GTM,Jimmy Ernesto Morales Cabrera,GTM_2019_29.txt,2019-02-01,2019,93,50.849998,5,gpd_term_anchor,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+624c0581ec695257,GTM,Jimmy Ernesto Morales Cabrera,GTM_2019_19.txt,2019-06-04,2019,277,17.680000,1,gpd_term_anchor,Guatemala|Jimmy Morales|1,development,leader_term_anchor,Guatemala,Jimmy Morales,1,.15000001
+1288f749dca171b8,GTM,Alejandro Eduardo Giammattei Falla,GTM_2022_11.txt,2022-01-15,2022,2231,30.360001,3,gpd_term_anchor,Guatemala|Alejandro Giammattei|1,test_locked,leader_term_anchor,Guatemala,Alejandro Giammattei,1,.16249999
+b2c73cabe72c3ce7,GTM,Alejandro Eduardo Giammattei Falla,GTM_2022_13.txt,2022-01-12,2022,2417,22.940001,2,gpd_term_anchor,Guatemala|Alejandro Giammattei|1,test_locked,leader_term_anchor,Guatemala,Alejandro Giammattei,1,.16249999
+ae5d1d53b80ee3bc,GTM,Alejandro Eduardo Giammattei Falla,GTM_2022_5.txt,2022-03-10,2022,333,20.990000,2,gpd_term_anchor,Guatemala|Alejandro Giammattei|1,test_locked,leader_term_anchor,Guatemala,Alejandro Giammattei,1,.16249999
+671e721dfb5a2160,GTM,Alejandro Eduardo Giammattei Falla,GTM_2023_25.txt,2023-09-20,2023,183,71.629997,7,gpd_term_anchor,Guatemala|Alejandro Giammattei|1,test_locked,leader_term_anchor,Guatemala,Alejandro Giammattei,1,.16249999
+82dc433e61329efd,GTM,Alejandro Eduardo Giammattei Falla,GTM_2023_21.txt,2023-10-09,2023,301,59.099998,5,gpd_term_anchor,Guatemala|Alejandro Giammattei|1,test_locked,leader_term_anchor,Guatemala,Alejandro Giammattei,1,.16249999
+a5bd9ddaa55f6f94,GTM,Bernardo Arévalo de León,GTM_2024_139.txt,2024-01-12,2024,525,47.669998,4,stratified_country_score,,not_in_gpd_term,none,,,,
+b2c70e22e815b8a1,GTM,Bernardo Arévalo de León,GTM_2024_63.txt,2024-05-17,2024,537,31.160000,3,stratified_country_score,,not_in_gpd_term,none,,,,
+6d5a56eec8941f82,GTM,Bernardo Arévalo de León,GTM_2024_81.txt,2024-04-13,2024,359,59.500000,5,stratified_country_score,,not_in_gpd_term,none,,,,
+74e2dfe861149091,GTM,Bernardo Arévalo de León,GTM_2024_29.txt,2024-09-15,2024,715,72.519997,7,stratified_country_score,,not_in_gpd_term,none,,,,
+44ed1983d4c9241f,GTM,Bernardo Arévalo de León,GTM_2025_9.txt,2025-05-01,2025,3530,43.439999,4,stratified_country_score,,not_in_gpd_term,none,,,,
+612ebcf1ac031d9b,GTM,Bernardo Arévalo de León,GTM_2025_13.txt,2025-06-03,2025,11384,21.540001,2,stratified_country_score,,not_in_gpd_term,none,,,,
+ebaa769d0f4d3fab,GTM,Bernardo Arévalo de León,GTM_2025_14.txt,2025-06-09,2025,1301,5.890000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+7aa6b5ebc4a25977,GTM,Bernardo Arévalo de León,GTM_2025_37.txt,2025-10-27,2025,1058,76.650002,7,stratified_country_score,,not_in_gpd_term,none,,,,
+b024b802a3950214,HND,Carlos Roberto Flores,HND_2000_1.txt,2000-01-01,2000,658,37.200001,3,gpd_term_anchor,Honduras|Carlos Flores|1,test_locked,leader_term_anchor,Honduras,Carlos Flores,1,.050000001
+cb244fea10c38fb4,HND,Ricardo Rodolfo Maduro Joest,HND_2002_1.txt,2002-01-01,2002,2627,47.279999,4,gpd_term_anchor,Honduras|Ricardo Maduro|1,test_locked,leader_term_anchor,Honduras,Ricardo Maduro,1,0
+78914ed84ac7c874,HND,Ricardo Rodolfo Maduro Joest,HND_2003_1.txt,2003-01-01,2003,727,48.450001,4,gpd_term_anchor,Honduras|Ricardo Maduro|1,test_locked,leader_term_anchor,Honduras,Ricardo Maduro,1,0
+9b9af1db17077a4b,HND,Ricardo Rodolfo Maduro Joest,HND_2004_1.txt,2004-01-01,2004,1347,29.969999,2,gpd_term_anchor,Honduras|Ricardo Maduro|1,test_locked,leader_term_anchor,Honduras,Ricardo Maduro,1,0
+a774ef700a2377ae,HND,Ricardo Rodolfo Maduro Joest,HND_2005_1.txt,2005-01-01,2005,1350,44.759998,4,gpd_term_anchor,Honduras|Ricardo Maduro|1,test_locked,leader_term_anchor,Honduras,Ricardo Maduro,1,0
+3576f2e35954e5c0,HND,José Manuel Zelaya Rosales,HND_2006_1.txt,2006-01-01,2006,1293,58.619999,5,gpd_term_anchor,Honduras|Manuel Zelaya|1,development,leader_term_anchor,Honduras,Manuel Zelaya,1,.5
+0d1afd0edcabd746,HND,José Manuel Zelaya Rosales,HND_2007_1.txt,2007-01-01,2007,2253,46.560001,4,gpd_term_anchor,Honduras|Manuel Zelaya|1,development,leader_term_anchor,Honduras,Manuel Zelaya,1,.5
+9a2b8bd2f2e6db3f,HND,Roberto Micheletti Baín,HND_2009_1.txt,2009-01-01,2009,307,17.230000,1,stratified_country_score,,not_in_gpd_term,none,,,,
+81d6e29f96699809,HND,Porfirio Lobo Sosa,HND_2010_1.txt,2010-01-01,2010,614,12.070000,1,gpd_term_anchor,Honduras|Porfirio Lobo Sosa|1,development,leader_term_anchor,Honduras,Porfirio Lobo Sosa,1,.33333334
+87c8f41f31b7f452,HND,Porfirio Lobo Sosa,HND_2011_1.txt,2011-01-01,2011,2274,19.660000,1,gpd_term_anchor,Honduras|Porfirio Lobo Sosa|1,development,leader_term_anchor,Honduras,Porfirio Lobo Sosa,1,.33333334
+dfe72af09671ef36,HND,Porfirio Lobo Sosa,HND_2013_1.txt,2013-01-01,2013,1781,55.869999,5,gpd_term_anchor,Honduras|Porfirio Lobo Sosa|1,development,leader_term_anchor,Honduras,Porfirio Lobo Sosa,1,.33333334
+093f5a09266145ef,HND,Juan Orlando Hernández,HND_2017_32.txt,2017-10-12,2017,1492,22.200001,2,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+bdbc392c32eb445b,HND,Juan Orlando Hernández,HND_2017_43.txt,2017-09-11,2017,2391,49.540001,4,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+3473d6a4bdd5c6a0,HND,Juan Orlando Hernández,HND_2018_69.txt,2018-06-19,2018,502,27.280001,2,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+dc9c471388de70e8,HND,Juan Orlando Hernández,HND_2018_112.txt,2018-02-06,2018,1126,14.410000,1,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+9ccd4ca9b802eb52,HND,Juan Orlando Hernández,HND_2018_10.txt,2018-12-13,2018,628,5.530000,0,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+1dc8c6278198fc28,HND,Juan Orlando Hernández,HND_2018_97.txt,2018-03-10,2018,249,9.390000,0,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+ced248e22cb9f02f,HND,Juan Orlando Hernández,HND_2019_181.txt,2019-01-04,2019,1445,47.730000,4,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+58a7bc7a801709c8,HND,Juan Orlando Hernández,HND_2019_163.txt,2019-01-31,2019,661,28.180000,2,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+8f592a5f61257637,HND,Juan Orlando Hernández,HND_2019_13.txt,2019-11-18,2019,1529,30.879999,3,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+9667a7646b8b626c,HND,Juan Orlando Hernández,HND_2019_53.txt,2019-08-28,2019,949,74.169998,7,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+601954fe59cdeab0,HND,Juan Orlando Hernández,HND_2019_144.txt,2019-03-01,2019,539,62.160000,6,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+c029ce91a8f085fd,HND,Juan Orlando Hernández,HND_2019_9.txt,2019-11-26,2019,1558,8.250000,0,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+b93d6f188ec8923a,HND,Juan Orlando Hernández,HND_2020_138.txt,2020-03-17,2020,583,39.830002,3,gpd_term_anchor,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+1b65c6279df083ed,HND,Juan Orlando Hernández,HND_2020_60.txt,2020-10-23,2020,5130,59.720001,5,gpd_term_anchor,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+930944ab192439d0,HND,Juan Orlando Hernández,HND_2020_128.txt,2020-04-04,2020,1593,48.750000,4,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+7bb9433622094828,HND,Juan Orlando Hernández,HND_2020_41.txt,2020-11-13,2020,730,24.379999,2,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+9314a311b01dc481,HND,Juan Orlando Hernández,HND_2020_62.txt,2020-10-23,2020,1279,36.880001,3,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+d3bd1cede9c3cd13,HND,Juan Orlando Hernández,HND_2020_110.txt,2020-07-23,2020,2127,40.450001,4,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+56f9a7787a71e530,HND,Juan Orlando Hernández,HND_2021_25.txt,2021-11-15,2021,3755,20.230000,2,gpd_term_anchor,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+f10571fad99ceec8,HND,Juan Orlando Hernández,HND_2021_71.txt,2021-08-29,2021,799,45.619999,4,gpd_term_anchor,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+d2a5d9f32a9e1d81,HND,Juan Orlando Hernández,HND_2021_255.txt,2021-01-06,2021,157,25.379999,2,gpd_term_anchor,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+ecd293aa1e1da144,HND,Juan Orlando Hernández,HND_2021_6.txt,2021-11-19,2021,947,58.330002,5,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+48ae4d7e1dcf3689,HND,Juan Orlando Hernández,HND_2021_224.txt,2021-02-01,2021,1929,58.369999,5,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+4f3116764156ee6a,HND,Juan Orlando Hernández,HND_2021_44.txt,2021-09-30,2021,243,8.530000,0,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+c2e15a9c4e8a987f,HND,Juan Orlando Hernández,HND_2021_55.txt,2021-09-23,2021,371,10.780000,1,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+c8aab176558ec2be,HND,Juan Orlando Hernández,HND_2021_89.txt,2021-08-16,2021,2193,53.730000,5,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+415c9b78d4766e22,HND,Juan Orlando Hernández,HND_2021_232.txt,2021-01-25,2021,1902,56.500000,5,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+50a958e41e22ae5f,HND,Juan Orlando Hernández,HND_2021_188.txt,2021-05-01,2021,957,64.459999,6,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+849037048a0dae8a,HND,Juan Orlando Hernández,HND_2021_53.txt,2021-09-23,2021,2876,65.309998,6,stratified_country_score,Honduras|Juan Orlando Hernandez|1,test_locked,leader_term_anchor,Honduras,Juan Orlando Hernandez,1,.46250001
+46bd3f17cb5a5bb0,HND,Iris Xiomara Castro Sarmiento,HND_2022_40.txt,2025-07-09,2022,5503,34.700001,3,stratified_country_score,,not_in_gpd_term,none,,,,
+d474e6fc30170c93,HND,Iris Xiomara Castro Sarmiento,HND_2022_30.txt,2025-07-09,2022,1441,78.099998,7,gpd_text_anchor,,not_in_gpd_term,text_anchor,,,,
+3743037d2e666c7b,HND,Iris Xiomara Castro Sarmiento,HND_2023_17.txt,2025-07-09,2023,1885,63.630001,6,stratified_country_score,,not_in_gpd_term,none,,,,
+73a39881fbe7512e,HND,Iris Xiomara Castro Sarmiento,HND_2023_19.txt,2025-07-09,2023,828,73.360001,7,stratified_country_score,,not_in_gpd_term,none,,,,
+b7de55b6d5ac16d3,HND,Iris Xiomara Castro Sarmiento,HND_2024_45.txt,2025-07-09,2024,10151,32.000000,3,stratified_country_score,,not_in_gpd_term,none,,,,
+2caca8d55237dadd,HND,Iris Xiomara Castro Sarmiento,HND_2024_42.txt,2025-07-09,2024,514,14.880000,1,stratified_country_score,,not_in_gpd_term,none,,,,
+b37c652599e957a3,HND,Iris Xiomara Castro Sarmiento,HND_2024_14.txt,2025-07-09,2024,3796,70.820000,7,stratified_country_score,,not_in_gpd_term,none,,,,
+6a4d6016da81bba1,MEX,Vicente Fox Quesada,MEX_2002_1.txt,2002-01-01,2002,1353,30.110001,3,gpd_term_anchor,Mexico|Vicente Fox|1,test_locked,leader_term_anchor,Mexico,Vicente Fox,1,.25
+f4f378ad7c3b63d2,MEX,Vicente Fox Quesada,MEX_2003_1.txt,2003-01-01,2003,1846,24.980000,2,gpd_term_anchor,Mexico|Vicente Fox|1,test_locked,leader_term_anchor,Mexico,Vicente Fox,1,.25
+58b98445b8d221e9,MEX,Vicente Fox Quesada,MEX_2004_1.txt,2004-01-01,2004,2091,25.250000,2,gpd_term_anchor,Mexico|Vicente Fox|1,test_locked,leader_term_anchor,Mexico,Vicente Fox,1,.25
+b97afa93e14c4b2c,MEX,Vicente Fox Quesada,MEX_2005_1.txt,2005-01-01,2005,4908,33.000000,3,gpd_term_anchor,Mexico|Vicente Fox|1,test_locked,leader_term_anchor,Mexico,Vicente Fox,1,.25
+d979b56c6e832909,MEX,Felipe de Jesús Calderón Hinojosa,MEX_2007_7.txt,2007-04-24,2007,1636,26.490000,2,gpd_term_anchor,Mexico|Felipe Calderon|1,test_locked,leader_term_anchor,Mexico,Felipe Calderon,1,.125
+ae15db791c320f68,MEX,Felipe de Jesús Calderón Hinojosa,MEX_2008_17.txt,2008-11-06,2008,2824,38.820000,3,gpd_term_anchor,Mexico|Felipe Calderon|1,test_locked,leader_term_anchor,Mexico,Felipe Calderon,1,.125
+609709289c9664ee,MEX,Felipe de Jesús Calderón Hinojosa,MEX_2010_20.txt,2010-12-05,2010,3249,25.389999,2,gpd_term_anchor,Mexico|Felipe Calderon|1,test_locked,leader_term_anchor,Mexico,Felipe Calderon,1,.125
+b704effc298b4e35,MEX,Felipe de Jesús Calderón Hinojosa,MEX_2011_17.txt,2011-09-12,2011,5139,17.930000,1,gpd_term_anchor,Mexico|Felipe Calderon|1,test_locked,leader_term_anchor,Mexico,Felipe Calderon,1,.125
+100bced6b84c3a81,MEX,Felipe de Jesús Calderón Hinojosa,MEX_2011_19.txt,2011-09-15,2011,3886,28.959999,2,gpd_term_anchor,Mexico|Felipe Calderon|1,test_locked,leader_term_anchor,Mexico,Felipe Calderon,1,.125
+f09a505f0b578422,MEX,Enrique Peña Nieto,MEX_2013_65.txt,2013-07-08,2013,404,31.870001,3,stratified_country_score,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+8d984f4ba47405fc,MEX,Enrique Peña Nieto,MEX_2013_170.txt,2013-01-22,2013,540,52.490002,5,stratified_country_score,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+c3fbf2c7c5202c3a,MEX,Enrique Peña Nieto,MEX_2013_132.txt,2013-03-07,2013,542,13.870000,1,stratified_country_score,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+575c4a5dbd572471,MEX,Enrique Peña Nieto,MEX_2013_83.txt,2013-06-05,2013,816,5.510000,0,stratified_country_score,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+2047b5b4273cf5ff,MEX,Enrique Peña Nieto,MEX_2014_163.txt,2014-06-06,2014,1018,2.210000,0,gpd_term_anchor,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+d7f3a8bac2067074,MEX,Enrique Peña Nieto,MEX_2014_134.txt,2014-02-14,2014,138,20.430000,2,gpd_term_anchor,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+a8eb423076ba21d6,MEX,Enrique Peña Nieto,MEX_2016_201.txt,2016-01-15,2016,77,23.379999,2,gpd_term_anchor,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+cbaf16bf57a72586,MEX,Enrique Peña Nieto,MEX_2016_208.txt,2016-11-14,2016,2323,9.010000,0,stratified_country_score,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+246120eccc5eefb4,MEX,Enrique Peña Nieto,MEX_2016_57.txt,2016-09-07,2016,276,9.880000,0,stratified_country_score,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+fbaa70335ec8a0e4,MEX,Enrique Peña Nieto,MEX_2017_178.txt,2017-03-30,2017,136,9.250000,0,gpd_term_anchor,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+5f357281ed390e49,MEX,Enrique Peña Nieto,MEX_2017_135.txt,2017-06-09,2017,410,48.119999,4,gpd_term_anchor,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+a3b429342973b140,MEX,Enrique Peña Nieto,MEX_2017_117.txt,2017-07-11,2017,249,21.750000,2,stratified_country_score,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+b5be94bd015bec67,MEX,Enrique Peña Nieto,MEX_2017_196.txt,2017-03-08,2017,71,9.080000,0,stratified_country_score,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+ecd72acc2ab532ae,MEX,Enrique Peña Nieto,MEX_2017_157.txt,2017-05-12,2017,236,5.560000,0,stratified_country_score,Mexico|Enrique Pena Nieto|1,development,leader_term_anchor,Mexico,Enrique Pena Nieto,1,0
+0008ebe476331d91,MEX,Andrés Manuel López Obrador,MEX_2019_96.txt,2019-08-09,2019,8492,47.560001,4,gpd_term_anchor,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+7ce7c26ae9558afa,MEX,Andrés Manuel López Obrador,MEX_2019_189.txt,2019-04-04,2019,7507,39.410000,3,gpd_term_anchor,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+aead32576ad739ef,MEX,Andrés Manuel López Obrador,MEX_2019_72.txt,2019-09-17,2019,9716,37.930000,3,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+253837094fae87a9,MEX,Andrés Manuel López Obrador,MEX_2019_27.txt,2019-11-21,2019,11869,32.959999,3,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+cbaa5e8714e23b47,MEX,Andrés Manuel López Obrador,MEX_2019_171.txt,2019-04-30,2019,5537,43.270000,4,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+8264484dd4794604,MEX,Andrés Manuel López Obrador,MEX_2020_343.txt,2020-05-22,2020,8650,20.790001,2,gpd_term_anchor,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+c1dda39e6e2c20d6,MEX,Andrés Manuel López Obrador,MEX_2020_439.txt,2020-03-26,2020,14167,41.470001,4,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+842c057d913a5c42,MEX,Andrés Manuel López Obrador,MEX_2020_278.txt,2020-06-29,2020,8312,15.210000,1,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+777d05969518e15f,MEX,Andrés Manuel López Obrador,MEX_2020_126.txt,2020-10-02,2020,8065,15.410000,1,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+8ec0406daf9cc82f,MEX,Andrés Manuel López Obrador,MEX_2021_213.txt,2021-04-29,2021,11002,46.470001,4,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+06f036986d90db00,MEX,Andrés Manuel López Obrador,MEX_2021_209.txt,2021-05-02,2021,5161,14.090000,1,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+c5610475165373a9,MEX,Andrés Manuel López Obrador,MEX_2021_134.txt,2021-06-24,2021,11408,56.099998,5,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+ac42ec12934a2d61,MEX,Andrés Manuel López Obrador,MEX_2021_130.txt,2021-06-30,2021,7552,63.549999,6,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+70c8cce9d8175b91,MEX,Andrés Manuel López Obrador,MEX_2022_13.txt,2022-12-15,2022,12999,46.959999,4,gpd_term_anchor,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+61ce61080544cf89,MEX,Andrés Manuel López Obrador,MEX_2022_56.txt,2022-10-17,2022,17645,42.009998,4,gpd_term_anchor,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+4cb3484d86ec788c,MEX,Andrés Manuel López Obrador,MEX_2022_81.txt,2022-09-13,2022,11005,43.490002,4,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+211bcc0bc5d6e7fa,MEX,Andrés Manuel López Obrador,MEX_2022_156.txt,2022-06-03,2022,9819,39.119999,3,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+8193cc81b6d499a6,MEX,Andrés Manuel López Obrador,MEX_2022_188.txt,2022-04-18,2022,776,68.989998,6,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+109e301cfff213cd,MEX,Andrés Manuel López Obrador,MEX_2023_167.txt,2023-04-09,2023,1334,60.470001,6,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+e89c6df129e83108,MEX,Andrés Manuel López Obrador,MEX_2023_94.txt,2023-08-09,2023,17137,61.240002,6,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+4751483a99fe3829,MEX,Andrés Manuel López Obrador,MEX_2023_120.txt,2023-06-18,2023,801,80.400002,8,stratified_country_score,Mexico|Andres Manuel Lopez Obrador|1,development,leader_term_anchor,Mexico,Andres Manuel Lopez Obrador,1,.96249998
+e1a9586b37e6347d,MEX,Claudia Sheinbaum Pardo,MEX_2025_13.txt,2025-02-05,2025,12051,22.080000,2,stratified_country_score,,not_in_gpd_term,none,,,,
+d221530a5d1734f6,MEX,Claudia Sheinbaum Pardo,MEX_2025_99.txt,2025-06-02,2025,279,51.000000,5,stratified_country_score,,not_in_gpd_term,none,,,,
+3a1cd2031d00567f,MEX,Claudia Sheinbaum Pardo,MEX_2025_116.txt,2025-06-19,2025,365,21.299999,2,stratified_country_score,,not_in_gpd_term,none,,,,
+3b627a4d95ff4907,MEX,Claudia Sheinbaum Pardo,MEX_2025_51.txt,2025-04-03,2025,12418,29.000000,2,stratified_country_score,,not_in_gpd_term,none,,,,
+0c10a65d75742f69,MEX,Claudia Sheinbaum Pardo,MEX_2025_67.txt,2025-04-22,2025,345,51.000000,5,stratified_country_score,,not_in_gpd_term,none,,,,
+132af57b2da3022d,MEX,Claudia Sheinbaum Pardo,MEX_2025_79.txt,2025-05-02,2025,294,70.320000,7,stratified_country_score,,not_in_gpd_term,none,,,,
+ca603438184648ad,NIC,Enrique José Bolaños Geyer,NIC_2002_30.txt,2002-11-12,2002,908,26.110001,2,gpd_term_anchor,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+c7062212db08bc09,NIC,Enrique José Bolaños Geyer,NIC_2002_9.txt,2002-07-23,2002,1154,38.860001,3,stratified_country_score,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+897d1575f866ba7a,NIC,Enrique José Bolaños Geyer,NIC_2002_25.txt,2002-08-28,2002,1356,26.360001,2,stratified_country_score,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+e7d7ee4eb5a0b6a7,NIC,Enrique José Bolaños Geyer,NIC_2002_40.txt,2002-03-08,2002,1505,50.439999,5,stratified_country_score,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+a3921dce76cb07b1,NIC,Enrique José Bolaños Geyer,NIC_2003_49.txt,2003-07-22,2003,1380,23.610001,2,gpd_term_anchor,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+60d4f29b09c39ee0,NIC,Enrique José Bolaños Geyer,NIC_2003_64.txt,2003-02-18,2003,1167,40.529999,4,gpd_term_anchor,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+458e6176490cb896,NIC,Enrique José Bolaños Geyer,NIC_2003_131.txt,2003-07-07,2003,600,15.040000,1,stratified_country_score,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+e46a711bc488f418,NIC,Enrique José Bolaños Geyer,NIC_2003_54.txt,2003-02-23,2003,1219,39.599998,3,stratified_country_score,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+00780e6f03b8b9f6,NIC,Enrique José Bolaños Geyer,NIC_2003_20.txt,2003-03-31,2003,1209,5.960000,0,stratified_country_score,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+3ab2f76f903b9ee0,NIC,Enrique José Bolaños Geyer,NIC_2003_109.txt,2003-06-14,2003,769,15.860000,1,stratified_country_score,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+d4b44ba0eb7d6d4a,NIC,Enrique José Bolaños Geyer,NIC_2004_60.txt,2004-08-12,2004,914,17.250000,1,gpd_term_anchor,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+389bc9fd1338fab9,NIC,Enrique José Bolaños Geyer,NIC_2004_13.txt,2004-07-29,2004,886,41.189999,4,stratified_country_score,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+0c3badef01fce813,NIC,Enrique José Bolaños Geyer,NIC_2005_14.txt,2005-12-01,2005,116,15.040000,1,stratified_country_score,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+8e1bfa77517ba3f4,NIC,Enrique José Bolaños Geyer,NIC_2006_7.txt,2006-12-12,2006,713,15.040000,1,gpd_term_anchor,Nicaragua|Enrique Bolanos|1,test_locked,leader_term_anchor,Nicaragua,Enrique Bolanos,1,0
+0587ee345783024d,NIC,José Daniel Ortega Saavedra,NIC_2007_3.txt,2007-01-10,2007,1059,39.349998,3,gpd_term_anchor,Nicaragua|Daniel Ortega|1,test_locked,leader_term_anchor,Nicaragua,Daniel Ortega,1,1.25
+08ca6d87b8354960,NIC,José Daniel Ortega Saavedra,NIC_2008_1.txt,2008-01-01,2008,9266,67.839996,6,gpd_term_anchor,Nicaragua|Daniel Ortega|1,test_locked,text_anchor,Nicaragua,Daniel Ortega,1,1.25
+9cd20224e5ba3f49,NIC,José Daniel Ortega Saavedra,NIC_2009_1.txt,2009-01-01,2009,4482,68.550003,6,gpd_term_anchor,Nicaragua|Daniel Ortega|1,test_locked,leader_term_anchor,Nicaragua,Daniel Ortega,1,1.25
+936902adafe37e7f,NIC,José Daniel Ortega Saavedra,NIC_2010_1.txt,2010-10-18,2010,1451,44.849998,4,gpd_term_anchor,Nicaragua|Daniel Ortega|1,test_locked,leader_term_anchor,Nicaragua,Daniel Ortega,1,1.25
+cd7e8eceb2042a67,NIC,José Daniel Ortega Saavedra,NIC_2011_1.txt,2011-11-08,2011,834,45.299999,4,gpd_term_anchor,Nicaragua|Daniel Ortega|1,test_locked,leader_term_anchor,Nicaragua,Daniel Ortega,1,1.25
+d1bc1884980623d7,NIC,José Daniel Ortega Saavedra,NIC_2014_48.txt,2014-08-12,2014,904,29.180000,2,gpd_term_anchor,Nicaragua|Daniel Ortega|2,development,leader_term_anchor,Nicaragua,Daniel Ortega,2,1
+071ba34a4626e33e,NIC,José Daniel Ortega Saavedra,NIC_2014_76.txt,2014-06-10,2014,750,16.709999,1,gpd_term_anchor,Nicaragua|Daniel Ortega|2,development,leader_term_anchor,Nicaragua,Daniel Ortega,2,1
+9f33c271915e155b,NIC,José Daniel Ortega Saavedra,NIC_2014_91.txt,2014-03-05,2014,584,60.560001,6,stratified_country_score,Nicaragua|Daniel Ortega|2,development,leader_term_anchor,Nicaragua,Daniel Ortega,2,1
+4fe7497836bf0f58,NIC,José Daniel Ortega Saavedra,NIC_2014_51.txt,2014-07-30,2014,2119,23.030001,2,stratified_country_score,Nicaragua|Daniel Ortega|2,development,leader_term_anchor,Nicaragua,Daniel Ortega,2,1
+28bb8bf4b5e0ed43,NIC,José Daniel Ortega Saavedra,NIC_2014_3.txt,2014-12-14,2014,815,80.699997,8,stratified_country_score,Nicaragua|Daniel Ortega|2,development,leader_term_anchor,Nicaragua,Daniel Ortega,2,1
+8c2c26af76b93817,NIC,José Daniel Ortega Saavedra,NIC_2015_8.txt,2015-12-10,2015,1208,37.310001,3,gpd_term_anchor,Nicaragua|Daniel Ortega|2,development,leader_term_anchor,Nicaragua,Daniel Ortega,2,1
+32f388ad4f02e432,NIC,José Daniel Ortega Saavedra,NIC_2015_64.txt,2015-08-08,2015,1028,31.110001,3,gpd_term_anchor,Nicaragua|Daniel Ortega|2,development,leader_term_anchor,Nicaragua,Daniel Ortega,2,1
+ab3153d9f337dae8,NIC,José Daniel Ortega Saavedra,NIC_2016_78.txt,2016-07-18,2016,185,54.990002,5,gpd_term_anchor,Nicaragua|Daniel Ortega|2,development,leader_term_anchor,Nicaragua,Daniel Ortega,2,1
+a0d8ae9c923ed30d,NIC,José Daniel Ortega Saavedra,NIC_2016_83.txt,2016-07-06,2016,558,59.939999,5,stratified_country_score,Nicaragua|Daniel Ortega|2,development,leader_term_anchor,Nicaragua,Daniel Ortega,2,1
+e56cf26a1bf95dfa,NIC,José Daniel Ortega Saavedra,NIC_2016_71.txt,2016-07-30,2016,158,33.009998,3,stratified_country_score,Nicaragua|Daniel Ortega|2,development,leader_term_anchor,Nicaragua,Daniel Ortega,2,1
+5cd82ee1aff8bcc6,NIC,José Daniel Ortega Saavedra,NIC_2016_76.txt,2016-07-18,2016,186,56.830002,5,stratified_country_score,Nicaragua|Daniel Ortega|2,development,leader_term_anchor,Nicaragua,Daniel Ortega,2,1
+b869b1c551e2c94f,NIC,José Daniel Ortega Saavedra,NIC_2016_94.txt,2016-05-19,2016,976,79.500000,7,stratified_country_score,Nicaragua|Daniel Ortega|2,development,leader_term_anchor,Nicaragua,Daniel Ortega,2,1
+bd663b5bb70db5c6,NIC,José Daniel Ortega Saavedra,NIC_2017_95.txt,2017-01-06,2017,1855,27.850000,2,gpd_term_anchor,Nicaragua|Daniel Ortega|3,test_locked,leader_term_anchor,Nicaragua,Daniel Ortega,3,.85000002
+4254c0ac01c9ec87,NIC,José Daniel Ortega Saavedra,NIC_2017_24.txt,2017-09-21,2017,1707,25.930000,2,gpd_term_anchor,Nicaragua|Daniel Ortega|3,test_locked,leader_term_anchor,Nicaragua,Daniel Ortega,3,.85000002
+34012a1a06b3ed0c,NIC,José Daniel Ortega Saavedra,NIC_2017_36.txt,2017-08-31,2017,2590,22.910000,2,stratified_country_score,Nicaragua|Daniel Ortega|3,test_locked,leader_term_anchor,Nicaragua,Daniel Ortega,3,.85000002
+844ed1b6af6185c5,NIC,José Daniel Ortega Saavedra,NIC_2018_35.txt,2018-07-20,2018,3381,83.769997,8,gpd_term_anchor,Nicaragua|Daniel Ortega|3,test_locked,leader_term_anchor,Nicaragua,Daniel Ortega,3,.85000002
+37427af326b65f2c,NIC,José Daniel Ortega Saavedra,NIC_2018_28.txt,2018-08-23,2018,2715,76.790001,7,gpd_term_anchor,Nicaragua|Daniel Ortega|3,test_locked,leader_term_anchor,Nicaragua,Daniel Ortega,3,.85000002
+a9f6b299a83bc205,NIC,José Daniel Ortega Saavedra,NIC_2018_64.txt,2018-02-22,2018,601,56.779999,5,gpd_term_anchor,Nicaragua|Daniel Ortega|3,test_locked,leader_term_anchor,Nicaragua,Daniel Ortega,3,.85000002
+107a2d3465d6ac91,NIC,José Daniel Ortega Saavedra,NIC_2019_25.txt,2019-07-30,2019,2234,9.990000,0,stratified_country_score,Nicaragua|Daniel Ortega|3,test_locked,leader_term_anchor,Nicaragua,Daniel Ortega,3,.85000002
+c0a88b85b519f471,NIC,José Daniel Ortega Saavedra,NIC_2021_3.txt,2021-02-23,2021,6381,68.199997,6,stratified_country_score,Nicaragua|Daniel Ortega|3,test_locked,leader_term_anchor,Nicaragua,Daniel Ortega,3,.85000002
+c1ea418b6ae9b172,NIC,José Daniel Ortega Saavedra,NIC_2022_19.txt,2022-09-04,2022,7936,47.320000,4,stratified_country_score,,not_in_gpd_term,none,,,,
+8eae6e3fff168cf0,NIC,José Daniel Ortega Saavedra,NIC_2022_30.txt,2022-12-20,2022,2100,65.339996,6,stratified_country_score,,not_in_gpd_term,none,,,,
+e6d5974f1ab0bdb3,NIC,José Daniel Ortega Saavedra,NIC_2022_12.txt,2022-05-27,2022,2519,67.800003,6,gpd_text_anchor,,not_in_gpd_term,text_anchor,,,,
+fa231b7035fe3cc6,NIC,José Daniel Ortega Saavedra,NIC_2023_18.txt,2023-04-20,2023,506,81.699997,8,stratified_country_score,,not_in_gpd_term,none,,,,
+550e198b5481f553,NIC,José Daniel Ortega Saavedra,NIC_2023_11.txt,2023-02-10,2023,4098,62.540001,6,gpd_text_anchor,,not_in_gpd_term,text_anchor,,,,
+97f69e46172e5227,NIC,José Daniel Ortega Saavedra,NIC_2025_30.txt,2025-09-17,2025,145,5.120000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+562e24014271b475,NIC,José Daniel Ortega Saavedra,NIC_2025_23.txt,2025-09-03,2025,41,43.000000,4,stratified_country_score,,not_in_gpd_term,none,,,,
+0f87f7e78440ce23,NIC,José Daniel Ortega Saavedra,NIC_2025_16.txt,2025-08-21,2025,2092,79.269997,7,stratified_country_score,,not_in_gpd_term,none,,,,
+0f56ee4007b985e7,PAN,Martín Erasto Torrijos Espino,PAN_2004_1.txt,2004-01-01,2004,1476,41.020000,4,gpd_term_anchor,Panama|Martin Torrijos|1,development,leader_term_anchor,Panama,Martin Torrijos,1,.22222222
+672a03fd179c47ff,PAN,Martín Erasto Torrijos Espino,PAN_2005_1.txt,2005-01-01,2005,1310,11.880000,1,gpd_term_anchor,Panama|Martin Torrijos|1,development,leader_term_anchor,Panama,Martin Torrijos,1,.22222222
+c123f7a407433924,PAN,Martín Erasto Torrijos Espino,PAN_2007_1.txt,2007-01-01,2007,518,10.750000,1,gpd_term_anchor,Panama|Martin Torrijos|1,development,leader_term_anchor,Panama,Martin Torrijos,1,.22222222
+8dd10e40c592e09b,PAN,Martín Erasto Torrijos Espino,PAN_2008_1.txt,2008-01-01,2008,483,22.700001,2,gpd_term_anchor,Panama|Martin Torrijos|1,development,leader_term_anchor,Panama,Martin Torrijos,1,.22222222
+6a897d225bd22a95,PAN,Ricardo Martinelli Berrocal,PAN_2010_1.txt,2010-01-01,2010,962,9.530000,0,gpd_text_anchor,Panama|Ricardo Martinelli|1,test_locked,text_anchor,Panama,Ricardo Martinelli,1,.5
+f8265d65dacc2c30,PAN,Ricardo Martinelli Berrocal,PAN_2012_171.txt,2012-02-03,2012,223,49.279999,4,gpd_term_anchor,Panama|Ricardo Martinelli|1,test_locked,leader_term_anchor,Panama,Ricardo Martinelli,1,.5
+71e343c7f2d4365a,PAN,Ricardo Martinelli Berrocal,PAN_2012_52.txt,2012-08-09,2012,488,75.650002,7,gpd_term_anchor,Panama|Ricardo Martinelli|1,test_locked,leader_term_anchor,Panama,Ricardo Martinelli,1,.5
+7a6ade18a1ac64e7,PAN,Ricardo Martinelli Berrocal,PAN_2012_67.txt,2012-07-18,2012,149,34.160000,3,gpd_term_anchor,Panama|Ricardo Martinelli|1,test_locked,leader_term_anchor,Panama,Ricardo Martinelli,1,.5
+9821871e7d53ab16,PAN,Ricardo Martinelli Berrocal,PAN_2012_133.txt,2012-04-20,2012,4885,37.020000,3,stratified_country_score,Panama|Ricardo Martinelli|1,test_locked,leader_term_anchor,Panama,Ricardo Martinelli,1,.5
+5a50390004c54963,PAN,Ricardo Martinelli Berrocal,PAN_2012_76.txt,2012-07-06,2012,153,21.150000,2,stratified_country_score,Panama|Ricardo Martinelli|1,test_locked,leader_term_anchor,Panama,Ricardo Martinelli,1,.5
+bdf0b53ed9bcac06,PAN,Ricardo Martinelli Berrocal,PAN_2012_75.txt,2012-07-08,2012,181,50.770000,5,stratified_country_score,Panama|Ricardo Martinelli|1,test_locked,leader_term_anchor,Panama,Ricardo Martinelli,1,.5
+e439b795eda9f905,PAN,Ricardo Martinelli Berrocal,PAN_2012_49.txt,2012-08-11,2012,85,14.040000,1,stratified_country_score,Panama|Ricardo Martinelli|1,test_locked,leader_term_anchor,Panama,Ricardo Martinelli,1,.5
+67f16266197bc62d,PAN,Ricardo Martinelli Berrocal,PAN_2012_185.txt,2012-01-10,2012,88,8.310000,0,stratified_country_score,Panama|Ricardo Martinelli|1,test_locked,leader_term_anchor,Panama,Ricardo Martinelli,1,.5
+5e6aac8e139c32ca,PAN,Ricardo Martinelli Berrocal,PAN_2012_190.txt,2012-01-02,2012,4643,67.610001,6,stratified_country_score,Panama|Ricardo Martinelli|1,test_locked,leader_term_anchor,Panama,Ricardo Martinelli,1,.5
+1b0761b28e5da9e7,PAN,Ricardo Martinelli Berrocal,PAN_2013_51.txt,2013-06-27,2013,52,2.320000,0,gpd_term_anchor,Panama|Ricardo Martinelli|1,test_locked,leader_term_anchor,Panama,Ricardo Martinelli,1,.5
+ada6f81515db4fd8,PAN,Ricardo Martinelli Berrocal,PAN_2013_23.txt,2013-10-25,2013,86,14.870000,1,gpd_term_anchor,Panama|Ricardo Martinelli|1,test_locked,leader_term_anchor,Panama,Ricardo Martinelli,1,.5
+1af38a8ecd96ef96,PAN,Ricardo Martinelli Berrocal,PAN_2013_75.txt,2013-05-15,2013,31,0.000000,0,stratified_country_score,Panama|Ricardo Martinelli|1,test_locked,leader_term_anchor,Panama,Ricardo Martinelli,1,.5
+d7d1408de941152c,PAN,Juan Carlos Varela,PAN_2014_82.txt,2014-06-18,2014,971,19.990000,1,gpd_term_anchor,Panama|Juan Carlos Varela|1,test_locked,leader_term_anchor,Panama,Juan Carlos Varela,1,.25
+ca518da818e2fb49,PAN,Juan Carlos Varela,PAN_2014_73.txt,2014-07-03,2014,468,37.119999,3,gpd_term_anchor,Panama|Juan Carlos Varela|1,test_locked,leader_term_anchor,Panama,Juan Carlos Varela,1,.25
+567269448ebab9b0,PAN,Juan Carlos Varela,PAN_2014_127.txt,2014-01-26,2014,230,50.500000,5,gpd_term_anchor,Panama|Juan Carlos Varela|1,test_locked,leader_term_anchor,Panama,Juan Carlos Varela,1,.25
+4d9552cc04c658d5,PAN,Juan Carlos Varela,PAN_2014_12.txt,2014-11-27,2014,730,66.650002,6,gpd_term_anchor,Panama|Juan Carlos Varela|1,test_locked,leader_term_anchor,Panama,Juan Carlos Varela,1,.25
+fb7e7f8fbe448006,PAN,Juan Carlos Varela,PAN_2014_39.txt,2014-09-30,2014,564,55.450001,5,stratified_country_score,Panama|Juan Carlos Varela|1,test_locked,leader_term_anchor,Panama,Juan Carlos Varela,1,.25
+5c0fc678b6e91975,PAN,Juan Carlos Varela,PAN_2016_3.txt,2016-05-09,2016,3377,43.720001,4,gpd_term_anchor,Panama|Juan Carlos Varela|1,test_locked,leader_term_anchor,Panama,Juan Carlos Varela,1,.25
+57fb0df758032121,PAN,Laurentino Cortizo Cohen,PAN_2019_165.txt,2019-05-11,2019,616,38.540001,3,gpd_term_anchor,Panama|Laurentino Cortizo|1,test_locked,leader_term_anchor,Panama,Laurentino Cortizo,1,.28749999
+3564f8380f90d970,PAN,Laurentino Cortizo Cohen,PAN_2019_61.txt,2019-10-11,2019,427,32.880001,3,gpd_term_anchor,Panama|Laurentino Cortizo|1,test_locked,leader_term_anchor,Panama,Laurentino Cortizo,1,.28749999
+0902f0c1f704378c,PAN,Laurentino Cortizo Cohen,PAN_2019_3.txt,2019-12-31,2019,327,44.490002,4,gpd_term_anchor,Panama|Laurentino Cortizo|1,test_locked,leader_term_anchor,Panama,Laurentino Cortizo,1,.28749999
+4f1f8d4f2dac05ce,PAN,Laurentino Cortizo Cohen,PAN_2019_30.txt,2019-11-24,2019,663,38.849998,3,stratified_country_score,Panama|Laurentino Cortizo|1,test_locked,leader_term_anchor,Panama,Laurentino Cortizo,1,.28749999
+4cb622089c61e0e7,PAN,Laurentino Cortizo Cohen,PAN_2019_174.txt,2019-04-30,2019,466,75.160004,7,stratified_country_score,Panama|Laurentino Cortizo|1,test_locked,leader_term_anchor,Panama,Laurentino Cortizo,1,.28749999
+d354f6d8d850d9f2,PAN,Laurentino Cortizo Cohen,PAN_2019_72.txt,2019-09-25,2019,956,20.080000,2,gpd_text_anchor,Panama|Laurentino Cortizo|1,test_locked,text_anchor,Panama,Laurentino Cortizo,1,.28749999
+b7c75471b5566fd1,PAN,Laurentino Cortizo Cohen,PAN_2019_132.txt,2019-07-01,2019,1938,60.410000,6,gpd_text_anchor,Panama|Laurentino Cortizo|1,test_locked,text_anchor,Panama,Laurentino Cortizo,1,.28749999
+066d7b866a5fd4ba,PAN,Laurentino Cortizo Cohen,PAN_2020_70.txt,2020-05-12,2020,785,33.020000,3,gpd_term_anchor,Panama|Laurentino Cortizo|1,test_locked,leader_term_anchor,Panama,Laurentino Cortizo,1,.28749999
+2483973cb2531b0b,PAN,Laurentino Cortizo Cohen,PAN_2020_79.txt,2020-04-16,2020,554,31.049999,3,stratified_country_score,Panama|Laurentino Cortizo|1,test_locked,leader_term_anchor,Panama,Laurentino Cortizo,1,.28749999
+8b1276e152af09e3,PAN,Laurentino Cortizo Cohen,PAN_2020_85.txt,2020-03-23,2020,303,26.940001,2,stratified_country_score,Panama|Laurentino Cortizo|1,test_locked,leader_term_anchor,Panama,Laurentino Cortizo,1,.28749999
+a97dfc8a6f00e3c4,PAN,Laurentino Cortizo Cohen,PAN_2020_3.txt,2020-11-26,2020,1847,52.500000,5,stratified_country_score,Panama|Laurentino Cortizo|1,test_locked,leader_term_anchor,Panama,Laurentino Cortizo,1,.28749999
+f630e0ad032ab8e2,PAN,Laurentino Cortizo Cohen,PAN_2020_22.txt,2020-08-13,2020,38,9.250000,0,stratified_country_score,Panama|Laurentino Cortizo|1,test_locked,leader_term_anchor,Panama,Laurentino Cortizo,1,.28749999
+b2ece08a5b1c336d,PAN,Laurentino Cortizo Cohen,PAN_2022_7.txt,2022-09-15,2022,385,26.430000,2,gpd_term_anchor,Panama|Laurentino Cortizo|1,test_locked,leader_term_anchor,Panama,Laurentino Cortizo,1,.28749999
+535a3f0c4507f943,PAN,Laurentino Cortizo Cohen,PAN_2022_33.txt,2022-02-03,2022,1383,14.130000,1,stratified_country_score,Panama|Laurentino Cortizo|1,test_locked,leader_term_anchor,Panama,Laurentino Cortizo,1,.28749999
+f6736e69905d9db8,PAN,José Raúl Mulino Quintero,PAN_2024_133.txt,2024-04-09,2024,572,64.519997,6,stratified_country_score,,not_in_gpd_term,none,,,,
+9159f487e6ae5df8,PAN,José Raúl Mulino Quintero,PAN_2024_106.txt,2024-07-02,2024,2328,68.959999,6,stratified_country_score,,not_in_gpd_term,none,,,,
+b0f1051de1e5c0cb,PAN,José Raúl Mulino Quintero,PAN_2024_175.txt,2024-08-16,2024,8023,45.549999,4,stratified_country_score,,not_in_gpd_term,none,,,,
+402f5ce7bfb4a6fe,PAN,José Raúl Mulino Quintero,PAN_2024_56.txt,2024-10-17,2024,647,47.459999,4,stratified_country_score,,not_in_gpd_term,none,,,,
+62d2aa16032e5309,PAN,José Raúl Mulino Quintero,PAN_2024_107.txt,2024-07-01,2024,1390,47.439999,4,stratified_country_score,,not_in_gpd_term,none,,,,
+71fa3f080a7ae292,PAN,José Raúl Mulino Quintero,PAN_2024_123.txt,2024-05-01,2024,3145,74.059998,7,stratified_country_score,,not_in_gpd_term,none,,,,
+6d265c2b1ffb5240,PAN,José Raúl Mulino Quintero,PAN_2024_72.txt,2024-09-27,2024,402,83.599998,8,stratified_country_score,,not_in_gpd_term,none,,,,
+1a337e2790f8a0c7,PAN,José Raúl Mulino Quintero,PAN_2024_99.txt,2024-08-05,2024,1778,71.870003,7,stratified_country_score,,not_in_gpd_term,none,,,,
+bb16148b98092433,PAN,José Raúl Mulino Quintero,PAN_2025_13.txt,2025-06-09,2025,148,21.290001,2,stratified_country_score,,not_in_gpd_term,none,,,,
+e6107a6bf0baf9a8,PAN,José Raúl Mulino Quintero,PAN_2025_14.txt,2025-06-09,2025,132,11.930000,1,stratified_country_score,,not_in_gpd_term,none,,,,
+9126e5adee4f23d1,PER,Alejandro Celestino Toledo Manrique,PER_2001_1.txt,2001-01-01,2001,1736,33.680000,3,gpd_term_anchor,Peru|Alejandro Toledo|1,test_locked,leader_term_anchor,Peru,Alejandro Toledo,1,.33333334
+892209ac9d3f6fd2,PER,Alejandro Celestino Toledo Manrique,PER_2003_1.txt,2003-01-01,2003,1440,52.840000,5,gpd_term_anchor,Peru|Alejandro Toledo|1,test_locked,leader_term_anchor,Peru,Alejandro Toledo,1,.33333334
+b4edb8fb3f1b55e7,PER,Alejandro Celestino Toledo Manrique,PER_2004_1.txt,2004-01-01,2004,1473,52.639999,5,gpd_term_anchor,Peru|Alejandro Toledo|1,test_locked,leader_term_anchor,Peru,Alejandro Toledo,1,.33333334
+b1ba95b99cb40b1d,PER,Alejandro Celestino Toledo Manrique,PER_2005_1.txt,2005-01-01,2005,953,57.060001,5,gpd_term_anchor,Peru|Alejandro Toledo|1,test_locked,leader_term_anchor,Peru,Alejandro Toledo,1,.33333334
+38da0f8fa2f709f3,PER,Alan Gabriel Ludwig García Pérez,PER_2006_1.txt,2006-01-01,2006,1059,71.480003,7,gpd_term_anchor,Peru|Alan Garcia|1,test_locked,text_anchor,Peru,Alan Garcia,1,1
+c74cc573716c46a5,PER,Alan Gabriel Ludwig García Pérez,PER_2007_1.txt,2007-01-01,2007,1230,35.750000,3,gpd_term_anchor,Peru|Alan Garcia|1,test_locked,leader_term_anchor,Peru,Alan Garcia,1,1
+c11380b5a4295054,PER,Alan Gabriel Ludwig García Pérez,PER_2008_1.txt,2008-01-01,2008,1794,38.490002,3,gpd_term_anchor,Peru|Alan Garcia|1,test_locked,leader_term_anchor,Peru,Alan Garcia,1,1
+5a67a682d57becf9,PER,Alan Gabriel Ludwig García Pérez,PER_2009_1.txt,2009-01-01,2009,4887,31.040001,3,gpd_term_anchor,Peru|Alan Garcia|1,test_locked,leader_term_anchor,Peru,Alan Garcia,1,1
+682da547a26a1a02,PER,Alan Gabriel Ludwig García Pérez,PER_2010_1.txt,2010-01-01,2010,1740,23.299999,2,gpd_term_anchor,Peru|Alan Garcia|1,test_locked,leader_term_anchor,Peru,Alan Garcia,1,1
+922aebc06b4a7409,PER,Ollanta Moisés Humala Tasso,PER_2012_112.txt,2012-07-31,2012,1985,46.810001,4,gpd_term_anchor,Peru|Ollanta Humala|1,development,leader_term_anchor,Peru,Ollanta Humala,1,.5
+7192790c8dc62d31,PER,Ollanta Moisés Humala Tasso,PER_2012_145.txt,2012-06-13,2012,507,8.220000,0,gpd_term_anchor,Peru|Ollanta Humala|1,development,leader_term_anchor,Peru,Ollanta Humala,1,.5
+a10eceb3a04cec74,PER,Ollanta Moisés Humala Tasso,PER_2012_39.txt,2012-12-10,2012,1041,0.000000,0,gpd_term_anchor,Peru|Ollanta Humala|1,development,leader_term_anchor,Peru,Ollanta Humala,1,.5
+37ec4f701c97061b,PER,Ollanta Moisés Humala Tasso,PER_2013_50.txt,2013-09-26,2013,563,12.560000,1,stratified_country_score,Peru|Ollanta Humala|1,development,leader_term_anchor,Peru,Ollanta Humala,1,.5
+e8bba951fbf90d17,PER,Ollanta Moisés Humala Tasso,PER_2013_2.txt,2013-12-28,2013,2559,62.110001,6,gpd_text_anchor,Peru|Ollanta Humala|1,development,text_anchor,Peru,Ollanta Humala,1,.5
+00fec26473eaf37f,PER,Ollanta Moisés Humala Tasso,PER_2013_51.txt,2013-09-25,2013,2436,28.820000,2,gpd_text_anchor,Peru|Ollanta Humala|1,development,text_anchor,Peru,Ollanta Humala,1,.5
+d2e6379ccb9718ce,PER,Ollanta Moisés Humala Tasso,PER_2015_13.txt,2015-11-13,2015,316,45.360001,4,gpd_term_anchor,Peru|Ollanta Humala|1,development,leader_term_anchor,Peru,Ollanta Humala,1,.5
+633ef5b9f9d930f2,PER,Ollanta Moisés Humala Tasso,PER_2015_50.txt,2015-02-09,2015,5276,34.639999,3,gpd_term_anchor,Peru|Ollanta Humala|1,development,leader_term_anchor,Peru,Ollanta Humala,1,.5
+7b36f5e918b91956,PER,Ollanta Moisés Humala Tasso,PER_2015_2.txt,2015-12-15,2015,2100,63.830002,6,stratified_country_score,Peru|Ollanta Humala|1,development,leader_term_anchor,Peru,Ollanta Humala,1,.5
+12c6bb42df689d82,PER,Pedro Pablo Kuczynski Goddard,PER_2016_5.txt,2016-12-15,2016,1098,25.900000,2,gpd_term_anchor,Peru|Pedro Pablo Kuczynski|1,development,leader_term_anchor,Peru,Pedro Pablo Kuczynski,1,.037500001
+eebed1e359ec72a6,PER,Pedro Pablo Kuczynski Goddard,PER_2016_19.txt,2016-08-15,2016,3058,54.439999,5,gpd_term_anchor,Peru|Pedro Pablo Kuczynski|1,development,text_anchor,Peru,Pedro Pablo Kuczynski,1,.037500001
+1c33d3792d2d27c6,PER,Pedro Pablo Kuczynski Goddard,PER_2017_10.txt,2017-12-26,2017,623,8.170000,0,gpd_term_anchor,Peru|Pedro Pablo Kuczynski|1,development,leader_term_anchor,Peru,Pedro Pablo Kuczynski,1,.037500001
+695d19b887870f72,PER,Pedro Pablo Kuczynski Goddard,PER_2017_12.txt,2017-12-26,2017,472,50.939999,5,gpd_term_anchor,Peru|Pedro Pablo Kuczynski|1,development,leader_term_anchor,Peru,Pedro Pablo Kuczynski,1,.037500001
+9058ee678536ad75,PER,Pedro Pablo Kuczynski Goddard,PER_2017_44.txt,2017-08-09,2017,1997,43.259998,4,gpd_term_anchor,Peru|Pedro Pablo Kuczynski|1,development,leader_term_anchor,Peru,Pedro Pablo Kuczynski,1,.037500001
+e2d196b6e049d5b6,PER,Martín Alberto Vizcarra Cornejo,PER_2018_12.txt,2018-09-07,2018,1057,49.470001,4,stratified_country_score,,not_in_gpd_term,none,,,,
+f870e7261e69ead8,PER,Martín Alberto Vizcarra Cornejo,PER_2019_17.txt,2019-10-01,2019,1055,73.760002,7,gpd_text_anchor,,not_in_gpd_term,text_anchor,,,,
+b75f5ead5791cd4d,PER,José Pedro Castillo Terrones,PER_2021_19.txt,2021-10-08,2021,496,0.000000,0,gpd_term_anchor,Peru|Pedro Castillo|1,development,leader_term_anchor,Peru,Pedro Castillo,1,.58749998
+351138bb17d14bc6,PER,José Pedro Castillo Terrones,PER_2021_42.txt,2021-07-30,2021,1502,32.169998,3,gpd_term_anchor,Peru|Pedro Castillo|1,development,leader_term_anchor,Peru,Pedro Castillo,1,.58749998
+b5244f217d99e76f,PER,José Pedro Castillo Terrones,PER_2021_21.txt,2021-10-06,2021,2151,65.919998,6,gpd_term_anchor,Peru|Pedro Castillo|1,development,leader_term_anchor,Peru,Pedro Castillo,1,.58749998
+00f186f1b33e8197,PER,José Pedro Castillo Terrones,PER_2021_1.txt,2021-12-27,2021,303,43.820000,4,gpd_term_anchor,Peru|Pedro Castillo|1,development,leader_term_anchor,Peru,Pedro Castillo,1,.58749998
+f1bec7e50dea9d59,PER,José Pedro Castillo Terrones,PER_2021_56.txt,2021-05-27,2021,2284,30.920000,3,gpd_term_anchor,Peru|Pedro Castillo|1,development,leader_term_anchor,Peru,Pedro Castillo,1,.58749998
+8dac0dd6e970beff,PER,Dina Ercilia Boluarte Zegarra,PER_2022_56.txt,2022-10-01,2022,1192,34.759998,3,stratified_country_score,,not_in_gpd_term,none,,,,
+fe22d0e5da35073e,PER,Dina Ercilia Boluarte Zegarra,PER_2022_53.txt,2022-10-06,2022,447,0.000000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+94e694f00db61966,PER,Dina Ercilia Boluarte Zegarra,PER_2022_105.txt,2022-05-22,2022,892,67.889999,6,stratified_country_score,,not_in_gpd_term,none,,,,
+646b8cd3ad99e443,PER,Dina Ercilia Boluarte Zegarra,PER_2022_95.txt,2022-06-15,2022,745,52.939999,5,stratified_country_score,,not_in_gpd_term,none,,,,
+c1804c5250de8def,PER,Dina Ercilia Boluarte Zegarra,PER_2022_27.txt,2022-11-04,2022,1488,72.949997,7,stratified_country_score,,not_in_gpd_term,none,,,,
+d54e5891d56e5345,PER,Dina Ercilia Boluarte Zegarra,PER_2022_78.txt,2022-08-14,2022,703,82.279999,8,stratified_country_score,,not_in_gpd_term,none,,,,
+558dd3559c4cdec0,PER,Dina Ercilia Boluarte Zegarra,PER_2023_114.txt,2023-01-27,2023,36,9.230000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+450093e50008a050,PER,Dina Ercilia Boluarte Zegarra,PER_2023_64.txt,2023-06-09,2023,1557,43.310001,4,stratified_country_score,,not_in_gpd_term,none,,,,
+90fb767b9380b4d5,PER,Dina Ercilia Boluarte Zegarra,PER_2023_1.txt,2023-12-11,2023,990,33.680000,3,stratified_country_score,,not_in_gpd_term,none,,,,
+8699778c2cdd8a0b,PER,Dina Ercilia Boluarte Zegarra,PER_2023_20.txt,2023-10-17,2023,307,23.260000,2,stratified_country_score,,not_in_gpd_term,none,,,,
+4a9a25089098d231,PER,Dina Ercilia Boluarte Zegarra,PER_2023_39.txt,2023-09-14,2023,2075,50.150002,5,stratified_country_score,,not_in_gpd_term,none,,,,
+d39b08f5f48bad43,PER,Dina Ercilia Boluarte Zegarra,PER_2023_18.txt,2023-10-17,2023,1634,10.650000,1,stratified_country_score,,not_in_gpd_term,none,,,,
+b522ee151687d172,PER,Dina Ercilia Boluarte Zegarra,PER_2023_36.txt,2023-09-19,2023,366,0.000000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+9a209146d9929f3c,PER,Dina Ercilia Boluarte Zegarra,PER_2023_35.txt,2023-09-19,2023,916,13.760000,1,stratified_country_score,,not_in_gpd_term,none,,,,
+8240753cb150fdc6,PER,Dina Ercilia Boluarte Zegarra,PER_2023_30.txt,2023-09-20,2023,2016,44.959999,4,gpd_text_anchor,,not_in_gpd_term,text_anchor,,,,
+94a7908fe630b3dd,PER,Dina Ercilia Boluarte Zegarra,PER_2024_109.txt,2024-02-21,2024,1310,28.610001,2,stratified_country_score,,not_in_gpd_term,none,,,,
+efd54411088a1a37,PER,Dina Ercilia Boluarte Zegarra,PER_2024_35.txt,2024-09-23,2024,942,38.150002,3,stratified_country_score,,not_in_gpd_term,none,,,,
+827edc178e076fcb,PER,Dina Ercilia Boluarte Zegarra,PER_2024_112.txt,2024-02-06,2024,799,23.389999,2,stratified_country_score,,not_in_gpd_term,none,,,,
+98c6fdd108caef0b,PER,Dina Ercilia Boluarte Zegarra,PER_2025_26.txt,2025-03-03,2025,843,70.300003,7,stratified_country_score,,not_in_gpd_term,none,,,,
+9689d600ef35cc74,PRY,Óscar Nicanor Duarte Frutos,PRY_2003_1.txt,2003-01-01,2003,1581,55.669998,5,gpd_term_anchor,Paraguay|Nicanor Duarte|1,test_locked,leader_term_anchor,Paraguay,Nicanor Duarte,1,.5
+e538449ed55cbae2,PRY,Óscar Nicanor Duarte Frutos,PRY_2004_1.txt,2004-01-01,2004,4262,40.080002,4,gpd_term_anchor,Paraguay|Nicanor Duarte|1,test_locked,leader_term_anchor,Paraguay,Nicanor Duarte,1,.5
+9fb871fb308a1e76,PRY,Óscar Nicanor Duarte Frutos,PRY_2005_1.txt,2005-01-01,2005,4130,14.590000,1,gpd_term_anchor,Paraguay|Nicanor Duarte|1,test_locked,leader_term_anchor,Paraguay,Nicanor Duarte,1,.5
+901d4e1bc3d07b61,PRY,Óscar Nicanor Duarte Frutos,PRY_2006_1.txt,2006-01-01,2006,5160,27.139999,2,gpd_term_anchor,Paraguay|Nicanor Duarte|1,test_locked,leader_term_anchor,Paraguay,Nicanor Duarte,1,.5
+e953231d1e28a7fe,PRY,Fernando Armindo Lugo Méndez,PRY_2009_2.txt,2009-12-17,2009,830,50.099998,5,stratified_country_score,Paraguay|Fernando Lugo|1,development,leader_term_anchor,Paraguay,Fernando Lugo,1,0
+1713ed8248cdf72b,PRY,Fernando Armindo Lugo Méndez,PRY_2010_1.txt,2010-12-19,2010,402,9.610000,0,gpd_term_anchor,Paraguay|Fernando Lugo|1,development,leader_term_anchor,Paraguay,Fernando Lugo,1,0
+99bf46d009325433,PRY,Fernando Armindo Lugo Méndez,PRY_2010_19.txt,2010-08-03,2010,521,48.200001,4,stratified_country_score,Paraguay|Fernando Lugo|1,development,leader_term_anchor,Paraguay,Fernando Lugo,1,0
+a59921c46b110eec,PRY,Fernando Armindo Lugo Méndez,PRY_2010_27.txt,2010-06-28,2010,825,44.470001,4,stratified_country_score,Paraguay|Fernando Lugo|1,development,leader_term_anchor,Paraguay,Fernando Lugo,1,0
+0841a6264d559c08,PRY,Fernando Armindo Lugo Méndez,PRY_2011_28.txt,2011-05-12,2011,980,62.560001,6,gpd_term_anchor,Paraguay|Fernando Lugo|1,development,leader_term_anchor,Paraguay,Fernando Lugo,1,0
+8b635f0556f0b175,PRY,Fernando Armindo Lugo Méndez,PRY_2011_10.txt,2011-10-21,2011,1695,29.430000,2,gpd_term_anchor,Paraguay|Fernando Lugo|1,development,leader_term_anchor,Paraguay,Fernando Lugo,1,0
+ad95c7a61c0e1ee0,PRY,Fernando Armindo Lugo Méndez,PRY_2011_1.txt,2011-12-28,2011,1292,68.070000,6,gpd_term_anchor,Paraguay|Fernando Lugo|1,development,leader_term_anchor,Paraguay,Fernando Lugo,1,0
+bee7bba0d9ca2686,PRY,Fernando Armindo Lugo Méndez,PRY_2011_9.txt,2011-10-26,2011,2202,61.900002,6,stratified_country_score,Paraguay|Fernando Lugo|1,development,leader_term_anchor,Paraguay,Fernando Lugo,1,0
+d6901a84ac413f91,PRY,Fernando Armindo Lugo Méndez,PRY_2011_31.txt,2011-04-29,2011,1288,57.099998,5,stratified_country_score,Paraguay|Fernando Lugo|1,development,leader_term_anchor,Paraguay,Fernando Lugo,1,0
+02af152cb56df196,PRY,Fernando Armindo Lugo Méndez,PRY_2011_22.txt,2011-06-20,2011,601,57.119999,5,stratified_country_score,Paraguay|Fernando Lugo|1,development,leader_term_anchor,Paraguay,Fernando Lugo,1,0
+2a5aadc347c819ab,PRY,Fernando Armindo Lugo Méndez,PRY_2011_32.txt,2011-04-27,2011,1069,72.370003,7,stratified_country_score,Paraguay|Fernando Lugo|1,development,leader_term_anchor,Paraguay,Fernando Lugo,1,0
+3acf3d728093d8b1,PRY,Fernando Armindo Lugo Méndez,PRY_2012_5.txt,2012-04-25,2012,1087,49.950001,4,gpd_term_anchor,Paraguay|Fernando Lugo|1,development,leader_term_anchor,Paraguay,Fernando Lugo,1,0
+427d29baf2c9eaad,PRY,Horacio Manuel Cartes Jara,PRY_2014_54.txt,2014-08-29,2014,483,34.970001,3,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+705e56fd90bfbf41,PRY,Horacio Manuel Cartes Jara,PRY_2014_60.txt,2014-08-14,2014,904,34.090000,3,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+3e7dd1b7d09b09ad,PRY,Horacio Manuel Cartes Jara,PRY_2014_12.txt,2014-12-09,2014,226,7.640000,0,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+5bbe156a349b4945,PRY,Horacio Manuel Cartes Jara,PRY_2015_17.txt,2015-09-29,2015,914,15.180000,1,gpd_term_anchor,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+b6896e084632072c,PRY,Horacio Manuel Cartes Jara,PRY_2015_60.txt,2015-03-20,2015,310,41.570000,4,gpd_term_anchor,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+e5afa5dddbfd33e4,PRY,Horacio Manuel Cartes Jara,PRY_2015_75.txt,2015-01-06,2015,434,48.450001,4,gpd_term_anchor,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+bcf1ef8d0580b705,PRY,Horacio Manuel Cartes Jara,PRY_2015_26.txt,2015-09-10,2015,468,62.630001,6,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+facf3e83580be25b,PRY,Horacio Manuel Cartes Jara,PRY_2015_25.txt,2015-09-10,2015,879,8.090000,0,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+2afbb30b4d9ce328,PRY,Horacio Manuel Cartes Jara,PRY_2015_74.txt,2015-01-09,2015,212,14.370000,1,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+aa33f8deda902035,PRY,Horacio Manuel Cartes Jara,PRY_2015_1.txt,2015-07-27,2015,357,25.040001,2,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+2001c46c77a261ee,PRY,Horacio Manuel Cartes Jara,PRY_2015_56.txt,2015-04-27,2015,543,16.709999,1,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+5ae4214920e12f81,PRY,Horacio Manuel Cartes Jara,PRY_2015_37.txt,2015-07-27,2015,1480,60.639999,6,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+6d454a7c8342b63d,PRY,Horacio Manuel Cartes Jara,PRY_2015_18.txt,2015-09-28,2015,1276,24.840000,2,gpd_text_anchor,Paraguay|Horacio Cartes|1,development,text_anchor,Paraguay,Horacio Cartes,1,.2375
+65cd3d5ae7c4df66,PRY,Horacio Manuel Cartes Jara,PRY_2016_5.txt,2016-12-24,2016,464,37.709999,3,gpd_term_anchor,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+018136ffec2051e8,PRY,Horacio Manuel Cartes Jara,PRY_2016_6.txt,2016-12-21,2016,307,34.700001,3,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+240d3b533a3b0fb8,PRY,Horacio Manuel Cartes Jara,PRY_2016_43.txt,2016-07-18,2016,385,4.760000,0,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+f17f86af8d09e1c5,PRY,Horacio Manuel Cartes Jara,PRY_2016_26.txt,2016-08-31,2016,135,12.440000,1,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+4cfc6a6eb363109b,PRY,Horacio Manuel Cartes Jara,PRY_2016_27.txt,2016-08-29,2016,394,76.279999,7,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+a17f49359017f12e,PRY,Horacio Manuel Cartes Jara,PRY_2017_14.txt,2017-07-01,2017,683,6.330000,0,gpd_term_anchor,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+8d8513cb80b0d6d0,PRY,Horacio Manuel Cartes Jara,PRY_2017_23.txt,2017-04-24,2017,238,20.360001,2,stratified_country_score,Paraguay|Horacio Cartes|1,development,leader_term_anchor,Paraguay,Horacio Cartes,1,.2375
+538e2d820b08295a,PRY,Mario Abdo Benítez,PRY_2020_4.txt,2020-07-01,2020,5028,26.389999,2,gpd_term_anchor,Paraguay|Mario Abdo Benitez|1,development,leader_term_anchor,Paraguay,Mario Abdo Benitez,1,.087499999
+13699872fa458e22,PRY,Mario Abdo Benítez,PRY_2020_12.txt,2020-01-10,2020,350,21.650000,2,gpd_term_anchor,Paraguay|Mario Abdo Benitez|1,development,leader_term_anchor,Paraguay,Mario Abdo Benitez,1,.087499999
+1560835e34d942be,PRY,Mario Abdo Benítez,PRY_2021_3.txt,2021-03-26,2021,989,23.670000,2,gpd_text_anchor,Paraguay|Mario Abdo Benitez|1,development,text_anchor,Paraguay,Mario Abdo Benitez,1,.087499999
+13aae969286d67e1,PRY,Mario Abdo Benítez,PRY_2022_2.txt,2022-11-30,2022,5385,45.459999,4,gpd_term_anchor,Paraguay|Mario Abdo Benitez|1,development,leader_term_anchor,Paraguay,Mario Abdo Benitez,1,.087499999
+49232f2d2c45954d,PRY,Mario Abdo Benítez,PRY_2022_8.txt,2022-11-22,2022,1827,30.520000,3,gpd_term_anchor,Paraguay|Mario Abdo Benitez|1,development,leader_term_anchor,Paraguay,Mario Abdo Benitez,1,.087499999
+3cccb6464bec962b,PRY,Mario Abdo Benítez,PRY_2023_6.txt,2023-01-24,2023,1157,12.020000,1,gpd_term_anchor,Paraguay|Mario Abdo Benitez|1,development,leader_term_anchor,Paraguay,Mario Abdo Benitez,1,.087499999
+89563c14c31876ce,PRY,Santiago Peña Palacios,PRY_2024_17.txt,2024-09-25,2024,3138,25.350000,2,stratified_country_score,,not_in_gpd_term,none,,,,
+2586d8fb3ad6b26e,PRY,Santiago Peña Palacios,PRY_2025_25.txt,2025-07-03,2025,8647,43.290001,4,stratified_country_score,,not_in_gpd_term,none,,,,
+be92b88c28a24959,PRY,Santiago Peña Palacios,PRY_2025_6.txt,2025-05-02,2025,127,11.750000,1,stratified_country_score,,not_in_gpd_term,none,,,,
+859f65f488be00cf,PRY,Santiago Peña Palacios,PRY_2025_21.txt,2025-06-25,2025,216,0.000000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+f401856a7e66e06d,PRY,Santiago Peña Palacios,PRY_2025_15.txt,2025-06-12,2025,1662,70.959999,7,stratified_country_score,,not_in_gpd_term,none,,,,
+2b236021d9127350,SLV,Francisco Guillermo Flores Perez,SLV_2001_1.txt,2001-06-02,2001,6045,30.940001,3,gpd_term_anchor,El Salvador|Francisco Flores|1,test_locked,leader_term_anchor,El Salvador,Francisco Flores,1,0
+6d601060efd0c240,SLV,Francisco Guillermo Flores Perez,SLV_2001_2.txt,2001-09-15,2001,1241,46.740002,4,gpd_text_anchor,El Salvador|Francisco Flores|1,test_locked,text_anchor,El Salvador,Francisco Flores,1,0
+00bd776d606b36e3,SLV,Francisco Guillermo Flores Perez,SLV_2002_1.txt,2002-03-21,2002,1004,36.180000,3,gpd_term_anchor,El Salvador|Francisco Flores|1,test_locked,leader_term_anchor,El Salvador,Francisco Flores,1,0
+15cbeb90246aebbd,SLV,Francisco Guillermo Flores Perez,SLV_2003_3.txt,2003-08-15,2003,556,83.930000,8,gpd_term_anchor,El Salvador|Francisco Flores|1,test_locked,leader_term_anchor,El Salvador,Francisco Flores,1,0
+2d989ec06baafd05,SLV,Francisco Guillermo Flores Perez,SLV_2003_1.txt,2003-01-01,2003,1505,44.200001,4,gpd_term_anchor,El Salvador|Francisco Flores|1,test_locked,text_anchor,El Salvador,Francisco Flores,1,0
+4dfd458cac4bcfe4,SLV,Francisco Guillermo Flores Perez,SLV_2003_2.txt,2003-07-23,2003,535,76.669998,7,gpd_term_anchor,El Salvador|Francisco Flores|1,test_locked,leader_term_anchor,El Salvador,Francisco Flores,1,0
+297e4e1eb578fe8d,SLV,Elías Antonio Saca González,SLV_2004_48.txt,2004-01-01,2004,1454,56.720001,5,stratified_country_score,El Salvador|Antonio Saca|1,test_locked,leader_term_anchor,El Salvador,Antonio Saca,1,.58333331
+46fc077f1a0481bb,SLV,Elías Antonio Saca González,SLV_2005_22.txt,2005-01-01,2005,464,15.070000,1,stratified_country_score,El Salvador|Antonio Saca|1,test_locked,leader_term_anchor,El Salvador,Antonio Saca,1,.58333331
+5e0ef76210a3c7b2,SLV,Elías Antonio Saca González,SLV_2005_132.txt,2005-01-01,2005,1086,45.360001,4,stratified_country_score,El Salvador|Antonio Saca|1,test_locked,leader_term_anchor,El Salvador,Antonio Saca,1,.58333331
+be7a285f28d61cea,SLV,Elías Antonio Saca González,SLV_2005_42.txt,2005-01-01,2005,1400,40.250000,4,stratified_country_score,El Salvador|Antonio Saca|1,test_locked,leader_term_anchor,El Salvador,Antonio Saca,1,.58333331
+ca8ad67f8d1a12f6,SLV,Elías Antonio Saca González,SLV_2006_109.txt,2006-01-01,2006,1299,38.980000,3,gpd_term_anchor,El Salvador|Antonio Saca|1,test_locked,leader_term_anchor,El Salvador,Antonio Saca,1,.58333331
+7a0f5221ddf9b909,SLV,Elías Antonio Saca González,SLV_2006_145.txt,2006-01-01,2006,1780,29.629999,2,gpd_term_anchor,El Salvador|Antonio Saca|1,test_locked,leader_term_anchor,El Salvador,Antonio Saca,1,.58333331
+13238f6ef272731d,SLV,Elías Antonio Saca González,SLV_2006_46.txt,2006-01-01,2006,1584,36.680000,3,gpd_term_anchor,El Salvador|Antonio Saca|1,test_locked,leader_term_anchor,El Salvador,Antonio Saca,1,.58333331
+0d46d5faafbfe54f,SLV,Elías Antonio Saca González,SLV_2006_107.txt,2006-01-01,2006,981,31.809999,3,stratified_country_score,El Salvador|Antonio Saca|1,test_locked,leader_term_anchor,El Salvador,Antonio Saca,1,.58333331
+ae20e5c640ab2e1f,SLV,Elías Antonio Saca González,SLV_2007_255.txt,2007-01-01,2007,1202,11.690000,1,gpd_term_anchor,El Salvador|Antonio Saca|1,test_locked,leader_term_anchor,El Salvador,Antonio Saca,1,.58333331
+d2a966875ae7246b,SLV,Elías Antonio Saca González,SLV_2007_1.txt,2007-01-01,2007,1261,10.250000,1,stratified_country_score,El Salvador|Antonio Saca|1,test_locked,leader_term_anchor,El Salvador,Antonio Saca,1,.58333331
+b524af85c91285f4,SLV,Elías Antonio Saca González,SLV_2007_273.txt,2007-01-01,2007,1612,28.290001,2,stratified_country_score,El Salvador|Antonio Saca|1,test_locked,leader_term_anchor,El Salvador,Antonio Saca,1,.58333331
+20687d66e323ed37,SLV,Elías Antonio Saca González,SLV_2007_216.txt,2007-01-01,2007,778,0.200000,0,stratified_country_score,El Salvador|Antonio Saca|1,test_locked,leader_term_anchor,El Salvador,Antonio Saca,1,.58333331
+f236f81ebf403344,SLV,Elías Antonio Saca González,SLV_2008_232.txt,2008-01-01,2008,1717,27.730000,2,gpd_term_anchor,El Salvador|Antonio Saca|1,test_locked,leader_term_anchor,El Salvador,Antonio Saca,1,.58333331
+eae3f8896af77005,SLV,Elías Antonio Saca González,SLV_2008_77.txt,2008-01-01,2008,4641,44.029999,4,gpd_text_anchor,El Salvador|Antonio Saca|1,test_locked,text_anchor,El Salvador,Antonio Saca,1,.58333331
+a716b8d6cd89eb43,SLV,Elías Antonio Saca González,SLV_2008_75.txt,2008-01-01,2008,2453,20.920000,2,gpd_text_anchor,El Salvador|Antonio Saca|1,test_locked,text_anchor,El Salvador,Antonio Saca,1,.58333331
+10c4c32f7f2fe212,SLV,Carlos Mauricio Funes Cartagena,SLV_2010_4.txt,2019-02-02,2010,1233,53.880001,5,gpd_term_anchor,El Salvador|Mauricio Funes|1,development,leader_term_anchor,El Salvador,Mauricio Funes,1,.625
+8395ca171f991312,SLV,Carlos Mauricio Funes Cartagena,SLV_2010_2.txt,2019-02-02,2010,1872,35.950001,3,gpd_term_anchor,El Salvador|Mauricio Funes|1,development,leader_term_anchor,El Salvador,Mauricio Funes,1,.625
+a1ab092d485d6285,SLV,Carlos Mauricio Funes Cartagena,SLV_2012_5.txt,2019-02-02,2012,517,52.660000,5,gpd_term_anchor,El Salvador|Mauricio Funes|1,development,leader_term_anchor,El Salvador,Mauricio Funes,1,.625
+0ebcd2efedea99ae,SLV,Carlos Mauricio Funes Cartagena,SLV_2012_1.txt,2019-02-02,2012,115,54.160000,5,gpd_term_anchor,El Salvador|Mauricio Funes|1,development,leader_term_anchor,El Salvador,Mauricio Funes,1,.625
+818715e4612e0a78,SLV,Carlos Mauricio Funes Cartagena,SLV_2013_1.txt,2019-02-02,2013,1361,58.139999,5,gpd_term_anchor,El Salvador|Mauricio Funes|1,development,leader_term_anchor,El Salvador,Mauricio Funes,1,.625
+fb88f631c1679532,SLV,Salvador Sánchez Cerén,SLV_2014_30.txt,2019-02-02,2014,256,23.000000,2,gpd_term_anchor,El Salvador|Salvador Sanchez Ceren|1,test_locked,leader_term_anchor,El Salvador,Salvador Sanchez Ceren,1,.625
+948faf389645b276,SLV,Salvador Sánchez Cerén,SLV_2014_8.txt,2019-02-02,2014,2114,24.080000,2,gpd_text_anchor,El Salvador|Salvador Sanchez Ceren|1,test_locked,text_anchor,El Salvador,Salvador Sanchez Ceren,1,.625
+375ee96ca472dad1,SLV,Salvador Sánchez Cerén,SLV_2016_16.txt,2019-02-02,2016,601,54.450001,5,gpd_term_anchor,El Salvador|Salvador Sanchez Ceren|1,test_locked,leader_term_anchor,El Salvador,Salvador Sanchez Ceren,1,.625
+723cc0a445dff9c0,SLV,Salvador Sánchez Cerén,SLV_2016_6.txt,2019-02-02,2016,138,7.750000,0,gpd_term_anchor,El Salvador|Salvador Sanchez Ceren|1,test_locked,leader_term_anchor,El Salvador,Salvador Sanchez Ceren,1,.625
+144c470c8b30098c,SLV,Salvador Sánchez Cerén,SLV_2017_7.txt,2019-02-02,2017,1067,8.600000,0,gpd_term_anchor,El Salvador|Salvador Sanchez Ceren|1,test_locked,leader_term_anchor,El Salvador,Salvador Sanchez Ceren,1,.625
+ed45e0885c6a1215,SLV,Salvador Sánchez Cerén,SLV_2017_2.txt,2019-02-02,2017,358,42.669998,4,gpd_term_anchor,El Salvador|Salvador Sanchez Ceren|1,test_locked,leader_term_anchor,El Salvador,Salvador Sanchez Ceren,1,.625
+6c800da68cb196ef,SLV,Nayib Armando Bukele Ortez,SLV_2021_209.txt,2021-05-05,2021,50,9.370000,0,gpd_term_anchor,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+e0b90e96670dfa46,SLV,Nayib Armando Bukele Ortez,SLV_2021_18.txt,2021-12-17,2021,1797,69.529999,6,stratified_country_score,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+997a1e810d3b140b,SLV,Nayib Armando Bukele Ortez,SLV_2021_74.txt,2021-11-09,2021,78,39.610001,3,stratified_country_score,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+a06818332ed43d39,SLV,Nayib Armando Bukele Ortez,SLV_2021_120.txt,2021-09-15,2021,316,55.119999,5,stratified_country_score,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+119decbc53161f4e,SLV,Nayib Armando Bukele Ortez,SLV_2021_265.txt,2021-02-10,2021,181,87.110001,8,stratified_country_score,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+14075fcdff100c7c,SLV,Nayib Armando Bukele Ortez,SLV_2022_93.txt,2022-10-12,2022,104,20.860001,2,stratified_country_score,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+82deebdc5ce26b42,SLV,Nayib Armando Bukele Ortez,SLV_2022_163.txt,2022-09-18,2022,363,62.810001,6,stratified_country_score,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+0247bd56a3f6b7c8,SLV,Nayib Armando Bukele Ortez,SLV_2022_230.txt,2022-08-23,2022,184,27.200001,2,stratified_country_score,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+033b03e522364203,SLV,Nayib Armando Bukele Ortez,SLV_2022_64.txt,2022-10-21,2022,89,8.460000,0,stratified_country_score,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+d8e65719dacb5325,SLV,Nayib Armando Bukele Ortez,SLV_2022_339.txt,2022-06-02,2022,105,70.110001,7,stratified_country_score,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+7285e7e7235761c4,SLV,Nayib Armando Bukele Ortez,SLV_2022_24.txt,2022-11-25,2022,788,81.779999,8,stratified_country_score,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+b59c4bbdbb1b8cae,SLV,Nayib Armando Bukele Ortez,SLV_2023_163.txt,2023-06-01,2023,1491,71.379997,7,stratified_country_score,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+c5f99e3ad8440535,SLV,Nayib Armando Bukele Ortez,SLV_2024_328.txt,2024-09-05,2024,5034,28.540001,2,gpd_term_anchor,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+7d6a713559a79578,SLV,Nayib Armando Bukele Ortez,SLV_2024_122.txt,2024-11-21,2024,2541,22.490000,2,gpd_term_anchor,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+b30424a5f86eb2a0,SLV,Nayib Armando Bukele Ortez,SLV_2024_511.txt,2024-07-21,2024,758,18.889999,1,gpd_term_anchor,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+34837919ccaee630,SLV,Nayib Armando Bukele Ortez,SLV_2024_12.txt,2024-12-27,2024,2773,19.980000,1,gpd_term_anchor,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+c8b288b1c5c5d9cb,SLV,Nayib Armando Bukele Ortez,SLV_2024_445.txt,2024-08-03,2024,2119,14.000000,1,stratified_country_score,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+4f2556339212e573,SLV,Nayib Armando Bukele Ortez,SLV_2024_754.txt,2024-03-06,2024,333,6.450000,0,stratified_country_score,El Salvador|Nayib Bukele|1,test_locked,leader_term_anchor,El Salvador,Nayib Bukele,1,.5
+a06468e8e7b9c42f,URY,Jorge Luis Batlle Ibáñez,URY_2001_187.txt,2001-08-25,2001,2081,18.450001,1,gpd_term_anchor,Uruguay|Jorge Batlle|1,test_locked,leader_term_anchor,Uruguay,Jorge Batlle,1,.21666667
+0a94d6dd95fd62a8,URY,Jorge Luis Batlle Ibáñez,URY_2001_13.txt,2001-02-22,2001,1356,5.460000,0,gpd_term_anchor,Uruguay|Jorge Batlle|1,test_locked,leader_term_anchor,Uruguay,Jorge Batlle,1,.21666667
+c6b7cd5e9d60c230,URY,Jorge Luis Batlle Ibáñez,URY_2002_83.txt,2002-04-23,2002,1111,19.740000,1,gpd_term_anchor,Uruguay|Jorge Batlle|1,test_locked,leader_term_anchor,Uruguay,Jorge Batlle,1,.21666667
+5dfde30426c112fa,URY,Jorge Luis Batlle Ibáñez,URY_2003_105.txt,2003-10-17,2003,2189,36.610001,3,gpd_term_anchor,Uruguay|Jorge Batlle|1,test_locked,leader_term_anchor,Uruguay,Jorge Batlle,1,.21666667
+9181c6f36471dae2,URY,Jorge Luis Batlle Ibáñez,URY_2003_124.txt,2003-11-15,2003,1088,13.120000,1,gpd_term_anchor,Uruguay|Jorge Batlle|1,test_locked,leader_term_anchor,Uruguay,Jorge Batlle,1,.21666667
+9ee884ed034f90a0,URY,Jorge Luis Batlle Ibáñez,URY_2003_6.txt,2003-01-03,2003,1079,33.520000,3,stratified_country_score,Uruguay|Jorge Batlle|1,test_locked,leader_term_anchor,Uruguay,Jorge Batlle,1,.21666667
+d1664741935de711,URY,Jorge Luis Batlle Ibáñez,URY_2004_1.txt,2004-01-28,2004,1263,11.450000,1,gpd_text_anchor,Uruguay|Jorge Batlle|1,test_locked,text_anchor,Uruguay,Jorge Batlle,1,.21666667
+1443582aec6acfb1,URY,Tabaré Ramón Vázquez Rosas,URY_2005_202.txt,2005-07-04,2005,981,2.500000,0,gpd_term_anchor,Uruguay|Tabare Vazquez|1,test_locked,leader_term_anchor,Uruguay,Tabare Vazquez,1,.25
+565ca9d1cf106214,URY,Tabaré Ramón Vázquez Rosas,URY_2005_59.txt,2005-04-25,2005,4920,43.939999,4,stratified_country_score,Uruguay|Tabare Vazquez|1,test_locked,leader_term_anchor,Uruguay,Tabare Vazquez,1,.25
+da3716bb89c65545,URY,Tabaré Ramón Vázquez Rosas,URY_2005_99.txt,2005-05-25,2005,3188,21.740000,2,stratified_country_score,Uruguay|Tabare Vazquez|1,test_locked,leader_term_anchor,Uruguay,Tabare Vazquez,1,.25
+f1f75191acb17e8a,URY,Tabaré Ramón Vázquez Rosas,URY_2005_53.txt,2005-03-01,2005,6946,48.139999,4,gpd_text_anchor,Uruguay|Tabare Vazquez|1,test_locked,text_anchor,Uruguay,Tabare Vazquez,1,.25
+94870187d337be76,URY,Tabaré Ramón Vázquez Rosas,URY_2006_142.txt,2006-05-01,2006,825,47.380001,4,gpd_term_anchor,Uruguay|Tabare Vazquez|1,test_locked,leader_term_anchor,Uruguay,Tabare Vazquez,1,.25
+f6fe812fa6d0961f,URY,Tabaré Ramón Vázquez Rosas,URY_2006_259.txt,2006-09-20,2006,3992,38.869999,3,gpd_term_anchor,Uruguay|Tabare Vazquez|1,test_locked,leader_term_anchor,Uruguay,Tabare Vazquez,1,.25
+89234e0bab695b8a,URY,Tabaré Ramón Vázquez Rosas,URY_2006_186.txt,2006-07-24,2006,3742,34.070000,3,stratified_country_score,Uruguay|Tabare Vazquez|1,test_locked,leader_term_anchor,Uruguay,Tabare Vazquez,1,.25
+606466d1e4cc9912,URY,Tabaré Ramón Vázquez Rosas,URY_2006_225.txt,2006-08-21,2006,2596,9.670000,0,stratified_country_score,Uruguay|Tabare Vazquez|1,test_locked,leader_term_anchor,Uruguay,Tabare Vazquez,1,.25
+290b8c9f80f38b6a,URY,Tabaré Ramón Vázquez Rosas,URY_2006_351.txt,2006-12-04,2006,1164,7.810000,0,stratified_country_score,Uruguay|Tabare Vazquez|1,test_locked,leader_term_anchor,Uruguay,Tabare Vazquez,1,.25
+9fe25dbd0f109708,URY,Tabaré Ramón Vázquez Rosas,URY_2006_143.txt,2006-05-01,2006,4272,71.660004,7,stratified_country_score,Uruguay|Tabare Vazquez|1,test_locked,leader_term_anchor,Uruguay,Tabare Vazquez,1,.25
+672c4179ed3de8ec,URY,Tabaré Ramón Vázquez Rosas,URY_2007_83.txt,2007-09-18,2007,2001,2.350000,0,gpd_term_anchor,Uruguay|Tabare Vazquez|1,test_locked,leader_term_anchor,Uruguay,Tabare Vazquez,1,.25
+ee3bea169726b745,URY,Tabaré Ramón Vázquez Rosas,URY_2008_219.txt,2008-12-17,2008,1296,29.219999,2,gpd_term_anchor,Uruguay|Tabare Vazquez|1,test_locked,leader_term_anchor,Uruguay,Tabare Vazquez,1,.25
+446465cf6ea05cfb,URY,José Alberto Mujica Cordano,URY_2011_5.txt,2011-11-25,2011,136,29.190001,2,gpd_term_anchor,Uruguay|Jose Mujica|1,test_locked,leader_term_anchor,Uruguay,Jose Mujica,1,.125
+fb0ff06919684b95,URY,José Alberto Mujica Cordano,URY_2012_88.txt,2012-04-17,2012,763,50.700001,5,gpd_term_anchor,Uruguay|Jose Mujica|1,test_locked,leader_term_anchor,Uruguay,Jose Mujica,1,.125
+c6e15dcaf0fbd34a,URY,José Alberto Mujica Cordano,URY_2013_41.txt,2013-07-15,2013,442,58.000000,5,stratified_country_score,Uruguay|Jose Mujica|1,test_locked,leader_term_anchor,Uruguay,Jose Mujica,1,.125
+5d24c5f03ccb183c,URY,José Alberto Mujica Cordano,URY_2013_5.txt,2013-12-13,2013,485,52.450001,5,stratified_country_score,Uruguay|Jose Mujica|1,test_locked,leader_term_anchor,Uruguay,Jose Mujica,1,.125
+f9826c63318b1b74,URY,José Alberto Mujica Cordano,URY_2014_47.txt,2014-09-12,2014,414,16.600000,1,gpd_term_anchor,Uruguay|Jose Mujica|1,test_locked,leader_term_anchor,Uruguay,Jose Mujica,1,.125
+0bd596635cb92adc,URY,José Alberto Mujica Cordano,URY_2014_39.txt,2014-09-30,2014,1081,30.110001,3,gpd_term_anchor,Uruguay|Jose Mujica|1,test_locked,leader_term_anchor,Uruguay,Jose Mujica,1,.125
+5cd45193ed18e12f,URY,José Alberto Mujica Cordano,URY_2014_61.txt,2014-08-22,2014,671,39.680000,3,gpd_term_anchor,Uruguay|Jose Mujica|1,test_locked,leader_term_anchor,Uruguay,Jose Mujica,1,.125
+3723cdb1f92824c8,URY,José Alberto Mujica Cordano,URY_2014_4.txt,2014-12-18,2014,622,37.200001,3,stratified_country_score,Uruguay|Jose Mujica|1,test_locked,leader_term_anchor,Uruguay,Jose Mujica,1,.125
+39dde3847ee12a1e,URY,José Alberto Mujica Cordano,URY_2014_36.txt,2014-10-02,2014,560,62.049999,6,stratified_country_score,Uruguay|Jose Mujica|1,test_locked,leader_term_anchor,Uruguay,Jose Mujica,1,.125
+5e2fb799e6d50443,URY,José Alberto Mujica Cordano,URY_2014_21.txt,2014-10-20,2014,684,63.070000,6,stratified_country_score,Uruguay|Jose Mujica|1,test_locked,leader_term_anchor,Uruguay,Jose Mujica,1,.125
+ae5ea0153e0dbbb6,URY,Tabaré Ramón Vázquez Rosas,URY_2015_13.txt,2015-10-29,2015,217,41.990002,4,gpd_term_anchor,Uruguay|Tabare Vazquez|2,development,leader_term_anchor,Uruguay,Tabare Vazquez,2,.21250001
+3127ddc16e52ecde,URY,Tabaré Ramón Vázquez Rosas,URY_2015_23.txt,2015-06-16,2015,1893,40.459999,4,gpd_term_anchor,Uruguay|Tabare Vazquez|2,development,leader_term_anchor,Uruguay,Tabare Vazquez,2,.21250001
+8616d15a0d66ad07,URY,Tabaré Ramón Vázquez Rosas,URY_2015_35.txt,2015-03-01,2015,3778,24.580000,2,gpd_text_anchor,Uruguay|Tabare Vazquez|2,development,text_anchor,Uruguay,Tabare Vazquez,2,.21250001
+73561ceb8a2e6a9f,URY,Tabaré Ramón Vázquez Rosas,URY_2015_14.txt,2015-09-29,2015,2319,38.930000,3,gpd_text_anchor,Uruguay|Tabare Vazquez|2,development,text_anchor,Uruguay,Tabare Vazquez,2,.21250001
+52abbba09122ba66,URY,Tabaré Ramón Vázquez Rosas,URY_2016_16.txt,2016-11-23,2016,2461,47.299999,4,gpd_term_anchor,Uruguay|Tabare Vazquez|2,development,leader_term_anchor,Uruguay,Tabare Vazquez,2,.21250001
+ffa8a0d443cf92fd,URY,Tabaré Ramón Vázquez Rosas,URY_2016_55.txt,2016-06-10,2016,7435,28.959999,2,gpd_term_anchor,Uruguay|Tabare Vazquez|2,development,leader_term_anchor,Uruguay,Tabare Vazquez,2,.21250001
+6f796bc2c1c3bafb,URY,Tabaré Ramón Vázquez Rosas,URY_2016_11.txt,2016-12-05,2016,402,50.529999,5,gpd_term_anchor,Uruguay|Tabare Vazquez|2,development,leader_term_anchor,Uruguay,Tabare Vazquez,2,.21250001
+bf39f2f7e1c0afd9,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,URY_2020_5.txt,2020-03-25,2020,313,41.430000,4,gpd_term_anchor,Uruguay|Luis Lacalle Pou|1,development,leader_term_anchor,Uruguay,Luis Lacalle Pou,1,.075000003
+1f31f6029d3d6689,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,URY_2020_19.txt,2020-03-01,2020,2828,44.529999,4,gpd_text_anchor,Uruguay|Luis Lacalle Pou|1,development,text_anchor,Uruguay,Luis Lacalle Pou,1,.075000003
+49bbb6543505a841,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,URY_2021_19.txt,2021-10-18,2021,975,41.500000,4,stratified_country_score,Uruguay|Luis Lacalle Pou|1,development,leader_term_anchor,Uruguay,Luis Lacalle Pou,1,.075000003
+04d22365fd7e3490,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,URY_2022_55.txt,2022-08-02,2022,1292,47.439999,4,stratified_country_score,Uruguay|Luis Lacalle Pou|1,development,leader_term_anchor,Uruguay,Luis Lacalle Pou,1,.075000003
+e959f820bba6b567,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,URY_2023_148.txt,2023-05-02,2023,895,10.660000,1,stratified_country_score,Uruguay|Luis Lacalle Pou|1,development,leader_term_anchor,Uruguay,Luis Lacalle Pou,1,.075000003
+c35397aa89ceb294,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,URY_2024_28.txt,2024-10-16,2024,1253,36.500000,3,gpd_term_anchor,Uruguay|Luis Lacalle Pou|1,development,leader_term_anchor,Uruguay,Luis Lacalle Pou,1,.075000003
+e3680f24f3b6ef55,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,URY_2024_302.txt,2024-03-11,2024,1785,25.059999,2,gpd_term_anchor,Uruguay|Luis Lacalle Pou|1,development,leader_term_anchor,Uruguay,Luis Lacalle Pou,1,.075000003
+d5817655425ba18a,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,URY_2024_200.txt,2024-06-05,2024,374,16.670000,1,gpd_term_anchor,Uruguay|Luis Lacalle Pou|1,development,leader_term_anchor,Uruguay,Luis Lacalle Pou,1,.075000003
+b022fbe76d32b1dc,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,URY_2024_108.txt,2024-08-23,2024,714,33.139999,3,gpd_term_anchor,Uruguay|Luis Lacalle Pou|1,development,leader_term_anchor,Uruguay,Luis Lacalle Pou,1,.075000003
+0cc4caa2071fb007,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,URY_2024_221.txt,2024-05-13,2024,472,27.549999,2,stratified_country_score,Uruguay|Luis Lacalle Pou|1,development,leader_term_anchor,Uruguay,Luis Lacalle Pou,1,.075000003
+a34d723bd2711149,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,URY_2024_45.txt,2024-10-04,2024,1573,14.660000,1,stratified_country_score,Uruguay|Luis Lacalle Pou|1,development,leader_term_anchor,Uruguay,Luis Lacalle Pou,1,.075000003
+f07757115cb075be,URY,Yamandú Antonio Orsi Martínez,URY_2025_68.txt,2025-09-29,2025,1483,22.320000,2,stratified_country_score,,not_in_gpd_term,none,,,,
+ed8e4ebf0735317a,URY,Yamandú Antonio Orsi Martínez,URY_2025_36.txt,2025-08-19,2025,770,18.370001,1,stratified_country_score,,not_in_gpd_term,none,,,,
+36f07608045098ee,URY,Yamandú Antonio Orsi Martínez,URY_2025_24.txt,2025-08-01,2025,176,0.200000,0,stratified_country_score,,not_in_gpd_term,none,,,,
+1579cd947bd8275e,VEN,Hugo Rafael Chávez Frías,VEN_2000_90.txt,2000-04-15,2000,2025,24.870001,2,gpd_term_anchor,Venezuela|Hugo Chavez|1,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,1,1.9166666
+252b57f3d4f3fff0,VEN,Hugo Rafael Chávez Frías,VEN_2000_17.txt,2000-11-20,2000,15535,57.480000,5,gpd_term_anchor,Venezuela|Hugo Chavez|1,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,1,1.9166666
+05cf2a13edaf3fcb,VEN,Hugo Rafael Chávez Frías,VEN_2001_131.txt,2001-05-10,2001,2683,29.049999,2,stratified_country_score,Venezuela|Hugo Chavez|1,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,1,1.9166666
+af5271009f2caf17,VEN,Hugo Rafael Chávez Frías,VEN_2002_128.txt,2002-01-26,2002,7304,63.080002,6,stratified_country_score,Venezuela|Hugo Chavez|1,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,1,1.9166666
+d220623feb53ccc1,VEN,Hugo Rafael Chávez Frías,VEN_2003_122.txt,2003-06-18,2003,6489,73.300003,7,stratified_country_score,Venezuela|Hugo Chavez|1,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,1,1.9166666
+e8f65ac9fa63bac3,VEN,Hugo Rafael Chávez Frías,VEN_2003_53.txt,2003-10-18,2003,5845,39.340000,3,stratified_country_score,Venezuela|Hugo Chavez|1,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,1,1.9166666
+28b9b5642cd0ad62,VEN,Hugo Rafael Chávez Frías,VEN_2004_26.txt,2004-10-27,2004,6164,56.240002,5,gpd_term_anchor,Venezuela|Hugo Chavez|1,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,1,1.9166666
+02ac9385b352c841,VEN,Hugo Rafael Chávez Frías,VEN_2005_35.txt,2005-08-21,2005,18355,54.750000,5,gpd_term_anchor,Venezuela|Hugo Chavez|1,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,1,1.9166666
+387f349ec3e91b7c,VEN,Hugo Rafael Chávez Frías,VEN_2005_20.txt,2005-10-24,2005,10865,49.099998,4,stratified_country_score,Venezuela|Hugo Chavez|1,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,1,1.9166666
+fc5a6d27b99aea69,VEN,Hugo Rafael Chávez Frías,VEN_2006_26.txt,2006-08-11,2006,4955,68.589996,6,gpd_term_anchor,Venezuela|Hugo Chavez|1,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,1,1.9166666
+89945bfa8f6a2a2d,VEN,Hugo Rafael Chávez Frías,VEN_2007_18.txt,2007-10-09,2007,2921,38.810001,3,stratified_country_score,Venezuela|Hugo Chavez|2,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,2,1.75
+20d3d245f4f17142,VEN,Hugo Rafael Chávez Frías,VEN_2008_50.txt,2008-02-11,2008,16028,68.860001,6,gpd_term_anchor,Venezuela|Hugo Chavez|2,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,2,1.75
+e68dd9c4825d2509,VEN,Hugo Rafael Chávez Frías,VEN_2009_20.txt,2009-07-05,2009,17817,36.080002,3,gpd_term_anchor,Venezuela|Hugo Chavez|2,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,2,1.75
+481030afc6dc0fa7,VEN,Hugo Rafael Chávez Frías,VEN_2009_32.txt,2009-03-08,2009,2448,46.480000,4,gpd_term_anchor,Venezuela|Hugo Chavez|2,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,2,1.75
+b5b8c1ee60998fe8,VEN,Hugo Rafael Chávez Frías,VEN_2012_81.txt,2012-04-28,2012,2901,61.880001,6,gpd_term_anchor,Venezuela|Hugo Chavez|2,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,2,1.75
+a12bd9b5b6732985,VEN,Hugo Rafael Chávez Frías,VEN_2012_37.txt,2012-03-17,2012,5624,74.650002,7,gpd_term_anchor,Venezuela|Hugo Chavez|2,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,2,1.75
+ac669432258bd47d,VEN,Nicolás Maduro Moros,VEN_2013_414.txt,2013-06-13,2013,766,73.550003,7,gpd_term_anchor,Venezuela|NicolÃ¡s Maduro|1,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,1,1.6375
+85bc87c1512fd23e,VEN,Hugo Rafael Chávez Frías,VEN_2013_478.txt,2013-03-08,2013,1711,59.810001,5,gpd_term_anchor,Venezuela|Hugo Chavez|3,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,3,1.6666666
+a88969d07d56d45a,VEN,Hugo Rafael Chávez Frías,VEN_2013_66.txt,2013-10-10,2013,7007,52.049999,5,gpd_term_anchor,Venezuela|Hugo Chavez|3,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,3,1.6666666
+a35327b268ce836b,VEN,Nicolás Maduro Moros,VEN_2013_370.txt,2013-09-21,2013,658,10.790000,1,stratified_country_score,Venezuela|NicolÃ¡s Maduro|1,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,1,1.6375
+b3aa9ec05a1034ca,VEN,Hugo Rafael Chávez Frías,VEN_2013_315.txt,2013-02-18,2013,192,53.770000,5,gpd_term_anchor,Venezuela|Hugo Chavez|3,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,3,1.6666666
+db368d39ef9a302f,VEN,Hugo Rafael Chávez Frías,VEN_2013_267.txt,2013-03-13,2013,2421,68.900002,6,gpd_term_anchor,Venezuela|Hugo Chavez|3,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,3,1.6666666
+e268d54d717c9ab8,VEN,Hugo Rafael Chávez Frías,VEN_2013_307.txt,2013-03-06,2013,8401,72.919998,7,gpd_term_anchor,Venezuela|Hugo Chavez|3,test_locked,leader_term_anchor,Venezuela,Hugo Chavez,3,1.6666666
+32c6ec3f3426341d,VEN,Nicolás Maduro Moros,VEN_2014_98.txt,2014-03-10,2014,8713,74.650002,7,stratified_country_score,Venezuela|NicolÃ¡s Maduro|1,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,1,1.6375
+1a395a07e540fcb9,VEN,Nicolás Maduro Moros,VEN_2014_115.txt,2014-02-22,2014,1103,55.700001,5,stratified_country_score,Venezuela|NicolÃ¡s Maduro|1,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,1,1.6375
+37d5769938428ea9,VEN,Nicolás Maduro Moros,VEN_2014_1.txt,2014-01-01,2014,3597,56.740002,5,gpd_text_anchor,Venezuela|NicolÃ¡s Maduro|1,test_locked,text_anchor,Venezuela,NicolÃ¡s Maduro,1,1.6375
+79e1b55111ad3076,VEN,Nicolás Maduro Moros,VEN_2015_64.txt,2015-10-22,2015,110,26.660000,2,stratified_country_score,Venezuela|NicolÃ¡s Maduro|1,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,1,1.6375
+adfe18e44c70d134,VEN,Nicolás Maduro Moros,VEN_2017_236.txt,2017-05-13,2017,499,83.930000,8,gpd_term_anchor,Venezuela|NicolÃ¡s Maduro|1,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,1,1.6375
+4c9cbce8a8775ce7,VEN,Nicolás Maduro Moros,VEN_2018_39.txt,2018-11-10,2018,5452,59.500000,5,gpd_term_anchor,Venezuela|NicolÃ¡s Maduro|1,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,1,1.6375
+683db49053575f24,VEN,Nicolás Maduro Moros,VEN_2018_269.txt,2018-06-01,2018,940,55.099998,5,gpd_term_anchor,Venezuela|NicolÃ¡s Maduro|1,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,1,1.6375
+d404f7bd95db11c5,VEN,Nicolás Maduro Moros,VEN_2018_293.txt,2018-05-22,2018,212,48.230000,4,gpd_term_anchor,Venezuela|NicolÃ¡s Maduro|1,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,1,1.6375
+a179d1737d0cfa9a,VEN,Nicolás Maduro Moros,VEN_2018_418.txt,2018-04-04,2018,195,49.660000,4,stratified_country_score,Venezuela|NicolÃ¡s Maduro|1,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,1,1.6375
+25584a4b377bf18b,VEN,Nicolás Maduro Moros,VEN_2018_301.txt,2018-05-20,2018,1559,24.709999,2,stratified_country_score,Venezuela|NicolÃ¡s Maduro|1,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,1,1.6375
+9abccf6517f12ee2,VEN,Nicolás Maduro Moros,VEN_2018_421.txt,2018-03-27,2018,1619,0.100000,0,stratified_country_score,Venezuela|NicolÃ¡s Maduro|1,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,1,1.6375
+f49d2f5688df8514,VEN,Nicolás Maduro Moros,VEN_2019_232.txt,2019-04-13,2019,6129,75.940002,7,gpd_term_anchor,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+d3b855ab02ecdfdd,VEN,Nicolás Maduro Moros,VEN_2019_153.txt,2019-06-24,2019,7802,72.680000,7,gpd_term_anchor,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+f0e4b34664ee989d,VEN,Nicolás Maduro Moros,VEN_2019_309.txt,2019-02-02,2019,6832,57.000000,5,stratified_country_score,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+5bf1545c18246919,VEN,Nicolás Maduro Moros,VEN_2020_47.txt,2020-04-03,2020,7925,58.869999,5,stratified_country_score,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+8362146919d79a1a,VEN,Nicolás Maduro Moros,VEN_2022_14.txt,2022-06-28,2022,1009,9.740000,0,stratified_country_score,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+8614ad50649f2a10,VEN,Nicolás Maduro Moros,VEN_2023_79.txt,2023-03-27,2023,3166,52.299999,5,gpd_term_anchor,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+5858357c6055ac9f,VEN,Nicolás Maduro Moros,VEN_2023_134.txt,2023-02-06,2023,543,49.430000,4,stratified_country_score,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+f149ccdf67f099b1,VEN,Nicolás Maduro Moros,VEN_2023_114.txt,2023-07-03,2023,875,60.590000,6,stratified_country_score,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+78ee40842f0d4248,VEN,Nicolás Maduro Moros,VEN_2023_103.txt,2023-09-19,2023,948,19.410000,1,stratified_country_score,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+780aaeb8848d6cf0,VEN,Nicolás Maduro Moros,VEN_2023_73.txt,2023-06-06,2023,992,11.590000,1,stratified_country_score,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+2f1aef78fc3f77a7,VEN,Nicolás Maduro Moros,VEN_2023_38.txt,2023-11-10,2023,697,1.170000,0,stratified_country_score,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+4d124a4a1a3c475e,VEN,Nicolás Maduro Moros,VEN_2024_156.txt,2024-07-22,2024,4506,77.260002,7,gpd_term_anchor,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+ab5d34fddbc4b7b8,VEN,Nicolás Maduro Moros,VEN_2024_331.txt,2024-04-24,2024,825,66.570000,6,gpd_term_anchor,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+e709041e2411257b,VEN,Nicolás Maduro Moros,VEN_2024_155.txt,2024-07-22,2024,4819,81.629997,8,stratified_country_score,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+fd8c8d11a6b1df37,VEN,Nicolás Maduro Moros,VEN_2024_284.txt,2024-06-07,2024,2911,34.240002,3,stratified_country_score,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625
+031cee0bc30bdd62,VEN,Nicolás Maduro Moros,VEN_2024_404.txt,2024-02-04,2024,5899,80.370003,8,stratified_country_score,Venezuela|NicolÃ¡s Maduro|2,test_locked,leader_term_anchor,Venezuela,NicolÃ¡s Maduro,2,1.5625

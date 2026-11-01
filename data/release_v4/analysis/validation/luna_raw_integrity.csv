@@ -1,0 +1,5 @@
+run_id,rows,raw_parsed,raw_missing_axes,raw_bounds,validity_recorded,partial
+luna__all_noninvalid__openai__v4,44592,44592.0,0.0,0.0,,
+luna__sample_900__openai__v4,900,900.0,0.0,0.0,,
+luna_chunked_all_noninvalid_v4,44492,,,,44492.0,0.0
+luna_chunked_sample1000_v4,1000,,,,1000.0,0.0

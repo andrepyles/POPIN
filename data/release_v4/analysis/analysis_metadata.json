@@ -1,0 +1,50 @@
+{
+  "release": "POPIN v4",
+  "package_revision": "4.1.0",
+  "snapshot": "2026-09-06",
+  "source_database": "popin.duckdb",
+  "source_tables": [
+    "discourses",
+    "scores"
+  ],
+  "score_filter": {
+    "model_id": "gpt-5.6-luna",
+    "prompt_id": "v4",
+    "status": "ok",
+    "chunked": false,
+    "scope": [
+      "full",
+      "pilot"
+    ],
+    "discourse_type_excluded": "INVALID"
+  },
+  "observations": 45492,
+  "speech_observations": 34821,
+  "countries": 19,
+  "leaders": 105,
+  "year_min": 2000,
+  "year_max": 2025,
+  "cohorts": [
+    {
+      "scope": "full",
+      "coverage": "all_noninvalid",
+      "documents": 44592
+    },
+    {
+      "scope": "pilot",
+      "coverage": "pilot",
+      "documents": 900
+    }
+  ],
+  "dimensions": [
+    "people_centrism",
+    "anti_elitism",
+    "moral_dichotomy",
+    "popular_sovereignty",
+    "exclusionary_rhetoric",
+    "crisis_rhetoric"
+  ],
+  "score": "arithmetic_mean_of_six_dimensions",
+  "posthoc_gpd_rescaling": false,
+  "generated_at_utc": "2026-11-01T18:43:43.983607+00:00"
+}

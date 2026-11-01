@@ -1,0 +1,85 @@
+{
+  "release": "POPIN v4",
+  "snapshot": "2026-09-06",
+  "generated_at_utc": "2026-11-01T18:43:53.149420+00:00",
+  "purpose": "Final validation and robustness tables; no new model calls or post-hoc rescaling.",
+  "primary_scope": "SPEECH",
+  "gpd_unit": "leader-mandate",
+  "gpd_scale_note": "GPD 0-2 was multiplied by 50 only for readable comparison; scales are not assumed equivalent.",
+  "lallpi_unit": "country-year",
+  "prompt_sensitivity_unit": "paired 900 discourse IDs",
+  "artifacts": {
+    "model_gpd_speech": {
+      "path": "data/release_v4/analysis/validation/model_gpd_speech.csv",
+      "source": "data/release_v4/analysis/source_audit/gpd_term_metrics.csv",
+      "filter": {
+        "scope": "SPEECH"
+      },
+      "rows": 15,
+      "sha256": "9ece7190521d9e6620abd8d628505ac3ce7d0d85e4ca4755ab4c5883af5ab8a5"
+    },
+    "gpd_term_points_speech": {
+      "path": "data/release_v4/analysis/validation/gpd_term_points_speech.csv",
+      "source": "data/release_v4/analysis/source_audit/gpd_term_points.csv",
+      "filter": {
+        "scope": "SPEECH"
+      },
+      "rows": 470,
+      "sha256": "835b8a045d027550fc0fc3b533d5196c41af12969df7f9adb00336a687a47fa9"
+    },
+    "prompt_sensitivity": {
+      "path": "data/release_v4/analysis/validation/prompt_sensitivity.csv",
+      "source": "data/release_v4/analysis/source_audit/prompt_comparison.csv",
+      "rows": 2,
+      "sha256": "b3948f356a5a48ed6773d8f6a6bc8283dc65057244cd966abdc424a75d59dc20"
+    },
+    "lallpi_country_year": {
+      "path": "data/release_v4/analysis/validation/lallpi_country_year.csv",
+      "source": "data/release_v4/analysis/source_audit/lallpi_country_year.csv",
+      "rows": 20,
+      "sha256": "cea745b4a20c2f8384603288f935a6e612e8f8fc574392477b0ec9cfe466c6d8"
+    },
+    "coverage_all_models": {
+      "path": "data/release_v4/analysis/validation/coverage_all_models.csv",
+      "source": "data/release_v4/analysis/source_audit/coverage.csv",
+      "rows": 5,
+      "sha256": "7b1309df6bebfe5260ae405672c4850b6b19f5da1122c3fb021dd4acccd00692"
+    },
+    "score_integrity_all_models": {
+      "path": "data/release_v4/analysis/validation/score_integrity_all_models.csv",
+      "source": "data/release_v4/analysis/source_audit/score_integrity.csv",
+      "rows": 5,
+      "sha256": "03890e7158f664fc68928e0b279fc5512996b7f50a40c1f5a3affc10a697d9db"
+    },
+    "prompt_inventory": {
+      "path": "data/release_v4/analysis/validation/prompt_inventory.csv",
+      "source": "data/release_v4/analysis/source_audit/prompt_inventory.csv",
+      "rows": 6,
+      "sha256": "3204cf4cdac12369e9e2bb36186f26a43a6ec69e533818a5b724fed4897bd785"
+    },
+    "gpd_word_cutoffs_speech": {
+      "path": "data/release_v4/analysis/validation/gpd_word_cutoffs_speech.csv",
+      "source": "data/release_v4/analysis/source_audit/word_cutoffs_gpd.csv",
+      "rows": 30,
+      "sha256": "e5adcee1d40df8ae20d12ea0ee3d4875ae3dd874942eeae163c7c9f163531fa7"
+    },
+    "model_pairs_full_corpus": {
+      "path": "data/release_v4/analysis/validation/model_pairs_full_corpus.csv",
+      "source": "data/release_v4/analysis/source_audit/paired_models.csv",
+      "rows": 10,
+      "sha256": "798e7f1a8a8a83f5680f3c1ca2507908abcca6ec43ad173c22d73603257928e4"
+    },
+    "gpd_text_match_diagnostics": {
+      "path": "data/release_v4/analysis/validation/gpd_text_match_diagnostics.csv",
+      "source": "data/release_v4/analysis/source_audit/gpd_text_candidate_metrics.csv",
+      "rows": 10,
+      "sha256": "e4e729bdea4f08faee401be09ab6f36173bfa80a3a7a6c34a79385ea16d1354a"
+    },
+    "luna_raw_integrity": {
+      "path": "data/release_v4/analysis/validation/luna_raw_integrity.csv",
+      "source": "data/release_v4/analysis/source_audit/luna_raw_integrity.csv",
+      "rows": 4,
+      "sha256": "30942df5ba63c3defeb2e4e00fbb49a30b5a5f814c6b5865ec29f72a14ed4d1c"
+    }
+  }
+}

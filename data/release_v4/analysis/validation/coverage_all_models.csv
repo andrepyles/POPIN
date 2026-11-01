@@ -1,0 +1,6 @@
+model,rows,ids,speech,parts
+Qwen chunked,45492,45492,34821,"{""qwen_v4_legacy"": 45492}"
+DeepSeek full,45492,45492,34821,"{""deepseek_v4_full_nonchunked_v4"": 45492}"
+DeepSeek chunked,45492,45492,34821,"{""deepseek_deepseek-v4-flash-0731__v4__decart__dfa2b4e42e"": 24482, ""deepseek_deepseek-v4-flash-0731__v4__decart__62a8eacb02"": 21010}"
+Luna full,45492,45492,34821,"{""luna__all_noninvalid__openai__v4"": 44592, ""luna__sample_900__openai__v4"": 900}"
+Luna chunked,45492,45492,34821,"{""luna_chunked_all_noninvalid_v4"": 44492, ""luna_chunked_sample1000_v4"": 1000}"

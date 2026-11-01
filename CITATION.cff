@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "POPIN v4: Populism Index for Latin America"
+message: "If you use POPIN, please cite the project and the associated dissertation."
+type: dataset
+authors:
+  - family-names: Siqueira
+    given-names: "André Pyles"
+    affiliation: "Universidade Presbiteriana Mackenzie"
+    email: "andre.p.siqueira@outlook.com"
+version: "4.1.0"
+date-released: 2026-11-01
+repository-code: "https://github.com/andrepyles/POPIN"
+url: "https://github.com/andrepyles/POPIN"
+keywords:
+  - populism
+  - Latin America
+  - political text
+  - computational social science
+  - large language models
+references:
+  - type: thesis
+    authors:
+      - family-names: Siqueira
+        given-names: "André Pyles"
+    title: "Populismo em números: construção de um índice para mensurar a retórica populista na América Latina no século XXI"
+    institution: "Universidade Presbiteriana Mackenzie"
+    year: 2025

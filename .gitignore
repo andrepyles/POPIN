@@ -6,6 +6,27 @@
 .env
 data/gpd_v2_1_20251120/sensitivity_runs/
 
+# Publish the compact reproducibility exports and manifests; keep large local
+# research databases and raw source files out of Git.
+!data/release_v4/
+!data/release_v4/*.csv
+!data/release_v4/*.parquet
+!data/release_v4/*.md
+!data/release_v4/*.json
+!data/release_v4/analysis/
+!data/release_v4/analysis/*.csv
+!data/release_v4/analysis/*.json
+!data/release_v4/analysis/validation/
+!data/release_v4/analysis/validation/*.csv
+!data/release_v4/analysis/validation/*.json
+!data/release_v4/analysis/validation/*.md
+!data/release_v4/analysis/source_inputs/
+!data/release_v4/analysis/source_inputs/*.csv
+!data/release_v4/analysis/source_inputs/*.md
+!data/release_v4/analysis/source_inputs/sensitivity_runs/
+!data/release_v4/analysis/source_inputs/sensitivity_runs/*.jsonl
+!data/release_v4/analysis/source_inputs/sensitivity_runs/*.meta.json
+
 # resultados e artefatos locais de processamento
 *.jsonl
 *.bak
@@ -13,3 +34,9 @@ data/gpd_v2_1_20251120/sensitivity_runs/
 *.progress
 *.pyc
 __pycache__/
+.venv/
+
+# The audit generator recreates this intermediate directory; only the final
+# validation outputs and versioned source inputs belong in the public package.
+data/release_v4/analysis/source_audit/
+!data/release_v4/analysis/source_inputs/sensitivity_runs/*.jsonl

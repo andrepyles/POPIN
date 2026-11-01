@@ -1,0 +1,29 @@
+{
+  "batch_id": "batch_6a9de2e7afb48190bcd015523ec011d0",
+  "input_file_id": "file-Q9pfakpAUhBu5WZ7fRQs5d",
+  "output_file_id": "file-XRDRcpT66jy15hAfA6o3Yu",
+  "status": "completed",
+  "submitted": 900,
+  "returned": 900,
+  "valid": 900,
+  "request_counts": {
+    "total": 900,
+    "completed": 900,
+    "failed": 0
+  },
+  "usage": {
+    "input_tokens": 3909585,
+    "output_tokens": 55800,
+    "total_tokens": 3965385,
+    "input_tokens_details": {
+      "cached_tokens": 955031
+    },
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    }
+  },
+  "estimated_tokens": 4521329,
+  "elapsed_s": 207.091,
+  "output": "openai_gpt-5.6-luna__neutral_full_900.jsonl",
+  "prompt_sha256": "cc14a6c9e60b6c77dbbde5f5daacf75678e333391854ad8e9b0f4d7d7adbff8b"
+}

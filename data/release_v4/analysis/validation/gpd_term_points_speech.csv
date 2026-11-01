@@ -1,0 +1,471 @@
+model,scope,key,iso3,leader,n_docs,gpd,mean
+Qwen chunked,SPEECH,Argentina|Fernando de la Rua|1,ARG,Fernando de la Rua,2,8.75,43.365
+Qwen chunked,SPEECH,Argentina|Eduardo Duhalde|1,ARG,Eduardo Alberto Duhalde,1,26.666667999999998,53.21
+Qwen chunked,SPEECH,Argentina|Nestor Kirchner|1,ARG,Néstor Carlos Kirchner Ostoic,676,12.5,46.586895
+Qwen chunked,SPEECH,Argentina|Cristina Fernandez|1,ARG,Cristina Fernández de Kirchner,1812,0.0,36.176754
+Qwen chunked,SPEECH,Argentina|Cristina Fernandez|2,ARG,Cristina Fernández de Kirchner,1423,9.375,36.567112
+Qwen chunked,SPEECH,Argentina|Mauricio Macri|1,ARG,Mauricio Macri,471,1.87500005,32.035587
+Qwen chunked,SPEECH,Argentina|Alberto FernÃ¡ndez|1,ARG,Alberto Fernández,494,14.3749995,45.80998
+Qwen chunked,SPEECH,Bolivia|Gonzalo Sanchez de Lozada|2,BOL,Gonzalo Sánchez de Lozada Sánchez Bustamante,2,11.249999500000001,56.010002
+Qwen chunked,SPEECH,Bolivia|Carlos Mesa|1,BOL,Carlos Diego Mesa Gisbert,1,6.25,46.25
+Qwen chunked,SPEECH,Bolivia|Evo Morales|1,BOL,Juan Evo Morales Ayma,4,75.0,63.515
+Qwen chunked,SPEECH,Bolivia|Evo Morales|2,BOL,Juan Evo Morales Ayma,80,50.0,50.590374
+Qwen chunked,SPEECH,Bolivia|Evo Morales|3,BOL,Juan Evo Morales Ayma,77,73.125,39.077797
+Qwen chunked,SPEECH,Brazil|Fernando Henrique Cardoso|2,BRA,Fernando Henrique Cardoso,471,0.0,18.901295
+Qwen chunked,SPEECH,Brazil|Luiz Inacio Lula da Silva|1,BRA,Luiz Inácio Lula da Silva,1983,12.5,36.755196
+Qwen chunked,SPEECH,Brazil|Dilma Rousseff|1,BRA,Dilma Vana Rousseff,438,0.0,25.098492
+Qwen chunked,SPEECH,Brazil|Dilma Rousseff|2,BRA,Dilma Vana Rousseff,138,16.875000500000002,26.758404
+Qwen chunked,SPEECH,Brazil|Michel Temer|1,BRA,Michel Temer,190,0.0,21.62942
+Qwen chunked,SPEECH,Brazil|Jair Bolsonaro|1,BRA,Jair Messias Bolsonaro,381,25.0,42.937454
+Qwen chunked,SPEECH,Chile|Ricardo Lagos|1,CHL,Ricardo Froilán Lagos Escobar,440,4.1666668,24.071295
+Qwen chunked,SPEECH,Chile|Michelle Bachelet|1,CHL,Verónica Michelle Bachelet Jeria,4,0.0,31.942501
+Qwen chunked,SPEECH,Chile|Sebastian Pinera|1,CHL,Miguel Juan Sebastián Piñera Echenique,102,0.0,28.177547
+Qwen chunked,SPEECH,Chile|Michelle Bachelet|2,CHL,Verónica Michelle Bachelet Jeria,904,10.625000499999999,21.34228
+Qwen chunked,SPEECH,Chile|Sebastian Pinera|2,CHL,Miguel Juan Sebastián Piñera Echenique,380,7.5000005,27.893948
+Qwen chunked,SPEECH,Colombia|Andres Pastrana|1,COL,Andres Pastrana Arango,295,1.25,30.30346
+Qwen chunked,SPEECH,Colombia|Alvaro Uribe|1,COL,Álvaro Uribe Vélez,1697,0.0,36.05119
+Qwen chunked,SPEECH,Colombia|Juan Manuel Santos|1,COL,Juan Manuel Santos Calderón,784,0.0,27.91634
+Qwen chunked,SPEECH,Colombia|Juan Manuel Santos|2,COL,Juan Manuel Santos Calderón,767,3.125,31.440052
+Qwen chunked,SPEECH,Colombia|IvÃ¡n Duque|1,COL,Iván Duque Márquez,1017,0.0,31.948862
+Qwen chunked,SPEECH,Costa Rica|Miguel Angel Rodriguez|1,CRI,Miguel Angel Rodriguez Echeverria,2,4.1666668,31.805
+Qwen chunked,SPEECH,Costa Rica|Abel Pacheco|1,CRI,Abel Pacheco de la Espriella,4,11.111111,40.395
+Qwen chunked,SPEECH,Costa Rica|Oscar Arias|2,CRI,Óscar Arias Sánchez,4,0.0,44.8125
+Qwen chunked,SPEECH,Costa Rica|Laura Chinchilla Miranda|1,CRI,Laura Chinchilla Miranda,4,0.0,20.605
+Qwen chunked,SPEECH,Costa Rica|Luis Guillermo Solis|1,CRI,Luis Guillermo Solís Rivera,4,20.000000500000002,21.8
+Qwen chunked,SPEECH,Costa Rica|Carlos Alvarado Quesada|1,CRI,Carlos Alvarado Quesada,4,0.0,41.375
+Qwen chunked,SPEECH,Cuba|Miguel DÃ­az-Canel|1,CUB,Miguel Díaz-Canel Bermúdez,141,41.874999,53.3156
+Qwen chunked,SPEECH,Dominican Republic|Hipolito Mejia|1,DOM,Rafael Hipólito Mejía Domínguez,5,3.75000015,44.058
+Qwen chunked,SPEECH,Dominican Republic|Leonel Fernandez|2,DOM,Leonel Antonio Fernández Reyna,4,12.5,28.150002
+Qwen chunked,SPEECH,Dominican Republic|Leonel Fernandez|3,DOM,Leonel Antonio Fernández Reyna,3,12.5,40.67
+Qwen chunked,SPEECH,Dominican Republic|Danilo Medina|1,DOM,Danilo Medina Sánchez,423,8.75,30.738014
+Qwen chunked,SPEECH,Dominican Republic|Danilo Medina|2,DOM,Danilo Medina Sánchez,541,18.75,28.328798
+Qwen chunked,SPEECH,Dominican Republic|Luis Abinader|1,DOM,Luis Rodolfo Abinader Corona,154,3.75000015,29.803375
+Qwen chunked,SPEECH,Ecuador|Gustavo Noboa|1,ECU,Gustavo José Joaquín Noboa Bejarano,3,11.6666665,37.14
+Qwen chunked,SPEECH,Ecuador|Lucio Gutierrez|1,ECU,Lucio Edwin Gutiérrez Borbúa,1,48.333332,25.67
+Qwen chunked,SPEECH,Ecuador|Alfredo Palacio|1,ECU,Luis Alfredo Palacio González,2,19.444444999999998,44.62
+Qwen chunked,SPEECH,Ecuador|Rafael Correa|1,ECU,Rafael Vicente Correa Delgado,80,62.5,63.892876
+Qwen chunked,SPEECH,Ecuador|Rafael Correa|2,ECU,Rafael Vicente Correa Delgado,253,86.666665,59.081142
+Qwen chunked,SPEECH,Ecuador|Rafael Correa|3,ECU,Rafael Vicente Correa Delgado,352,76.25,56.8381
+Qwen chunked,SPEECH,Ecuador|Lenin Moreno|1,ECU,Lenín Boltaire Moreno Garcés,281,9.375,40.47872
+Qwen chunked,SPEECH,Ecuador|Guillermo Lasso|1,ECU,Guillermo Alberto Santiago Lasso Mendoza,293,18.0000005,37.57058
+Qwen chunked,SPEECH,El Salvador|Francisco Flores|1,SLV,Francisco Guillermo Flores Perez,7,0.0,48.968567
+Qwen chunked,SPEECH,El Salvador|Antonio Saca|1,SLV,Elías Antonio Saca González,1131,29.1666655,25.699478
+Qwen chunked,SPEECH,El Salvador|Mauricio Funes|1,SLV,Carlos Mauricio Funes Cartagena,27,31.25,40.178516
+Qwen chunked,SPEECH,El Salvador|Salvador Sanchez Ceren|1,SLV,Salvador Sánchez Cerén,116,31.25,27.924911
+Qwen chunked,SPEECH,El Salvador|Nayib Bukele|1,SLV,Nayib Armando Bukele Ortez,936,25.0,32.0749
+Qwen chunked,SPEECH,Guatemala|Oscar Berger|1,GTM,Óscar José Rafael Berger Perdomo,4,0.0,26.4925
+Qwen chunked,SPEECH,Guatemala|Otto Perez Molina|1,GTM,Otto Fernando Pérez Molina,24,17.499999499999998,28.241251
+Qwen chunked,SPEECH,Guatemala|Jimmy Morales|1,GTM,Jimmy Ernesto Morales Cabrera,127,7.5000005,30.774961
+Qwen chunked,SPEECH,Guatemala|Alejandro Giammattei|1,GTM,Alejandro Eduardo Giammattei Falla,17,8.124999500000001,42.612938
+Qwen chunked,SPEECH,Honduras|Carlos Flores|1,HND,Carlos Roberto Flores,1,2.50000005,37.2
+Qwen chunked,SPEECH,Honduras|Ricardo Maduro|1,HND,Ricardo Rodolfo Maduro Joest,4,0.0,42.614998
+Qwen chunked,SPEECH,Honduras|Manuel Zelaya|1,HND,José Manuel Zelaya Rosales,2,25.0,52.59
+Qwen chunked,SPEECH,Honduras|Porfirio Lobo Sosa|1,HND,Porfirio Lobo Sosa,3,16.666667,29.199999
+Qwen chunked,SPEECH,Honduras|Juan Orlando Hernandez|1,HND,Juan Orlando Hernández,711,23.125000500000002,39.603333
+Qwen chunked,SPEECH,Mexico|Vicente Fox|1,MEX,Vicente Fox Quesada,4,12.5,28.335
+Qwen chunked,SPEECH,Mexico|Felipe Calderon|1,MEX,Felipe de Jesús Calderón Hinojosa,95,6.25,36.26558
+Qwen chunked,SPEECH,Mexico|Enrique Pena Nieto|1,MEX,Enrique Peña Nieto,896,0.0,21.10163
+Qwen chunked,SPEECH,Mexico|Andres Manuel Lopez Obrador|1,MEX,Andrés Manuel López Obrador,1329,48.124999,32.800175
+Qwen chunked,SPEECH,Nicaragua|Enrique Bolanos|1,NIC,Enrique José Bolaños Geyer,293,0.0,30.959284
+Qwen chunked,SPEECH,Nicaragua|Daniel Ortega|1,NIC,José Daniel Ortega Saavedra,5,62.5,53.177998
+Qwen chunked,SPEECH,Nicaragua|Daniel Ortega|2,NIC,José Daniel Ortega Saavedra,214,50.0,43.89341
+Qwen chunked,SPEECH,Nicaragua|Daniel Ortega|3,NIC,José Daniel Ortega Saavedra,168,42.500001,45.639286
+Qwen chunked,SPEECH,Panama|Martin Torrijos|1,PAN,Martín Erasto Torrijos Espino,4,11.111111,21.587502
+Qwen chunked,SPEECH,Panama|Ricardo Martinelli|1,PAN,Ricardo Martinelli Berrocal,198,25.0,33.430454
+Qwen chunked,SPEECH,Panama|Juan Carlos Varela|1,PAN,Juan Carlos Varela,109,12.5,36.711468
+Qwen chunked,SPEECH,Panama|Laurentino Cortizo|1,PAN,Laurentino Cortizo Cohen,219,14.3749995,34.03128
+Qwen chunked,SPEECH,Paraguay|Nicanor Duarte|1,PRY,Óscar Nicanor Duarte Frutos,4,25.0,34.37
+Qwen chunked,SPEECH,Paraguay|Fernando Lugo|1,PRY,Fernando Armindo Lugo Méndez,80,0.0,40.475376
+Qwen chunked,SPEECH,Paraguay|Horacio Cartes|1,PRY,Horacio Manuel Cartes Jara,182,11.875,29.17456
+Qwen chunked,SPEECH,Paraguay|Mario Abdo Benitez|1,PRY,Mario Abdo Benítez,39,4.374999949999999,24.677948
+Qwen chunked,SPEECH,Peru|Alejandro Toledo|1,PER,Alejandro Celestino Toledo Manrique,4,16.666667,49.055
+Qwen chunked,SPEECH,Peru|Alan Garcia|1,PER,Alan Gabriel Ludwig García Pérez,5,50.0,40.012
+Qwen chunked,SPEECH,Peru|Ollanta Humala|1,PER,Ollanta Moisés Humala Tasso,365,25.0,32.074493
+Qwen chunked,SPEECH,Peru|Pedro Pablo Kuczynski|1,PER,Pedro Pablo Kuczynski Goddard,97,1.87500005,27.445772
+Qwen chunked,SPEECH,Peru|Pedro Castillo|1,PER,José Pedro Castillo Terrones,65,29.374999000000003,40.10246
+Qwen chunked,SPEECH,Uruguay|Jorge Batlle|1,URY,Jorge Luis Batlle Ibáñez,328,10.8333335,19.417744
+Qwen chunked,SPEECH,Uruguay|Tabare Vazquez|1,URY,Tabaré Ramón Vázquez Rosas,444,12.5,21.061283
+Qwen chunked,SPEECH,Uruguay|Jose Mujica|1,URY,José Alberto Mujica Cordano,191,6.25,33.81838
+Qwen chunked,SPEECH,Uruguay|Tabare Vazquez|2,URY,Tabaré Ramón Vázquez Rosas,137,10.625000499999999,23.945621
+Qwen chunked,SPEECH,Uruguay|Luis Lacalle Pou|1,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,530,3.75000015,26.050642
+Qwen chunked,SPEECH,Venezuela|Hugo Chavez|1,VEN,Hugo Rafael Chávez Frías,743,95.83333,61.011845
+Qwen chunked,SPEECH,Venezuela|Hugo Chavez|2,VEN,Hugo Rafael Chávez Frías,293,87.5,61.483242
+Qwen chunked,SPEECH,Venezuela|Hugo Chavez|3,VEN,Hugo Rafael Chávez Frías,120,83.33333,60.5515
+Qwen chunked,SPEECH,Venezuela|NicolÃ¡s Maduro|1,VEN,Nicolás Maduro Moros,1512,81.875,64.8489
+Qwen chunked,SPEECH,Venezuela|NicolÃ¡s Maduro|2,VEN,Nicolás Maduro Moros,813,78.125,61.88478
+DeepSeek full,SPEECH,Argentina|Fernando de la Rua|1,ARG,Fernando de la Rua,2,8.75,21.85
+DeepSeek full,SPEECH,Argentina|Eduardo Duhalde|1,ARG,Eduardo Alberto Duhalde,1,26.666667999999998,44.38
+DeepSeek full,SPEECH,Argentina|Nestor Kirchner|1,ARG,Néstor Carlos Kirchner Ostoic,676,12.5,24.690653
+DeepSeek full,SPEECH,Argentina|Cristina Fernandez|1,ARG,Cristina Fernández de Kirchner,1812,0.0,15.12601
+DeepSeek full,SPEECH,Argentina|Cristina Fernandez|2,ARG,Cristina Fernández de Kirchner,1423,9.375,18.192923
+DeepSeek full,SPEECH,Argentina|Mauricio Macri|1,ARG,Mauricio Macri,471,1.87500005,11.224755
+DeepSeek full,SPEECH,Argentina|Alberto FernÃ¡ndez|1,ARG,Alberto Fernández,494,14.3749995,20.447712
+DeepSeek full,SPEECH,Bolivia|Gonzalo Sanchez de Lozada|2,BOL,Gonzalo Sánchez de Lozada Sánchez Bustamante,2,11.249999500000001,20.715
+DeepSeek full,SPEECH,Bolivia|Carlos Mesa|1,BOL,Carlos Diego Mesa Gisbert,1,6.25,13.56
+DeepSeek full,SPEECH,Bolivia|Evo Morales|1,BOL,Juan Evo Morales Ayma,4,75.0,41.58
+DeepSeek full,SPEECH,Bolivia|Evo Morales|2,BOL,Juan Evo Morales Ayma,80,50.0,21.315876
+DeepSeek full,SPEECH,Bolivia|Evo Morales|3,BOL,Juan Evo Morales Ayma,77,73.125,14.491039
+DeepSeek full,SPEECH,Brazil|Fernando Henrique Cardoso|2,BRA,Fernando Henrique Cardoso,471,0.0,3.523312
+DeepSeek full,SPEECH,Brazil|Luiz Inacio Lula da Silva|1,BRA,Luiz Inácio Lula da Silva,1983,12.5,11.844519
+DeepSeek full,SPEECH,Brazil|Dilma Rousseff|1,BRA,Dilma Vana Rousseff,438,0.0,4.9614615
+DeepSeek full,SPEECH,Brazil|Dilma Rousseff|2,BRA,Dilma Vana Rousseff,138,16.875000500000002,10.223985
+DeepSeek full,SPEECH,Brazil|Michel Temer|1,BRA,Michel Temer,190,0.0,4.523947
+DeepSeek full,SPEECH,Brazil|Jair Bolsonaro|1,BRA,Jair Messias Bolsonaro,381,25.0,22.16551
+DeepSeek full,SPEECH,Chile|Ricardo Lagos|1,CHL,Ricardo Froilán Lagos Escobar,440,4.1666668,5.1158414
+DeepSeek full,SPEECH,Chile|Michelle Bachelet|1,CHL,Verónica Michelle Bachelet Jeria,4,0.0,10.425
+DeepSeek full,SPEECH,Chile|Sebastian Pinera|1,CHL,Miguel Juan Sebastián Piñera Echenique,102,0.0,3.71
+DeepSeek full,SPEECH,Chile|Michelle Bachelet|2,CHL,Verónica Michelle Bachelet Jeria,904,10.625000499999999,4.6182632
+DeepSeek full,SPEECH,Chile|Sebastian Pinera|2,CHL,Miguel Juan Sebastián Piñera Echenique,380,7.5000005,7.1327367
+DeepSeek full,SPEECH,Colombia|Andres Pastrana|1,COL,Andres Pastrana Arango,295,1.25,7.7446785
+DeepSeek full,SPEECH,Colombia|Alvaro Uribe|1,COL,Álvaro Uribe Vélez,1697,0.0,10.486706
+DeepSeek full,SPEECH,Colombia|Juan Manuel Santos|1,COL,Juan Manuel Santos Calderón,784,0.0,4.885064
+DeepSeek full,SPEECH,Colombia|Juan Manuel Santos|2,COL,Juan Manuel Santos Calderón,767,3.125,5.5510173
+DeepSeek full,SPEECH,Colombia|IvÃ¡n Duque|1,COL,Iván Duque Márquez,1017,0.0,6.7534904
+DeepSeek full,SPEECH,Costa Rica|Miguel Angel Rodriguez|1,CRI,Miguel Angel Rodriguez Echeverria,2,4.1666668,6.6800003
+DeepSeek full,SPEECH,Costa Rica|Abel Pacheco|1,CRI,Abel Pacheco de la Espriella,4,11.111111,13.4725
+DeepSeek full,SPEECH,Costa Rica|Oscar Arias|2,CRI,Óscar Arias Sánchez,4,0.0,20.94
+DeepSeek full,SPEECH,Costa Rica|Laura Chinchilla Miranda|1,CRI,Laura Chinchilla Miranda,4,0.0,8.0625
+DeepSeek full,SPEECH,Costa Rica|Luis Guillermo Solis|1,CRI,Luis Guillermo Solís Rivera,4,20.000000500000002,7.8100004
+DeepSeek full,SPEECH,Costa Rica|Carlos Alvarado Quesada|1,CRI,Carlos Alvarado Quesada,4,0.0,9.099999
+DeepSeek full,SPEECH,Cuba|Miguel DÃ­az-Canel|1,CUB,Miguel Díaz-Canel Bermúdez,141,41.874999,37.812977
+DeepSeek full,SPEECH,Dominican Republic|Hipolito Mejia|1,DOM,Rafael Hipólito Mejía Domínguez,5,3.75000015,11.126
+DeepSeek full,SPEECH,Dominican Republic|Leonel Fernandez|2,DOM,Leonel Antonio Fernández Reyna,4,12.5,15.6925
+DeepSeek full,SPEECH,Dominican Republic|Leonel Fernandez|3,DOM,Leonel Antonio Fernández Reyna,3,12.5,22.813334
+DeepSeek full,SPEECH,Dominican Republic|Danilo Medina|1,DOM,Danilo Medina Sánchez,423,8.75,5.7683215
+DeepSeek full,SPEECH,Dominican Republic|Danilo Medina|2,DOM,Danilo Medina Sánchez,541,18.75,4.9146028
+DeepSeek full,SPEECH,Dominican Republic|Luis Abinader|1,DOM,Luis Rodolfo Abinader Corona,154,3.75000015,7.1482463
+DeepSeek full,SPEECH,Ecuador|Gustavo Noboa|1,ECU,Gustavo José Joaquín Noboa Bejarano,3,11.6666665,22.003334
+DeepSeek full,SPEECH,Ecuador|Lucio Gutierrez|1,ECU,Lucio Edwin Gutiérrez Borbúa,1,48.333332,6.96
+DeepSeek full,SPEECH,Ecuador|Alfredo Palacio|1,ECU,Luis Alfredo Palacio González,2,19.444444999999998,18.41
+DeepSeek full,SPEECH,Ecuador|Rafael Correa|1,ECU,Rafael Vicente Correa Delgado,80,62.5,43.598373
+DeepSeek full,SPEECH,Ecuador|Rafael Correa|2,ECU,Rafael Vicente Correa Delgado,253,86.666665,40.942486
+DeepSeek full,SPEECH,Ecuador|Rafael Correa|3,ECU,Rafael Vicente Correa Delgado,352,76.25,40.806644
+DeepSeek full,SPEECH,Ecuador|Lenin Moreno|1,ECU,Lenín Boltaire Moreno Garcés,281,9.375,16.878435
+DeepSeek full,SPEECH,Ecuador|Guillermo Lasso|1,ECU,Guillermo Alberto Santiago Lasso Mendoza,293,18.0000005,13.249658
+DeepSeek full,SPEECH,El Salvador|Francisco Flores|1,SLV,Francisco Guillermo Flores Perez,7,0.0,14.592857
+DeepSeek full,SPEECH,El Salvador|Antonio Saca|1,SLV,Elías Antonio Saca González,1131,29.1666655,5.312033
+DeepSeek full,SPEECH,El Salvador|Mauricio Funes|1,SLV,Carlos Mauricio Funes Cartagena,27,31.25,17.118517
+DeepSeek full,SPEECH,El Salvador|Salvador Sanchez Ceren|1,SLV,Salvador Sánchez Cerén,116,31.25,6.506466
+DeepSeek full,SPEECH,El Salvador|Nayib Bukele|1,SLV,Nayib Armando Bukele Ortez,936,25.0,8.379551
+DeepSeek full,SPEECH,Guatemala|Oscar Berger|1,GTM,Óscar José Rafael Berger Perdomo,4,0.0,14.397501
+DeepSeek full,SPEECH,Guatemala|Otto Perez Molina|1,GTM,Otto Fernando Pérez Molina,24,17.499999499999998,9.243751
+DeepSeek full,SPEECH,Guatemala|Jimmy Morales|1,GTM,Jimmy Ernesto Morales Cabrera,127,7.5000005,8.619134
+DeepSeek full,SPEECH,Guatemala|Alejandro Giammattei|1,GTM,Alejandro Eduardo Giammattei Falla,17,8.124999500000001,17.915882
+DeepSeek full,SPEECH,Honduras|Carlos Flores|1,HND,Carlos Roberto Flores,1,2.50000005,6.85
+DeepSeek full,SPEECH,Honduras|Ricardo Maduro|1,HND,Ricardo Rodolfo Maduro Joest,4,0.0,10.2
+DeepSeek full,SPEECH,Honduras|Manuel Zelaya|1,HND,José Manuel Zelaya Rosales,2,25.0,29.015
+DeepSeek full,SPEECH,Honduras|Porfirio Lobo Sosa|1,HND,Porfirio Lobo Sosa,3,16.666667,10.79
+DeepSeek full,SPEECH,Honduras|Juan Orlando Hernandez|1,HND,Juan Orlando Hernández,711,23.125000500000002,12.582096
+DeepSeek full,SPEECH,Mexico|Vicente Fox|1,MEX,Vicente Fox Quesada,4,12.5,7.0025005
+DeepSeek full,SPEECH,Mexico|Felipe Calderon|1,MEX,Felipe de Jesús Calderón Hinojosa,95,6.25,8.922947
+DeepSeek full,SPEECH,Mexico|Enrique Pena Nieto|1,MEX,Enrique Peña Nieto,896,0.0,2.6324775
+DeepSeek full,SPEECH,Mexico|Andres Manuel Lopez Obrador|1,MEX,Andrés Manuel López Obrador,1329,48.124999,19.61647
+DeepSeek full,SPEECH,Nicaragua|Enrique Bolanos|1,NIC,Enrique José Bolaños Geyer,293,0.0,10.835461
+DeepSeek full,SPEECH,Nicaragua|Daniel Ortega|1,NIC,José Daniel Ortega Saavedra,5,62.5,32.461998
+DeepSeek full,SPEECH,Nicaragua|Daniel Ortega|2,NIC,José Daniel Ortega Saavedra,214,50.0,16.363365
+DeepSeek full,SPEECH,Nicaragua|Daniel Ortega|3,NIC,José Daniel Ortega Saavedra,168,42.500001,22.977262
+DeepSeek full,SPEECH,Panama|Martin Torrijos|1,PAN,Martín Erasto Torrijos Espino,4,11.111111,4.2125
+DeepSeek full,SPEECH,Panama|Ricardo Martinelli|1,PAN,Ricardo Martinelli Berrocal,198,25.0,9.172423
+DeepSeek full,SPEECH,Panama|Juan Carlos Varela|1,PAN,Juan Carlos Varela,109,12.5,10.6707325
+DeepSeek full,SPEECH,Panama|Laurentino Cortizo|1,PAN,Laurentino Cortizo Cohen,219,14.3749995,10.040594
+DeepSeek full,SPEECH,Paraguay|Nicanor Duarte|1,PRY,Óscar Nicanor Duarte Frutos,4,25.0,18.705
+DeepSeek full,SPEECH,Paraguay|Fernando Lugo|1,PRY,Fernando Armindo Lugo Méndez,80,0.0,15.421249
+DeepSeek full,SPEECH,Paraguay|Horacio Cartes|1,PRY,Horacio Manuel Cartes Jara,182,11.875,8.241484
+DeepSeek full,SPEECH,Paraguay|Mario Abdo Benitez|1,PRY,Mario Abdo Benítez,39,4.374999949999999,4.878974
+DeepSeek full,SPEECH,Peru|Alejandro Toledo|1,PER,Alejandro Celestino Toledo Manrique,4,16.666667,17.215
+DeepSeek full,SPEECH,Peru|Alan Garcia|1,PER,Alan Gabriel Ludwig García Pérez,5,50.0,14.49
+DeepSeek full,SPEECH,Peru|Ollanta Humala|1,PER,Ollanta Moisés Humala Tasso,365,25.0,8.937507
+DeepSeek full,SPEECH,Peru|Pedro Pablo Kuczynski|1,PER,Pedro Pablo Kuczynski Goddard,97,1.87500005,6.8234015
+DeepSeek full,SPEECH,Peru|Pedro Castillo|1,PER,José Pedro Castillo Terrones,65,29.374999000000003,14.486155
+DeepSeek full,SPEECH,Uruguay|Jorge Batlle|1,URY,Jorge Luis Batlle Ibáñez,328,10.8333335,3.894055
+DeepSeek full,SPEECH,Uruguay|Tabare Vazquez|1,URY,Tabaré Ramón Vázquez Rosas,444,12.5,5.0996623
+DeepSeek full,SPEECH,Uruguay|Jose Mujica|1,URY,José Alberto Mujica Cordano,191,6.25,8.950628
+DeepSeek full,SPEECH,Uruguay|Tabare Vazquez|2,URY,Tabaré Ramón Vázquez Rosas,137,10.625000499999999,4.588321
+DeepSeek full,SPEECH,Uruguay|Luis Lacalle Pou|1,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,530,3.75000015,3.71866
+DeepSeek full,SPEECH,Venezuela|Hugo Chavez|1,VEN,Hugo Rafael Chávez Frías,743,95.83333,41.722908
+DeepSeek full,SPEECH,Venezuela|Hugo Chavez|2,VEN,Hugo Rafael Chávez Frías,293,87.5,39.79717
+DeepSeek full,SPEECH,Venezuela|Hugo Chavez|3,VEN,Hugo Rafael Chávez Frías,120,83.33333,30.004417
+DeepSeek full,SPEECH,Venezuela|NicolÃ¡s Maduro|1,VEN,Nicolás Maduro Moros,1512,81.875,40.83883
+DeepSeek full,SPEECH,Venezuela|NicolÃ¡s Maduro|2,VEN,Nicolás Maduro Moros,813,78.125,39.097443
+DeepSeek chunked,SPEECH,Argentina|Fernando de la Rua|1,ARG,Fernando de la Rua,2,8.75,14.59
+DeepSeek chunked,SPEECH,Argentina|Eduardo Duhalde|1,ARG,Eduardo Alberto Duhalde,1,26.666667999999998,18.03
+DeepSeek chunked,SPEECH,Argentina|Nestor Kirchner|1,ARG,Néstor Carlos Kirchner Ostoic,676,12.5,21.144407
+DeepSeek chunked,SPEECH,Argentina|Cristina Fernandez|1,ARG,Cristina Fernández de Kirchner,1812,0.0,12.627201
+DeepSeek chunked,SPEECH,Argentina|Cristina Fernandez|2,ARG,Cristina Fernández de Kirchner,1423,9.375,13.703675
+DeepSeek chunked,SPEECH,Argentina|Mauricio Macri|1,ARG,Mauricio Macri,471,1.87500005,9.863993
+DeepSeek chunked,SPEECH,Argentina|Alberto FernÃ¡ndez|1,ARG,Alberto Fernández,494,14.3749995,16.125425
+DeepSeek chunked,SPEECH,Bolivia|Gonzalo Sanchez de Lozada|2,BOL,Gonzalo Sánchez de Lozada Sánchez Bustamante,2,11.249999500000001,16.02
+DeepSeek chunked,SPEECH,Bolivia|Carlos Mesa|1,BOL,Carlos Diego Mesa Gisbert,1,6.25,9.88
+DeepSeek chunked,SPEECH,Bolivia|Evo Morales|1,BOL,Juan Evo Morales Ayma,4,75.0,40.212498
+DeepSeek chunked,SPEECH,Bolivia|Evo Morales|2,BOL,Juan Evo Morales Ayma,80,50.0,19.186499
+DeepSeek chunked,SPEECH,Bolivia|Evo Morales|3,BOL,Juan Evo Morales Ayma,77,73.125,13.044154
+DeepSeek chunked,SPEECH,Brazil|Fernando Henrique Cardoso|2,BRA,Fernando Henrique Cardoso,471,0.0,3.3602333
+DeepSeek chunked,SPEECH,Brazil|Luiz Inacio Lula da Silva|1,BRA,Luiz Inácio Lula da Silva,1983,12.5,10.879537
+DeepSeek chunked,SPEECH,Brazil|Dilma Rousseff|1,BRA,Dilma Vana Rousseff,438,0.0,4.5417123
+DeepSeek chunked,SPEECH,Brazil|Dilma Rousseff|2,BRA,Dilma Vana Rousseff,138,16.875000500000002,7.392826
+DeepSeek chunked,SPEECH,Brazil|Michel Temer|1,BRA,Michel Temer,190,0.0,3.630947
+DeepSeek chunked,SPEECH,Brazil|Jair Bolsonaro|1,BRA,Jair Messias Bolsonaro,381,25.0,20.017033
+DeepSeek chunked,SPEECH,Chile|Ricardo Lagos|1,CHL,Ricardo Froilán Lagos Escobar,440,4.1666668,4.500591
+DeepSeek chunked,SPEECH,Chile|Michelle Bachelet|1,CHL,Verónica Michelle Bachelet Jeria,4,0.0,5.73
+DeepSeek chunked,SPEECH,Chile|Sebastian Pinera|1,CHL,Miguel Juan Sebastián Piñera Echenique,102,0.0,3.2808824
+DeepSeek chunked,SPEECH,Chile|Michelle Bachelet|2,CHL,Verónica Michelle Bachelet Jeria,904,10.625000499999999,4.07417
+DeepSeek chunked,SPEECH,Chile|Sebastian Pinera|2,CHL,Miguel Juan Sebastián Piñera Echenique,380,7.5000005,6.1711316
+DeepSeek chunked,SPEECH,Colombia|Andres Pastrana|1,COL,Andres Pastrana Arango,295,1.25,6.963152
+DeepSeek chunked,SPEECH,Colombia|Alvaro Uribe|1,COL,Álvaro Uribe Vélez,1697,0.0,8.257366
+DeepSeek chunked,SPEECH,Colombia|Juan Manuel Santos|1,COL,Juan Manuel Santos Calderón,784,0.0,4.4786863
+DeepSeek chunked,SPEECH,Colombia|Juan Manuel Santos|2,COL,Juan Manuel Santos Calderón,767,3.125,5.124107
+DeepSeek chunked,SPEECH,Colombia|IvÃ¡n Duque|1,COL,Iván Duque Márquez,1017,0.0,6.169587
+DeepSeek chunked,SPEECH,Costa Rica|Miguel Angel Rodriguez|1,CRI,Miguel Angel Rodriguez Echeverria,2,4.1666668,5.69
+DeepSeek chunked,SPEECH,Costa Rica|Abel Pacheco|1,CRI,Abel Pacheco de la Espriella,4,11.111111,12.632501
+DeepSeek chunked,SPEECH,Costa Rica|Oscar Arias|2,CRI,Óscar Arias Sánchez,4,0.0,14.5325
+DeepSeek chunked,SPEECH,Costa Rica|Laura Chinchilla Miranda|1,CRI,Laura Chinchilla Miranda,4,0.0,5.41
+DeepSeek chunked,SPEECH,Costa Rica|Luis Guillermo Solis|1,CRI,Luis Guillermo Solís Rivera,4,20.000000500000002,5.2825003
+DeepSeek chunked,SPEECH,Costa Rica|Carlos Alvarado Quesada|1,CRI,Carlos Alvarado Quesada,4,0.0,9.3225
+DeepSeek chunked,SPEECH,Cuba|Miguel DÃ­az-Canel|1,CUB,Miguel Díaz-Canel Bermúdez,141,41.874999,30.417303
+DeepSeek chunked,SPEECH,Dominican Republic|Hipolito Mejia|1,DOM,Rafael Hipólito Mejía Domínguez,5,3.75000015,11.059999
+DeepSeek chunked,SPEECH,Dominican Republic|Leonel Fernandez|2,DOM,Leonel Antonio Fernández Reyna,4,12.5,7.0125
+DeepSeek chunked,SPEECH,Dominican Republic|Leonel Fernandez|3,DOM,Leonel Antonio Fernández Reyna,3,12.5,12.37
+DeepSeek chunked,SPEECH,Dominican Republic|Danilo Medina|1,DOM,Danilo Medina Sánchez,423,8.75,5.6699057
+DeepSeek chunked,SPEECH,Dominican Republic|Danilo Medina|2,DOM,Danilo Medina Sánchez,541,18.75,4.6677084
+DeepSeek chunked,SPEECH,Dominican Republic|Luis Abinader|1,DOM,Luis Rodolfo Abinader Corona,154,3.75000015,6.4396105
+DeepSeek chunked,SPEECH,Ecuador|Gustavo Noboa|1,ECU,Gustavo José Joaquín Noboa Bejarano,3,11.6666665,20.89
+DeepSeek chunked,SPEECH,Ecuador|Lucio Gutierrez|1,ECU,Lucio Edwin Gutiérrez Borbúa,1,48.333332,7.15
+DeepSeek chunked,SPEECH,Ecuador|Alfredo Palacio|1,ECU,Luis Alfredo Palacio González,2,19.444444999999998,21.17
+DeepSeek chunked,SPEECH,Ecuador|Rafael Correa|1,ECU,Rafael Vicente Correa Delgado,80,62.5,37.904
+DeepSeek chunked,SPEECH,Ecuador|Rafael Correa|2,ECU,Rafael Vicente Correa Delgado,253,86.666665,32.189922
+DeepSeek chunked,SPEECH,Ecuador|Rafael Correa|3,ECU,Rafael Vicente Correa Delgado,352,76.25,31.043665
+DeepSeek chunked,SPEECH,Ecuador|Lenin Moreno|1,ECU,Lenín Boltaire Moreno Garcés,281,9.375,13.543879
+DeepSeek chunked,SPEECH,Ecuador|Guillermo Lasso|1,ECU,Guillermo Alberto Santiago Lasso Mendoza,293,18.0000005,11.960034
+DeepSeek chunked,SPEECH,El Salvador|Francisco Flores|1,SLV,Francisco Guillermo Flores Perez,7,0.0,16.819998
+DeepSeek chunked,SPEECH,El Salvador|Antonio Saca|1,SLV,Elías Antonio Saca González,1131,29.1666655,5.6382847
+DeepSeek chunked,SPEECH,El Salvador|Mauricio Funes|1,SLV,Carlos Mauricio Funes Cartagena,27,31.25,14.08889
+DeepSeek chunked,SPEECH,El Salvador|Salvador Sanchez Ceren|1,SLV,Salvador Sánchez Cerén,116,31.25,6.5765514
+DeepSeek chunked,SPEECH,El Salvador|Nayib Bukele|1,SLV,Nayib Armando Bukele Ortez,936,25.0,8.061859
+DeepSeek chunked,SPEECH,Guatemala|Oscar Berger|1,GTM,Óscar José Rafael Berger Perdomo,4,0.0,8.9175005
+DeepSeek chunked,SPEECH,Guatemala|Otto Perez Molina|1,GTM,Otto Fernando Pérez Molina,24,17.499999499999998,9.532917
+DeepSeek chunked,SPEECH,Guatemala|Jimmy Morales|1,GTM,Jimmy Ernesto Morales Cabrera,127,7.5000005,8.572835
+DeepSeek chunked,SPEECH,Guatemala|Alejandro Giammattei|1,GTM,Alejandro Eduardo Giammattei Falla,17,8.124999500000001,17.602942
+DeepSeek chunked,SPEECH,Honduras|Carlos Flores|1,HND,Carlos Roberto Flores,1,2.50000005,4.75
+DeepSeek chunked,SPEECH,Honduras|Ricardo Maduro|1,HND,Ricardo Rodolfo Maduro Joest,4,0.0,10.055
+DeepSeek chunked,SPEECH,Honduras|Manuel Zelaya|1,HND,José Manuel Zelaya Rosales,2,25.0,30.99
+DeepSeek chunked,SPEECH,Honduras|Porfirio Lobo Sosa|1,HND,Porfirio Lobo Sosa,3,16.666667,14.506667
+DeepSeek chunked,SPEECH,Honduras|Juan Orlando Hernandez|1,HND,Juan Orlando Hernández,711,23.125000500000002,10.770057
+DeepSeek chunked,SPEECH,Mexico|Vicente Fox|1,MEX,Vicente Fox Quesada,4,12.5,4.14
+DeepSeek chunked,SPEECH,Mexico|Felipe Calderon|1,MEX,Felipe de Jesús Calderón Hinojosa,95,6.25,7.3984203
+DeepSeek chunked,SPEECH,Mexico|Enrique Pena Nieto|1,MEX,Enrique Peña Nieto,896,0.0,2.5185716
+DeepSeek chunked,SPEECH,Mexico|Andres Manuel Lopez Obrador|1,MEX,Andrés Manuel López Obrador,1329,48.124999,12.140067
+DeepSeek chunked,SPEECH,Nicaragua|Enrique Bolanos|1,NIC,Enrique José Bolaños Geyer,293,0.0,10.565018
+DeepSeek chunked,SPEECH,Nicaragua|Daniel Ortega|1,NIC,José Daniel Ortega Saavedra,5,62.5,24.973999
+DeepSeek chunked,SPEECH,Nicaragua|Daniel Ortega|2,NIC,José Daniel Ortega Saavedra,214,50.0,15.943131
+DeepSeek chunked,SPEECH,Nicaragua|Daniel Ortega|3,NIC,José Daniel Ortega Saavedra,168,42.500001,19.513332
+DeepSeek chunked,SPEECH,Panama|Martin Torrijos|1,PAN,Martín Erasto Torrijos Espino,4,11.111111,5.285
+DeepSeek chunked,SPEECH,Panama|Ricardo Martinelli|1,PAN,Ricardo Martinelli Berrocal,198,25.0,9.122879
+DeepSeek chunked,SPEECH,Panama|Juan Carlos Varela|1,PAN,Juan Carlos Varela,109,12.5,10.860001
+DeepSeek chunked,SPEECH,Panama|Laurentino Cortizo|1,PAN,Laurentino Cortizo Cohen,219,14.3749995,9.424155
+DeepSeek chunked,SPEECH,Paraguay|Nicanor Duarte|1,PRY,Óscar Nicanor Duarte Frutos,4,25.0,10.424999
+DeepSeek chunked,SPEECH,Paraguay|Fernando Lugo|1,PRY,Fernando Armindo Lugo Méndez,80,0.0,15.594876
+DeepSeek chunked,SPEECH,Paraguay|Horacio Cartes|1,PRY,Horacio Manuel Cartes Jara,182,11.875,8.296209
+DeepSeek chunked,SPEECH,Paraguay|Mario Abdo Benitez|1,PRY,Mario Abdo Benítez,39,4.374999949999999,5.5415382
+DeepSeek chunked,SPEECH,Peru|Alejandro Toledo|1,PER,Alejandro Celestino Toledo Manrique,4,16.666667,15.275
+DeepSeek chunked,SPEECH,Peru|Alan Garcia|1,PER,Alan Gabriel Ludwig García Pérez,5,50.0,15.511999
+DeepSeek chunked,SPEECH,Peru|Ollanta Humala|1,PER,Ollanta Moisés Humala Tasso,365,25.0,8.052657
+DeepSeek chunked,SPEECH,Peru|Pedro Pablo Kuczynski|1,PER,Pedro Pablo Kuczynski Goddard,97,1.87500005,6.3535056
+DeepSeek chunked,SPEECH,Peru|Pedro Castillo|1,PER,José Pedro Castillo Terrones,65,29.374999000000003,14.266923
+DeepSeek chunked,SPEECH,Uruguay|Jorge Batlle|1,URY,Jorge Luis Batlle Ibáñez,328,10.8333335,3.2535057
+DeepSeek chunked,SPEECH,Uruguay|Tabare Vazquez|1,URY,Tabaré Ramón Vázquez Rosas,444,12.5,4.7349997
+DeepSeek chunked,SPEECH,Uruguay|Jose Mujica|1,URY,José Alberto Mujica Cordano,191,6.25,9.856441
+DeepSeek chunked,SPEECH,Uruguay|Tabare Vazquez|2,URY,Tabaré Ramón Vázquez Rosas,137,10.625000499999999,4.2091975
+DeepSeek chunked,SPEECH,Uruguay|Luis Lacalle Pou|1,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,530,3.75000015,3.2752075
+DeepSeek chunked,SPEECH,Venezuela|Hugo Chavez|1,VEN,Hugo Rafael Chávez Frías,743,95.83333,26.999043
+DeepSeek chunked,SPEECH,Venezuela|Hugo Chavez|2,VEN,Hugo Rafael Chávez Frías,293,87.5,27.923618
+DeepSeek chunked,SPEECH,Venezuela|Hugo Chavez|3,VEN,Hugo Rafael Chávez Frías,120,83.33333,27.713083
+DeepSeek chunked,SPEECH,Venezuela|NicolÃ¡s Maduro|1,VEN,Nicolás Maduro Moros,1512,81.875,33.38863
+DeepSeek chunked,SPEECH,Venezuela|NicolÃ¡s Maduro|2,VEN,Nicolás Maduro Moros,813,78.125,30.740334
+Luna full,SPEECH,Argentina|Fernando de la Rua|1,ARG,Fernando de la Rua,2,8.75,25.17
+Luna full,SPEECH,Argentina|Eduardo Duhalde|1,ARG,Eduardo Alberto Duhalde,1,26.666667999999998,39.04
+Luna full,SPEECH,Argentina|Nestor Kirchner|1,ARG,Néstor Carlos Kirchner Ostoic,676,12.5,27.97182
+Luna full,SPEECH,Argentina|Cristina Fernandez|1,ARG,Cristina Fernández de Kirchner,1812,0.0,18.26653
+Luna full,SPEECH,Argentina|Cristina Fernandez|2,ARG,Cristina Fernández de Kirchner,1423,9.375,23.902557
+Luna full,SPEECH,Argentina|Mauricio Macri|1,ARG,Mauricio Macri,471,1.87500005,14.241698
+Luna full,SPEECH,Argentina|Alberto FernÃ¡ndez|1,ARG,Alberto Fernández,494,14.3749995,24.27328
+Luna full,SPEECH,Bolivia|Gonzalo Sanchez de Lozada|2,BOL,Gonzalo Sánchez de Lozada Sánchez Bustamante,2,11.249999500000001,25.035
+Luna full,SPEECH,Bolivia|Carlos Mesa|1,BOL,Carlos Diego Mesa Gisbert,1,6.25,31.34
+Luna full,SPEECH,Bolivia|Evo Morales|1,BOL,Juan Evo Morales Ayma,4,75.0,52.57
+Luna full,SPEECH,Bolivia|Evo Morales|2,BOL,Juan Evo Morales Ayma,80,50.0,28.74675
+Luna full,SPEECH,Bolivia|Evo Morales|3,BOL,Juan Evo Morales Ayma,77,73.125,16.998703
+Luna full,SPEECH,Brazil|Fernando Henrique Cardoso|2,BRA,Fernando Henrique Cardoso,471,0.0,8.914714
+Luna full,SPEECH,Brazil|Luiz Inacio Lula da Silva|1,BRA,Luiz Inácio Lula da Silva,1983,12.5,17.999243
+Luna full,SPEECH,Brazil|Dilma Rousseff|1,BRA,Dilma Vana Rousseff,438,0.0,11.253859
+Luna full,SPEECH,Brazil|Dilma Rousseff|2,BRA,Dilma Vana Rousseff,138,16.875000500000002,17.152536
+Luna full,SPEECH,Brazil|Michel Temer|1,BRA,Michel Temer,190,0.0,7.4478426
+Luna full,SPEECH,Brazil|Jair Bolsonaro|1,BRA,Jair Messias Bolsonaro,381,25.0,25.168056
+Luna full,SPEECH,Chile|Ricardo Lagos|1,CHL,Ricardo Froilán Lagos Escobar,440,4.1666668,10.114341
+Luna full,SPEECH,Chile|Michelle Bachelet|1,CHL,Verónica Michelle Bachelet Jeria,4,0.0,24.6075
+Luna full,SPEECH,Chile|Sebastian Pinera|1,CHL,Miguel Juan Sebastián Piñera Echenique,102,0.0,5.0339217
+Luna full,SPEECH,Chile|Michelle Bachelet|2,CHL,Verónica Michelle Bachelet Jeria,904,10.625000499999999,8.481328
+Luna full,SPEECH,Chile|Sebastian Pinera|2,CHL,Miguel Juan Sebastián Piñera Echenique,380,7.5000005,12.740237
+Luna full,SPEECH,Colombia|Andres Pastrana|1,COL,Andres Pastrana Arango,295,1.25,13.721253
+Luna full,SPEECH,Colombia|Alvaro Uribe|1,COL,Álvaro Uribe Vélez,1697,0.0,17.10284
+Luna full,SPEECH,Colombia|Juan Manuel Santos|1,COL,Juan Manuel Santos Calderón,784,0.0,8.701735
+Luna full,SPEECH,Colombia|Juan Manuel Santos|2,COL,Juan Manuel Santos Calderón,767,3.125,8.646663
+Luna full,SPEECH,Colombia|IvÃ¡n Duque|1,COL,Iván Duque Márquez,1017,0.0,11.788074
+Luna full,SPEECH,Costa Rica|Miguel Angel Rodriguez|1,CRI,Miguel Angel Rodriguez Echeverria,2,4.1666668,21.295
+Luna full,SPEECH,Costa Rica|Abel Pacheco|1,CRI,Abel Pacheco de la Espriella,4,11.111111,16.845001
+Luna full,SPEECH,Costa Rica|Oscar Arias|2,CRI,Óscar Arias Sánchez,4,0.0,31.140001
+Luna full,SPEECH,Costa Rica|Laura Chinchilla Miranda|1,CRI,Laura Chinchilla Miranda,4,0.0,17.88
+Luna full,SPEECH,Costa Rica|Luis Guillermo Solis|1,CRI,Luis Guillermo Solís Rivera,4,20.000000500000002,22.625
+Luna full,SPEECH,Costa Rica|Carlos Alvarado Quesada|1,CRI,Carlos Alvarado Quesada,4,0.0,19.225
+Luna full,SPEECH,Cuba|Miguel DÃ­az-Canel|1,CUB,Miguel Díaz-Canel Bermúdez,141,41.874999,51.0183
+Luna full,SPEECH,Dominican Republic|Hipolito Mejia|1,DOM,Rafael Hipólito Mejía Domínguez,5,3.75000015,22.484
+Luna full,SPEECH,Dominican Republic|Leonel Fernandez|2,DOM,Leonel Antonio Fernández Reyna,4,12.5,25.965
+Luna full,SPEECH,Dominican Republic|Leonel Fernandez|3,DOM,Leonel Antonio Fernández Reyna,3,12.5,43.393337
+Luna full,SPEECH,Dominican Republic|Danilo Medina|1,DOM,Danilo Medina Sánchez,423,8.75,8.775556
+Luna full,SPEECH,Dominican Republic|Danilo Medina|2,DOM,Danilo Medina Sánchez,541,18.75,8.220019
+Luna full,SPEECH,Dominican Republic|Luis Abinader|1,DOM,Luis Rodolfo Abinader Corona,154,3.75000015,13.406364
+Luna full,SPEECH,Ecuador|Gustavo Noboa|1,ECU,Gustavo José Joaquín Noboa Bejarano,3,11.6666665,27.303335
+Luna full,SPEECH,Ecuador|Lucio Gutierrez|1,ECU,Lucio Edwin Gutiérrez Borbúa,1,48.333332,11.86
+Luna full,SPEECH,Ecuador|Alfredo Palacio|1,ECU,Luis Alfredo Palacio González,2,19.444444999999998,16.345001
+Luna full,SPEECH,Ecuador|Rafael Correa|1,ECU,Rafael Vicente Correa Delgado,80,62.5,55.490746
+Luna full,SPEECH,Ecuador|Rafael Correa|2,ECU,Rafael Vicente Correa Delgado,253,86.666665,53.83237
+Luna full,SPEECH,Ecuador|Rafael Correa|3,ECU,Rafael Vicente Correa Delgado,352,76.25,53.76395
+Luna full,SPEECH,Ecuador|Lenin Moreno|1,ECU,Lenín Boltaire Moreno Garcés,281,9.375,22.703274
+Luna full,SPEECH,Ecuador|Guillermo Lasso|1,ECU,Guillermo Alberto Santiago Lasso Mendoza,293,18.0000005,17.810717
+Luna full,SPEECH,El Salvador|Francisco Flores|1,SLV,Francisco Guillermo Flores Perez,7,0.0,26.048573
+Luna full,SPEECH,El Salvador|Antonio Saca|1,SLV,Elías Antonio Saca González,1131,29.1666655,11.356968
+Luna full,SPEECH,El Salvador|Mauricio Funes|1,SLV,Carlos Mauricio Funes Cartagena,27,31.25,18.85074
+Luna full,SPEECH,El Salvador|Salvador Sanchez Ceren|1,SLV,Salvador Sánchez Cerén,116,31.25,8.440431
+Luna full,SPEECH,El Salvador|Nayib Bukele|1,SLV,Nayib Armando Bukele Ortez,936,25.0,11.300417
+Luna full,SPEECH,Guatemala|Oscar Berger|1,GTM,Óscar José Rafael Berger Perdomo,4,0.0,17.552502
+Luna full,SPEECH,Guatemala|Otto Perez Molina|1,GTM,Otto Fernando Pérez Molina,24,17.499999499999998,9.349583
+Luna full,SPEECH,Guatemala|Jimmy Morales|1,GTM,Jimmy Ernesto Morales Cabrera,127,7.5000005,10.152519
+Luna full,SPEECH,Guatemala|Alejandro Giammattei|1,GTM,Alejandro Eduardo Giammattei Falla,17,8.124999500000001,19.650589
+Luna full,SPEECH,Honduras|Carlos Flores|1,HND,Carlos Roberto Flores,1,2.50000005,12.57
+Luna full,SPEECH,Honduras|Ricardo Maduro|1,HND,Ricardo Rodolfo Maduro Joest,4,0.0,15.414999
+Luna full,SPEECH,Honduras|Manuel Zelaya|1,HND,José Manuel Zelaya Rosales,2,25.0,39.809998
+Luna full,SPEECH,Honduras|Porfirio Lobo Sosa|1,HND,Porfirio Lobo Sosa,3,16.666667,18.963333
+Luna full,SPEECH,Honduras|Juan Orlando Hernandez|1,HND,Juan Orlando Hernández,711,23.125000500000002,16.853685
+Luna full,SPEECH,Mexico|Vicente Fox|1,MEX,Vicente Fox Quesada,4,12.5,7.7025003
+Luna full,SPEECH,Mexico|Felipe Calderon|1,MEX,Felipe de Jesús Calderón Hinojosa,95,6.25,18.251474
+Luna full,SPEECH,Mexico|Enrique Pena Nieto|1,MEX,Enrique Peña Nieto,896,0.0,4.229029
+Luna full,SPEECH,Mexico|Andres Manuel Lopez Obrador|1,MEX,Andrés Manuel López Obrador,1329,48.124999,37.185574
+Luna full,SPEECH,Nicaragua|Enrique Bolanos|1,NIC,Enrique José Bolaños Geyer,293,0.0,15.40471
+Luna full,SPEECH,Nicaragua|Daniel Ortega|1,NIC,José Daniel Ortega Saavedra,5,62.5,39.086
+Luna full,SPEECH,Nicaragua|Daniel Ortega|2,NIC,José Daniel Ortega Saavedra,214,50.0,22.117895
+Luna full,SPEECH,Nicaragua|Daniel Ortega|3,NIC,José Daniel Ortega Saavedra,168,42.500001,31.64899
+Luna full,SPEECH,Panama|Martin Torrijos|1,PAN,Martín Erasto Torrijos Espino,4,11.111111,5.075
+Luna full,SPEECH,Panama|Ricardo Martinelli|1,PAN,Ricardo Martinelli Berrocal,198,25.0,9.756263
+Luna full,SPEECH,Panama|Juan Carlos Varela|1,PAN,Juan Carlos Varela,109,12.5,10.050917
+Luna full,SPEECH,Panama|Laurentino Cortizo|1,PAN,Laurentino Cortizo Cohen,219,14.3749995,11.656575
+Luna full,SPEECH,Paraguay|Nicanor Duarte|1,PRY,Óscar Nicanor Duarte Frutos,4,25.0,22.977499
+Luna full,SPEECH,Paraguay|Fernando Lugo|1,PRY,Fernando Armindo Lugo Méndez,80,0.0,15.2508745
+Luna full,SPEECH,Paraguay|Horacio Cartes|1,PRY,Horacio Manuel Cartes Jara,182,11.875,8.972913
+Luna full,SPEECH,Paraguay|Mario Abdo Benitez|1,PRY,Mario Abdo Benítez,39,4.374999949999999,9.265127
+Luna full,SPEECH,Peru|Alejandro Toledo|1,PER,Alejandro Celestino Toledo Manrique,4,16.666667,29.255001
+Luna full,SPEECH,Peru|Alan Garcia|1,PER,Alan Gabriel Ludwig García Pérez,5,50.0,23.946
+Luna full,SPEECH,Peru|Ollanta Humala|1,PER,Ollanta Moisés Humala Tasso,365,25.0,10.965206
+Luna full,SPEECH,Peru|Pedro Pablo Kuczynski|1,PER,Pedro Pablo Kuczynski Goddard,97,1.87500005,8.6646385
+Luna full,SPEECH,Peru|Pedro Castillo|1,PER,José Pedro Castillo Terrones,65,29.374999000000003,17.895077
+Luna full,SPEECH,Uruguay|Jorge Batlle|1,URY,Jorge Luis Batlle Ibáñez,328,10.8333335,7.8269815
+Luna full,SPEECH,Uruguay|Tabare Vazquez|1,URY,Tabaré Ramón Vázquez Rosas,444,12.5,10.023604
+Luna full,SPEECH,Uruguay|Jose Mujica|1,URY,José Alberto Mujica Cordano,191,6.25,8.882408
+Luna full,SPEECH,Uruguay|Tabare Vazquez|2,URY,Tabaré Ramón Vázquez Rosas,137,10.625000499999999,6.6289053
+Luna full,SPEECH,Uruguay|Luis Lacalle Pou|1,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,530,3.75000015,4.9176416
+Luna full,SPEECH,Venezuela|Hugo Chavez|1,VEN,Hugo Rafael Chávez Frías,743,95.83333,63.343044
+Luna full,SPEECH,Venezuela|Hugo Chavez|2,VEN,Hugo Rafael Chávez Frías,293,87.5,60.400852
+Luna full,SPEECH,Venezuela|Hugo Chavez|3,VEN,Hugo Rafael Chávez Frías,120,83.33333,43.41891
+Luna full,SPEECH,Venezuela|NicolÃ¡s Maduro|1,VEN,Nicolás Maduro Moros,1512,81.875,57.940662
+Luna full,SPEECH,Venezuela|NicolÃ¡s Maduro|2,VEN,Nicolás Maduro Moros,813,78.125,57.487747
+Luna chunked,SPEECH,Argentina|Fernando de la Rua|1,ARG,Fernando de la Rua,2,8.75,16.505001
+Luna chunked,SPEECH,Argentina|Eduardo Duhalde|1,ARG,Eduardo Alberto Duhalde,1,26.666667999999998,20.9
+Luna chunked,SPEECH,Argentina|Nestor Kirchner|1,ARG,Néstor Carlos Kirchner Ostoic,676,12.5,23.299423
+Luna chunked,SPEECH,Argentina|Cristina Fernandez|1,ARG,Cristina Fernández de Kirchner,1812,0.0,13.294955
+Luna chunked,SPEECH,Argentina|Cristina Fernandez|2,ARG,Cristina Fernández de Kirchner,1423,9.375,15.238468
+Luna chunked,SPEECH,Argentina|Mauricio Macri|1,ARG,Mauricio Macri,471,1.87500005,12.128004
+Luna chunked,SPEECH,Argentina|Alberto FernÃ¡ndez|1,ARG,Alberto Fernández,494,14.3749995,17.476295
+Luna chunked,SPEECH,Bolivia|Gonzalo Sanchez de Lozada|2,BOL,Gonzalo Sánchez de Lozada Sánchez Bustamante,2,11.249999500000001,21.485
+Luna chunked,SPEECH,Bolivia|Carlos Mesa|1,BOL,Carlos Diego Mesa Gisbert,1,6.25,19.59
+Luna chunked,SPEECH,Bolivia|Evo Morales|1,BOL,Juan Evo Morales Ayma,4,75.0,44.9775
+Luna chunked,SPEECH,Bolivia|Evo Morales|2,BOL,Juan Evo Morales Ayma,80,50.0,21.50275
+Luna chunked,SPEECH,Bolivia|Evo Morales|3,BOL,Juan Evo Morales Ayma,77,73.125,13.1180525
+Luna chunked,SPEECH,Brazil|Fernando Henrique Cardoso|2,BRA,Fernando Henrique Cardoso,471,0.0,6.340297
+Luna chunked,SPEECH,Brazil|Luiz Inacio Lula da Silva|1,BRA,Luiz Inácio Lula da Silva,1983,12.5,12.058261
+Luna chunked,SPEECH,Brazil|Dilma Rousseff|1,BRA,Dilma Vana Rousseff,438,0.0,7.4985614
+Luna chunked,SPEECH,Brazil|Dilma Rousseff|2,BRA,Dilma Vana Rousseff,138,16.875000500000002,10.563986
+Luna chunked,SPEECH,Brazil|Michel Temer|1,BRA,Michel Temer,190,0.0,5.1491055
+Luna chunked,SPEECH,Brazil|Jair Bolsonaro|1,BRA,Jair Messias Bolsonaro,381,25.0,20.088112
+Luna chunked,SPEECH,Chile|Ricardo Lagos|1,CHL,Ricardo Froilán Lagos Escobar,440,4.1666668,7.1042953
+Luna chunked,SPEECH,Chile|Michelle Bachelet|1,CHL,Verónica Michelle Bachelet Jeria,4,0.0,9.155001
+Luna chunked,SPEECH,Chile|Sebastian Pinera|1,CHL,Miguel Juan Sebastián Piñera Echenique,102,0.0,4.185098
+Luna chunked,SPEECH,Chile|Michelle Bachelet|2,CHL,Verónica Michelle Bachelet Jeria,904,10.625000499999999,6.745818
+Luna chunked,SPEECH,Chile|Sebastian Pinera|2,CHL,Miguel Juan Sebastián Piñera Echenique,380,7.5000005,9.440159
+Luna chunked,SPEECH,Colombia|Andres Pastrana|1,COL,Andres Pastrana Arango,295,1.25,9.407763
+Luna chunked,SPEECH,Colombia|Alvaro Uribe|1,COL,Álvaro Uribe Vélez,1697,0.0,10.922805
+Luna chunked,SPEECH,Colombia|Juan Manuel Santos|1,COL,Juan Manuel Santos Calderón,784,0.0,6.2645407
+Luna chunked,SPEECH,Colombia|Juan Manuel Santos|2,COL,Juan Manuel Santos Calderón,767,3.125,6.5712514
+Luna chunked,SPEECH,Colombia|IvÃ¡n Duque|1,COL,Iván Duque Márquez,1017,0.0,8.532301
+Luna chunked,SPEECH,Costa Rica|Miguel Angel Rodriguez|1,CRI,Miguel Angel Rodriguez Echeverria,2,4.1666668,9.725
+Luna chunked,SPEECH,Costa Rica|Abel Pacheco|1,CRI,Abel Pacheco de la Espriella,4,11.111111,17.387499
+Luna chunked,SPEECH,Costa Rica|Oscar Arias|2,CRI,Óscar Arias Sánchez,4,0.0,16.3225
+Luna chunked,SPEECH,Costa Rica|Laura Chinchilla Miranda|1,CRI,Laura Chinchilla Miranda,4,0.0,7.595
+Luna chunked,SPEECH,Costa Rica|Luis Guillermo Solis|1,CRI,Luis Guillermo Solís Rivera,4,20.000000500000002,9.9575
+Luna chunked,SPEECH,Costa Rica|Carlos Alvarado Quesada|1,CRI,Carlos Alvarado Quesada,4,0.0,12.045
+Luna chunked,SPEECH,Cuba|Miguel DÃ­az-Canel|1,CUB,Miguel Díaz-Canel Bermúdez,141,41.874999,37.917942
+Luna chunked,SPEECH,Dominican Republic|Hipolito Mejia|1,DOM,Rafael Hipólito Mejía Domínguez,5,3.75000015,12.866
+Luna chunked,SPEECH,Dominican Republic|Leonel Fernandez|2,DOM,Leonel Antonio Fernández Reyna,4,12.5,10.98
+Luna chunked,SPEECH,Dominican Republic|Leonel Fernandez|3,DOM,Leonel Antonio Fernández Reyna,3,12.5,19.449999
+Luna chunked,SPEECH,Dominican Republic|Danilo Medina|1,DOM,Danilo Medina Sánchez,423,8.75,6.757376
+Luna chunked,SPEECH,Dominican Republic|Danilo Medina|2,DOM,Danilo Medina Sánchez,541,18.75,5.806118
+Luna chunked,SPEECH,Dominican Republic|Luis Abinader|1,DOM,Luis Rodolfo Abinader Corona,154,3.75000015,9.124935
+Luna chunked,SPEECH,Ecuador|Gustavo Noboa|1,ECU,Gustavo José Joaquín Noboa Bejarano,3,11.6666665,21.83
+Luna chunked,SPEECH,Ecuador|Lucio Gutierrez|1,ECU,Lucio Edwin Gutiérrez Borbúa,1,48.333332,12.17
+Luna chunked,SPEECH,Ecuador|Alfredo Palacio|1,ECU,Luis Alfredo Palacio González,2,19.444444999999998,16.06
+Luna chunked,SPEECH,Ecuador|Rafael Correa|1,ECU,Rafael Vicente Correa Delgado,80,62.5,43.52462
+Luna chunked,SPEECH,Ecuador|Rafael Correa|2,ECU,Rafael Vicente Correa Delgado,253,86.666665,35.860832
+Luna chunked,SPEECH,Ecuador|Rafael Correa|3,ECU,Rafael Vicente Correa Delgado,352,76.25,34.72761
+Luna chunked,SPEECH,Ecuador|Lenin Moreno|1,ECU,Lenín Boltaire Moreno Garcés,281,9.375,14.000107
+Luna chunked,SPEECH,Ecuador|Guillermo Lasso|1,ECU,Guillermo Alberto Santiago Lasso Mendoza,293,18.0000005,13.863071
+Luna chunked,SPEECH,El Salvador|Francisco Flores|1,SLV,Francisco Guillermo Flores Perez,7,0.0,22.437143
+Luna chunked,SPEECH,El Salvador|Antonio Saca|1,SLV,Elías Antonio Saca González,1131,29.1666655,9.005941
+Luna chunked,SPEECH,El Salvador|Mauricio Funes|1,SLV,Carlos Mauricio Funes Cartagena,27,31.25,15.005926
+Luna chunked,SPEECH,El Salvador|Salvador Sanchez Ceren|1,SLV,Salvador Sánchez Cerén,116,31.25,8.175861
+Luna chunked,SPEECH,El Salvador|Nayib Bukele|1,SLV,Nayib Armando Bukele Ortez,936,25.0,9.392926
+Luna chunked,SPEECH,Guatemala|Oscar Berger|1,GTM,Óscar José Rafael Berger Perdomo,4,0.0,10.627501
+Luna chunked,SPEECH,Guatemala|Otto Perez Molina|1,GTM,Otto Fernando Pérez Molina,24,17.499999499999998,9.555
+Luna chunked,SPEECH,Guatemala|Jimmy Morales|1,GTM,Jimmy Ernesto Morales Cabrera,127,7.5000005,8.782441
+Luna chunked,SPEECH,Guatemala|Alejandro Giammattei|1,GTM,Alejandro Eduardo Giammattei Falla,17,8.124999500000001,17.834118
+Luna chunked,SPEECH,Honduras|Carlos Flores|1,HND,Carlos Roberto Flores,1,2.50000005,10.06
+Luna chunked,SPEECH,Honduras|Ricardo Maduro|1,HND,Ricardo Rodolfo Maduro Joest,4,0.0,11.549999
+Luna chunked,SPEECH,Honduras|Manuel Zelaya|1,HND,José Manuel Zelaya Rosales,2,25.0,30.955
+Luna chunked,SPEECH,Honduras|Porfirio Lobo Sosa|1,HND,Porfirio Lobo Sosa,3,16.666667,14.753334
+Luna chunked,SPEECH,Honduras|Juan Orlando Hernandez|1,HND,Juan Orlando Hernández,711,23.125000500000002,12.124528
+Luna chunked,SPEECH,Mexico|Vicente Fox|1,MEX,Vicente Fox Quesada,4,12.5,6.4775004
+Luna chunked,SPEECH,Mexico|Felipe Calderon|1,MEX,Felipe de Jesús Calderón Hinojosa,95,6.25,11.608419
+Luna chunked,SPEECH,Mexico|Enrique Pena Nieto|1,MEX,Enrique Peña Nieto,896,0.0,3.7117522
+Luna chunked,SPEECH,Mexico|Andres Manuel Lopez Obrador|1,MEX,Andrés Manuel López Obrador,1329,48.124999,14.27513
+Luna chunked,SPEECH,Nicaragua|Enrique Bolanos|1,NIC,Enrique José Bolaños Geyer,293,0.0,13.329795
+Luna chunked,SPEECH,Nicaragua|Daniel Ortega|1,NIC,José Daniel Ortega Saavedra,5,62.5,27.151999
+Luna chunked,SPEECH,Nicaragua|Daniel Ortega|2,NIC,José Daniel Ortega Saavedra,214,50.0,18.604721
+Luna chunked,SPEECH,Nicaragua|Daniel Ortega|3,NIC,José Daniel Ortega Saavedra,168,42.500001,23.447142
+Luna chunked,SPEECH,Panama|Martin Torrijos|1,PAN,Martín Erasto Torrijos Espino,4,11.111111,6.2925
+Luna chunked,SPEECH,Panama|Ricardo Martinelli|1,PAN,Ricardo Martinelli Berrocal,198,25.0,8.835202
+Luna chunked,SPEECH,Panama|Juan Carlos Varela|1,PAN,Juan Carlos Varela,109,12.5,9.489817
+Luna chunked,SPEECH,Panama|Laurentino Cortizo|1,PAN,Laurentino Cortizo Cohen,219,14.3749995,9.78959
+Luna chunked,SPEECH,Paraguay|Nicanor Duarte|1,PRY,Óscar Nicanor Duarte Frutos,4,25.0,15.217501
+Luna chunked,SPEECH,Paraguay|Fernando Lugo|1,PRY,Fernando Armindo Lugo Méndez,80,0.0,14.859375
+Luna chunked,SPEECH,Paraguay|Horacio Cartes|1,PRY,Horacio Manuel Cartes Jara,182,11.875,8.106593
+Luna chunked,SPEECH,Paraguay|Mario Abdo Benitez|1,PRY,Mario Abdo Benítez,39,4.374999949999999,6.6974363
+Luna chunked,SPEECH,Peru|Alejandro Toledo|1,PER,Alejandro Celestino Toledo Manrique,4,16.666667,16.552502
+Luna chunked,SPEECH,Peru|Alan Garcia|1,PER,Alan Gabriel Ludwig García Pérez,5,50.0,18.036
+Luna chunked,SPEECH,Peru|Ollanta Humala|1,PER,Ollanta Moisés Humala Tasso,365,25.0,8.73863
+Luna chunked,SPEECH,Peru|Pedro Pablo Kuczynski|1,PER,Pedro Pablo Kuczynski Goddard,97,1.87500005,6.922887
+Luna chunked,SPEECH,Peru|Pedro Castillo|1,PER,José Pedro Castillo Terrones,65,29.374999000000003,15.424153
+Luna chunked,SPEECH,Uruguay|Jorge Batlle|1,URY,Jorge Luis Batlle Ibáñez,328,10.8333335,5.4857316
+Luna chunked,SPEECH,Uruguay|Tabare Vazquez|1,URY,Tabaré Ramón Vázquez Rosas,444,12.5,7.358108
+Luna chunked,SPEECH,Uruguay|Jose Mujica|1,URY,José Alberto Mujica Cordano,191,6.25,8.1616745
+Luna chunked,SPEECH,Uruguay|Tabare Vazquez|2,URY,Tabaré Ramón Vázquez Rosas,137,10.625000499999999,5.4410224
+Luna chunked,SPEECH,Uruguay|Luis Lacalle Pou|1,URY,Luis Alberto Aparicio Alejandro Lacalle Pou,530,3.75000015,3.7720942
+Luna chunked,SPEECH,Venezuela|Hugo Chavez|1,VEN,Hugo Rafael Chávez Frías,743,95.83333,33.328426
+Luna chunked,SPEECH,Venezuela|Hugo Chavez|2,VEN,Hugo Rafael Chávez Frías,293,87.5,34.31908
+Luna chunked,SPEECH,Venezuela|Hugo Chavez|3,VEN,Hugo Rafael Chávez Frías,120,83.33333,32.006496
+Luna chunked,SPEECH,Venezuela|NicolÃ¡s Maduro|1,VEN,Nicolás Maduro Moros,1512,81.875,40.351616
+Luna chunked,SPEECH,Venezuela|NicolÃ¡s Maduro|2,VEN,Nicolás Maduro Moros,813,78.125,36.880344
